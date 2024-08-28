@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問い合わせ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-envelope"></i> お問い合わせフォーム</h1>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> ホーム</a>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-section">
+            <h2>問い合わせ内容を入力してください</h2>
+            <form action="send_email.php" method="post">
+                <label for="reason">問い合わせ理由</label>
+                <select id="reason" name="reason">
+                    <option value="問題の不備">問題の不備</option>
+                    <option value="解答の不備">解答の不備</option>
+                    <option value="解説の不備">解説の不備</option>
+                    <option value="その他">その他</option>
+                </select>
+                
+                <label for="message">詳細</label>
+                <textarea id="message" name="message" rows="5" placeholder="詳細を入力してください"></textarea>
+                
+                <input type="submit" value="送信">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 医師国家試験予備試験過去問チャート</p>
+    </footer>
+</body>
+</html>

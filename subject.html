@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問題表示ページ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>問題表示</h1>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> ホーム</a>
+        </nav>
+    </header>
+    <main>
+        <section id="question-section">
+            <h2 id="subject-title">科目: </h2>
+            <p id="question-text">ここに問題が表示されます。</p>
+            <button id="answer-btn"><i class="fas fa-check-circle"></i> 解答を表示</button>
+            <p id="answer-text" style="display: none;">ここに解答が表示されます。</p>
+            <div class="navigation">
+                <button id="prev-btn" disabled><i class="fas fa-arrow-left"></i> 前の問題</button>
+                <button id="next-btn">次の問題 <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <button id="back-btn"><i class="fas fa-undo"></i> 科目選択ページに戻る</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 医師国家試験予備試験過去問チャート</p>
+    </footer>
+
+    <script>
+        // URLからパラメータを取得する
+        const urlParams = new URLSearchParams(window.location.search);
+        const year = urlParams.get('year'); // 年度の取得
+        const part = urlParams.get('part'); // 第1部・第2部の取得
+        const subject = urlParams.get('subject'); // 科目名の取得
+
+        // 仮の問題データ
+        const questions = [
+            { question: `${subject}の問題1`, answer: `${subject}の解答1` },
+            { question: `${subject}の問題2`, answer: `${subject}の解答2` },
+            { question: `${subject}の問題3`, answer: `${subject}の解答3` }
+        ];
+
+        let currentQuestionIndex = 0;
+
+        const questionText = document.getElementById("question-text");
+        const answerText = document.getElementById("answer-text");
+        const answerBtn = document.getElementById("answer-btn");
+        const prevBtn = document.getElementById("prev-btn");
+        const nextBtn = document.getElementById("next-btn");
+
+        // 初期表示
+        function displayQuestion() {
+            questionText.textContent = questions[currentQuestionIndex].question;
+            answerText.style.display = "none"; // 解答を非表示に
+            answerText.textContent = ""; // 解答のリセット
+
+            // ボタンの状態を更新
+            prevBtn.disabled = currentQuestionIndex === 0;
+            nextBtn.disabled = currentQuestionIndex === questions.length - 1;
+        }
+
+        // 解答表示
+        answerBtn.addEventListener("click", function() {
+            answerText.style.display = "block";
+            answerText.textContent = questions[currentQuestionIndex].answer;
+        });
+
+        // 次の問題
+        nextBtn.addEventListener("click", function() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                displayQuestion();
+            }
+        });
+
+        // 前の問題
+        prevBtn.addEventListener("click", function() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                displayQuestion();
+            }
+        });
+
+        // 戻るリンク設定
+        const backButton = document.getElementById("back-btn");
+        if (year && part === '1') {
+            backButton.onclick = function() {
+                window.location.href = `part1_${year}.html`;
+            };
+        } else if (year && part === '2') {
+            backButton.onclick = function() {
+                window.location.href = `part2_${year}.html`;
+            };
+        } else {
+            backButton.onclick = function() {
+                window.location.href = 'index.html';
+            };
+        }
+
+        // 初期表示
+        displayQuestion();
+    </script>
+</body>
+</html>
