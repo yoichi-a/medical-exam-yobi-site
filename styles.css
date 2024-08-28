@@ -1,0 +1,132 @@
+/* ベーススタイル（PC向け） */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+footer {
+    background-color: #00acc1;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+}
+
+header {
+    background-color: #00acc1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.year-selection {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.year {
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-section form {
+    display: inline-block;
+    text-align: left;
+}
+
+.contact-section label {
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-section textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.contact-section select, .contact-section input[type="submit"] {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.notifications {
+    background-color: #e0f7fa;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.notifications h2 {
+    color: #00796b;
+}
+
+.notifications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notifications ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #b2ebf2;
+}
+
+/* モバイル対応のスタイル（幅が768px以下の画面に適用） */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .year-selection, .contact-section {
+        padding: 0 10px;
+    }
+
+    .subject-selection h2, .year-selection h2 {
+        font-size: 24px;
+    }
+
+    .notifications, .contact-section form {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
