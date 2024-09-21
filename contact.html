@@ -17,7 +17,7 @@
     <main>
         <section class="contact-section">
             <h2>問い合わせ内容を入力してください</h2>
-            <form action="send_email.php" method="post">
+            <form action="https://formspree.io/f/mzzplgol" method="POST">
                 <label for="reason">問い合わせ理由</label>
                 <select id="reason" name="reason">
                     <option value="問題の不備">問題の不備</option>
@@ -28,6 +28,9 @@
                 
                 <label for="message">詳細</label>
                 <textarea id="message" name="message" rows="5" placeholder="詳細を入力してください"></textarea>
+                
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="_replyto" placeholder="あなたのメールアドレス" required>
                 
                 <input type="submit" value="送信">
             </form>
