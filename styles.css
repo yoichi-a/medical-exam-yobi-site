@@ -70,7 +70,8 @@ nav a {
     padding: 10px;
 }
 
-.contact-section select, .contact-section input[type="submit"] {
+.contact-section select,
+.contact-section input[type="submit"] {
     padding: 10px;
     margin-top: 10px;
 }
@@ -96,6 +97,14 @@ nav a {
     border-bottom: 1px solid #b2ebf2;
 }
 
+/* === 追加: 画像のスタイル調整 === */
+#question-image,
+#answer-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
 /* モバイル対応のスタイル（幅が768px以下の画面に適用） */
 @media (max-width: 768px) {
     header {
@@ -113,15 +122,18 @@ nav a {
         padding: 0 10px;
     }
 
-    .year-selection, .contact-section {
+    .year-selection,
+    .contact-section {
         padding: 0 10px;
     }
 
-    .subject-selection h2, .year-selection h2 {
+    .subject-selection h2,
+    .year-selection h2 {
         font-size: 24px;
     }
 
-    .notifications, .contact-section form {
+    .notifications,
+    .contact-section form {
         width: 100%;
         padding: 0 10px;
     }
