@@ -4,106 +4,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>問題表示ページ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Font Awesomeの最新安定版を使用 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- メタデータの追加 -->
+    <meta name="description" content="医師国家試験予備試験過去問の問題表示ページです。">
 </head>
 <body>
     <header>
         <h1>問題表示</h1>
         <nav>
-            <a href="index.html"><i class="fas fa-home"></i> ホーム</a>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> ホーム</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <section id="question-section">
             <h2 id="subject-title">科目: </h2>
             <p id="question-text">ここに問題が表示されます。</p>
-            <button id="answer-btn"><i class="fas fa-check-circle"></i> 解答を表示</button>
+            <!-- 画像を表示するための <img> 要素を追加 -->
+            <img id="question-image" src="" alt="問題の画像" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
+
+            <button id="answer-btn"><i class="fa-solid fa-check-circle"></i> 解答を表示</button>
             <p id="answer-text" style="display: none;">ここに解答が表示されます。</p>
+            <!-- 解答の画像を表示するための <img> 要素を追加 -->
+            <img id="answer-image" src="" alt="解答の画像" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
+
             <div class="navigation">
-                <button id="prev-btn" disabled><i class="fas fa-arrow-left"></i> 前の問題</button>
-                <button id="next-btn">次の問題 <i class="fas fa-arrow-right"></i></button>
+                <button id="prev-btn" disabled><i class="fa-solid fa-arrow-left"></i> 前の問題</button>
+                <button id="next-btn">次の問題 <i class="fa-solid fa-arrow-right"></i></button>
             </div>
-            <button id="back-btn"><i class="fas fa-undo"></i> 科目選択ページに戻る</button>
+            <button id="back-btn"><i class="fa-solid fa-rotate-left"></i> 科目選択ページに戻る</button>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 医師国家試験予備試験過去問チャート</p>
+        <p>© 2024 医師国家試験予備試験過去問チャート</p>
     </footer>
 
     <script>
-        // URLからパラメータを取得する
-        const urlParams = new URLSearchParams(window.location.search);
-        const year = urlParams.get('year'); // 年度の取得
-        const part = urlParams.get('part'); // 第1部・第2部の取得
-        const subject = urlParams.get('subject'); // 科目名の取得
+        document.addEventListener("DOMContentLoaded", function() {
+            // URLからパラメータを取得する
+            const urlParams = new URLSearchParams(window.location.search);
+            const year = urlParams.get('year'); // 年度の取得
+            const part = urlParams.get('part'); // 第1部・第2部の取得
+            const subject = urlParams.get('subject'); // 科目名の取得
 
-        // 仮の問題データ
-        const questions = [
-            { question: `${subject}の問題1`, answer: `${subject}の解答1` },
-            { question: `${subject}の問題2`, answer: `${subject}の解答2` },
-            { question: `${subject}の問題3`, answer: `${subject}の解答3` }
-        ];
+            // 科目名を日本語に変換するマッピング
+            const subjectNames = {
+                anatomy: '解剖学',
+                physiology: '生理学',
+                biochemistry: '生化学',
+                immunology: '免疫学',
+                pharmacology: '薬理学',
+                pathology: '病理学',
+                forensic_medicine: '法医学',
+                microbiology: '微生物学',
+                hygiene: '衛生学',
+                internal_medicine: '内科学',
+                pediatrics: '小児科学',
+                psychiatry: '精神科学',
+                surgery: '外科学',
+                orthopedics: '整形外科学',
+                obstetrics_gynecology: '産科・婦人科学',
+                dermatology: '皮膚科学',
+                urology: '泌尿器科学',
+                otorhinolaryngology: '耳鼻咽喉科学',
+                ophthalmology: '眼科学',
+                radiology: '放射線科学',
+                emergency_medicine: '救急医学'
+                // 必要に応じて他の科目を追加
+            };
 
-        let currentQuestionIndex = 0;
+            // 科目名を日本語で表示
+            const subjectTitle = document.getElementById('subject-title');
+            const japaneseSubjectName = subjectNames[subject] || '未知の科目'; // マッピングがない場合はデフォルト値
+            subjectTitle.textContent = `科目: ${japaneseSubjectName}`;
 
-        const questionText = document.getElementById("question-text");
-        const answerText = document.getElementById("answer-text");
-        const answerBtn = document.getElementById("answer-btn");
-        const prevBtn = document.getElementById("prev-btn");
-        const nextBtn = document.getElementById("next-btn");
+            // 問題データを格納する変数
+            let questions = [];
+            let currentQuestionIndex = 0;
 
-        // 初期表示
-        function displayQuestion() {
-            questionText.textContent = questions[currentQuestionIndex].question;
-            answerText.style.display = "none"; // 解答を非表示に
-            answerText.textContent = ""; // 解答のリセット
+            // HTML要素の参照
+            const questionText = document.getElementById("question-text");
+            const questionImage = document.getElementById("question-image");
+            const answerText = document.getElementById("answer-text");
+            const answerImage = document.getElementById("answer-image");
+            const answerBtn = document.getElementById("answer-btn");
+            const prevBtn = document.getElementById("prev-btn");
+            const nextBtn = document.getElementById("next-btn");
 
-            // ボタンの状態を更新
-            prevBtn.disabled = currentQuestionIndex === 0;
-            nextBtn.disabled = currentQuestionIndex === questions.length - 1;
-        }
-
-        // 解答表示
-        answerBtn.addEventListener("click", function() {
-            answerText.style.display = "block";
-            answerText.textContent = questions[currentQuestionIndex].answer;
-        });
-
-        // 次の問題
-        nextBtn.addEventListener("click", function() {
-            if (currentQuestionIndex < questions.length - 1) {
-                currentQuestionIndex++;
-                displayQuestion();
+            // 要素の存在確認
+            if (!subjectTitle || !questionText || !questionImage || !answerText || !answerImage || !answerBtn || !prevBtn || !nextBtn) {
+                alert('必要な要素が見つかりません。ページの構造を確認してください。');
+                return;
             }
-        });
 
-        // 前の問題
-        prevBtn.addEventListener("click", function() {
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
-                displayQuestion();
+            // 問題データを読み込む関数
+            async function loadQuestions() {
+                try {
+                    const response = await fetch(`data/${year}/part${part}/${subject}.json`);
+                    if (!response.ok) {
+                        throw new Error('問題データの読み込みに失敗しました。');
+                    }
+                    questions = await response.json();
+                    displayQuestion();
+                } catch (error) {
+                    console.error(error);
+                    alert('問題データの読み込みに失敗しました。');
+                }
             }
+
+            // 初期表示
+            function displayQuestion() {
+                if (questions.length > 0) {
+                    const currentQuestion = questions[currentQuestionIndex];
+                    questionText.textContent = currentQuestion.question || '問題文がありません。';
+
+                    // 問題の画像を表示
+                    if (currentQuestion.image) {
+                        questionImage.src = currentQuestion.image;
+                        questionImage.style.display = 'block';
+                    } else {
+                        questionImage.style.display = 'none';
+                    }
+
+                    // 解答と解答の画像を非表示に
+                    answerText.style.display = "none";
+                    answerText.textContent = "";
+                    answerImage.style.display = 'none';
+
+                    // ボタンの状態を更新
+                    prevBtn.disabled = currentQuestionIndex === 0;
+                    nextBtn.disabled = currentQuestionIndex === questions.length - 1;
+                } else {
+                    questionText.textContent = '問題が見つかりません。';
+                    answerBtn.disabled = true;
+                    prevBtn.disabled = true;
+                    nextBtn.disabled = true;
+                }
+            }
+
+            // 解答表示
+            answerBtn.addEventListener("click", function() {
+                const currentQuestion = questions[currentQuestionIndex];
+                answerText.style.display = "block";
+                answerText.textContent = currentQuestion.answer || '解答がありません。';
+
+                // 解答の画像を表示
+                if (currentQuestion.answerImage) {
+                    answerImage.src = currentQuestion.answerImage;
+                    answerImage.style.display = 'block';
+                } else {
+                    answerImage.style.display = 'none';
+                }
+            });
+
+            // 次の問題
+            nextBtn.addEventListener("click", function() {
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    displayQuestion();
+                }
+            });
+
+            // 前の問題
+            prevBtn.addEventListener("click", function() {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    displayQuestion();
+                }
+            });
+
+            // 戻るリンク設定
+            const backButton = document.getElementById("back-btn");
+            if (backButton) {
+                if (year && part === '1') {
+                    backButton.onclick = function() {
+                        window.location.href = `part1_${year}.html`;
+                    };
+                } else if (year && part === '2') {
+                    backButton.onclick = function() {
+                        window.location.href = `part2_${year}.html`;
+                    };
+                } else {
+                    backButton.onclick = function() {
+                        window.location.href = 'index.html';
+                    };
+                }
+            }
+
+            // 初期化
+            loadQuestions();
         });
-
-        // 戻るリンク設定
-        const backButton = document.getElementById("back-btn");
-        if (year && part === '1') {
-            backButton.onclick = function() {
-                window.location.href = `part1_${year}.html`;
-            };
-        } else if (year && part === '2') {
-            backButton.onclick = function() {
-                window.location.href = `part2_${year}.html`;
-            };
-        } else {
-            backButton.onclick = function() {
-                window.location.href = 'index.html';
-            };
-        }
-
-        // 初期表示
-        displayQuestion();
     </script>
 </body>
 </html>
