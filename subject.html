@@ -23,6 +23,8 @@
         <section id="question-section">
             <h2 id="subject-title">科目: </h2>
             <p id="question-text">ここに問題が表示されます。</p>
+            <!-- 選択肢を表示する要素 -->
+            <ul id="choices-list"></ul>
             <!-- 画像を表示するための <img> 要素を追加 -->
             <img id="question-image" src="" alt="問題の画像" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
 
@@ -87,6 +89,7 @@
 
             // HTML要素の参照
             const questionText = document.getElementById("question-text");
+            const choicesList = document.getElementById("choices-list");
             const questionImage = document.getElementById("question-image");
             const answerText = document.getElementById("answer-text");
             const answerImage = document.getElementById("answer-image");
@@ -95,7 +98,7 @@
             const nextBtn = document.getElementById("next-btn");
 
             // 要素の存在確認
-            if (!subjectTitle || !questionText || !questionImage || !answerText || !answerImage || !answerBtn || !prevBtn || !nextBtn) {
+            if (!subjectTitle || !questionText || !choicesList || !questionImage || !answerText || !answerImage || !answerBtn || !prevBtn || !nextBtn) {
                 alert('必要な要素が見つかりません。ページの構造を確認してください。');
                 return;
             }
@@ -121,9 +124,17 @@
                     const currentQuestion = questions[currentQuestionIndex];
                     questionText.textContent = currentQuestion.question || '問題文がありません。';
 
+                    // 選択肢の表示
+                    choicesList.innerHTML = '';
+                    for (const [key, value] of Object.entries(currentQuestion.choices)) {
+                        const li = document.createElement('li');
+                        li.textContent = `${key}: ${value}`;
+                        choicesList.appendChild(li);
+                    }
+
                     // 問題の画像を表示
-                    if (currentQuestion.image) {
-                        questionImage.src = currentQuestion.image;
+                    if (currentQuestion.questionImage) {
+                        questionImage.src = currentQuestion.questionImage;
                         questionImage.style.display = 'block';
                     } else {
                         questionImage.style.display = 'none';
@@ -137,6 +148,7 @@
                     // ボタンの状態を更新
                     prevBtn.disabled = currentQuestionIndex === 0;
                     nextBtn.disabled = currentQuestionIndex === questions.length - 1;
+                    answerBtn.disabled = false; // 解答ボタンを再度有効化
                 } else {
                     questionText.textContent = '問題が見つかりません。';
                     answerBtn.disabled = true;
@@ -149,7 +161,9 @@
             answerBtn.addEventListener("click", function() {
                 const currentQuestion = questions[currentQuestionIndex];
                 answerText.style.display = "block";
-                answerText.textContent = currentQuestion.answer || '解答がありません。';
+                const correctChoice = currentQuestion.answer;
+                const explanation = currentQuestion.explanation || '';
+                answerText.innerHTML = `正解：${correctChoice}<br>${explanation}`;
 
                 // 解答の画像を表示
                 if (currentQuestion.answerImage) {
@@ -158,6 +172,9 @@
                 } else {
                     answerImage.style.display = 'none';
                 }
+
+                // 解答ボタンを無効化
+                answerBtn.disabled = true;
             });
 
             // 次の問題
