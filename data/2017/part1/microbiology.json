@@ -1,62 +1,123 @@
 [
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "生食と寄生虫の組合せで誤っているのはどれか。",
+      "choices": {
+        "a": "サバ--------アニサキス",
+        "b": "シラウオ--------肺吸虫",
+        "c": "ドジョウ--------顎口虫",
+        "d": "ナメクジ--------広東住血線虫",
+        "e": "豚肉--------トキソプラズマ"
+      },
+      "answer": "b",
+      "explanation": "シラウオに肺吸虫は一般的ではありません。アニサキスはサバなどの生魚に寄生することが多いですが、肺吸虫は主にカニやエビなどの甲殻類を経口摂取することで感染します。したがって、選択肢bは誤りです。他の組み合わせは正しいです。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "プラジカンテルの投与が禁忌なのはどれか。",
+      "choices": {
+        "a": "肝吸虫症",
+        "b": "有鉤条虫症",
+        "c": "無鉤条虫症",
+        "d": "広節裂頭条虫症",
+        "e": "日本住血虫症"
+      },
+      "answer": "e",
+      "explanation": "プラジカンテルは広節裂頭条虫症や有鉤条虫症には有効ですが、日本住血虫症には効果がないため、選択肢eが誤りです。日本住血虫症の治療には他の抗寄生虫薬が用いられます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "寄生虫症と治療薬の組合わせで正しいのはどれか。",
+      "choices": {
+        "a": "ジアルジア症--------メトロニダゾール",
+        "b": "膣トリコモナス症--------ニフルティモックス",
+        "c": "トキソプラズマ症--------硫酸キニーネ",
+        "d": "リーシュマニア症--------イブメルメクチン",
+        "e": "クリプトスポリジウム症--------ST合剤"
+      },
+      "answer": "a",
+      "explanation": "ジアルジア症の治療にはメトロニダゾールが標準的な薬剤です。他の選択肢は治療薬と疾患の組み合わせが誤っています。例えば、膣トリコモナス症はメトロニダゾールで治療し、トキソプラズマ症はピリミジン拮抗薬が用いられます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "クリプトスポリジウム症について誤っているのはどれか。",
+      "choices": {
+        "a": "水系感染症である。",
+        "b": "日和見感染症である。",
+        "c": "人獣共通感染症である。",
+        "d": "節足動物媒介感染症である。",
+        "e": "旅行者下痢症の原因となる。"
+      },
+      "answer": "d",
+      "explanation": "クリプトスポリジウム症は水系感染症であり、日和見感染症として免疫抑制状態で発症しやすく、人獣共通感染症でもあります。また、旅行者下痢症の原因にもなります。しかし、節足動物が媒介する感染症ではありません。従って、選択肢dが誤りです。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "芽胞形成細菌はどれか。",
+      "choices": {
+        "a": "Bacteroides fragilis",
+        "b": "Burkholderia cepacia",
+        "c": "Clostridium difficile",
+        "d": "Corynebacterium diphtheriae",
+        "e": "Listeria monocytogenes"
+      },
+      "answer": "c",
+      "explanation": "Clostridium difficileは芽胞形成細菌です。他の選択肢に挙げられた菌種は芽胞を形成しません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "ブドウ糖非発酵菌はどれか。",
+      "choices": {
+        "a": "Acinetobacter baumannii",
+        "b": "Clostridium difficile",
+        "c": "Haemophilus influenzae",
+        "d": "Klebsiella pneumoniae",
+        "e": "Serratia marcescens"
+      },
+      "answer": "a",
+      "explanation": "Acinetobacter baumanniiはブドウ糖を発酵しない菌です。その他の選択肢はブドウ糖を発酵する菌です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "空気感染するのはどれか。",
+      "choices": {
+        "a": "肺炎球菌",
+        "b": "百日咳菌",
+        "c": "麻疹ウイルス",
+        "d": "ムンプスウイルス",
+        "e": "Mycoplasma pneumoniae"
+      },
+      "answer": "c",
+      "explanation": "麻疹ウイルス（麻疹）は空気感染します。他の選択肢の病原体は主に飛沫感染や接触感染します。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "ライム病について誤っているのはどれか。",
+      "choices": {
+        "a": "発熱と解熱を繰り返す。",
+        "b": "ボレリア感染症である。",
+        "c": "遊走性紅斑がみられる。",
+        "d": "北米でも発生がみられる。",
+        "e": "マダニの吸血によって感染する。"
+      },
+      "answer": "a",
+      "explanation": "ライム病では遊走性紅斑やボレリア菌による感染が特徴的であり、北米でも広く発生しています。マダニによる吸血が感染経路です。しかし、発熱と解熱を繰り返すのはライム病ではなく、マラリアなど他の感染症の特徴です。従って、選択肢aが誤りです。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "抗菌薬と作用機序の組合わせで正しいのはどれか。",
+      "choices": {
+        "a": "キノロン薬--------細胞壁合成阻害",
+        "b": "サルファ剤--------細胞膜障害",
+        "c": "マクロライド--------DNA合成阻害",
+        "d": "アミノ配糖体--------タンパク質合成阻害",
+        "e": "リファンピシン--------RNA合成阻害"
+      },
+      "answer": "d",
+      "explanation": "アミノグリコシド系抗菌薬はタンパク質合成を阻害します。他の選択肢は作用機序が誤っています。キノロン薬はDNAジャイレースやトポイソメラーゼIVを阻害し、細胞壁合成阻害ではありません。サルファ剤は葉酸合成阻害、マクロライドはタンパク質合成阻害、リファンピシンはRNAポリメラーゼを阻害します。従って、選択肢dが正解です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "真菌に分類される微生物はどれか。",
+      "choices": {
+        "a": "Toxoplasma",
+        "b": "Clostridium",
+        "c": "Pneumocystis",
+        "d": "Streptococcus",
+        "e": "Cryptosporidium"
+      },
+      "answer": "c",
+      "explanation": "Pneumocystisは真菌に分類されます。その他の選択肢は原生動物や細菌に属します。"
     }
-]
+  ]
+  

@@ -1,62 +1,123 @@
 [
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "全身性炎症反応症候群の診断基準に含まれないのはどれか。",
+      "choices": {
+        "a": "体温",
+        "b": "尿量",
+        "c": "呼吸数",
+        "d": "脈拍数",
+        "e": "白血球数"
+      },
+      "answer": "b",
+      "explanation": "全身性炎症反応症候群（SIRS）の診断基準には、体温、脈拍数、呼吸数、白血球数が含まれますが、尿量は含まれません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "疾患と腫瘍マーカーの組合せで正しいのはどれか。",
+      "choices": {
+        "a": "乳癌——CA15-3",
+        "b": "食道癌——CEA",
+        "c": "膵臓癌——PIVKA-II",
+        "d": "大腸癌——SCC",
+        "e": "肝細胞癌——CA19-9"
+      },
+      "answer": "a",
+      "explanation": "CA15-3は乳癌の腫瘍マーカーです。他の組み合わせは誤っています。\n- 食道癌ではSCC（扁平上皮癌抗原）が関連します。\n- 膵臓癌ではCA19-9が上昇します。\n- 肝細胞癌ではPIVKA-IIやAFPが腫瘍マーカーです。\n- 大腸癌ではCEAがよく用いられます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "膵頭部癌でみられるのはどれか。",
+      "choices": {
+        "a": "Blumberg徴候",
+        "b": "Courvoisier徴候",
+        "c": "Grey-Turner徴候",
+        "d": "Rosenstein徴候",
+        "e": "Rovsing徴候"
+      },
+      "answer": "b",
+      "explanation": "Courvoisier徴候は、無痛性の胆嚢腫大で、膵頭部癌などによる胆管閉塞で見られます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "心筋梗塞後にみられないのはどれか。",
+      "choices": {
+        "a": "左室瘤",
+        "b": "冠動脈瘻",
+        "c": "自由壁破裂",
+        "d": "心室中隔穿孔",
+        "e": "僧帽弁乳頭筋断裂"
+      },
+      "answer": "b",
+      "explanation": "冠動脈瘻は先天性の異常であり、心筋梗塞後の合併症としては一般的ではありません。他の選択肢は心筋梗塞後の合併症として知られています。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "肺癌でみられないのはどれか。",
+      "choices": {
+        "a": "Boerhaave症候群",
+        "b": "Horner症候群",
+        "c": "Lambert-Eaton症候群",
+        "d": "Pancoast症候群",
+        "e": "上大静脈症候群"
+      },
+      "answer": "a",
+      "explanation": "Boerhaave症候群は食道破裂のことであり、肺癌とは直接関係がありません。他の選択肢は肺癌に関連する症候群です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "我が国の直腸癌の肉眼分類で一番多いのはどれか",
+      "choices": {
+        "a": "1型（腫瘤型）",
+        "b": "2型（潰瘍限局型）",
+        "c": "3型（潰瘍浸潤型）",
+        "d": "4型（びまん浸潤型）",
+        "e": "5型（分類不能）"
+      },
+      "answer": "b",
+      "explanation": "日本における直腸癌の肉眼分類では、2型（潰瘍限局型）が最も多く見られます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "絞扼性イレウスの原因となるのはどれか。",
+      "choices": {
+        "a": "急性膵炎",
+        "b": "急性虫垂炎",
+        "c": "潰瘍性大腸炎",
+        "d": "鼠径ヘルニア",
+        "e": "下腸間膜動脈血栓症"
+      },
+      "answer": "d",
+      "explanation": "鼠径ヘルニアによる腸管の絞扼は、絞扼性イレウスの一般的な原因です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "胃癌について正しいのはどれか。",
+      "choices": {
+        "a": "噴門部に多い。",
+        "b": "扁平上皮癌が多い。",
+        "c": "Helicobacter pylori感染と関係がある。",
+        "d": "Douglas窩転移をKrukenberg転移と呼ぶ。",
+        "e": "深達度が固有筋層にとどまるものを早期癌と呼ぶ。"
+      },
+      "answer": "c",
+      "explanation": "胃癌はHelicobacter pylori感染と強く関連しています。\n- 胃癌は一般的に幽門部や前庭部に多く見られます。\n- 胃癌の主な組織型は腺癌であり、扁平上皮癌は稀です。\n- Krukenberg腫瘍は胃癌が卵巣に転移したものを指します。\n- 早期胃癌は粘膜下層までにとどまるものを指し、固有筋層に達したものは進行癌です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "先天性十二指腸閉鎖症でみられるのはどれか。",
+      "choices": {
+        "a": "target sign",
+        "b": "coil-up sign",
+        "c": "whirlpool sign",
+        "d": "step-ladder sign",
+        "e": "double bubble sign"
+      },
+      "answer": "e",
+      "explanation": "先天性十二指腸閉鎖症では、胃と十二指腸の拡張がX線で二つの気泡として見えるdouble bubble signが特徴的です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "乳癌の診断に有用でないのはどれか。",
+      "choices": {
+        "a": "造影MRI",
+        "b": "経皮的針生検",
+        "c": "乳房超音波検査",
+        "d": "マンモグラフィ",
+        "e": "胸部エックス線撮影"
+      },
+      "answer": "e",
+      "explanation": "胸部エックス線撮影は肺や心臓の評価には有用ですが、乳癌の診断には直接的には有用ではありません。"
     }
-]
+  ]
+  

@@ -1,62 +1,123 @@
 [
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "細胞膜蛋白のうち C3/C5 転換酵素を失活させるのはどれか。",
+      "choices": {
+        "a": "Factor H",
+        "b": "CD59 (protectin)",
+        "c": "HRF (Homologous Restriction Factor)",
+        "d": "CD55 (decay-accelerating factor; DAF)",
+        "e": "CD46 (membrane cofactor protein; MCP)"
+      },
+      "answer": "d",
+      "explanation": "CD55（decay-accelerating factor; DAF）は、細胞膜上でC3/C5転換酵素を失活させる役割を持つ補体系調節分子です。Factor Hは液相で補体系を調節し、CD46（membrane cofactor protein; MCP）も補体系の調節に関与しますが、C3/C5転換酵素の失活に直接関与するのは主にCD55です。CD59はMAC（膜攻撃複合体）の形成を阻害します。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "イミキモドを認識する Toll-like receptorはどれか。",
+      "choices": {
+        "a": "TLR3",
+        "b": "TLR4",
+        "c": "TLR5",
+        "d": "TLRO",
+        "e": "TLR7"
+      },
+      "answer": "e",
+      "explanation": "イミキモド（Imiquimod）はTLR7のリガンドであり、免疫応答を活性化するために使用されます。他の選択肢は異なるパターン認識受容体であり、イミキモドの認識には関与しません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "免疫グロブリン重鎖の定常部に存在しないのはどれか。",
+      "choices": {
+        "a": "アロタイプ",
+        "b": "ヒンジ領域",
+        "c": "補体結合部",
+        "d": "アイソタイプ",
+        "e": "イディオタイプ"
+      },
+      "answer": "e",
+      "explanation": "イディオタイプ（Idiotype）は可変部に特有の抗体部位を指し、定常部には存在しません。他の選択肢はすべて免疫グロブリンの定常部に関連する要素です。アロタイプは定常部の遺伝的多様性を指し、ヒンジ領域や補体結合部、アイソタイプも定常部に含まれます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "胸腺で組織特異的抗原に対する寛容を誘導するのはどれか。",
+      "choices": {
+        "a": "T細胞",
+        "b": "筋様細胞",
+        "c": "樹状細胞",
+        "d": "髄質上皮細胞",
+        "e": "皮質上皮細胞"
+      },
+      "answer": "d",
+      "explanation": "胸腺の髄質上皮細胞（medullary thymic epithelial cells）は、自己の組織特異的抗原を提示し、T細胞の負の選択を通じて自己寛容を誘導します。これにより自己反応性T細胞が除去されます。他の選択肢は直接的に寛容誘導に関与していません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "免疫担当細胞と相互作用する対応細胞が発現する分子との組合せで正しいのはどれか。",
+      "choices": {
+        "a": "CD3- CD19+ ̶̶̶CD40",
+        "b": "CD3- CD56+ ̶̶̶HLA-E",
+        "c": "CD3+CD4+ ̶̶̶-HLA-A",
+        "d": "CD3+CD8+ ̶̶̶-HLA-DP",
+        "e": "CD3+CD161+ ̶̶‒HLA-DR"
+      },
+      "answer": "b",
+      "explanation": "CD56はナチュラルキラー（NK）細胞のマーカーであり、HLA-EはNK細胞の抑制受容体と相互作用します。したがって、選択肢bが正しいです。他の選択肢は細胞表面マーカーと分子の組み合わせが誤っています。例えば、CD40はB細胞に発現しますが、CD19+ B細胞とCD40は正しい組み合わせですが、選択肢aは他の情報が誤りです。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "細胞が分化する環境で、抗原を MHC 拘束性に認識する様式が変わるのはどれか。",
+      "choices": {
+        "a": "T細胞",
+        "b": "B細胞",
+        "c": "好中球",
+        "d": "樹状細胞",
+        "e": "マクロファージ"
+      },
+      "answer": "a",
+      "explanation": "T細胞は分化過程で抗原をMHC分子を介して認識する様式が変わります。例えば、CD4+ T細胞はMHCクラスIIを介して、CD8+ T細胞はMHCクラスIを介して抗原を認識します。その他の細胞は主に抗原提示や認識の方法が一定です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "自己炎症性疾患の症状に直接関連しないのはどれか。",
+      "choices": {
+        "a": "IL-1β高値",
+        "b": "高IgD血症",
+        "c": "IL-1Ra低値",
+        "d": "インフラマソーム異常",
+        "e": "I型インターフェロン高値"
+      },
+      "answer": "e",
+      "explanation": "自己炎症性疾患は主にIL-1βの過剰産生、IL-1Raの低下、インフラマソームの異常などに関連します。I型インターフェロン高値は主に自己免疫疾患（例：全身性エリテマトーデス）に関連しており、自己炎症性疾患には直接関連しません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "[dsDNA-抗 DNA 抗体(IgG)] 免疫複合体を抗 IgG抗体産生性B細胞が取り込んだときに活性化するのはどれか。",
+      "choices": {
+        "a": "LCK",
+        "b": "TLR9",
+        "c": "RIG-I",
+        "d": "STING",
+        "e": "ZAP-70"
+      },
+      "answer": "b",
+      "explanation": "TLR9は二本鎖DNAを認識するトール様受容体であり、抗DNA抗体と結合した免疫複合体を取り込んだB細胞内で活性化されます。これにより、B細胞の活性化および抗体産生が促進されます。他の選択肢は異なる受容体や分子であり、直接的な活性化には関与しません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "親A・B(互いに完全アロ allogeneic の関係)の骨髄細胞を子(AxB) F1が拒絶するときに攻撃するのはどれか。",
+      "choices": {
+        "a": "T細胞",
+        "b": "B細胞",
+        "c": "好中球",
+        "d": "NK細胞",
+        "e": "マクロファージ"
+      },
+      "answer": "a",
+      "explanation": "T細胞は異なるHLA型を認識し、異種細胞を攻撃する主要な免疫細胞です。親A・Bからの骨髄細胞はF1世代のHLA型と一致しないため、T細胞がこれらの異種細胞を攻撃します。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "免疫機能のうち生後最も遅く成人レベルに達するのはどれか。",
+      "choices": {
+        "a": "補体活性",
+        "b": "IgM抗体価",
+        "c": "NK細胞活性",
+        "d": "キラーT細胞活性",
+        "e": "マクロファージの食・殺菌能"
+      },
+      "answer": "d",
+      "explanation": "キラーT細胞（CD8+ T細胞）の活性化と成熟は生後最も遅く成人レベルに達します。他の免疫機能は比較的早期に成熟します。"
     }
-]
+  ]
+  

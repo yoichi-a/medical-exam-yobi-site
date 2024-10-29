@@ -1,62 +1,123 @@
 [
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "体内移行するのはどれか。",
+      "choices": {
+        "a": "蟯虫",
+        "b": "鞭虫",
+        "c": "肝吸虫",
+        "d": "横川吸虫",
+        "e": "Westermani肺吸虫"
+      },
+      "answer": "e",
+      "explanation": "Westermani肺吸虫（Paragonimus westermani）は体内を移行する能力を持ち、特に肺に移行して感染を引き起こします。他の選択肢の寄生虫は主に腸内や肝臓に留まる傾向があります。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "画像診断が有用でないのはどれか。",
+      "choices": {
+        "a": "多包虫症",
+        "b": "宮崎肺吸虫症",
+        "c": "腸アニサキス症",
+        "d": "トリコモナス膣炎",
+        "e": "トキソプラズマ脳症"
+      },
+      "answer": "d",
+      "explanation": "トリコモナス膣炎は主に顕微鏡検査やPCR検査で診断され、画像診断は有用ではありません。他の選択肢は画像診断が診断や評価に役立ちます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "日本において撲滅されたのはどれか。",
+      "choices": {
+        "a": "マラリア",
+        "b": "アメーバ赤痢",
+        "c": "宮崎肺吸虫症",
+        "d": "広東住血線虫症",
+        "e": "広節裂頭条虫症"
+      },
+      "answer": "a",
+      "explanation": "日本では20世紀中頃にマラリアが撲滅されました。他の選択肢の感染症は現在も存在するか、完全には撲滅されていません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "三日熱マラリアの根治のため投与すべきなのはどれか。",
+      "choices": {
+        "a": "鉄剤",
+        "b": "プリマキン",
+        "c": "メフロキン",
+        "d": "プログアニル",
+        "e": "メベンダゾール"
+      },
+      "answer": "b",
+      "explanation": "プリマキン（Primaquine）は三日熱マラリア（Plasmodium vivaxやPlasmodium ovale）の肝内潜伏期の芽胞子を根治するために使用されます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "Gram染色が有用なのはどれか。",
+      "choices": {
+        "a": "肺結核",
+        "b": "クラミジア肺炎",
+        "c": "マイコプラズマ肺炎",
+        "d": "カンピロバクター腸炎",
+        "e": "ニューモシスチス肺炎"
+      },
+      "answer": "d",
+      "explanation": "カンピロバクター腸炎（Campylobacter）はGram陰性菌であり、Gram染色が有用です。他の選択肢の病原体はGram染色では検出が困難または適用外です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "莢膜をもつのはどれか。",
+      "choices": {
+        "a": "赤痢菌",
+        "b": "腸球菌",
+        "c": "肺炎桿菌",
+        "d": "リステリア菌",
+        "e": "B群溶血性レンサ球菌"
+      },
+      "answer": "c",
+      "explanation": "肺炎桿菌（Klebsiella pneumoniae）は莢膜を有しており、病原性を高めています。他の選択肢の菌種も莢膜を持つものがありますが、特に肺炎桿菌が顕著です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "ベンジルペニシリンが有効なのはどれか。",
+      "choices": {
+        "a": "Salmonella enterica",
+        "b": "Klebsiella pneumoniae",
+        "c": "Haemophilus influenzae",
+        "d": "Neisseria meningitidis",
+        "e": "Pseudomonas aeruginosa"
+      },
+      "answer": "d",
+      "explanation": "Neisseria meningitidisはベンジルペニシリンに感受性が高く、有効です。他の選択肢の菌種は多くが耐性を示すため、ベンジルペニシリンでは治療が困難です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "空気感染しないのはどれか。",
+      "choices": {
+        "a": "結核",
+        "b": "水痘",
+        "c": "風疹",
+        "d": "麻疹",
+        "e": "天然痘"
+      },
+      "answer": "c",
+      "explanation": "風疹は主に飛沫感染によって伝播し、厳密には空気感染とは異なります。他の選択肢は空気感染（エアロゾル）によって伝播することが知られています。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "B型肝炎ウイルスについて誤っているのはどれか。",
+      "choices": {
+        "a": "DNAウイルスである",
+        "b": "ワクチンが有用である。",
+        "c": "日本では遺伝子型Bが多い。",
+        "d": "C型肝炎ウイルスに比べて感染力が強い。",
+        "e": "C型肝炎ウイルスに比べて劇症化しやすい。"
+      },
+      "answer": "e",
+      "explanation": "B型肝炎ウイルス（HBV）はC型肝炎ウイルス（HCV）に比べて劇症化しやすいわけではありません。HBVはHCVよりも急性期に劇症化するケースがありますが、全体として劇症化しやすいとは一概には言えません。他の選択肢は正しい情報です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "潜伏感染しないのはどれか。",
+      "choices": {
+        "a": "パルボウイルスB19",
+        "b": "サイトメガロウイルス",
+        "c": "Epstein-Barrウイルス",
+        "d": "ヒトヘルペスウイルス6",
+        "e": "水痘・帯状疱疹ウイルス"
+      },
+      "answer": "a",
+      "explanation": "パルボウイルスB19は潜伏感染を起こさず、感染後に急性症状が現れます。他の選択肢のウイルスは潜伏期を持ち、再活性化することがあります。"
     }
-]
+  ]
+  

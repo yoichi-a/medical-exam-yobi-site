@@ -1,62 +1,123 @@
 [
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "中硬膜動脈が頭蓋内に入る孔があるのはどれか。",
+      "choices": {
+        "a": "後頭骨",
+        "b": "上顎骨",
+        "c": "側頭骨",
+        "d": "蝶形骨",
+        "e": "頭頂骨"
+      },
+      "answer": "c",
+      "explanation": "中硬膜動脈（middle meningeal artery）は側頭骨にある死小孔（foramen spinosum）を通って頭蓋内に入ります。これは頭蓋骨の側面、具体的には側頭骨に位置しています。他の選択肢には中硬膜動脈が入る孔は存在しません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "外果の後面を通る筋はどれか。",
+      "choices": {
+        "a": "足底筋",
+        "b": "前頸骨筋",
+        "c": "短腓骨筋",
+        "d": "第三腓骨筋",
+        "e": "長母趾屈筋"
+      },
+      "answer": "c",
+      "explanation": "外果の後面を通る筋は短腓骨筋（peroneus brevis）です。短腓骨筋は腓骨の下部から外果に向かって走行し、足の外側に位置する筋肉です。他の選択肢は外果の後面を通る筋ではありません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "内腸骨動脈の枝であるのはどれか。",
+      "choices": {
+        "a": "上殿動脈",
+        "b": "卵巣動脈",
+        "c": "下腹壁動脈",
+        "d": "上直腸動脈",
+        "e": "正中仙骨動脈"
+      },
+      "answer": "a",
+      "explanation": "上殿動脈（superior gluteal artery）は内腸骨動脈（internal iliac artery）の主要な枝の一つです。卵巣動脈は腹腔動脈の直接の枝であり、下腹壁動脈は外腸骨動脈から分岐します。上直腸動脈は下腸間膜動脈（inferior mesenteric artery）の枝であり、正中仙骨動脈も内腸骨動脈の枝ですが、上殿動脈が最も代表的です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "関節とその形状による分類の組合せについて、正しいのはどれか。",
+      "choices": {
+        "a": "股関節 - 楕円関節",
+        "b": "距腿関節 - 蝶番関節",
+        "c": "椎間関節 - 顆状関節",
+        "d": "正中環軸関節 - 球関節",
+        "e": "橈骨手根関節 - 鞍関節"
+      },
+      "answer": "b",
+      "explanation": "距腿関節（踝関節）は蝶番関節（hinge joint）に分類されます。股関節は球関節、椎間関節は滑車関節（plane joint）、正中環軸関節（atlantoaxial joint）は回転関節（pivot joint）、橈骨手根関節は鞍関節（saddle joint）に分類されます。従って、選択肢bが正しい組み合わせです。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "静脈系について正しいのはどれか。",
+      "choices": {
+        "a": "奇静脈は右腕頭静脈に注ぐ。",
+        "b": "左腎静脈は右腎静脈より短い。",
+        "c": "上甲状腺静脈は内頸静脈に注ぐ。",
+        "d": "上直腸静脈は内腸骨静脈に注ぐ。",
+        "e": "上腸間膜静脈は下腸間膜静脈の左を上行する。"
+      },
+      "answer": "c",
+      "explanation": "上甲状腺静脈は内頸静脈（internal jugular vein）に注ぎます。奇静脈（cephalic vein）は主に上腕静脈系に注ぎますが、選択肢aは不正確です。左腎静脈は右腎静脈より長いです。上直腸静脈は内腸骨静脈に注ぎますが、これは選択肢dも正しいです。ただし、選択肢cが最も正確な一つとして選ばれます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "神経堤細胞に由来するのはどれか。",
+      "choices": {
+        "a": "副腎皮質",
+        "b": "瞳孔括約筋",
+        "c": "エナメル細胞",
+        "d": "Schwann細胞",
+        "e": "甲状腺濾胞細胞"
+      },
+      "answer": "d",
+      "explanation": "Schwann細胞は神経堤細胞（neural crest cells）から分化します。副腎皮質は中胚葉由来、瞳孔括約筋は神経堤細胞由来ではありません。エナメル細胞は歯の表面を形成する細胞であり、神経堤細胞とは関連がありません。甲状腺濾胞細胞は内胚葉由来です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "上皮組織が重層扁平上皮なのはどれか。",
+      "choices": {
+        "a": "膣",
+        "b": "結腸",
+        "c": "耳管",
+        "d": "尿管",
+        "e": "腎臓の集合管"
+      },
+      "answer": "a",
+      "explanation": "膣は重層扁平上皮（stratified squamous epithelium）で覆われています。結腸は単層柱状上皮、耳管は偽多層円柱上皮（ciliated pseudostratified columnar epithelium）、尿管は移行上皮（transitional epithelium）、腎臓の集合管は単層円柱上皮で構成されています。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "脊髄について正しいのはどれか。",
+      "choices": {
+        "a": "胸髄では側角がみられる。",
+        "b": "錐体路は後索を通過する。",
+        "c": "脊髄小脳路は前索を通過する。",
+        "d": "成人では下端は第四腰椎の高さである。",
+        "e": "脊髄中心管は上端で第三脳室と連絡している。"
+      },
+      "answer": "a",
+      "explanation": "胸髄では側角が存在します。錐体路（corticospinal tract）は前索を通過し、脊髄小脳路（corticopontocerebellar tract）は側索を通過します。成人の脊髄の下端は通常L1/L2レベルであり、第四腰椎ではありません。脊髄中心管は脳幹の一部である第四脳室と連絡していますが、第三脳室とは連絡していません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "Meckel 憩室がみられる部位はどれか。",
+      "choices": {
+        "a": "空腸",
+        "b": "回腸",
+        "c": "盲腸",
+        "d": "上行結腸",
+        "e": "横行結腸"
+      },
+      "answer": "b",
+      "explanation": "Meckel憩室は回腸（ileum）の末端近く、通常約2フィート（60センチメートル）以内に存在します。空腸、盲腸、上行結腸、横行結腸にはMeckel憩室は発生しません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "精巣を包む緻密で強靭な被膜はどれか。",
+      "choices": {
+        "a": "白膜",
+        "b": "肉様膜",
+        "c": "外精筋膜",
+        "d": "精巣鞘膜",
+        "e": "内精筋膜"
+      },
+      "answer": "a",
+      "explanation": "精巣を包む緻密で強靭な被膜は白膜（tunica albuginea）です。白膜は精巣をしっかりと保護し、その形状を維持する役割を果たしています。肉様膜（tunica vaginalis）は精巣を覆う漿膜であり、外精筋膜や内精筋膜は標準的な解剖学用語ではありません。精巣鞘膜も肉様膜と関連しますが、白膜が緻密で強靭な被膜として最も適切です。"
     }
-]
+  ]
+  

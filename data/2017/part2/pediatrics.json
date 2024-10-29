@@ -1,62 +1,122 @@
 [
-    {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+  {
+    "question": "生ワクチンはどれか。",
+    "choices": {
+      "a": "破傷風ワクチン",
+      "b": "肺炎球菌ワクチン",
+      "c": "インフルエンザワクチン",
+      "d": "ロタウイルス",
+      "e": "B型肝炎ワクチン"
     },
-    {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+    "answer": "d",
+    "explanation": "ロタウイルスワクチンは生ワクチンです。他の選択肢は不活化ワクチンです。"
+  },
+  {
+    "question": "閉鎖している部位はどれか。",
+    "choices": {
+      "a": "食道",
+      "b": "幽門",
+      "c": "十二指腸",
+      "d": "回腸",
+      "e": "S状結腸"
     },
-    {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+    "answer": "c",
+    "explanation": "ダブルバブルサインと胆汁性嘔吐から、十二指腸閉鎖が疑われます。"
+  },
+  {
+    "question": "川崎病の主要症状はどれか。",
+    "choices": {
+      "a": "眼球黄染",
+      "b": "舌の白苔",
+      "c": "不定形発疹",
+      "d": "手のこわばり",
+      "e": "腋窩リンパ節腫脹"
     },
-    {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+    "answer": "c",
+    "explanation": "川崎病の主要症状には不定形発疹が含まれます。"
+  },
+  {
+    "question": "小児において肺血流が減少するのはどれか。",
+    "choices": {
+      "a": "動脈管開存症",
+      "b": "Fallot四徴症",
+      "c": "心房中隔欠損症",
+      "d": "心室中隔欠損症",
+      "e": "房室中隔欠損症〈心内膜床欠損症〉"
     },
-    {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+    "answer": "b",
+    "explanation": "Fallot四徴症では肺動脈狭窄により肺血流が減少します。"
+  },
+  {
+    "question": "原因として最も考えられるのはどれか。",
+    "choices": {
+      "a": "大腸菌",
+      "b": "百日咳菌",
+      "c": "肺炎球菌",
+      "d": "黄色ブドウ球菌",
+      "e": "B群溶血性連鎖球菌"
     },
-    {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+    "answer": "e",
+    "explanation": "新生児の細菌性髄膜炎の主な原因菌はB群溶血性連鎖球菌です。"
+  },
+  {
+    "question": "対応として正しいのはどれか。",
+    "choices": {
+      "a": "胃洗浄をする。",
+      "b": "下剤を投与する。",
+      "c": "催吐薬を投与する。",
+      "d": "ハイムリック法を行う。",
+      "e": "時間を空けて再度エックス線撮影をする。"
     },
-    {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+    "answer": "e",
+    "explanation": "胃内のボタン電池は自然排出を待ち、経過観察として再度エックス線撮影を行います。"
+  },
+  {
+    "question": "高身長を認めるのはどれか。",
+    "choices": {
+      "a": "Down症候群",
+      "b": "Turner症候群",
+      "c": "Marfan症候群",
+      "d": "Noonan症候群",
+      "e": "PraderWilli症候群"
     },
-    {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+    "answer": "c",
+    "explanation": "Marfan症候群は高身長が特徴です。"
+  },
+  {
+    "question": "採血時に溶血を起こした場合に正しい検査値が得られない可能性が最も高いのはどれか。",
+    "choices": {
+      "a": "ALT",
+      "b": "CRP",
+      "c": "カリウム",
+      "d": "カルシウム",
+      "e": "ナトリウム"
     },
-    {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+    "answer": "c",
+    "explanation": "溶血によりカリウム値が偽高値となります。"
+  },
+  {
+    "question": "日齢3の健常新生児の血液検査で正常なのはどれか。",
+    "choices": {
+      "a": "血糖36mg/dL",
+      "b": "尿素窒素28mg/dL",
+      "c": "アルブミン2.4mg/dL",
+      "d": "クレアチニン1.6mg/dL",
+      "e": "総ビリルビン6.8mg/dL"
     },
-    {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
-    }
+    "answer": "e",
+    "explanation": "新生児では総ビリルビン値が高めですが正常範囲です。他は異常値です。"
+  },
+  {
+    "question": "学校保健安全法による小学校健康診断の検査項目に含まれないのはどれか。",
+    "choices": {
+      "a": "脊柱の異常",
+      "b": "歯の異常",
+      "c": "視力",
+      "d": "聴力",
+      "e": "座高"
+    },
+    "answer": "e",
+    "explanation": "座高は検査項目に含まれません。"
+  }
 ]
