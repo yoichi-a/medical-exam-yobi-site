@@ -1,8 +1,21 @@
-/* ベーススタイル（PC向け） */
+/* === カラー変数の定義 === */
+:root {
+    --primary-color: #00acc1;       /* ヘッダーとフッターの背景色 */
+    --secondary-color: #00796b;     /* 見出しの色 */
+    --background-color: #f0f8ff;    /* ページの背景色 */
+    --notification-bg: #e0f7fa;     /* お知らせセクションの背景色 */
+    --text-color: #333333;           /* 基本テキストの色 */
+    --link-color: #00acc1;           /* リンクの色 */
+    --link-hover-color: #00796b;     /* リンクホバー時の色 */
+    --border-color: #cccccc;         /* ボーダーの色 */
+    --focus-color: #ff9800;          /* フォーカス時の色 */
+}
+
+/* === ベーススタイル（PC向け） === */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
+    font-family: 'Noto Sans JP', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     display: flex;
@@ -18,7 +31,7 @@ main {
 }
 
 footer {
-    background-color: #00acc1;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 10px;
@@ -28,16 +41,35 @@ footer {
 }
 
 header {
-    background-color: #00acc1;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    color: var(--link-hover-color);
 }
 
 .year-selection {
@@ -68,23 +100,38 @@ nav a {
     width: 100%;
     max-width: 400px;
     padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    resize: vertical;
 }
 
 .contact-section select,
 .contact-section input[type="submit"] {
     padding: 10px;
     margin-top: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-section select:hover,
+.contact-section input[type="submit"]:hover {
+    background-color: var(--link-hover-color);
+    transform: translateY(-2px);
 }
 
 .notifications {
-    background-color: #e0f7fa;
+    background-color: var(--notification-bg);
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
 }
 
 .notifications h2 {
-    color: #00796b;
+    color: var(--secondary-color);
 }
 
 .notifications ul {
@@ -94,10 +141,14 @@ nav a {
 
 .notifications ul li {
     padding: 5px 0;
-    border-bottom: 1px solid #b2ebf2;
+    border-bottom: 1px solid var(--border-color);
 }
 
-/* === 追加: 画像のスタイル調整 === */
+.notifications ul li:last-child {
+    border-bottom: none;
+}
+
+/* === 画像のスタイル調整 === */
 #question-image,
 #answer-image {
     max-width: 100%;
@@ -105,15 +156,113 @@ nav a {
     margin-top: 10px;
 }
 
-/* モバイル対応のスタイル（幅が768px以下の画面に適用） */
+/* === 運営者からのメッセージセクションのスタイル === */
+.introduction {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.introduction h2 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.introduction p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.introduction hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 30px 0;
+}
+
+/* === リンクのホバー効果 === */
+.introduction a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.introduction a:hover,
+.introduction a:focus {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+/* === 利用規約セクションのスタイル === */
+.terms-of-use {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.terms-of-use h2 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.terms-of-use h3 {
+    color: var(--secondary-color);
+    margin-top: 15px;
+}
+
+.terms-of-use p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* === フォーカススタイルの追加 === */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px dashed var(--focus-color);
+    outline-offset: 4px;
+}
+
+/* === アニメーションの追加 === */
+button,
+input[type="submit"] {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: var(--link-hover-color);
+    transform: translateY(-2px);
+}
+
+.introduction h2,
+nav a {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* === モバイル対応のスタイル（幅が768px以下の画面に適用） === */
 @media (max-width: 768px) {
     header {
         padding: 10px;
         text-align: center;
     }
 
-    nav a {
-        display: block;
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
         margin: 10px 0;
     }
 
@@ -123,22 +272,60 @@ nav a {
     }
 
     .year-selection,
-    .contact-section {
+    .contact-section,
+    .introduction,
+    .terms-of-use {
         padding: 0 10px;
     }
 
     .subject-selection h2,
-    .year-selection h2 {
+    .year-selection h2,
+    .introduction h2,
+    .terms-of-use h2 {
         font-size: 24px;
     }
 
     .notifications,
-    .contact-section form {
+    .contact-section form,
+    .introduction,
+    .terms-of-use {
         width: 100%;
         padding: 0 10px;
     }
 
     footer {
         padding: 20px;
+    }
+
+    /* 運営者からのメッセージセクションのモバイル調整 */
+    .introduction {
+        padding: 15px;
+    }
+
+    .introduction h2 {
+        font-size: 20px;
+    }
+
+    .introduction p {
+        font-size: 14px;
+    }
+
+    .terms-of-use h2 {
+        font-size: 20px;
+    }
+
+    .terms-of-use h3 {
+        font-size: 18px;
+    }
+
+    .terms-of-use p {
+        font-size: 14px;
+    }
+
+    /* 年度選択セクションのグリッドレイアウト調整 */
+    .years-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
     }
 }
