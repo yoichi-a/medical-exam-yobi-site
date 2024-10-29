@@ -1,62 +1,123 @@
 [
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "膜攻撃複合体<MAC>構成単位と遊走性因子の両方を生じるのはどれか。",
+      "choices": {
+        "a": "C1q",
+        "b": "C2",
+        "c": "C3",
+        "d": "C4",
+        "e": "C5"
+      },
+      "answer": "c",
+      "explanation": "C3は補体カスケードの中心的な役割を果たし、C3a（遊走性因子として働く）およびC3b（オプソニンとして作用する）を生成します。これにより、膜攻撃複合体（MAC）の形成が促進されます。したがって、選択肢cのC3が正解です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "体液中と比べ主としてB細胞表面上に存在するのはどれか。",
+      "choices": {
+        "a": "IgA",
+        "b": "IgD",
+        "c": "IgE",
+        "d": "IgG",
+        "e": "IgM"
+      },
+      "answer": "b",
+      "explanation": "IgDは主に未活化のB細胞表面に存在し、B細胞受容体として機能します。他の免疫グロブリンは主に体液中に存在します。したがって、選択肢bのIgDが正解です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "ヒトCD4陽性T細胞が認識する主要組織適合抗原はどれか。",
+      "choices": {
+        "a": "HLA-A",
+        "b": "HLA-B",
+        "c": "HLA-C",
+        "d": "HLA-DR",
+        "e": "HLA-E"
+      },
+      "answer": "d",
+      "explanation": "CD4陽性T細胞はMHCクラスII分子（例：HLA-DR）によって提示される抗原を認識します。HLA-A、HLA-B、HLA-CはMHCクラスI分子であり、CD8陽性T細胞が認識します。したがって、選択肢dのHLA-DRが正解です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "抗炎症作用を示すのはどれか。",
+      "choices": {
+        "a": "IL-2",
+        "b": "IL-4",
+        "c": "IL-6",
+        "d": "IL-8",
+        "e": "IL-10"
+      },
+      "answer": "e",
+      "explanation": "IL-10は抗炎症性サイトカインとして知られ、炎症反応を抑制します。他の選択肢は主に炎症や免疫応答の促進に関与します。したがって、選択肢eのIL-10が正解です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "細菌の鞭毛蛋白を認識するToll様受容体はどれか。",
+      "choices": {
+        "a": "TLR1",
+        "b": "TCR2",
+        "c": "TLR3",
+        "d": "TLR4",
+        "e": "TLR5"
+      },
+      "answer": "e",
+      "explanation": "TLR5は細菌の鞭毛蛋白であるフラジェリン（flagellin）を認識します。他のTLRは異なるリガンドを認識します。したがって、選択肢eのTLR5が正解です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "抗体医薬の標的と対象疾患の組合わせで正しいのはどれか。",
+      "choices": {
+        "a": "C5̶̶̶‒気管支喘息",
+        "b": "CD20̶-Tリンパ腫",
+        "c": "PD-1̶‒慢性骨髄性白血病",
+        "d": "TNF-α̶-Crohn病",
+        "e": "IgE̶̶̶‒非典型溶血性尿毒症症候群"
+      },
+      "answer": "d",
+      "explanation": "TNF-α阻害薬はCrohn病の治療に有効です。他の組み合わせは誤っています。例えば、C5阻害薬は主に神経梅毒や重症感染症に用いられ、IgE阻害薬はアレルギー治療に用いられます。CD20阻害薬はB細胞性リンパ腫に用いられますが、慢性骨髄性白血病には主に他の治療法が用いられます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "補体の欠損や異常で最も顕著に感受性が増す病原体はどれか。",
+      "choices": {
+        "a": "Salmonella Typhi",
+        "b": "Candida albicans",
+        "c": "Pneumocystis jirovecii",
+        "d": "Neisseria meningitidis",
+        "e": "Mycobacterium tuberculosis"
+      },
+      "answer": "d",
+      "explanation": "補体システム、特に終末補体成分（C5-C9）の欠損はNeisseria meningitidisなどのグラム陰性球菌に対する感受性を著しく高めます。その他の病原体も補体の影響を受けますが、Neisseria meningitidisが最も顕著です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "アレルギー反応のCoombs分類(I ~IV型)で、自己免疫性溶血性貧血と同じカテゴリーに属するのはどれか。",
+      "choices": {
+        "a": "血清病",
+        "b": "Basedow病",
+        "c": "気管支喘息",
+        "d": "ループス腎炎",
+        "e": "アレルギー性接触皮膚炎"
+      },
+      "answer": "d",
+      "explanation": "自己免疫性溶血性貧血はType II（抗体依存性細胞傷害性）過敏反応に分類されます。ループス腎炎も同じくType IIに分類されることが多いです。他の選択肢は異なるタイプに分類されます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "互いに完全アロ(同種)の関係にあるA,B及びAとBの第1代雑種である(A×B)F1について皮膚を生着する組合せはどれか。[ドナー→ホスト]",
+      "choices": {
+        "a": "A→B",
+        "b": "B→A",
+        "c": "A→(A×B)F1",
+        "d": "(A×B)F1→A",
+        "e": "(A×B)F1→B"
+      },
+      "answer": "b",
+      "explanation": "移植片対宿主反応（GvHR）はドナーの免疫細胞が宿主の組織を異物と認識して攻撃する反応です。完全アロ相同性があるAとBの間では、[B→A]の移植が最もGvHRを引き起こしやすいです。その他の組み合わせでは相互作用が少ないため、GvHRのリスクが低くなります。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "自己反応性リンパ球をリンパ節に駆動する作用を持つのはどれか。",
+      "choices": {
+        "a": "タクロリムス",
+        "b": "フィンゴリモド",
+        "c": "シクロスポリン",
+        "d": "ミコフェノール酸",
+        "e": "副腎皮質ステロイド"
+      },
+      "answer": "b",
+      "explanation": "フィンゴリモド（Fingolimod）はスフィンゴシン-1-リン酸受容体を調節し、リンパ球をリンパ節内に留める作用を持ちます。これにより自己反応性リンパ球の末梢への移動が抑制され、自己免疫反応が軽減されます。他の選択肢は異なる免疫抑制メカニズムを持ちますが、直接的にリンパ球をリンパ節に駆動する作用はありません。"
     }
-]
+  ]
+  

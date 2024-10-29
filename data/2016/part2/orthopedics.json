@@ -1,62 +1,123 @@
 [
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "病状と徒手テストの組合せで正しいのはどれか。",
+      "choices": {
+        "a": "肘部管症候群——Phalenテスト",
+        "b": "アキレス腱断裂——Apleyテスト",
+        "c": "de Quervain病——Eichhoffテスト",
+        "d": "前十字靱帯損傷——McMurrayテスト",
+        "e": "先天性股関節脱臼——Lachmanテスト"
+      },
+      "answer": "c",
+      "explanation": "Eichhoffテストはde Quervain病の診断に用いられます。他の組合せは誤っています。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "上腕二頭筋の徒手筋力テストで重力に抗した肘関節の自動屈曲は可能だが、弱から中等度の徒手抵抗では屈曲できない。",
+      "choices": {
+        "a": "1(Trace)",
+        "b": "2(Poor)",
+        "c": "3(Fair)",
+        "d": "4(Good)",
+        "e": "5(Normal)"
+      },
+      "answer": "c",
+      "explanation": "徒手筋力テスト（MMT）のグレード3（Fair）は、重力に抗して動かせるが、抵抗を加えると動かせない状態です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "高齢女性に最も多い骨粗鬆症性骨折部分はどれか。",
+      "choices": {
+        "a": "脊椎椎体",
+        "b": "尺骨近位部",
+        "c": "上腕骨骨幹部",
+        "d": "大腿骨遠位部",
+        "e": "大腿骨骨幹部"
+      },
+      "answer": "a",
+      "explanation": "骨粗鬆症性骨折で最も多いのは脊椎椎体の圧迫骨折です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "先天性股関節脱臼の治療に用いられるのはどれか。",
+      "choices": {
+        "a": "足底挿板",
+        "b": "長下肢装具",
+        "c": "Denis-Browne副子",
+        "d": "ミルウォーキー型装具",
+        "e": "リーメンビューゲル装具"
+      },
+      "answer": "e",
+      "explanation": "リーメンビューゲル装具は先天性股関節脱臼の治療に使用されます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "腰椎椎間板ヘルニアについて正しいのはどれか。",
+      "choices": {
+        "a": "高齢女性に多い。",
+        "b": "診断にはMRIが有用である。",
+        "c": "L2-3椎間板高位が最も多い。",
+        "d": "ヘルニア腫瘤の自然退縮はまれである。",
+        "e": "SLR<straight Leg Raising>テストは陰性が多い。"
+      },
+      "answer": "b",
+      "explanation": "腰椎椎間板ヘルニアの診断にはMRIが有用です。他の選択肢は誤りです。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "頸椎症性神経根症で陽性となるのはどれか。",
+      "choices": {
+        "a": "Adsonテスト",
+        "b": "Morleyテスト",
+        "c": "Jacksonテスト",
+        "d": "Patrickテスト",
+        "e": "FNS<femoral nerve stretch>テスト"
+      },
+      "answer": "c",
+      "explanation": "Jacksonテストは頸椎神経根症の検査で陽性となります。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "小児の脊椎疾患について正しいのはどれか。",
+      "choices": {
+        "a": "進行性の先天性側弯症はまれである。",
+        "b": "斜頸は生後1週以内に手術を行う。",
+        "c": "開放性脊髄髄膜瘤は緊急手術の適応である。",
+        "d": "潜在性二分脊椎は神経麻痺を伴うことが多い。",
+        "e": "腰椎分離症は保存加療による癒合は期待できない。"
+      },
+      "answer": "c",
+      "explanation": "開放性脊髄髄膜瘤は感染予防のため緊急手術が必要です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "外傷性脱臼について正しいのはどれか。",
+      "choices": {
+        "a": "肩関節は前方脱臼が多い。",
+        "b": "肘関節は前方脱臼が多い。",
+        "c": "Galeazzi骨折では橈骨頭脱臼を伴う。",
+        "d": "Monteggia骨折では尺骨頭脱臼を伴う。",
+        "e": "肩鎖関節脱臼は腕神経叢麻痺を併発しやすい。"
+      },
+      "answer": "a",
+      "explanation": "肩関節の脱臼では前方脱臼が最も多く見られます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "最も悪性化しやすいのはどれか。",
+      "choices": {
+        "a": "類骨骨腫",
+        "b": "軟骨芽細胞腫",
+        "c": "非骨化性線維腫",
+        "d": "多発性内軟骨腫",
+        "e": "滑膜骨軟骨腫症"
+      },
+      "answer": "d",
+      "explanation": "多発性内軟骨腫（エンコンドローマ）は悪性化しやすいことで知られています。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "転移性骨腫瘍について正しいのはどれか。",
+      "choices": {
+        "a": "脊椎椎体に多い。",
+        "b": "多発性転移は少ない。",
+        "c": "原発巣としては胃癌が最も多い。",
+        "d": "MRIではT1、T2強調像ともに高信号を呈する。",
+        "e": "エックス線写真で造骨性変化を呈するものが多い。"
+      },
+      "answer": "a",
+      "explanation": "転移性骨腫瘍は脊椎椎体に好発します。他の選択肢は誤りです。"
     }
-]
+  ]
+  
