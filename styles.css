@@ -4,11 +4,11 @@
     --secondary-color: #00796b;     /* 見出しの色 */
     --background-color: #f0f8ff;    /* ページの背景色 */
     --notification-bg: #e0f7fa;     /* お知らせセクションの背景色 */
-    --text-color: #333333;           /* 基本テキストの色 */
-    --link-color: #00acc1;           /* リンクの色 */
-    --link-hover-color: #00796b;     /* リンクホバー時の色 */
-    --border-color: #cccccc;         /* ボーダーの色 */
-    --focus-color: #ff9800;          /* フォーカス時の色 */
+    --text-color: #333333;          /* 基本テキストの色 */
+    --link-color: #00acc1;          /* リンクの色 */
+    --link-hover-color: #00796b;    /* リンクホバー時の色 */
+    --border-color: #cccccc;        /* ボーダーの色 */
+    --focus-color: #ff9800;         /* フォーカス時の色 */
 }
 
 /* === ベーススタイル（PC向け） === */
@@ -23,28 +23,13 @@ body {
     min-height: 100vh;
 }
 
-main {
-    flex: 1;
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-}
-
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    position: relative;
-    margin-top: auto;
-}
-
 header {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 20px;
+    width: 100%; /* 追加 */
+    box-sizing: border-box; /* 追加 */
 }
 
 nav ul {
@@ -52,6 +37,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap; /* 追加 */
     justify-content: center;
 }
 
@@ -61,7 +47,6 @@ nav ul li {
 
 nav a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
@@ -72,13 +57,39 @@ nav a:focus {
     color: var(--link-hover-color);
 }
 
+main {
+    flex: 1;
+    width: 100%; /* 修正: 90%から100%へ */
+    max-width: 1000px;
+    margin: 20px auto;
+    box-sizing: border-box; /* 追加 */
+    padding: 0 10px; /* 追加 */
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+    box-sizing: border-box; /* 追加 */
+}
+
+.year-selection,
+.contact-section,
+.introduction,
+.terms-of-use {
+    max-width: 1000px; /* 追加 */
+    margin: 0 auto; /* 追加 */
+    padding: 0 20px; /* 追加 */
+    box-sizing: border-box; /* 追加 */
+}
+
 .year-selection {
     text-align: center;
     margin-top: 50px;
-}
-
-.year {
-    margin-bottom: 20px;
 }
 
 .contact-section {
@@ -89,6 +100,8 @@ nav a:focus {
 .contact-section form {
     display: inline-block;
     text-align: left;
+    width: 100%; /* 追加 */
+    max-width: 500px; /* 追加 */
 }
 
 .contact-section label {
@@ -98,11 +111,11 @@ nav a:focus {
 
 .contact-section textarea {
     width: 100%;
-    max-width: 400px;
     padding: 10px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
     resize: vertical;
+    box-sizing: border-box; /* 追加 */
 }
 
 .contact-section select,
@@ -128,6 +141,7 @@ nav a:focus {
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
+    box-sizing: border-box; /* 追加 */
 }
 
 .notifications h2 {
@@ -160,9 +174,9 @@ nav a:focus {
 .introduction {
     background-color: #ffffff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
+    border-radius: 10px;
+    box-sizing: border-box; /* 追加 */
 }
 
 .introduction h2 {
@@ -201,10 +215,10 @@ nav a:focus {
 .terms-of-use {
     background-color: #ffffff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
     margin-bottom: 40px;
+    border-radius: 10px;
+    box-sizing: border-box; /* 追加 */
 }
 
 .terms-of-use h2 {
@@ -260,6 +274,7 @@ nav a {
 
     nav ul {
         flex-direction: column;
+        align-items: center; /* 追加 */
     }
 
     nav ul li {
@@ -267,7 +282,6 @@ nav a {
     }
 
     main {
-        width: 100%;
         padding: 0 10px;
     }
 
@@ -327,5 +341,24 @@ nav a {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 20px;
+    }
+
+    /* ナビゲーションボタンの調整 */
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation button {
+        width: 100%;
+        max-width: 300px;
+        margin: 5px 0;
+    }
+
+    /* ボタンのテキストサイズ調整 */
+    button,
+    input[type="submit"] {
+        font-size: 16px;
     }
 }
