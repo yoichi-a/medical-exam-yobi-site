@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // HTML要素の参照
     const questionText = document.getElementById("question-text");
+    const choicesList = document.getElementById("choices-list");
     const questionImage = document.getElementById("question-image");
     const answerText = document.getElementById("answer-text");
     const answerImage = document.getElementById("answer-image");
@@ -46,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const nextBtn = document.getElementById("next-btn");
 
     // 要素の存在確認
-    if (!subjectTitle || !questionText || !questionImage || !answerText || !answerImage || !answerBtn || !prevBtn || !nextBtn) {
+    if (!subjectTitle || !questionText || !choicesList || !questionImage || !answerText || !answerImage || !answerBtn || !prevBtn || !nextBtn) {
         alert('必要な要素が見つかりません。ページの構造を確認してください。');
         return;
     }
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 問題データを読み込む関数
     async function loadQuestions() {
         try {
-            const response = await fetch(`data/${year}/part${part}/${subject}.json`);
+            const response = await fetch(`/medical-exam-yobi-site/data/${year}/part${part}/${subject}.json`); // 絶対パスに修正
             if (!response.ok) {
                 throw new Error(`サーバーエラー: ${response.statusText}`);
             }
@@ -75,9 +76,19 @@ document.addEventListener("DOMContentLoaded", function() {
             const currentQuestion = questions[currentQuestionIndex];
             questionText.textContent = currentQuestion.question || '問題文がありません。';
 
+            // 選択肢の表示
+            choicesList.innerHTML = '';
+            if (currentQuestion.choices) {
+                for (const [key, value] of Object.entries(currentQuestion.choices)) {
+                    const li = document.createElement('li');
+                    li.textContent = `${key}: ${value}`;
+                    choicesList.appendChild(li);
+                }
+            }
+
             // 問題の画像を表示
             if (currentQuestion.image) {
-                questionImage.src = currentQuestion.image;
+                questionImage.src = `/medical-exam-yobi-site/images/${currentQuestion.image}.png`; // 絶対パスに修正
                 questionImage.style.display = 'block';
             } else {
                 questionImage.style.display = 'none';
@@ -91,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // ボタンの状態を更新
             prevBtn.disabled = currentQuestionIndex === 0;
             nextBtn.disabled = currentQuestionIndex === questions.length - 1;
+            answerBtn.disabled = false; // 解答ボタンを有効化
         } else {
             questionText.textContent = '問題が見つかりません。';
             answerBtn.disabled = true;
@@ -103,15 +115,23 @@ document.addEventListener("DOMContentLoaded", function() {
     answerBtn.addEventListener("click", function() {
         const currentQuestion = questions[currentQuestionIndex];
         answerText.style.display = "block";
-        answerText.textContent = currentQuestion.answer || '解答がありません。';
+        if (Array.isArray(currentQuestion.answer)) {
+            const correctAnswers = currentQuestion.answer.join(', ');
+            answerText.innerHTML = `正解：${correctAnswers}<br>${currentQuestion.explanation || '解説がありません。'}`;
+        } else {
+            answerText.innerHTML = `正解：${currentQuestion.answer}<br>${currentQuestion.explanation || '解説がありません。'}`;
+        }
 
         // 解答の画像を表示
         if (currentQuestion.answerImage) {
-            answerImage.src = currentQuestion.answerImage;
+            answerImage.src = `/medical-exam-yobi-site/images/${currentQuestion.answerImage}.png`; // 絶対パスに修正
             answerImage.style.display = 'block';
         } else {
             answerImage.style.display = 'none';
         }
+
+        // 解答ボタンを無効化
+        answerBtn.disabled = true;
     });
 
     // 次の問題に移動
@@ -133,17 +153,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // 戻るリンク設定
     const backButton = document.getElementById("back-btn");
     if (backButton) {
-        if (year && (part === '1')) {
+        if (year && part === '1') {
             backButton.onclick = function() {
-                window.location.href = `part1_${year}.html`;
+                window.location.href = `/medical-exam-yobi-site/part1_${year}.html`; // 絶対パスに修正
             };
-        } else if (year && (part === '2')) {
+        } else if (year && part === '2') {
             backButton.onclick = function() {
-                window.location.href = `part2_${year}.html`;
+                window.location.href = `/medical-exam-yobi-site/part2_${year}.html`; // 絶対パスに修正
             };
         } else {
             backButton.onclick = function() {
-                window.location.href = 'index.html';
+                window.location.href = '/medical-exam-yobi-site/index.html'; // 絶対パスに修正
             };
         }
     }
