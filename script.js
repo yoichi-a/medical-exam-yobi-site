@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // URLからパラメータを取得
     const urlParams = new URLSearchParams(window.location.search);
     const year = urlParams.get('year');
-    const part = urlParams.get('part');
     const subject = urlParams.get('subject');
 
     // 科目名を日本語に変換するマッピング
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 科目名を日本語で表示
     const subjectTitle = document.getElementById('subject-title');
     const japaneseSubjectName = subjectNames[subject] || '未知の科目';
-    subjectTitle.textContent = `科目: ${japaneseSubjectName}`;
+    subjectTitle.textContent = `${year}年の${japaneseSubjectName}`;
 
     // HTML要素の参照
     const questionText = document.getElementById("question-text");
@@ -61,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 問題データを読み込む関数
     async function loadQuestions() {
         try {
-            const response = await fetch(`${repositoryName}/data/${year}/part${part}/${subject}.json`);
+            const response = await fetch(`${repositoryName}/data/${year}/${subject}.json`);
             if (!response.ok) {
                 throw new Error(`サーバーエラー: ${response.statusText}`);
             }
@@ -156,13 +155,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // 戻るリンク設定
     const backButton = document.getElementById("back-btn");
     if (backButton) {
-        if (year && part === '1') {
+        if (year) {
             backButton.onclick = function() {
-                window.location.href = `${repositoryName}/part1_${year}.html`;
-            };
-        } else if (year && part === '2') {
-            backButton.onclick = function() {
-                window.location.href = `${repositoryName}/part2_${year}.html`;
+                window.location.href = `${repositoryName}/${year}.html`;
             };
         } else {
             backButton.onclick = function() {
