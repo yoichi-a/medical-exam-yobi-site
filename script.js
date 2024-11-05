@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // 問題の画像を表示
             if (currentQuestion.image) {
-                questionImage.src = `/medical-exam-yobi-site/images/${currentQuestion.image}.png`; // 絶対パスに修正
+                questionImage.src = `https://yoichi-a.github.io/medical-exam-yobi-site/images/${currentQuestion.image}.png`; // 絶対パスに修正
                 questionImage.style.display = 'block';
             } else {
                 questionImage.style.display = 'none';
