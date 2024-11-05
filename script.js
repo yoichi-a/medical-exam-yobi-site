@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // リポジトリ名を設定（あなたのリポジトリ名に合わせて変更してください）
+    const repositoryName = '/medical-exam-yobi-site';
+
     // URLからパラメータを取得
     const urlParams = new URLSearchParams(window.location.search);
     const year = urlParams.get('year');
@@ -58,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 問題データを読み込む関数
     async function loadQuestions() {
         try {
-            const response = await fetch(`/medical-exam-yobi-site/data/${year}/part${part}/${subject}.json`); // 絶対パスに修正
+            const response = await fetch(`${repositoryName}/data/${year}/part${part}/${subject}.json`);
             if (!response.ok) {
                 throw new Error(`サーバーエラー: ${response.statusText}`);
             }
@@ -88,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // 問題の画像を表示
             if (currentQuestion.image) {
-                questionImage.src = `https://yoichi-a.github.io/medical-exam-yobi-site/images/${currentQuestion.image}.png`; // 絶対パスに修正
+                questionImage.src = `${repositoryName}/images/${currentQuestion.image}.png`;
                 questionImage.style.display = 'block';
             } else {
                 questionImage.style.display = 'none';
@@ -124,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // 解答の画像を表示
         if (currentQuestion.answerImage) {
-            answerImage.src = `/medical-exam-yobi-site/images/${currentQuestion.answerImage}.png`; // 絶対パスに修正
+            answerImage.src = `${repositoryName}/images/${currentQuestion.answerImage}.png`;
             answerImage.style.display = 'block';
         } else {
             answerImage.style.display = 'none';
@@ -155,15 +158,15 @@ document.addEventListener("DOMContentLoaded", function() {
     if (backButton) {
         if (year && part === '1') {
             backButton.onclick = function() {
-                window.location.href = `/medical-exam-yobi-site/part1_${year}.html`; // 絶対パスに修正
+                window.location.href = `${repositoryName}/part1_${year}.html`;
             };
         } else if (year && part === '2') {
             backButton.onclick = function() {
-                window.location.href = `/medical-exam-yobi-site/part2_${year}.html`; // 絶対パスに修正
+                window.location.href = `${repositoryName}/part2_${year}.html`;
             };
         } else {
             backButton.onclick = function() {
-                window.location.href = '/medical-exam-yobi-site/index.html'; // 絶対パスに修正
+                window.location.href = `${repositoryName}/index.html`;
             };
         }
     }
