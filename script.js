@@ -34,10 +34,12 @@ document.addEventListener("DOMContentLoaded", function() {
         // 必要に応じて他の科目を追加
     };
 
-    // 科目名を日本語で表示
-    const subjectTitle = document.getElementById('subject-title');
+    // 科目名を日本語で取得
     const japaneseSubjectName = subjectNames[subject] || '未知の科目';
-    subjectTitle.textContent = `科目: ${japaneseSubjectName}`;
+
+    // <h1>のテキストを更新
+    const problemTitle = document.getElementById('problem-title');
+    problemTitle.textContent = `${year}年 ${japaneseSubjectName}`;
 
     // HTML要素の参照
     const questionText = document.getElementById("question-text");
@@ -50,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const nextBtn = document.getElementById("next-btn");
 
     // 要素の存在確認
-    if (!subjectTitle || !questionText || !choicesList || !questionImage || !answerText || !answerImage || !answerBtn || !prevBtn || !nextBtn) {
+    if (!problemTitle || !questionText || !choicesList || !questionImage || !answerText || !answerImage || !answerBtn || !prevBtn || !nextBtn) {
         alert('必要な要素が見つかりません。ページの構造を確認してください。');
         return;
     }
