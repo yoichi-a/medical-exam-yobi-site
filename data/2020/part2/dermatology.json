@@ -1,62 +1,123 @@
 [
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "Merkel細胞の働きについて正しいものはどれか。",
+      "choices": {
+        "a": "汗を分泌する。",
+        "b": "コラーゲンを産生する。",
+        "c": "抗原提示する。",
+        "d": "触覚を司る。",
+        "e": "メラニンを産生する。"
+      },
+      "answer": "d",
+      "explanation": "Merkel細胞は皮膚の触覚（圧覚）を感知する感覚細胞で、触覚を司ります。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "Darier徴候を呈するのはどれか。",
+      "choices": {
+        "a": "色素性蕁麻疹",
+        "b": "尋常性乾癬",
+        "c": "尋常性天疱瘡",
+        "d": "中毒性表皮壊死症",
+        "e": "扁平苔癬"
+      },
+      "answer": "a",
+      "explanation": "Darier徴候は色素性蕁麻疹（肥満細胞症）で陽性となります。皮疹部を擦過すると膨疹が生じます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "凍結療法を行うのはどれか。",
+      "choices": {
+        "a": "尋常性乾癬",
+        "b": "アトピー性皮膚炎",
+        "c": "菌状息肉症",
+        "d": "ウイルス性疣贅",
+        "e": "尋常性白斑"
+      },
+      "answer": "d",
+      "explanation": "ウイルス性疣贅（いぼ）は凍結療法（液体窒素）による治療が有効です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "抗PD-1抗体薬が適用されるのはどれか。",
+      "choices": {
+        "a": "悪性黒色腫",
+        "b": "アトピー性皮膚炎",
+        "c": "尋常性乾癬",
+        "d": "慢性蕁麻疹",
+        "e": "Merkel細胞癌"
+      },
+      "answer": ["a", "e"],
+      "explanation": "抗PD-1抗体薬は悪性黒色腫やMerkel細胞癌の治療に用いられます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "疥癬の原因はどれか。",
+      "choices": {
+        "a": "カンジダ",
+        "b": "ツツガムシ",
+        "c": "白癬菌",
+        "d": "ヒゼンダニ",
+        "e": "マダニ"
+      },
+      "answer": "d",
+      "explanation": "疥癬はヒゼンダニが皮膚に寄生することで起こります。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "食物依存性運動誘発アナフィラキシーのアレルゲンのうち我が国で最も頻度が高いのはどれか。",
+      "choices": {
+        "a": "甲殻類",
+        "b": "小麦",
+        "c": "果物",
+        "d": "ソバ",
+        "e": "大豆"
+      },
+      "answer": "b",
+      "explanation": "日本では小麦が最も多い原因食品です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "掌蹠膿疱症性骨関節炎が発症する関節で最も頻度が高いのはどれか。",
+      "choices": {
+        "a": "肩関節",
+        "b": "胸鎖関節",
+        "c": "肘関節",
+        "d": "手関節",
+        "e": "股関節"
+      },
+      "answer": "b",
+      "explanation": "掌蹠膿疱症性骨関節炎は胸鎖関節に好発します。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "Pautrier微小膿瘍をきたす疾患はどれか。",
+      "choices": {
+        "a": "黄色肉芽腫",
+        "b": "菌状息肉症",
+        "c": "膿疱性乾癬",
+        "d": "Bowen病",
+        "e": "Darier病"
+      },
+      "answer": "b",
+      "explanation": "菌状息肉症はPautrier微小膿瘍を特徴とする皮膚T細胞リンパ腫です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "17歳の女性。発熱と皮疹を主訴に来院した。市販の感冒薬を服用開始した3日後に、39°C台の高熱と体表に紅斑、びらん及び水疱が生じた。さらに、眼球結膜と口腔粘膜にもびらんが生じたため来院した。現時点で最も考えられるのはどれか。",
+      "choices": {
+        "a": "急性汎発性発疹性膿疱症",
+        "b": "水疱性類天疱瘡",
+        "c": "ブドウ球菌性熱傷様皮膚症候群",
+        "d": "薬剤性過敏症症候群",
+        "e": "Stevens-Johnson症候群"
+      },
+      "answer": "e",
+      "explanation": "薬剤服用後に高熱と皮膚・粘膜のびらんを呈しているため、Stevens-Johnson症候群が疑われます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "顔面の多発血管線維腫、精神遅滞、てんかんを3主徴とし、乳児期に葉状白斑を認める疾患はどれか。",
+      "choices": {
+        "a": "神経線維腫症1型",
+        "b": "神経線維腫症2型",
+        "c": "結節性硬化症",
+        "d": "Peutz-Jeghers症候群",
+        "e": "色素失調症"
+      },
+      "answer": "c",
+      "explanation": "結節性硬化症は顔面血管線維腫、精神遅滞、てんかんの三主徴を持ち、葉状白斑が特徴的です。"
     }
-]
+  ]
+  

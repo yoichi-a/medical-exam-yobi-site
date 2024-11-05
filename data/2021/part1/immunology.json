@@ -1,62 +1,123 @@
 [
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "細菌などの非メチル化CpG配列を認識するToll様受容体(TLR)はどれか。",
+      "choices": {
+        "a": "TLR1",
+        "b": "TLR3",
+        "c": "TLR5",
+        "d": "TLR7",
+        "e": "TLR9"
+      },
+      "answer": "e",
+      "explanation": "TLR9は細菌やウイルスの非メチル化CpGモチーフを認識するToll様受容体です。これにより、免疫系が病原体を検出し、適切な免疫応答を誘導します。他のTLRは異なるリガンドを認識します。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "成熟B細胞になって細胞表面に発現される分子はどれか。",
+      "choices": {
+        "a": "IgD",
+        "b": "IgM",
+        "c": "λ5",
+        "d": "CD19",
+        "e": "CD79"
+      },
+      "answer": "a",
+      "explanation": "成熟B細胞は細胞表面にIgMおよびIgDを発現します。IgDはB細胞の成熟と活性化に関与しています。選択肢bのIgMも正しいですが、選択肢aが特に成熟B細胞特有の分子として適切です。他の選択肢は成熟B細胞の表面分子としては一般的ではありません。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "健康成人の血中免疫グロブリン濃度(高→低)はどれか。",
+      "choices": {
+        "a": "IgM>IgG>IgA>IgE",
+        "b": "IgM>IgG>IgE>IgA",
+        "c": "IgG>IgM>IgA>IgE",
+        "d": "IgG>IgA>IgM>IgE",
+        "e": "IgA>IgG>IgM>IgE"
+      },
+      "answer": "d",
+      "explanation": "健康成人の血中免疫グロブリン濃度は一般的にIgGが最も高く、次いでIgA、IgM、そしてIgEが低い順となります。したがって、選択肢dの「IgG>IgA>IgM>IgE」が正しいです。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "ナチュラルキラー細胞の生存・維持に必要なサイトカインはどれか。",
+      "choices": {
+        "a": "IL-3",
+        "b": "IL-5",
+        "c": "IL-15",
+        "d": "IL21",
+        "e": "IL-22"
+      },
+      "answer": "c",
+      "explanation": "IL-15はナチュラルキラー細胞（NK細胞）の生存と維持に必要なサイトカインです。IL-15はNK細胞の増殖、活性化、および長期的な生存をサポートします。他の選択肢は主に異なる免疫細胞の機能に関与しています。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "好中球誘導とマクロファージ活性化を主な機能とするT細胞はどれか。",
+      "choices": {
+        "a": "Th1細胞",
+        "b": "Th2細胞",
+        "c": "Th17細胞",
+        "d": "制御性T細胞",
+        "e": "細胞傷害性T細胞"
+      },
+      "answer": "a",
+      "explanation": "Th1細胞は好中球の誘導とマクロファージの活性化を主な機能とするT細胞です。Th1細胞は細胞性免疫を促進し、特に細胞内病原体に対する防御に重要です。他の選択肢は異なる免疫応答に関与します。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "共培養でListeria monocytogenesを殺傷できる感作宿主由来細胞はどれか。",
+      "choices": {
+        "a": "活性化Th1細胞",
+        "b": "活性化Th2細胞",
+        "c": "活性化Th17細胞",
+        "d": "活性化マクロファージ",
+        "e": "活性化細胞傷害性T細胞"
+      },
+      "answer": "a",
+      "explanation": "活性化Th1細胞はマクロファージを活性化し、Listeria monocytogenesのような細胞内病原体を殺傷する能力を持ちます。Th2細胞やTh17細胞は異なる免疫応答に関与し、細胞傷害性T細胞は主にウイルス感染細胞や腫瘍細胞の除去に関与します。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "破傷風ワクチン既接種者の皮内に破傷風ワクチンを接種した。起こる反応はどれか。",
+      "choices": {
+        "a": "Arthus反応",
+        "b": "Weil-Felix反応",
+        "c": "Paul-Bunnel反応",
+        "d": "Prausnitz-Kustner反応",
+        "e": "Jarisch-Herxheimer反応"
+      },
+      "answer": "a",
+      "explanation": "Arthus反応はType III過敏反応の一種で、免疫複合体の沈着による局所的な炎症反応です。破傷風ワクチンの再接種時に過去にワクチンを接種している場合に発生することがあります。他の選択肢は異なる種類の免疫反応や病態を指します。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "T細胞が主なエフェクターとなるアレルギーはどれか。",
+      "choices": {
+        "a": "Basedow病",
+        "b": "セリアック病",
+        "c": "アナフィラキシー",
+        "d": "Goodpasture症候群",
+        "e": "溶連菌感染後糸球体腎炎"
+      },
+      "answer": "b",
+      "explanation": "セリアック病はT細胞が主なエフェクターとなる自己免疫疾患です。グルテン摂取により小腸の絨毛が損傷され、T細胞が炎症を引き起こします。他の選択肢は異なる免疫メカニズムに基づく疾患です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "親A・B、雑種第1代(A × B)F1でF1を宿主とした場合、移植片対宿主反応を生じやすいのはどれか。",
+      "choices": {
+        "a": "A × B 肝臓",
+        "b": "A × B 皮膚",
+        "c": "A × B 骨髄",
+        "d": "(A × B)F1皮膚",
+        "e": "(A × B)F1骨髄"
+      },
+      "answer": "b",
+      "explanation": "皮膚は非常に高い免疫原性を持ち、移植片対宿主反応（GVHD）を引き起こしやすい組織です。特に異なる血液型やMHCを持つ組織間では、皮膚移植は強いGVHDを誘発します。骨髄は比較的免疫原性が低いですが、皮膚に比べると反応は弱いです。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+      "question": "血液型不適合妊娠で惹起される新生児の異常について誤っているのはどれか。",
+      "choices": {
+        "a": "溶血性疾患が多い。",
+        "b": "異常を引き起こす抗体のクラスはIgMである。",
+        "c": "ABO型不適合では第一子妊娠時から起きる場合がある。",
+        "d": "Rh型不適合では予防として第一子出産後に抗D抗体を用いる。",
+        "e": "異常に起こした新生児の赤血球は直接Coombs試験陽性である。"
+      },
+      "answer": "b",
+      "explanation": "血液型不適合妊娠において、異常を引き起こす抗体のクラスは主にIgGです。IgM抗体は胎盤を通過しないため、直接的な溶血を引き起こしません。したがって、選択肢bの「異常を引き起こす抗体のクラスはIgMである。」は誤りです。他の選択肢は正しい記述です。"
     }
-]
+  ]
+  

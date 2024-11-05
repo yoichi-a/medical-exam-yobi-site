@@ -1,62 +1,122 @@
 [
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+        "question": "1型アレルギー反応を引き起こす免疫グロブリンのアイソタイプはどれか。",
+        "choices": {
+            "a": "IgA",
+            "b": "IgD",
+            "c": "IgE",
+            "d": "IgG",
+            "e": "IgM"
+        },
+        "answer": "c",
+        "explanation": "1型アレルギー反応は主にIgE抗体によって媒介されます。IgEはアレルゲンに結合し、肥満細胞や好塩基球を活性化してヒスタミンなどのメディエーターを放出し、アレルギー症状を引き起こします。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+        "question": "自然免疫と獲得免疫の橋渡しを行う細胞はどれか。",
+        "choices": {
+            "a": "B細胞",
+            "b": "T細胞",
+            "c": "樹状細胞",
+            "d": "肥満細胞",
+            "e": "マクロファージ"
+        },
+        "answer": "c",
+        "explanation": "樹状細胞は抗原提示細胞として機能し、自然免疫（Innate immunity）と獲得免疫（Adaptive immunity）を橋渡しします。樹状細胞は抗原を取り込み、処理してT細胞に提示することで、獲得免疫の活性化を促進します。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+        "question": "エンドソーム内の核酸を認識するToll様受容体(TLR)はどれか。",
+        "choices": {
+            "a": "TLR1",
+            "b": "TLR2",
+            "c": "TLR3",
+            "d": "TLR4",
+            "e": "TLR5"
+        },
+        "answer": "c",
+        "explanation": "TLR3は二本鎖RNAを認識するToll様受容体であり、主にウイルス感染に対する免疫応答に関与します。他のTLRは異なるパターン認識分子を認識します。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+        "question": "胸腺で初期分化する細胞はどれか。",
+        "choices": {
+            "a": "B細胞",
+            "b": "T細胞",
+            "c": "NK細胞",
+            "d": "t状細胞",
+            "e": "マクロファージ"
+        },
+        "answer": "b",
+        "explanation": "T細胞は胸腺で初期分化を経て成熟します。胸腺はT細胞の選別と教育の場であり、自己反応性のT細胞を除去する役割も担います。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+        "question": "真菌感染時に好中球を動員するヘルパーT細胞の亜集団はどれか。",
+        "choices": {
+            "a": "Th1",
+            "b": "Th2",
+            "c": "Th17",
+            "d": "Tfh",
+            "e": "Treg"
+        },
+        "answer": "c",
+        "explanation": "Th17細胞は真菌感染に対する防御に重要な役割を果たし、好中球の動員を促進します。Th1細胞も真菌に対する免疫応答に関与しますが、Th17が特に好中球の動員に関連しています。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+        "question": "T細胞の増殖を促進するサイトカインはどれか。",
+        "choices": {
+            "a": "IL-1",
+            "b": "IL-2",
+            "c": "IL-4",
+            "d": "IL-10",
+            "e": "IL-15"
+        },
+        "answer": "b",
+        "explanation": "IL-2はT細胞の増殖を促進する主要なサイトカインであり、T細胞の自己増殖と活性化に不可欠です。他のサイトカインは異なる機能を持ちます。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+        "question": "免疫チェックポイント阻害薬の標的となる分子はどれか。",
+        "choices": {
+            "a": "CD19",
+            "b": "CD20",
+            "c": "CTLA-4",
+            "d": "HER2",
+            "e": "VEGF"
+        },
+        "answer": "c",
+        "explanation": "CTLA-4は免疫チェックポイント分子であり、免疫チェックポイント阻害薬はCTLA-4を標的としてT細胞の活性化を促進し、腫瘍細胞に対する免疫応答を強化します。他の分子は異なる治療標的です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+        "question": "抗体がマクロファージを活性化させる時に介する受容体はどれか。",
+        "choices": {
+            "a": "Fc受容体",
+            "b": "補体受容体",
+            "c": "Toll様受容体",
+            "d": "マンノース受容体",
+            "e": "C型レクチン受容体"
+        },
+        "answer": "a",
+        "explanation": "Fc受容体は抗体のFc領域に結合し、抗体で標識された病原体を認識・取り込み、マクロファージを活性化させます。これにより、マクロファージは病原体を効果的に除去します。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+        "question": "二卵性双生児の子供が同一のHLA分子を持つ確率はどれか。",
+        "choices": {
+            "a": "75%",
+            "b": "50%",
+            "c": "25%",
+            "d": "10%",
+            "e": "<1%"
+        },
+        "answer": "c",
+        "explanation": "二卵性双生児は遺伝的に約50%の遺伝子を共有します。HLA遺伝子は多型性が高く、同一のHLA型を持つ確率は約25%です。"
     },
     {
-        "question": "",
-        "image": "",
-        "answer": "",
-        "answerImage": ""
+        "question": "CD40リガンドの遺伝的欠損により生じるB細胞に関する免疫異常はどれか。",
+        "choices": {
+            "a": "血中IgE濃度が上昇する。",
+            "b": "血中IgG濃度が上昇する。",
+            "c": "血中IgG濃度が減少する。",
+            "d": "血中IgM濃度が減少する。",
+            "e": "高親和性IgMが産生される。"
+        },
+        "answer": "c",
+        "explanation": "CD40リガンドの遺伝的欠損はHyper-IgM症候群を引き起こし、B細胞がクラススイッチを行えず、IgG、IgA、IgEの産生が減少します。したがって、血中IgG濃度が減少する（c）が正しいです。"
     }
 ]
