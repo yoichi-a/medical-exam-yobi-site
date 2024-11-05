@@ -1,0 +1,255 @@
+/* === 全要素に box-sizing: border-box; を適用 === */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* === カラー変数の定義 === */
+:root {
+    --primary-color: #00acc1;       /* ヘッダーとフッターの背景色 */
+    --secondary-color: #00796b;     /* 見出しの色 */
+    --background-color: #f0f8ff;    /* ページの背景色 */
+    --notification-bg: #e0f7fa;     /* お知らせセクションの背景色 */
+    --text-color: #333333;          /* 基本テキストの色 */
+    --link-color: #00acc1;          /* リンクの色 */
+    --link-hover-color: #00796b;    /* リンクホバー時の色 */
+    --border-color: #cccccc;        /* ボーダーの色 */
+    --focus-color: #ff9800;         /* フォーカス時の色 */
+}
+
+/* === ベーススタイル === */
+body {
+    font-family: 'Noto Sans JP', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* 横スクロールを防ぐ */
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* アイテムが画面幅を超える場合に折り返す */
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: flex; /* アイコンとテキストを横並びに */
+    align-items: center; /* 垂直方向に中央揃え */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav a span {
+    margin-right: 5px;
+    font-size: 1em;
+    vertical-align: middle;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+
+/* === 年度選択セクションのスタイル === */
+.year-selection {
+    text-align: center;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.year-selection h2 {
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.years-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.year {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.year h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.year a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.year a:hover,
+.year a:focus {
+    background-color: var(--link-hover-color);
+    transform: translateY(-2px);
+}
+
+/* === 利用規約セクションのスタイル === */
+.terms-of-use {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.terms-of-use h2 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.terms-of-use h3 {
+    color: var(--secondary-color);
+    margin-top: 15px;
+}
+
+.terms-of-use p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* === フォーカススタイルの追加 === */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px dashed var(--focus-color);
+    outline-offset: 4px;
+}
+
+/* === アニメーションの追加 === */
+button,
+input[type="submit"],
+.year a {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.year a:hover {
+    background-color: var(--link-hover-color);
+    transform: translateY(-2px);
+}
+
+nav a,
+.year-selection h2,
+.terms-of-use h2 {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* === モバイル対応のスタイル === */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    .year-selection {
+        padding: 0 10px;
+    }
+
+    .years-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .year {
+        width: 100%;
+        max-width: 400px;
+        margin: 10px 0;
+    }
+
+    .year-selection h2,
+    .terms-of-use h2 {
+        font-size: 24px;
+    }
+
+    .terms-of-use h3 {
+        font-size: 20px;
+    }
+
+    .terms-of-use p {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
