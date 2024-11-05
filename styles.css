@@ -1,3 +1,8 @@
+/* === 全要素に box-sizing: border-box; を適用 === */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* === カラー変数の定義 === */
 :root {
     --primary-color: #00acc1;       /* ヘッダーとフッターの背景色 */
@@ -11,7 +16,7 @@
     --focus-color: #ff9800;         /* フォーカス時の色 */
 }
 
-/* === ベーススタイル（PC向け） === */
+/* === ベーススタイル === */
 body {
     font-family: 'Noto Sans JP', Arial, sans-serif;
     background-color: var(--background-color);
@@ -21,6 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* 横スクロールを防ぐ */
 }
 
 header {
@@ -28,8 +34,8 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
-    width: 100%; /* 追加 */
-    box-sizing: border-box; /* 追加 */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 nav ul {
@@ -37,7 +43,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* 追加 */
+    flex-wrap: wrap; /* アイテムが画面幅を超える場合に折り返す */
     justify-content: center;
 }
 
@@ -48,7 +54,15 @@ nav ul li {
 nav a {
     color: white;
     text-decoration: none;
+    display: flex; /* アイコンとテキストを横並びに */
+    align-items: center; /* 垂直方向に中央揃え */
     transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav a span {
+    margin-right: 5px;
+    font-size: 1em;
+    vertical-align: middle;
 }
 
 nav a:hover,
@@ -59,11 +73,11 @@ nav a:focus {
 
 main {
     flex: 1;
-    width: 100%; /* 修正: 90%から100%へ */
+    width: 100%;
     max-width: 1000px;
     margin: 20px auto;
-    box-sizing: border-box; /* 追加 */
-    padding: 0 10px; /* 追加 */
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 footer {
@@ -74,141 +88,57 @@ footer {
     width: 100%;
     position: relative;
     margin-top: auto;
-    box-sizing: border-box; /* 追加 */
+    box-sizing: border-box;
 }
 
-.year-selection,
-.contact-section,
-.introduction,
-.terms-of-use {
-    max-width: 1000px; /* 追加 */
-    margin: 0 auto; /* 追加 */
-    padding: 0 20px; /* 追加 */
-    box-sizing: border-box; /* 追加 */
-}
-
+/* === 年度選択セクションのスタイル === */
 .year-selection {
     text-align: center;
     margin-top: 50px;
+    padding: 0 20px;
 }
 
-.contact-section {
-    text-align: center;
-    margin-top: 50px;
+.year-selection h2 {
+    color: var(--secondary-color);
+    margin-bottom: 30px;
 }
 
-.contact-section form {
-    display: inline-block;
-    text-align: left;
-    width: 100%; /* 追加 */
-    max-width: 500px; /* 追加 */
+.years-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.contact-section label {
+.year {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.year h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.year a {
     display: block;
-    margin-top: 10px;
-}
-
-.contact-section textarea {
-    width: 100%;
+    margin: 10px 0;
     padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    resize: vertical;
-    box-sizing: border-box; /* 追加 */
-}
-
-.contact-section select,
-.contact-section input[type="submit"] {
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
     background-color: var(--primary-color);
     color: white;
-    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact-section select:hover,
-.contact-section input[type="submit"]:hover {
+.year a:hover,
+.year a:focus {
     background-color: var(--link-hover-color);
     transform: translateY(-2px);
-}
-
-.notifications {
-    background-color: var(--notification-bg);
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-sizing: border-box; /* 追加 */
-}
-
-.notifications h2 {
-    color: var(--secondary-color);
-}
-
-.notifications ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.notifications ul li {
-    padding: 5px 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.notifications ul li:last-child {
-    border-bottom: none;
-}
-
-/* === 画像のスタイル調整 === */
-#question-image,
-#answer-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-}
-
-/* === 運営者からのメッセージセクションのスタイル === */
-.introduction {
-    background-color: #ffffff;
-    padding: 20px;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    box-sizing: border-box; /* 追加 */
-}
-
-.introduction h2 {
-    color: var(--secondary-color);
-    text-align: center;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-}
-
-.introduction p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-    text-align: justify;
-}
-
-.introduction hr {
-    border: none;
-    border-top: 1px solid var(--border-color);
-    margin: 30px 0;
-}
-
-/* === リンクのホバー効果 === */
-.introduction a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.introduction a:hover,
-.introduction a:focus {
-    text-decoration: underline;
-    color: var(--link-hover-color);
 }
 
 /* === 利用規約セクションのスタイル === */
@@ -218,7 +148,10 @@ footer {
     margin-top: 40px;
     margin-bottom: 40px;
     border-radius: 10px;
-    box-sizing: border-box; /* 追加 */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .terms-of-use h2 {
@@ -250,22 +183,25 @@ select:focus {
 
 /* === アニメーションの追加 === */
 button,
-input[type="submit"] {
+input[type="submit"],
+.year a {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.year a:hover {
     background-color: var(--link-hover-color);
     transform: translateY(-2px);
 }
 
-.introduction h2,
-nav a {
+nav a,
+.year-selection h2,
+.terms-of-use h2 {
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-/* === モバイル対応のスタイル（幅が768px以下の画面に適用） === */
+/* === モバイル対応のスタイル === */
 @media (max-width: 768px) {
     header {
         padding: 10px;
@@ -274,7 +210,7 @@ nav a {
 
     nav ul {
         flex-direction: column;
-        align-items: center; /* 追加 */
+        align-items: center;
     }
 
     nav ul li {
@@ -285,80 +221,35 @@ nav a {
         padding: 0 10px;
     }
 
-    .year-selection,
-    .contact-section,
-    .introduction,
-    .terms-of-use {
+    .year-selection {
         padding: 0 10px;
     }
 
-    .subject-selection h2,
+    .years-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .year {
+        width: 100%;
+        max-width: 400px;
+        margin: 10px 0;
+    }
+
     .year-selection h2,
-    .introduction h2,
     .terms-of-use h2 {
         font-size: 24px;
     }
 
-    .notifications,
-    .contact-section form,
-    .introduction,
-    .terms-of-use {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    footer {
-        padding: 20px;
-    }
-
-    /* 運営者からのメッセージセクションのモバイル調整 */
-    .introduction {
-        padding: 15px;
-    }
-
-    .introduction h2 {
-        font-size: 20px;
-    }
-
-    .introduction p {
-        font-size: 14px;
-    }
-
-    .terms-of-use h2 {
-        font-size: 20px;
-    }
-
     .terms-of-use h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .terms-of-use p {
         font-size: 14px;
     }
 
-    /* 年度選択セクションのグリッドレイアウト調整 */
-    .years-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 20px;
-    }
-
-    /* ナビゲーションボタンの調整 */
-    .navigation {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navigation button {
-        width: 100%;
-        max-width: 300px;
-        margin: 5px 0;
-    }
-
-    /* ボタンのテキストサイズ調整 */
-    button,
-    input[type="submit"] {
-        font-size: 16px;
+    footer {
+        padding: 20px;
     }
 }
