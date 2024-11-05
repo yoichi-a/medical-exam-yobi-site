@@ -1,0 +1,194 @@
+/* === カラー変数の定義 === */
+:root {
+    --primary-color: #00acc1;       /* ヘッダーとフッターの背景色 */
+    --secondary-color: #00796b;     /* 見出しの色 */
+    --background-color: #f0f8ff;    /* ページの背景色 */
+    --text-color: #333333;          /* 基本テキストの色 */
+    --link-color: #00acc1;          /* リンクの色 */
+    --link-hover-color: #00796b;    /* リンクホバー時の色 */
+    --border-color: #cccccc;        /* ボーダーの色 */
+    --focus-color: #ff9800;         /* フォーカス時の色 */
+}
+
+/* === ベーススタイル === */
+body {
+    font-family: 'Noto Sans JP', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav a i {
+    margin-right: 5px;
+    font-size: 1em;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+
+/* === 科目選択セクションのスタイル === */
+.subject-selection {
+    text-align: center;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.subject-selection h2 {
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.subjects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.subject-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.subject-card a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subject-card i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.subject-card span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* === フォーカススタイルの追加 === */
+a:focus,
+button:focus {
+    outline: 2px dashed var(--focus-color);
+    outline-offset: 4px;
+}
+
+/* === メディアクエリによるレスポンシブ対応 === */
+@media (max-width: 1024px) {
+    .subject-card {
+        width: calc(33.333% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .subject-card {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .subject-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    .subject-selection {
+        padding: 0 10px;
+    }
+
+    .subject-selection h2 {
+        font-size: 24px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
