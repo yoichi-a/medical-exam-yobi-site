@@ -3,33 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2022年度 第2部 科目選択</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>2022年度 科目選択</title>
+    <!-- Font Awesomeの最新安定版を使用 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- スタイルシートを別ファイルとしてリンク -->
+    <link rel="stylesheet" href="subject-selection.css">
+    <!-- メタデータの追加 -->
+    <meta name="description" content="医師国家試験予備試験過去問の科目選択ページです。">
 </head>
 <body>
     <header>
-        <h1>2022年度 第2部 科目選択</h1>
+        <h1>2022年度 科目選択</h1>
         <nav>
-            <a href="index.html"><i class="fas fa-home"></i> ホーム</a>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> ホーム</a></li>
+                <li><a href="year-selection.html"><i class="fas fa-calendar-alt"></i> 年度選択</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <section class="subject-selection">
             <h2>科目を選択してください</h2>
-            <div class="subjects">
-                <a href="subject.html?year=2022&part=2&subject=internal_medicine"><i class="fas fa-book"></i> 内科学</a>
-                <a href="subject.html?year=2022&part=2&subject=pediatrics"><i class="fas fa-book"></i> 小児科学</a>
-                <a href="subject.html?year=2022&part=2&subject=psychiatry"><i class="fas fa-book"></i> 精神科学</a>
-                <a href="subject.html?year=2022&part=2&subject=surgery"><i class="fas fa-book"></i> 外科学</a>
-                <a href="subject.html?year=2022&part=2&subject=orthopedics"><i class="fas fa-book"></i> 整形外科学</a>
-                <a href="subject.html?year=2022&part=2&subject=obstetrics_gynecology"><i class="fas fa-book"></i> 産科・婦人科学</a>
-                <a href="subject.html?year=2022&part=2&subject=dermatology"><i class="fas fa-book"></i> 皮膚科学</a>
-                <a href="subject.html?year=2022&part=2&subject=urology"><i class="fas fa-book"></i> 泌尿器科学</a>
-                <a href="subject.html?year=2022&part=2&subject=otorhinolaryngology"><i class="fas fa-book"></i> 耳鼻いんこう科学</a>
-                <a href="subject.html?year=2022&part=2&subject=ophthalmology"><i class="fas fa-book"></i> 眼科学</a>
-                <a href="subject.html?year=2022&part=2&subject=radiology"><i class="fas fa-book"></i> 放射線科学</a>
-                <a href="subject.html?year=2022&part=2&subject=emergency_medicine"><i class="fas fa-book"></i> 救急医学</a>
+            <div class="subjects-grid">
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=internal_medicine">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>内科学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=pediatrics">
+                        <i class="fas fa-baby"></i>
+                        <span>小児科学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=psychiatry">
+                        <i class="fas fa-brain"></i>
+                        <span>精神科学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=surgery">
+                        <i class="fas fa-user-md"></i>
+                        <span>外科学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=orthopedics">
+                        <i class="fas fa-bone"></i>
+                        <span>整形外科学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=obstetrics_gynecology">
+                        <i class="fas fa-female"></i>
+                        <span>産科・婦人科学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=dermatology">
+                        <i class="fas fa-leaf"></i>
+                        <span>皮膚科学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=urology">
+                        <i class="fas fa-procedures"></i>
+                        <span>泌尿器科学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=otorhinolaryngology">
+                        <i class="fas fa-head-side-mask"></i>
+                        <span>耳鼻いんこう科学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=ophthalmology">
+                        <i class="fas fa-eye"></i>
+                        <span>眼科学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=radiology">
+                        <i class="fas fa-radiation"></i>
+                        <span>放射線科学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2022&part=2&subject=emergency_medicine">
+                        <i class="fas fa-ambulance"></i>
+                        <span>救急医学</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>

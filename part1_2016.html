@@ -3,30 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2016年度 第1部 科目選択</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>2016年度 科目選択</title>
+    <!-- Font Awesomeの最新安定版を使用 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- スタイルシートを別ファイルとしてリンク -->
+    <link rel="stylesheet" href="subject-selection.css">
+    <!-- メタデータの追加 -->
+    <meta name="description" content="医師国家試験予備試験過去問の科目選択ページです。">
 </head>
 <body>
     <header>
-        <h1>2016年度 第1部 科目選択</h1>
+        <h1>2016年度 科目選択</h1>
         <nav>
-            <a href="index.html"><i class="fas fa-home"></i> ホーム</a>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> ホーム</a></li>
+                <li><a href="year-selection.html"><i class="fas fa-calendar-alt"></i> 年度選択</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <section class="subject-selection">
             <h2>科目を選択してください</h2>
-            <div class="subjects">
-                <a href="subject.html?year=2016&part=1&subject=anatomy"><i class="fas fa-book"></i> 解剖学</a>
-                <a href="subject.html?year=2016&part=1&subject=physiology"><i class="fas fa-book"></i> 生理学</a>
-                <a href="subject.html?year=2016&part=1&subject=biochemistry"><i class="fas fa-book"></i> 生化学</a>
-                <a href="subject.html?year=2016&part=1&subject=immunology"><i class="fas fa-book"></i> 免疫学</a>
-                <a href="subject.html?year=2016&part=1&subject=pharmacology"><i class="fas fa-book"></i> 薬理学</a>
-                <a href="subject.html?year=2016&part=1&subject=pathology"><i class="fas fa-book"></i> 病理学</a>
-                <a href="subject.html?year=2016&part=1&subject=forensic_medicine"><i class="fas fa-book"></i> 法医学</a>
-                <a href="subject.html?year=2016&part=1&subject=microbiology"><i class="fas fa-book"></i> 微生物学</a>
-                <a href="subject.html?year=2016&part=1&subject=hygiene"><i class="fas fa-book"></i> 衛生学</a>
+            <div class="subjects-grid">
+                <div class="subject-card">
+                    <a href="subject.html?year=2016&part=1&subject=anatomy">
+                        <i class="fas fa-user"></i>
+                        <span>解剖学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2016&part=1&subject=physiology">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>生理学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2016&part=1&subject=biochemistry">
+                        <i class="fas fa-vials"></i>
+                        <span>生化学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2016&part=1&subject=immunology">
+                        <i class="fas fa-shield-virus"></i>
+                        <span>免疫学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2016&part=1&subject=pharmacology">
+                        <i class="fas fa-pills"></i>
+                        <span>薬理学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2016&part=1&subject=pathology">
+                        <i class="fas fa-microscope"></i>
+                        <span>病理学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2016&part=1&subject=forensic_medicine">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>法医学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2016&part=1&subject=microbiology">
+                        <i class="fas fa-virus"></i>
+                        <span>微生物学</span>
+                    </a>
+                </div>
+                <div class="subject-card">
+                    <a href="subject.html?year=2016&part=1&subject=hygiene">
+                        <i class="fas fa-soap"></i>
+                        <span>衛生学</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
