@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yoichi-a.github.io/medical-exam-yobi-site/sitemap.xml
