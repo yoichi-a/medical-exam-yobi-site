@@ -1,0 +1,161 @@
+/* === リセットスタイル === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === カラー変数の定義 === */
+:root {
+    --primary-color: #8e24aa;
+    --secondary-color: #4a148c;
+    --accent-color: #fdd835;
+    --text-color: #333333;
+    --background-color: #fafafa;
+    --link-color: #8e24aa;
+    --link-hover-color: #6a1b9a;
+}
+
+/* === フォント設定 === */
+body {
+    font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* === ヘッダーセクション === */
+header {
+    position: relative;
+    background: url('images/japanese_language_exam_header.jpg') no-repeat center center/cover;
+    height: 60vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(58, 16, 65, 0.6);
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+nav .logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.header-content {
+    z-index: 1;
+}
+
+.header-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* === メインコンテンツ === */
+main {
+    padding: 50px 20px;
+}
+
+.coming-soon {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.coming-soon h2 {
+    font-size: 36px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.coming-soon p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* === フッター === */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: var(--accent-color);
+}
+
+/* === レスポンシブ対応 === */
+@media (max-width: 768px) {
+    header {
+        height: 50vh;
+    }
+
+    .header-content h1 {
+        font-size: 32px;
+    }
+
+    .coming-soon h2 {
+        font-size: 28px;
+    }
+
+    nav .logo a {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}

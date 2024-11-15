@@ -35,7 +35,6 @@ header {
     text-align: center;
     padding: 20px;
     width: 100%;
-    box-sizing: border-box;
 }
 
 nav ul {
@@ -141,6 +140,39 @@ footer {
     transform: translateY(-2px);
 }
 
+/* === 特別なリンクセクションのスタイル === */
+.special-links {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.special-links h2 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.special-links a.special-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    background-color: #ff9800; /* 特別なリンク用の色 */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.special-links a.special-link:hover,
+.special-links a.special-link:focus {
+    background-color: #e65100; /* ホバー時の色 */
+    transform: translateY(-2px);
+}
+
+.special-links a.special-link i {
+    margin-right: 10px;
+}
+
 /* === 利用規約セクションのスタイル === */
 .terms-of-use {
     background-color: #ffffff;
@@ -184,13 +216,15 @@ select:focus {
 /* === アニメーションの追加 === */
 button,
 input[type="submit"],
-.year a {
+.year a,
+.special-links a.special-link {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover,
 input[type="submit"]:hover,
-.year a:hover {
+.year a:hover,
+.special-links a.special-link:hover {
     background-color: var(--link-hover-color);
     transform: translateY(-2px);
 }
@@ -247,6 +281,12 @@ nav a,
 
     .terms-of-use p {
         font-size: 14px;
+    }
+
+    .special-links a.special-link {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
     }
 
     footer {
