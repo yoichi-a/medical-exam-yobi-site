@@ -93,7 +93,7 @@ footer {
 /* === 年度選択セクションのスタイル === */
 .year-selection {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px; /* マージンを調整 */
     padding: 0 20px;
 }
 
@@ -143,6 +143,7 @@ footer {
 /* === 特別なリンクセクションのスタイル === */
 .special-links {
     margin-top: 40px;
+    margin-bottom: 40px; /* 上下の余白を調整 */
     text-align: center;
 }
 
