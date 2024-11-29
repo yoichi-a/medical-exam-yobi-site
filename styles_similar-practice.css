@@ -1,0 +1,167 @@
+/* === カラー変数の定義 === */
+:root {
+    --primary-color: #00838f;       /* ヘッダーとフッターの背景色 */
+    --secondary-color: #006064;     /* 見出しの色 */
+    --background-color: #e0f7fa;    /* ページの背景色 */
+    --text-color: #333333;          /* 基本テキストの色 */
+    --link-color: #00838f;          /* リンクの色 */
+    --link-hover-color: #004d40;    /* リンクホバー時の色 */
+    --border-color: #b0bec5;        /* ボーダーの色 */
+    --button-color: #0097a7;        /* ボタンの色 */
+    --button-hover-color: #006978;  /* ボタンホバー時の色 */
+}
+
+/* === ベーススタイル === */
+body {
+    font-family: 'Noto Sans JP', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--link-hover-color);
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* === 科目選択セクション === */
+.subject-selection h2 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subjects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.subject-category {
+    width: 48%;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.subject-category h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.subject-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subject-category ul li {
+    margin-bottom: 10px;
+}
+
+.subject-category ul li a {
+    display: block;
+    padding: 10px;
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.subject-category ul li a:hover {
+    background-color: var(--button-hover-color);
+}
+
+.subject-category ul li a i {
+    margin-right: 8px;
+}
+
+/* === 利用規約セクション === */
+.terms-of-use {
+    background-color: white;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.terms-of-use h2 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.terms-of-use h3 {
+    color: var(--secondary-color);
+    margin-top: 20px;
+}
+
+.terms-of-use p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* === フッター === */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+/* === レスポンシブデザイン === */
+@media (max-width: 768px) {
+    .subject-category {
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+}

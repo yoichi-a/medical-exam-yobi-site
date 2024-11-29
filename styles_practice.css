@@ -1,0 +1,241 @@
+/* === カラー変数の定義 === */
+:root {
+    --primary-color: #004d40;       /* ヘッダーとフッターの背景色 */
+    --secondary-color: #00695c;     /* 見出しの色 */
+    --background-color: #e0f2f1;    /* ページの背景色 */
+    --text-color: #333333;          /* 基本テキストの色 */
+    --link-color: #004d40;          /* リンクの色 */
+    --link-hover-color: #00251a;    /* リンクホバー時の色 */
+    --border-color: #b0bec5;        /* ボーダーの色 */
+    --button-color: #00796b;        /* ボタンの色 */
+    --button-hover-color: #005a4f;  /* ボタンホバー時の色 */
+    --correct-color: #388e3c;       /* 正解時の色 */
+    --incorrect-color: #d32f2f;     /* 不正解時の色 */
+}
+
+/* === ベーススタイル === */
+body {
+    font-family: 'Noto Sans JP', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--link-hover-color);
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* === 問題セクション === */
+#question-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#progress {
+    text-align: right;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#question-text {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#choices-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#choices-list li {
+    margin-bottom: 10px;
+}
+
+#choices-list label {
+    cursor: pointer;
+}
+
+#choices-list input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--button-hover-color);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#feedback-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#feedback-text.correct {
+    color: var(--correct-color);
+}
+
+#feedback-text.incorrect {
+    color: var(--incorrect-color);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.navigation button {
+    width: 150px;
+}
+
+#finish-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    background-color: var(--button-color);
+}
+
+#finish-btn:hover {
+    background-color: var(--button-hover-color);
+}
+
+#back-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    background-color: var(--button-color);
+}
+
+#back-btn:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* === 結果セクション === */
+#result-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#result-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+#result-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#retry-btn,
+#back-to-selection-btn {
+    background-color: var(--button-color);
+    margin-top: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#retry-btn:hover,
+#back-to-selection-btn:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* === フッター === */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+/* === レスポンシブデザイン === */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    #question-text {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
