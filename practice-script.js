@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const repositoryName = '/medical-exam-yobi-site';
+    const repositoryName = '/medical-exam-yobi-site'; // プロジェクトページの場合。ユーザーページの場合は '' に設定
 
     // URLからパラメータを取得
     const urlParams = new URLSearchParams(window.location.search);
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     input.name = 'choice';
                     input.value = key;
                     label.appendChild(input);
-                    label.appendChild(document.createTextNode(` ${key}: ${value}`));
+                    label.appendChild(document.createTextNode(`${key}: ${value}`));
                     li.appendChild(label);
                     choicesList.appendChild(li);
                 }
@@ -235,6 +235,6 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     }
 
-    // 初期化：問題データを読み込む
+    // 問題データを読み込む
     loadQuestions();
 });
