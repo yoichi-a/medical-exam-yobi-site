@@ -2,61 +2,44 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <!-- ビューポートのメタタグ -->
+    <title>第二部実地試験について - 医師国家試験予備試験過去問チャート</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>類似問題演習 - 医師国家試験予備試験過去問チャート</title>
     <!-- Google Fonts の追加 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome の追加 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 新しいスタイルシートのリンク -->
-    <link rel="stylesheet" href="styles_practice.css">
-    <meta name="description" content="医師国家試験予備試験の類似問題演習ページです。">
-    <meta name="keywords" content="医師国家試験, 予備試験, 類似問題, 問題演習, 医学, 試験対策">
+    <!-- スタイルシートのリンク -->
+    <link rel="stylesheet" href="styles_practical_exam.css">
+    <meta name="description" content="第二部実地試験に関する情報を提供するページです。">
+    <meta name="keywords" content="医師国家試験, 予備試験, 第二部実地試験, 過去問, 医学, 試験対策">
 </head>
 <body>
     <header>
-        <h1 id="practice-title">類似問題演習</h1>
+        <div class="overlay"></div>
         <nav>
+            <div class="logo">
+                <a href="index.html">医師国家試験予備試験過去問チャート</a>
+            </div>
             <ul>
-                <li><a href="index.html"><span class="fa-solid fa-house" aria-hidden="true"></span> ホーム</a></li>
-                <li><a href="year-selection.html"><span class="fa-solid fa-calendar-alt" aria-hidden="true"></span> 年度選択</a></li>
-                <li><a href="similar-practice.html"><span class="fa-solid fa-book-open" aria-hidden="true"></span> 類似問題演習</a></li>
-                <li><a href="contact.html"><span class="fa-solid fa-envelope" aria-hidden="true"></span> お問い合わせ</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> ホーム</a></li>
+                <li><a href="year-selection.html"><i class="fa-solid fa-calendar-alt"></i> 年度選択</a></li>
+                <li><a href="similar-practice.html"><i class="fa-solid fa-book-open"></i> 類似問題演習</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> お問い合わせ</a></li>
             </ul>
         </nav>
+        <div class="header-content">
+            <h1>第二部実地試験について</h1>
+        </div>
     </header>
+
     <main>
-        <section id="question-section">
-            <p id="progress">問題 <span id="current-number">1</span> / <span id="total-number">100</span></p>
-            <p id="question-text">ここに問題が表示されます。</p>
-            <!-- 選択肢を表示する要素 -->
-            <ul id="choices-list"></ul>
-    
-            <button id="submit-answer-btn"><i class="fa-solid fa-check-circle"></i> 解答を送信</button>
-            <p id="feedback-text" style="display: none;">ここにフィードバックが表示されます。</p>
-    
-            <div class="navigation">
-                <button id="prev-btn" disabled><i class="fa-solid fa-arrow-left"></i> 前の問題</button>
-                <button id="next-btn" disabled>次の問題 <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-            <button id="finish-btn" style="display: none;"><i class="fa-solid fa-flag-checkered"></i> 結果を表示</button>
-            <button id="back-btn"><i class="fa-solid fa-rotate-left"></i> 科目選択ページに戻る</button>
-        </section>
-        <!-- 結果表示セクション -->
-        <section id="result-section" style="display: none;">
-            <h2>結果</h2>
-            <p>正解数：<span id="correct-count">0</span> / <span id="total-questions">0</span></p>
-            <p>正答率：<span id="accuracy">0</span>%</p>
-            <button id="retry-btn"><i class="fa-solid fa-redo"></i> もう一度やり直す</button>
-            <button id="back-to-selection-btn"><i class="fa-solid fa-rotate-left"></i> 科目選択ページに戻る</button>
+        <section class="coming-soon">
+            <h2>準備中...</h2>
+            <p>現在、第二部実地試験に関する詳細な情報を準備しております。</p>
         </section>
     </main>
+
     <footer>
         <p>© 2024 医師国家試験予備試験過去問チャート</p>
-    </footer>
-
-    <!-- 外部JavaScriptファイルを読み込む -->
-    <script src="/medical-exam-yobi-site/practice-script.js"></script>
 </body>
 </html>
