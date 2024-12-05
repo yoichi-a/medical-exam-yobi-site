@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const repositoryName = '/medical-exam-yobi-site'; // プロジェクトページの場合。ユーザーページの場合は '' に設定
+    const repositoryName = '/medical-exam-yobi-site'; // リポジトリ名を正しく設定
 
-    // URLからパラメータを取得
+    // URLからパラメータを取得し、デフォルト値を設定
     const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get('category'); // 'basic' または 'clinical'
-    const subject = urlParams.get('subject');
+    const category = urlParams.get('category') || 'basic'; // デフォルトは 'basic'
+    const subject = urlParams.get('subject') || 'anatomy'; // デフォルトは 'anatomy'
 
     // 科目名を日本語に変換するマッピング
     const subjectNames = {
@@ -54,9 +54,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const accuracyElement = document.getElementById("accuracy");
     const retryBtn = document.getElementById("retry-btn");
     const backToSelectionBtn = document.getElementById("back-to-selection-btn");
-
-    // 戻るボタン
     const backButton = document.getElementById("back-btn");
+
+    // 要素の存在確認
+    if (!practiceTitle || !questionText || !choicesList || !answerBtn || !prevBtn || !nextBtn) {
+        alert('必要な要素が見つかりません。ページの構造を確認してください。');
+        return;
+    }
 
     let questions = []; // 問題データを格納
     let currentQuestionIndex = 0; // 現在の問題番号
@@ -70,8 +74,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 throw new Error(`サーバーエラー: ${response.statusText}`);
             }
             questions = await response.json();
+
+            if (questions.length === 0) {
+                throw new Error('問題データが空です。');
+            }
+
             // 問題をシャッフル
             shuffleArray(questions);
+
             // 総問題数を設定
             totalNumber.textContent = questions.length;
             displayQuestion();
@@ -162,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // ボタンの状態を更新
         answerBtn.disabled = true;
-        nextBtn.disabled = currentQuestionIndex === questions.length - 1 ? true : false;
+        nextBtn.disabled = currentQuestionIndex === questions.length - 1;
 
         // 最後の問題の場合、結果表示ボタンを表示
         if (currentQuestionIndex === questions.length - 1) {
