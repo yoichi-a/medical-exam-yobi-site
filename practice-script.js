@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const choicesList = document.getElementById("choices-list");
     const answerBtn = document.getElementById("submit-answer-btn");
     const feedbackText = document.getElementById("feedback-text");
+    const explanationText = document.getElementById("explanation-text"); // 解説テキスト要素を追加
     const prevBtn = document.getElementById("prev-btn");
     const nextBtn = document.getElementById("next-btn");
     const finishBtn = document.getElementById("finish-btn");
@@ -69,19 +70,18 @@ document.addEventListener("DOMContentLoaded", function() {
     // 問題データを読み込む関数
     async function loadQuestions() {
         try {
-            const response = await fetch(`${repositoryName}/data/similar/${category}/${subject}.json`);
+            const dataUrl = `${repositoryName}/data/similar/${category}/${subject}.json`;
+            console.log('データURL:', dataUrl); // デバッグ用
+            const response = await fetch(dataUrl);
             if (!response.ok) {
-                throw new Error(`サーバーエラー: ${response.statusText}`);
+                throw new Error(`サーバーエラー: ${response.status} ${response.statusText}`);
             }
             questions = await response.json();
-
             if (questions.length === 0) {
                 throw new Error('問題データが空です。');
             }
-
             // 問題をシャッフル
             shuffleArray(questions);
-
             // 総問題数を設定
             totalNumber.textContent = questions.length;
             displayQuestion();
@@ -125,9 +125,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
 
-            // フィードバックを非表示に
+            // フィードバックと解説を非表示に
             feedbackText.style.display = "none";
             feedbackText.textContent = "";
+            explanationText.style.display = "none";
+            explanationText.textContent = "";
 
             // ボタンの状態を更新
             prevBtn.disabled = currentQuestionIndex === 0;
@@ -170,9 +172,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
         feedbackText.style.display = 'block';
 
+        // 解説を表示
+        explanationText.style.display = 'block';
+
+        // 解説文を表示
+        if (currentQuestion.explanation) {
+            explanationText.innerHTML = currentQuestion.explanation;
+        } else {
+            explanationText.textContent = '解説がありません。';
+        }
+
         // ボタンの状態を更新
         answerBtn.disabled = true;
-        nextBtn.disabled = currentQuestionIndex === questions.length - 1;
+        nextBtn.disabled = currentQuestionIndex === questions.length - 1 ? true : false;
 
         // 最後の問題の場合、結果表示ボタンを表示
         if (currentQuestionIndex === questions.length - 1) {
