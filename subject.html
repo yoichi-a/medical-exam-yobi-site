@@ -23,15 +23,18 @@
     </header>
     <main>
         <section id="question-section">
+            <!-- ここに進捗を表示する要素を追加 -->
+            <p id="progress">問題 <span id="current-number">0</span> / <span id="total-number">0</span></p>
+
             <p id="question-text">ここに問題が表示されます。</p>
             <!-- 選択肢を表示する要素 -->
             <ul id="choices-list"></ul>
-            <!-- 画像を表示するための <img> 要素を追加 -->
+            <!-- 画像を表示するための <img> 要素 -->
             <img id="question-image" src="" alt="問題の画像" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
 
             <button id="answer-btn"><i class="fa-solid fa-check-circle"></i> 解答を表示</button>
             <p id="answer-text" style="display: none;">ここに解答が表示されます。</p>
-            <!-- 解答の画像を表示するための <img> 要素を追加 -->
+            <!-- 解答の画像を表示するための <img> 要素 -->
             <img id="answer-image" src="" alt="解答の画像" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
 
             <div class="navigation">
@@ -46,6 +49,6 @@
     </footer>
 
     <!-- 外部JavaScriptファイルを読み込む -->
-    <script src="/medical-exam-yobi-site/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

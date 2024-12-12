@@ -51,8 +51,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const prevBtn = document.getElementById("prev-btn");
     const nextBtn = document.getElementById("next-btn");
 
+    // 進捗表示用の要素
+    const currentNumber = document.getElementById("current-number");
+    const totalNumber = document.getElementById("total-number");
+
     // 要素の存在確認
-    if (!problemTitle || !questionText || !choicesList || !questionImage || !answerText || !answerImage || !answerBtn || !prevBtn || !nextBtn) {
+    if (!problemTitle || !questionText || !choicesList || !questionImage || !answerText || !answerImage || !answerBtn || !prevBtn || !nextBtn || !currentNumber || !totalNumber) {
         alert('必要な要素が見つかりません。ページの構造を確認してください。');
         return;
     }
@@ -68,6 +72,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 throw new Error(`サーバーエラー: ${response.statusText}`);
             }
             questions = await response.json();
+            if (questions.length === 0) {
+                throw new Error('問題データがありません。');
+            }
+
+            // 全問題数を表示
+            totalNumber.textContent = questions.length;
+
             displayQuestion();
         } catch (error) {
             console.error(error);
@@ -108,6 +119,10 @@ document.addEventListener("DOMContentLoaded", function() {
             prevBtn.disabled = currentQuestionIndex === 0;
             nextBtn.disabled = currentQuestionIndex === questions.length - 1;
             answerBtn.disabled = false; // 解答ボタンを有効化
+
+            // 現在の問題番号を更新
+            currentNumber.textContent = currentQuestionIndex + 1;
+
         } else {
             questionText.textContent = '問題が見つかりません。';
             answerBtn.disabled = true;
