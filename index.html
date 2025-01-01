@@ -1,88 +1,120 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <!-- ビューポートのメタタグを追加 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>医師国家試験予備試験過去問チャート</title>
-    <!-- Google Fonts の追加 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <!-- Font Awesome の追加 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- スタイルシートのリンク -->
-    <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="医師国家試験予備試験の過去問を年度別にまとめたチャートサイトです。">
-    <meta name="keywords" content="医師国家試験, 予備試験, 過去問, 医学, 試験対策">
+  <meta charset="UTF-8">
+  <!-- ビューポートのメタタグを追加 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ページのタイトル -->
+  <title>医師国家試験予備試験過去問チャート</title>
+
+  <!-- Google Fonts の追加 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <!-- Font Awesome の追加 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- スタイルシートのリンク -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ページの説明やキーワードなど -->
+  <meta name="description" content="医師国家試験予備試験の過去問を年度別にまとめたチャートサイトです。模擬試験情報やお問い合わせも可能。決済・返金ポリシーや問い合わせ先も明記しています。">
+  <meta name="keywords" content="医師国家試験, 予備試験, 過去問, 医学, 試験対策">
 </head>
 <body>
-    <header>
-        <h1>医師国家試験予備試験過去問チャート</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html"><span class="fa-solid fa-house" aria-hidden="true"></span> ホーム</a></li>
-                <li><a href="year-selection.html"><span class="fa-solid fa-calendar-alt" aria-hidden="true"></span> 年度選択</a></li>
-                <li><a href="similar-practice.html"><i class="fa-solid fa-book-open"></i> 類似問題演習</a></li>
-                <li><a href="contact.html"><span class="fa-solid fa-envelope" aria-hidden="true"></span> お問い合わせ</a></li>
-                <!-- ▼ 新規追加：会員制サイトへのリンク -->
-                <li><a href="member-space.html"><i class="fa-solid fa-lock"></i> 会員制サイト</a></li>
-                <!-- ▲ 新規追加ここまで -->
-            </ul>
-        </nav>
-    </header>
+<header>
+  <h1>医師国家試験予備試験過去問チャート</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html"><span class="fa-solid fa-house" aria-hidden="true"></span> ホーム</a></li>
+      <li><a href="year-selection.html"><span class="fa-solid fa-calendar-alt" aria-hidden="true"></span> 年度選択</a></li>
+      <li><a href="similar-practice.html"><i class="fa-solid fa-book-open"></i> 類似問題演習</a></li>
+      <li><a href="contact.html"><span class="fa-solid fa-envelope" aria-hidden="true"></span> お問い合わせ</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <main>
-        <section class="introduction">
-            <h2>運営者からのメッセージ</h2>
-            <p>はじめまして。医師国家試験予備試験過去問チャートの運営者です。</p>
-            
-            <p>このページを訪れている方の中には、「海外の医学部に在学中で、将来日本で医師になりたい方」から「何度も予備試験を受けたけれど、思うように実力を発揮できていない方」まで、さまざまな状況の方がいらっしゃると思います。</p>
-            
-            <p>私自身も皆さんと同じように、予備試験という高い壁に挑戦した経験があります。その過程で痛感したのは、予備試験においてモチベーションを保つことが非常に難しいということです。そのため、今後は皆さんからのご要望が多ければ、模擬試験を実施し、現状を把握する機会を提供したいと考えています。</p>
-            
-            <p>このサイトは皆さんの声をもとに改善していきたいと思っています。匿名で構いませんので、お気軽にお問い合わせください。また、相談や質問にも可能な限り対応しますので、積極的に交流していきましょう。「模擬試験に参加したい」といったご意見もお待ちしています。</p>
-            
-            <p>ここでの学びが、皆さんの合格に少しでも貢献できれば幸いです。</p>
-            
-            <hr>
-            
-            <p>大家好，我是此网站的运营者。</p>
-            
-            <p>访问本网站的各位，可能有“在海外医学部就读、将来希望在日本成为医生的人”，也可能有“多次参加预备考试但未能充分发挥实力的人”，情况各不相同。</p>
-            
-            <p>我自己也曾和大家一样，挑战过预备考试这座高墙。在这个过程中，我深刻体会到在备考预备考试时保持动力是非常困难的。因此，今后如果有更多的需求，我计划举办模拟考试，为大家提供了解自己现状的机会。</p>
-            
-            <p>本网站将根据大家的反馈不断改进，所以即使是匿名也没关系，请随时联系我。此外，我也会尽可能地回应各种咨询和问题，希望能与大家积极交流。我也欢迎表达“希望参加模拟考试”等意见。</p>
-            
-            <p>希望这里的学习能对大家的合格有所帮助。</p>
-            
-            <hr>
-            
-            <p>Hello, I am the administrator of this site.</p>
-            
-            <p>The visitors to this site likely range from “students at overseas medical schools who aspire to become doctors in Japan” to “those who have taken the 「予備試験」 multiple times but have struggled to perform to their full potential.”</p>
-            
-            <p>I, too, have faced the high hurdle of the 「予備試験」, just like you. Through that experience, I came to realize how challenging it is to maintain motivation during exam preparation. Therefore, if there is enough interest, I plan to organize mock exams in the future to provide opportunities for you to assess your current level.</p>
-            
-            <p>This site aims to improve based on your feedback, so please feel free to reach out, even anonymously. I will also do my best to respond to inquiries and questions, so let’s actively engage with each other. I also welcome any expressions of interest, such as “I would like to participate in mock exams.”</p>
-            
-            <p>I hope that studying here can contribute, even in a small way, to your success in passing the exam.</p>
-        </section>
+<main>
+  <!-- ▼ お知らせセクションを追加 -->
+  <section class="notifications">
+    <h2>お知らせ</h2>
+    <ul>
+      <li>
+        <strong>【模擬試験実施のお知らせ】</strong><br>
+        予備試験本番レベルの問題を揃えた「医師国家試験予備試験第一部試験模擬試験」を実施いたします！<br>
+        <a href="mock-exam.html">詳細を見る</a>
+      </li>
+    </ul>
+  </section>
+  <!-- ▲ お知らせセクションここまで -->
 
-        <section class="terms-of-use">
-            <h2>利用規約</h2>
-            <p>このサイトをご利用いただく前に、以下の利用規約をお読みください。本サイトを利用することで、これらの規約に同意したものとみなされます。</p>
-            <h3>著作権</h3>
-            <p>本サイトに掲載されている全てのコンテンツの著作権は、当サイト運営者またはコンテンツ提供者に帰属します。無断での転載、複製を禁じます。</p>
-            <h3>免責事項</h3>
-            <p>本サイトの情報は正確性を期しておりますが、その完全性や正確性を保証するものではありません。利用者が本サイトの情報を用いて行う行為について、一切の責任を負いません。</p>
-            <h3>リンクについて</h3>
-            <p>本サイトへのリンクは原則自由ですが、公序良俗に反するサイトからのリンクはお断りします。</p>
-            <!-- その他の利用規約項目を追加 -->
-        </section>
-    </main>
+  <section class="introduction">
+    <h2>運営者からのメッセージ</h2>
+    <p>はじめまして。医師国家試験予備試験過去問チャートの運営者です。</p>
 
-    <footer>
-        <p>© 2024 医師国家試験予備試験過去問チャート</p>
-    </footer>
+    <p>このページを訪れている方の中には、「海外の医学部に在学中で、将来日本で医師になりたい方」から「何度も予備試験を受けたけれど、思うように実力を発揮できていない方」まで、さまざまな状況の方がいらっしゃると思います。</p>
+
+    <p>私自身も皆さんと同じように、予備試験という高い壁に挑戦した経験があります。その過程で痛感したのは、予備試験においてモチベーションを保つことが非常に難しいということです。そのため、今後は皆さんからのご要望が多ければ、模擬試験を実施し、現状を把握する機会を提供したいと考えています。</p>
+
+    <p>このサイトは皆さんの声をもとに改善していきたいと思っています。匿名で構いませんので、お気軽にお問い合わせください。また、相談や質問にも可能な限り対応しますので、積極的に交流していきましょう。「模擬試験に参加したい」といったご意見もお待ちしています。</p>
+
+    <p>ここでの学びが、皆さんの合格に少しでも貢献できれば幸いです。</p>
+
+    <hr>
+
+    <p>大家好，我是此网站的运营者。</p>
+
+    <p>访问本网站的各位，可能有“在海外医学部就读、将来希望在日本成为医生的人”，也可能有“多次参加预备考试但未能充分发挥实力的人”，情况各不相同。</p>
+
+    <p>我自己也曾和大家一样，挑战过预备考试这座高墙。在这个过程中，我深刻体会到在备考预备考试时保持动力是非常困难的。因此，今后如果有更多的需求，我计划举办模拟考试，为大家提供了解自己现状的机会。</p>
+
+    <p>本网站将根据大家的反馈不断改进，所以即使是匿名也没关系，请随时联系我。此外，我也会尽可能地回应各种咨询和问题，希望能与大家积极交流。我也欢迎表达“希望参加模拟考试”等意见。</p>
+
+    <p>希望这里的学习能对大家的合格有所帮助。</p>
+
+    <hr>
+
+    <p>Hello, I am the administrator of this site.</p>
+
+    <p>The visitors to this site likely range from “students at overseas medical schools who aspire to become doctors in Japan” to “those who have taken the 「予備試験」 multiple times but have struggled to perform to their full potential.”</p>
+
+    <p>I, too, have faced the high hurdle of the 「予備試験」, just like you. Through that experience, I came to realize how challenging it is to maintain motivation during exam preparation. Therefore, if there is enough interest, I plan to organize mock exams in the future to provide opportunities for you to assess your current level.</p>
+
+    <p>This site aims to improve based on your feedback, so please feel free to reach out, even anonymously. I will also do my best to respond to inquiries and questions, so let’s actively engage with each other. I also welcome any expressions of interest, such as “I would like to participate in mock exams.”</p>
+
+    <p>I hope that studying here can contribute, even in a small way, to your success in passing the exam.</p>
+  </section>
+
+  <section class="terms-of-use">
+    <h2>利用規約</h2>
+    <p>このサイトをご利用いただく前に、以下の利用規約をお読みください。本サイトを利用することで、これらの規約に同意したものとみなされます。</p>
+
+    <h3>著作権</h3>
+    <p>本サイトに掲載されている全てのコンテンツの著作権は、当サイト運営者またはコンテンツ提供者に帰属します。無断での転載、複製を禁じます。</p>
+
+    <h3>免責事項</h3>
+    <p>本サイトの情報は正確性を期しておりますが、その完全性や正確性を保証するものではありません。利用者が本サイトの情報を用いて行う行為について、一切の責任を負いません。</p>
+
+    <h3>決済・返金ポリシー</h3>
+    <p>本サイトでは、Stripeなどのオンライン決済サービスを利用する場合があります。購入後の返金は、原則として対応いたしかねますのでご了承ください。万が一、決済エラーや重複課金などの問題が発生した場合は、下記の問い合わせ先までご連絡ください。</p>
+
+    <h3>禁止事項</h3>
+    <p>
+      ・本サイトのコンテンツ（問題・解説・PDFなど）を第三者に譲渡または公開する行為<br>
+      ・問題や解説をSNSなどで不特定多数に公開する行為<br>
+      ・公序良俗に反する行為、法律に抵触する行為
+    </p>
+
+    <h3>リンクについて</h3>
+    <p>本サイトへのリンクは原則自由ですが、公序良俗に反するサイトからのリンクはお断りします。</p>
+
+    <h3>問い合わせ先</h3>
+    <p>模擬試験や決済に関するお問い合わせは、以下のメールアドレスをご利用ください。<br>
+    メールアドレス：<a href="mailto:info@example.com">info@example.com</a><br>
+    または、<a href="contact.html">お問い合わせページ</a>よりフォーム送信してください。</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2024 医師国家試験予備試験過去問チャート</p>
+</footer>
 </body>
 </html>

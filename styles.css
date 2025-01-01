@@ -28,8 +28,8 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
-    width: 100%; /* 追加 */
-    box-sizing: border-box; /* 追加 */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 nav ul {
@@ -37,7 +37,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* 追加 */
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -62,8 +62,8 @@ main {
     width: 100%; /* 修正: 90%から100%へ */
     max-width: 1000px;
     margin: 20px auto;
-    box-sizing: border-box; /* 追加 */
-    padding: 0 10px; /* 追加 */
+    box-sizing: border-box;
+    padding: 0 10px; 
 }
 
 footer {
@@ -74,17 +74,17 @@ footer {
     width: 100%;
     position: relative;
     margin-top: auto;
-    box-sizing: border-box; /* 追加 */
+    box-sizing: border-box;
 }
 
 .year-selection,
 .contact-section,
 .introduction,
 .terms-of-use {
-    max-width: 1000px; /* 追加 */
-    margin: 0 auto; /* 追加 */
-    padding: 0 20px; /* 追加 */
-    box-sizing: border-box; /* 追加 */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .year-selection {
@@ -100,8 +100,8 @@ footer {
 .contact-section form {
     display: inline-block;
     text-align: left;
-    width: 100%; /* 追加 */
-    max-width: 500px; /* 追加 */
+    width: 100%;
+    max-width: 500px;
 }
 
 .contact-section label {
@@ -115,7 +115,7 @@ footer {
     border: 1px solid var(--border-color);
     border-radius: 5px;
     resize: vertical;
-    box-sizing: border-box; /* 追加 */
+    box-sizing: border-box;
 }
 
 .contact-section select,
@@ -141,7 +141,7 @@ footer {
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
-    box-sizing: border-box; /* 追加 */
+    box-sizing: border-box;
 }
 
 .notifications h2 {
@@ -176,7 +176,7 @@ footer {
     padding: 20px;
     margin-bottom: 40px;
     border-radius: 10px;
-    box-sizing: border-box; /* 追加 */
+    box-sizing: border-box;
 }
 
 .introduction h2 {
@@ -218,7 +218,7 @@ footer {
     margin-top: 40px;
     margin-bottom: 40px;
     border-radius: 10px;
-    box-sizing: border-box; /* 追加 */
+    box-sizing: border-box;
 }
 
 .terms-of-use h2 {
@@ -274,7 +274,7 @@ nav a {
 
     nav ul {
         flex-direction: column;
-        align-items: center; /* 追加 */
+        align-items: center;
     }
 
     nav ul li {
