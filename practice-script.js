@@ -1,7 +1,9 @@
 // practice-script.js
 
 document.addEventListener("DOMContentLoaded", function() {
-    const repositoryName = '/medical-exam-yobi-site'; // 実際の構成に合わせて修正
+    // ★ 変更点 ★
+    // GitHub Pages + 独自ドメインで、data/ や images/ がドメイン直下なら空文字にする
+    const repositoryName = '';
 
     // URLからパラメータを取得し、デフォルト値を設定
     const urlParams = new URLSearchParams(window.location.search);
@@ -82,8 +84,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 throw new Error('問題データが空です。');
             }
 
-            // ※ シャッフルしないで、そのままの順序で扱う
-            // shuffleArray(questions); // ← コメントアウト
+            // (シャッフルはしない)
+            // shuffleArray(questions);
 
             // トータル問題数を表示
             if (totalNumber) {
@@ -109,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ======== 問題を表示する関数 ========
     function displayQuestion() {
-        // 問題が無いとき
         if (questions.length === 0) {
             if (questionText) questionText.textContent = '問題が見つかりません。';
             if (answerBtn) answerBtn.disabled = true;
@@ -126,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
             questionText.textContent = q.question || '問題文がありません。';
         }
 
-        // 何問目か表示 (1-based)
+        // 何問目か表示
         if (currentNumber) {
             currentNumber.textContent = (currentQuestionIndex + 1);
         }
@@ -160,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
             explanationText.textContent = '';
         }
 
-        // 前・次・解答ボタンの状態
+        // ボタンの状態
         if (prevBtn) {
             prevBtn.disabled = (currentQuestionIndex === 0);
         }
@@ -194,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 correctAnswer
             };
 
-            // フィードバック (正誤表示)
+            // フィードバック (正誤)
             if (feedbackText) {
                 feedbackText.textContent = (userAnswer === correctAnswer)
                     ? '正解です！'
@@ -202,13 +203,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 feedbackText.style.display = 'block';
             }
 
-            // 解説表示
+            // 解説
             if (explanationText) {
                 explanationText.style.display = 'block';
                 explanationText.innerHTML = q.explanation || '解説がありません。';
             }
 
-            // 次の問題 or 結果表示ボタン
+            // 次の問題 or 結果表示
             if (answerBtn) answerBtn.disabled = true;
             if (nextBtn) {
                 nextBtn.disabled = (currentQuestionIndex === questions.length - 1);
@@ -225,12 +226,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // ======== 次の問題へ ========
     if (nextBtn) {
         nextBtn.addEventListener("click", function() {
-            // 10問ごとに部分採点 (10,20,30,...)
+            // 10問ごとに部分採点 (例: 10, 20, 30...)
             if ((currentQuestionIndex + 1) % 10 === 0) {
                 doPartialScore();
             }
 
-            // 次の問題へ
             if (currentQuestionIndex < questions.length - 1) {
                 currentQuestionIndex++;
                 displayQuestion();
@@ -253,9 +253,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // ======== 10問ごとに部分採点する関数 ========
+    // ======== 10問ごとに部分採点する ========
     function doPartialScore() {
-        // 例: currentQuestionIndexが9なら1~10問目の部分採点
         const endIndex = currentQuestionIndex;
         const startIndex = endIndex - 9 >= 0 ? endIndex - 9 : 0;
         let correctCount = 0;
@@ -293,13 +292,13 @@ document.addEventListener("DOMContentLoaded", function() {
         if (totalQuestionsElement) totalQuestionsElement.textContent = total;
         if (accuracyElement) accuracyElement.textContent = accuracy;
 
-        // 問題セクションを非表示、結果セクションを表示
+        // 問題セクションを隠して結果セクションを表示
         document.getElementById('question-section').style.display = 'none';
         if (resultSection) {
             resultSection.style.display = 'block';
         }
 
-        // 進捗データは削除 (一旦終了)
+        // 一旦終了扱いなのでlocalStorageを削除
         localStorage.removeItem(storageKey);
     }
 
@@ -309,7 +308,6 @@ document.addEventListener("DOMContentLoaded", function() {
             currentQuestionIndex = 0;
             userAnswers = [];
 
-            // localStorage削除
             localStorage.removeItem(storageKey);
 
             if (resultSection) resultSection.style.display = 'none';
@@ -341,6 +339,6 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem(storageKey, JSON.stringify(dataToSave));
     }
 
-    // ======== 実行（問題データ読み込み） ========
+    // ======== 実行 ========
     loadQuestions();
 });

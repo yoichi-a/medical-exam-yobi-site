@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // リポジトリ名を設定（あなたのリポジトリ名に合わせて変更してください）
-    const repositoryName = '/medical-exam-yobi-site';
+    // ★ 変更点 ★
+    // GitHub Pages + 独自ドメインで、data/ や images/ がドメイン直下なら空文字にする
+    const repositoryName = '';
 
     // URLからパラメータを取得
     const urlParams = new URLSearchParams(window.location.search);
