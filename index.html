@@ -20,21 +20,25 @@
   <meta name="keywords" content="医師国家試験, 予備試験, 過去問, 医学, 試験対策">
 </head>
 <body>
-<header>
-  <h1>医師国家試験予備試験過去問チャート</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html"><span class="fa-solid fa-house" aria-hidden="true"></span> ホーム</a></li>
-      <li><a href="year-selection.html"><span class="fa-solid fa-calendar-alt" aria-hidden="true"></span> 年度選択</a></li>
-      <li><a href="similar-practice.html"><i class="fa-solid fa-book-open"></i> 類似問題演習</a></li>
-      <li><a href="contact.html"><span class="fa-solid fa-envelope" aria-hidden="true"></span> お問い合わせ</a></li>
-    </ul>
-  </nav>
+
+<!-- ヒーロー風の背景をつけるため、headerタグにクラスを追加 -->
+<header class="hero-header">
+  <div class="header-overlay"><!-- 半透明オーバーレイ用のラッパ -->
+    <h1>医師国家試験予備試験過去問チャート</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html"><span class="fa-solid fa-house" aria-hidden="true"></span> ホーム</a></li>
+        <li><a href="year-selection.html"><span class="fa-solid fa-calendar-alt" aria-hidden="true"></span> 年度選択</a></li>
+        <li><a href="similar-practice.html"><i class="fa-solid fa-book-open"></i> 類似問題演習</a></li>
+        <li><a href="contact.html"><span class="fa-solid fa-envelope" aria-hidden="true"></span> お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main>
   <!-- ▼ お知らせセクションを追加 -->
-  <section class="notifications">
+  <section class="notifications card">
     <h2>お知らせ</h2>
     <ul>
       <li>
@@ -46,7 +50,7 @@
   </section>
   <!-- ▲ お知らせセクションここまで -->
 
-  <section class="introduction">
+  <section class="introduction card">
     <h2>運営者からのメッセージ</h2>
     <p>はじめまして。医師国家試験予備試験過去問チャートの運営者です。</p>
 
@@ -83,7 +87,7 @@
     <p>I hope that studying here can contribute, even in a small way, to your success in passing the exam.</p>
   </section>
 
-  <section class="terms-of-use">
+  <section class="terms-of-use card">
     <h2>利用規約</h2>
     <p>このサイトをご利用いただく前に、以下の利用規約をお読みください。本サイトを利用することで、これらの規約に同意したものとみなされます。</p>
 
@@ -94,7 +98,7 @@
     <p>本サイトの情報は正確性を期しておりますが、その完全性や正確性を保証するものではありません。利用者が本サイトの情報を用いて行う行為について、一切の責任を負いません。</p>
 
     <h3>決済・返金ポリシー</h3>
-    <p>本サイトでは、Stripeなどのオンライン決済サービスを利用する場合があります。購入後の返金は、原則として対応いたしかねますのでご了承ください。万が一、決済エラーや重複課金などの問題が発生した場合は、下記の問い合わせ先までご連絡ください。</p>
+    <p>本サイトでは、Stripeなどのオンライン決済サービスを利用する場合があります。購入後の返金は、原則として対応いたしかねますのでご了承ください。万が一、決済エラーや重複課金などの問題が発生した場合は、お問い合わせページにてご連絡ください。</p>
 
     <h3>禁止事項</h3>
     <p>
@@ -107,12 +111,13 @@
     <p>本サイトへのリンクは原則自由ですが、公序良俗に反するサイトからのリンクはお断りします。</p>
 
     <h3>問い合わせ先</h3>
-    <p>模擬試験や決済に関するお問い合わせは、お問い合わせページ</a>よりフォーム送信してください。</p>
+    <p>模擬試験や決済に関するお問い合わせは、<a href="contact.html">お問い合わせページ</a>よりフォーム送信してください。</p>
   </section>
 </main>
 
 <footer>
   <p>© 2024 医師国家試験予備試験過去問チャート</p>
 </footer>
+
 </body>
 </html>

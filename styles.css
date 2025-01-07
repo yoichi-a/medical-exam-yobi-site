@@ -23,6 +23,9 @@ body {
     min-height: 100vh;
 }
 
+/* ▼ もともとの header セレクタですが、
+   今回 header にクラスを追加するので、
+   そのクラス（.hero-header）用の新規スタイルを後半で追加しています。 */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -381,4 +384,48 @@ nav a {
     input[type="submit"] {
         font-size: 16px;
     }
+}
+
+/* =================================== */
+/* === 以下、新規追加CSS（ヒーローヘッダー & カード強化） === */
+/* =================================== */
+
+/* ヒーロー風の背景を適用するためのクラス */
+.hero-header {
+    position: relative;
+    background: url('https://source.unsplash.com/1600x900/?medical') no-repeat center center;
+    background-size: cover;
+    /* 画像を見せるため、適度にパディングを増量 */
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/* 半透明のオーバーレイ */
+.header-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+/* ロゴテキスト（h1）を少し強調 */
+.hero-header h1 {
+    margin-bottom: 20px;
+    font-size: 2rem; /* お好みで調整可能 */
+}
+
+/* “カード”の見た目を強化してリッチにする */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.16);
 }
