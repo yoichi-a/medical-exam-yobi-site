@@ -27,8 +27,6 @@
         <li><a href="year-selection.html"><span class="fa-solid fa-calendar-alt" aria-hidden="true"></span> 年度選択</a></li>
         <li><a href="similar-practice.html"><i class="fa-solid fa-book-open"></i> 類似問題演習</a></li>
         <li><a href="contact.html"><span class="fa-solid fa-envelope" aria-hidden="true"></span> お問い合わせ</a></li>
-        <!-- 現在のページ -->
-        <li><a href="mock-exam.html" class="active"><i class="fa-solid fa-pencil-alt"></i> 模擬試験について</a></li>
       </ul>
     </nav>
   </header>
@@ -58,10 +56,10 @@
 
       <h3>試験概要</h3>
       <ul>
-        <li>試験実施期間：<strong>2月を予定（詳細は後日）</strong></li>
+        <li>試験実施期間：<strong>2月中を予定（詳細は後日）</strong></li>
         <li>問題数：9科目 × 各10問（合計90問）</li>
-        <li>出題内容：基礎医学を中心とした予備試験本番レベルの問題</li>
-        <li>受験形式：オンラインで各自（時間制限は本番同様を想定）</li>
+        <li>出題内容：基礎医学を中心とした予備試験本番レベルの問題（画像問題はなし）</li>
+        <li>受験形式：各自（時間制限は本番同様を想定）</li>
       </ul>
       <p>受験者数に応じて<strong>順位・偏差値</strong>を算出し、後日メールにて送付いたします。</p>
     </section>
@@ -82,19 +80,6 @@
         （メールアドレスが異なると解答解説および後日配信の成績連絡が正常に送付できない場合があります）<br><br>
         多くの受験者の中でのご自身の学習到達度を確認する絶好の機会です。ぜひチャレンジしてみてください。
       </p>
-
-      <!-- Stripe Checkoutなどを使う場合のフォーム例（コメントアウト） -->
-      <!--
-      <form action="/create-checkout-session" method="POST">
-        <button type="submit" id="checkout-button">模擬試験を購入する</button>
-      </form>
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        const stripe = Stripe("YOUR_STRIPE_PUBLISHABLE_KEY");
-        // create-checkout-session へfetch or form submissionし、
-        // セッションIDを受け取って Stripe Checkout にリダイレクトさせる
-      </script>
-      -->
       <button>模擬試験を購入する（テスト）</button>
     </section>
 
@@ -114,6 +99,12 @@
 
   <footer>
     <p>© 2024 医師国家試験予備試験過去問チャート</p>
+    <!-- ▼ 目立たないように小さめ＆薄い色でリンクを配置 ▼ -->
+    <p class="footer-links">
+      <a href="privacy.html">プライバシーポリシー</a> |
+      <a href="commerce.html">特定商取引法に基づく表記</a>
+    </p>
+    <!-- ▲ 目立たないように小さめ＆薄い色でリンクを配置 ▲ -->
   </footer>
 </body>
 </html>

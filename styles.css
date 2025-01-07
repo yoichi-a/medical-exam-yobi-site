@@ -59,11 +59,11 @@ nav a:focus {
 
 main {
     flex: 1;
-    width: 100%; /* 修正: 90%から100%へ */
+    width: 100%;
     max-width: 1000px;
     margin: 20px auto;
     box-sizing: border-box;
-    padding: 0 10px; 
+    padding: 0 10px;
 }
 
 footer {
@@ -76,6 +76,26 @@ footer {
     margin-top: auto;
     box-sizing: border-box;
 }
+
+/* ▼ フッターの追加リンクを目立たせないためのスタイル ▼ */
+.footer-links {
+    font-size: 0.8em;       /* 小さめの文字サイズ */
+    margin-top: 0.5em;      /* 少し余白 */
+    color: #ccc;            /* 薄めの色 */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ccc;            /* リンクも薄い色に */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #fff;            /* ホバー・フォーカス時は白文字 */
+    text-decoration: underline;
+}
+/* ▲ フッターの追加リンクを目立たせないためのスタイル ▲ */
 
 .year-selection,
 .contact-section,
