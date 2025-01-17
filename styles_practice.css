@@ -1,16 +1,14 @@
 /* === カラー変数の定義 === */
 :root {
-    --primary-color: #004d40;       /* ヘッダーとフッターの背景色 */
-    --secondary-color: #00695c;     /* 見出しの色 */
-    --background-color: #e0f2f1;    /* ページの背景色 */
+    --primary-color: #00838f;       /* ヘッダーとフッターの背景色 */
+    --secondary-color: #006064;     /* サブの強調色 */
+    --background-color: #e0f7fa;    /* ページの背景色 */
     --text-color: #333333;          /* 基本テキストの色 */
-    --link-color: #004d40;          /* リンクの色 */
-    --link-hover-color: #00251a;    /* リンクホバー時の色 */
+    --link-color: #00838f;          /* リンクの色 */
+    --link-hover-color: #004d40;    /* リンクホバー時の色 */
     --border-color: #b0bec5;        /* ボーダーの色 */
-    --button-color: #00796b;        /* ボタンの色 */
-    --button-hover-color: #005a4f;  /* ボタンホバー時の色 */
-    --correct-color: #388e3c;       /* 正解時の色 */
-    --incorrect-color: #d32f2f;     /* 不正解時の色 */
+    --button-color: #0097a7;        /* ボタンの色 */
+    --button-hover-color: #006978;  /* ボタンホバー時の色 */
 }
 
 /* === ベーススタイル === */
@@ -34,6 +32,7 @@ header h1 {
     font-size: 24px;
 }
 
+/* === ナビゲーション === */
 nav ul {
     list-style: none;
     padding: 0;
@@ -57,149 +56,92 @@ nav a:hover {
     color: var(--link-hover-color);
 }
 
+/* === メインコンテンツ領域 === */
 main {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 0 20px;
     box-sizing: border-box;
 }
 
-/* === 問題セクション === */
-#question-section {
+/* === 既存の科目選択や利用規約などのスタイル === */
+.subject-selection h2 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subjects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.subject-category {
+    width: 48%;
     background-color: white;
     padding: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-sizing: border-box;
-    margin-bottom: 20px;
 }
 
-#progress {
-    text-align: right;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-#question-text {
-    font-size: 18px;
+.subject-category h3 {
+    color: var(--secondary-color);
     margin-bottom: 15px;
+    font-size: 20px;
 }
 
-#choices-list {
+.subject-category ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
-#choices-list li {
+.subject-category ul li {
     margin-bottom: 10px;
 }
 
-#choices-list label {
-    cursor: pointer;
-}
-
-#choices-list input[type="radio"] {
-    margin-right: 10px;
-}
-
-button {
+.subject-category ul li a {
+    display: block;
+    padding: 10px;
     background-color: var(--button-color);
     color: white;
-    border: none;
-    padding: 10px 20px;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
     transition: background-color 0.3s ease;
 }
 
-button:hover:not(:disabled) {
+.subject-category ul li a:hover {
     background-color: var(--button-hover-color);
 }
 
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+.subject-category ul li a i {
+    margin-right: 8px;
 }
 
-#feedback-text {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-#feedback-text.correct {
-    color: var(--correct-color);
-}
-
-#feedback-text.incorrect {
-    color: var(--incorrect-color);
-}
-
-.navigation {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.navigation button {
-    width: 150px;
-}
-
-#finish-btn {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: 20px auto;
-    background-color: var(--button-color);
-}
-
-#finish-btn:hover {
-    background-color: var(--button-hover-color);
-}
-
-#back-btn {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: 10px auto;
-    background-color: var(--button-color);
-}
-
-#back-btn:hover {
-    background-color: var(--button-hover-color);
-}
-
-/* === 結果セクション === */
-#result-section {
+/* === 利用規約セクション === */
+.terms-of-use {
     background-color: white;
     padding: 20px;
+    margin-top: 40px;
     border-radius: 10px;
-    box-sizing: border-box;
-    text-align: center;
 }
 
-#result-section h2 {
+.terms-of-use h2 {
     color: var(--secondary-color);
+    text-align: center;
     margin-bottom: 20px;
 }
 
-#result-section p {
-    font-size: 18px;
-    margin-bottom: 10px;
+.terms-of-use h3 {
+    color: var(--secondary-color);
+    margin-top: 20px;
 }
 
-#retry-btn,
-#back-to-selection-btn {
-    background-color: var(--button-color);
-    margin-top: 15px;
-    width: 100%;
-    max-width: 300px;
-}
-
-#retry-btn:hover,
-#back-to-selection-btn:hover {
-    background-color: var(--button-hover-color);
+.terms-of-use p {
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 /* === フッター === */
@@ -213,29 +155,257 @@ footer {
 
 /* === レスポンシブデザイン === */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 20px;
+    .subject-category {
+        width: 100%;
     }
 
     nav ul li {
         margin: 5px 10px;
     }
 
+    nav ul {
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================================================================
+   ==================== 以下、類似問題演習ページ向け追加 ===================
+   ========================================================================= */
+
+/* === 問題表示セクション全体をカード風に === */
+#question-section {
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    position: relative; /* 結果表示など重なる場合の拡張に備えて */
+}
+
+/* === 進捗表示 (#progress) === */
+#progress {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+#progress span {
+    font-weight: bold;
+}
+
+/* === 問題文 (#question-text) === */
+#question-text {
+    font-size: 1.15em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    background-color: #fdfdfd;
+    padding: 15px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 5px;
+    text-align: justify;
+}
+
+/* === 選択肢リスト (#choices-list) === */
+#choices-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+/* --- 選択肢をカード風に装飾 --- */
+#choices-list li {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 12px;
+    padding: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* --- ホバーで浮き上がり演出 --- */
+#choices-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* === 解答送信ボタン (#submit-answer-btn) === */
+#submit-answer-btn {
+    display: inline-block;
+    background-color: var(--button-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+}
+#submit-answer-btn:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
+}
+
+/* === フィードバック表示 (#feedback-text) & 解説 (#explanation-text) === */
+#feedback-text,
+#explanation-text {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* 正解or不正解などによって色を変えたい場合のサンプル: 
+   例えば JSでclassを付け替える → .correct, .incorrect等 */
+.correct {
+    background-color: #e0ffe0; /* 薄い緑 */
+    border: 1px solid #66bb6a;
+}
+.incorrect {
+    background-color: #ffe0e0; /* 薄い赤 */
+    border: 1px solid #ff8a80;
+}
+
+/* === ナビゲーションボタン (前の問題、次の問題) === */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.navigation button {
+    background-color: var(--button-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.navigation button:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
+}
+
+/* === 終了ボタン (#finish-btn) === */
+#finish-btn {
+    display: inline-block;
+    background-color: var(--button-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+#finish-btn:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
+}
+
+/* === 戻るボタン (#back-btn) === */
+#back-btn {
+    display: inline-block;
+    background-color: #fff;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#back-btn:hover {
+    background-color: var(--button-hover-color);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* === 結果表示セクション (#result-section) === */
+#result-section {
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+#result-section h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    text-align: center;
+}
+#result-section p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+#retry-btn,
+#back-to-selection-btn {
+    background-color: var(--button-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+#retry-btn:hover,
+#back-to-selection-btn:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
+}
+
+/* === スマホ対応 === */
+@media (max-width: 768px) {
+    #question-section,
+    #result-section {
+        padding: 15px;
+        margin: 15px 0;
+    }
     #question-text {
-        font-size: 16px;
+        font-size: 1.05em;
     }
-
-    button {
-        padding: 8px 16px;
-        font-size: 14px;
+    #choices-list li {
+        padding: 10px;
+        margin-bottom: 10px;
     }
-
     .navigation {
         flex-direction: column;
     }
-
     .navigation button {
         width: 100%;
-        margin: 5px 0;
+        max-width: 280px;
+        margin: 5px auto;
+    }
+    #back-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    #finish-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    #retry-btn,
+    #back-to-selection-btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 5px auto;
     }
 }
