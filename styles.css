@@ -9,10 +9,14 @@
     --link-hover-color: #00796b;    /* リンクホバー時の色 */
     --border-color: #cccccc;        /* ボーダーの色 */
     --focus-color: #ff9800;         /* フォーカス時の色 */
-}
-
-/* === ベーススタイル（PC向け） === */
-body {
+  
+    /* グラデーション色の定義（進捗バーやボタンのホバーに使う） */
+    --gradient-start: #00acc1;
+    --gradient-end: #00796b;
+  }
+  
+  /* === ベーススタイル（PC向け） === */
+  body {
     font-family: 'Noto Sans JP', Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -21,52 +25,56 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-header {
+  }
+  
+  /* ヘッダー */
+  header {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
-}
-
-nav ul {
+  }
+  header h1 {
+    margin: 0;
+  }
+  
+  /* ナビゲーション */
+  nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-nav ul li {
+  }
+  nav ul li {
     margin: 0 15px;
-}
-
-nav a {
+  }
+  nav a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-nav a:hover,
-nav a:focus {
+  }
+  nav a:hover,
+  nav a:focus {
     text-decoration: underline;
     color: var(--link-hover-color);
-}
-
-main {
+  }
+  
+  /* メインコンテンツ */
+  main {
     flex: 1;
     width: 100%;
     max-width: 1000px;
     margin: 20px auto;
     box-sizing: border-box;
     padding: 0 10px;
-}
-
-footer {
+  }
+  
+  /* フッター */
+  footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
@@ -75,310 +83,255 @@ footer {
     position: relative;
     margin-top: auto;
     box-sizing: border-box;
-}
-
-/* ▼ フッターの追加リンクを目立たせないためのスタイル ▼ */
-.footer-links {
-    font-size: 0.8em;       /* 小さめの文字サイズ */
-    margin-top: 0.5em;      /* 少し余白 */
-    color: #ccc;            /* 薄めの色 */
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: #ccc;            /* リンクも薄い色に */
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.footer-links a:hover,
-.footer-links a:focus {
-    color: #fff;            /* ホバー・フォーカス時は白文字 */
-    text-decoration: underline;
-}
-/* ▲ フッターの追加リンクを目立たせないためのスタイル ▲ */
-
-.year-selection,
-.contact-section,
-.introduction,
-.terms-of-use {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.year-selection {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.contact-section {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.contact-section form {
-    display: inline-block;
-    text-align: left;
-    width: 100%;
-    max-width: 500px;
-}
-
-.contact-section label {
-    display: block;
-    margin-top: 10px;
-}
-
-.contact-section textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    resize: vertical;
-    box-sizing: border-box;
-}
-
-.contact-section select,
-.contact-section input[type="submit"] {
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.contact-section select:hover,
-.contact-section input[type="submit"]:hover {
-    background-color: var(--link-hover-color);
-    transform: translateY(-2px);
-}
-
-.notifications {
-    background-color: var(--notification-bg);
+  }
+  footer p {
+    margin: 0;
+  }
+  
+  /* === カード状の問題表示セクション === */
+  .question-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
+    margin-bottom: 20px;
     box-sizing: border-box;
-}
-
-.notifications h2 {
+    transition: box-shadow 0.3s ease;
+  }
+  /* ホバー時にシャドウを少し濃く */
+  .question-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* === 問題数の表示 === */
+  .problem-count {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .problem-count strong {
     color: var(--secondary-color);
-}
-
-.notifications ul {
+  }
+  
+  /* === 進捗バー周り === */
+  .progress-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 中央寄せ */
+    margin-bottom: 20px;
+    gap: 8px;
+  }
+  .progress-bar-container label {
+    font-weight: bold;
+  }
+  progress {
+    appearance: none; /* ブラウザデフォルトの見た目をリセット */
+    flex: 1;
+    height: 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+  }
+  /* Chrome/Edge/Safari 対応 */
+  progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 5px;
+  }
+  progress::-webkit-progress-value {
+    /* グラデーションに変更 */
+    background: linear-gradient(
+      90deg,
+      var(--gradient-start),
+      var(--gradient-end)
+    );
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  /* Firefox 対応 */
+  progress::-moz-progress-bar {
+    background: linear-gradient(
+      90deg,
+      var(--gradient-start),
+      var(--gradient-end)
+    );
+    border-radius: 5px;
+  }
+  #progress-ratio {
+    width: 40px;
+    text-align: right;
+  }
+  
+  /* === 問題文 === */
+  #question-text {
+    font-size: 1.15em;      /* 少し大きめの文字サイズ */
+    line-height: 1.6;       /* 行間を広めに */
+    margin-bottom: 20px;
+    text-align: justify;    /* 両端揃え */
+  }
+  
+  /* === 選択肢リスト === */
+  #choices-list {
     list-style-type: none;
     padding: 0;
-}
-
-.notifications ul li {
-    padding: 5px 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.notifications ul li:last-child {
-    border-bottom: none;
-}
-
-/* === 画像のスタイル調整 === */
-#question-image,
-#answer-image {
+    margin-bottom: 20px;
+  }
+  #choices-list li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+  }
+  #choices-list li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* === 画像スタイル === */
+  #question-image,
+  #answer-image {
     max-width: 100%;
     height: auto;
     margin-top: 10px;
-}
-
-/* === 運営者からのメッセージセクションのスタイル === */
-.introduction {
-    background-color: #ffffff;
-    padding: 20px;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-.introduction h2 {
-    color: var(--secondary-color);
-    text-align: center;
+  }
+  
+  /* === 解答周り === */
+  .answer-button {
+    display: inline-block;
     margin-bottom: 20px;
-    transition: color 0.3s ease;
-}
-
-.introduction p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-    text-align: justify;
-}
-
-.introduction hr {
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
+    padding: 10px 20px;
+    color: white;
+    background: var(--primary-color);
     border: none;
-    border-top: 1px solid var(--border-color);
-    margin: 30px 0;
-}
-
-/* === リンクのホバー効果 === */
-.introduction a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.introduction a:hover,
-.introduction a:focus {
-    text-decoration: underline;
-    color: var(--link-hover-color);
-}
-
-/* === 利用規約セクションのスタイル === */
-.terms-of-use {
-    background-color: #ffffff;
-    padding: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-.terms-of-use h2 {
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.terms-of-use h3 {
-    color: var(--secondary-color);
-    margin-top: 15px;
-}
-
-.terms-of-use p {
+    border-radius: 5px;
+  }
+  .answer-button:hover {
+    background: linear-gradient(
+      90deg,
+      var(--gradient-start),
+      var(--gradient-end)
+    );
+    transform: translateY(-2px);
+  }
+  .answer-text {
+    font-size: 1.05em;
     line-height: 1.6;
-    margin-bottom: 15px;
-    text-align: justify;
-}
-
-/* === フォーカススタイルの追加 === */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
+    margin-top: 10px;
+  }
+  
+  /* === ナビゲーションボタン === */
+  .navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  .navigation button {
+    font-size: 1em;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: var(--primary-color);
+  }
+  .navigation button:hover {
+    background: linear-gradient(
+      90deg,
+      var(--gradient-start),
+      var(--gradient-end)
+    );
+    transform: translateY(-2px);
+  }
+  
+  /* 戻るボタン */
+  .back-button {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1em;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: var(--primary-color);
+  }
+  .back-button:hover {
+    background: linear-gradient(
+      90deg,
+      var(--gradient-start),
+      var(--gradient-end)
+    );
+    transform: translateY(-2px);
+  }
+  
+  /* === フォーカススタイル === */
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
     outline: 2px dashed var(--focus-color);
     outline-offset: 4px;
-}
-
-/* === アニメーションの追加 === */
-button,
-input[type="submit"] {
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover,
-input[type="submit"]:hover {
-    background-color: var(--link-hover-color);
-    transform: translateY(-2px);
-}
-
-.introduction h2,
-nav a {
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-/* === モバイル対応のスタイル（幅が768px以下の画面に適用） === */
-@media (max-width: 768px) {
+  }
+  
+  /* === モバイル対応 (幅が768px以下) === */
+  @media (max-width: 768px) {
     header {
-        padding: 10px;
-        text-align: center;
+      padding: 10px;
     }
-
+  
     nav ul {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-
     nav ul li {
-        margin: 10px 0;
+      margin: 10px 0;
     }
-
+  
     main {
-        padding: 0 10px;
+      padding: 0 10px;
     }
-
-    .year-selection,
-    .contact-section,
-    .introduction,
-    .terms-of-use {
-        padding: 0 10px;
+  
+    .question-card {
+      padding: 15px;
+      margin-bottom: 30px;
     }
-
-    .subject-selection h2,
-    .year-selection h2,
-    .introduction h2,
-    .terms-of-use h2 {
-        font-size: 24px;
+  
+    #problem-title {
+      font-size: 1.4em;
     }
-
-    .notifications,
-    .contact-section form,
-    .introduction,
-    .terms-of-use {
-        width: 100%;
-        padding: 0 10px;
+    #question-text {
+      font-size: 1.1em;
     }
-
-    footer {
-        padding: 20px;
+    .answer-text {
+      font-size: 1em;
     }
-
-    /* 運営者からのメッセージセクションのモバイル調整 */
-    .introduction {
-        padding: 15px;
+  
+    /* ボタンサイズや余白を調整 */
+    .answer-button,
+    .navigation button,
+    .back-button {
+      width: 100%;
+      max-width: 300px;
+      margin: 5px auto;
+      font-size: 0.95em;
     }
-
-    .introduction h2 {
-        font-size: 20px;
-    }
-
-    .introduction p {
-        font-size: 14px;
-    }
-
-    .terms-of-use h2 {
-        font-size: 20px;
-    }
-
-    .terms-of-use h3 {
-        font-size: 18px;
-    }
-
-    .terms-of-use p {
-        font-size: 14px;
-    }
-
-    /* 年度選択セクションのグリッドレイアウト調整 */
-    .years-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 20px;
-    }
-
-    /* ナビゲーションボタンの調整 */
+  
     .navigation {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
     }
-
-    .navigation button {
-        width: 100%;
-        max-width: 300px;
-        margin: 5px 0;
+  
+    /* 進捗バーのコンテナを縦並びに */
+    .progress-bar-container {
+      flex-direction: column;
+      gap: 6px;
     }
-
-    /* ボタンのテキストサイズ調整 */
-    button,
-    input[type="submit"] {
-        font-size: 16px;
-    }
-}
+  }
+  

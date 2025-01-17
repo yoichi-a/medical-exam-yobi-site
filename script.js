@@ -55,9 +55,26 @@ document.addEventListener("DOMContentLoaded", function() {
     // 進捗表示用の要素
     const currentNumber = document.getElementById("current-number");
     const totalNumber = document.getElementById("total-number");
+    // 追加: プログレスバーの要素
+    const progressBar = document.getElementById("progress-bar");
+    const progressRatio = document.getElementById("progress-ratio");
 
     // 要素の存在確認
-    if (!problemTitle || !questionText || !choicesList || !questionImage || !answerText || !answerImage || !answerBtn || !prevBtn || !nextBtn || !currentNumber || !totalNumber) {
+    if (
+        !problemTitle ||
+        !questionText ||
+        !choicesList ||
+        !questionImage ||
+        !answerText ||
+        !answerImage ||
+        !answerBtn ||
+        !prevBtn ||
+        !nextBtn ||
+        !currentNumber ||
+        !totalNumber ||
+        !progressBar ||
+        !progressRatio
+    ) {
         alert('必要な要素が見つかりません。ページの構造を確認してください。');
         return;
     }
@@ -80,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // 全問題数を表示
             totalNumber.textContent = questions.length;
 
+            // 最初の問題を表示
             displayQuestion();
         } catch (error) {
             console.error(error);
@@ -116,15 +134,21 @@ document.addEventListener("DOMContentLoaded", function() {
             answerText.textContent = "";
             answerImage.style.display = 'none';
 
-            // ボタンの状態を更新
-            prevBtn.disabled = currentQuestionIndex === 0;
-            nextBtn.disabled = currentQuestionIndex === questions.length - 1;
-            answerBtn.disabled = false; // 解答ボタンを有効化
-
-            // 現在の問題番号を更新
+            // 現在の問題番号を表示 (1-based)
             currentNumber.textContent = currentQuestionIndex + 1;
 
+            // ナビゲーションボタンの状態を更新
+            prevBtn.disabled = (currentQuestionIndex === 0);
+            nextBtn.disabled = (currentQuestionIndex === questions.length - 1);
+            answerBtn.disabled = false;
+
+            // 進捗バーの更新
+            progressBar.value = currentQuestionIndex + 1;  
+            progressBar.max = questions.length;
+            const percentage = Math.round(((currentQuestionIndex + 1) / questions.length) * 100);
+            progressRatio.textContent = percentage + "%";
         } else {
+            // 問題データが空の場合
             questionText.textContent = '問題が見つかりません。';
             answerBtn.disabled = true;
             prevBtn.disabled = true;
@@ -136,6 +160,8 @@ document.addEventListener("DOMContentLoaded", function() {
     answerBtn.addEventListener("click", function() {
         const currentQuestion = questions[currentQuestionIndex];
         answerText.style.display = "block";
+
+        // 正解が配列の場合は全て列挙
         if (Array.isArray(currentQuestion.answer)) {
             const correctAnswers = currentQuestion.answer.join(', ');
             answerText.innerHTML = `正解：${correctAnswers}<br>${currentQuestion.explanation || '解説がありません。'}`;

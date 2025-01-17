@@ -1,54 +1,103 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>問題表示ページ</title>
-    <!-- Font Awesomeの最新安定版を使用 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <!-- メタデータの追加 -->
-    <meta name="description" content="医師国家試験予備試験過去問の問題表示ページです。">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>問題表示ページ</title>
+  <!-- Font Awesomeの最新安定版を使用 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <!-- 外部CSSファイルを読み込む -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- メタデータの追加 -->
+  <meta
+    name="description"
+    content="医師国家試験予備試験過去問の問題表示ページです。"
+  />
 </head>
 <body>
-    <header>
-        <h1 id="problem-title">問題表示</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> ホーム</a></li>
-                <li><a href="year-selection.html"><i class="fa-solid fa-calendar-alt"></i> 年度選択</a></li>
-                <li><a href="similar-practice.html"><i class="fa-solid fa-book-open"></i> 類似問題演習</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="question-section">
-            <!-- ここに進捗を表示する要素を追加 -->
-            <p id="progress">問題 <span id="current-number">0</span> / <span id="total-number">0</span></p>
+  <header>
+    <h1 id="problem-title">問題表示</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> ホーム</a></li>
+        <li><a href="year-selection.html"
+          ><i class="fa-solid fa-calendar-alt"></i> 年度選択</a
+        ></li>
+        <li><a href="similar-practice.html"
+          ><i class="fa-solid fa-book-open"></i> 類似問題演習</a
+        ></li>
+      </ul>
+    </nav>
+  </header>
 
-            <p id="question-text">ここに問題が表示されます。</p>
-            <!-- 選択肢を表示する要素 -->
-            <ul id="choices-list"></ul>
-            <!-- 画像を表示するための <img> 要素 -->
-            <img id="question-image" src="" alt="問題の画像" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
+  <main>
+    <!-- カード風の問題表示セクション -->
+    <section id="question-section" class="question-card">
+      <!-- 問題数と進捗 -->
+      <p id="progress" class="problem-count">
+        <strong>問題 <span id="current-number">0</span> / <span id="total-number">0</span></strong>
+      </p>
 
-            <button id="answer-btn"><i class="fa-solid fa-check-circle"></i> 解答を表示</button>
-            <p id="answer-text" style="display: none;">ここに解答が表示されます。</p>
-            <!-- 解答の画像を表示するための <img> 要素 -->
-            <img id="answer-image" src="" alt="解答の画像" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
+      <!-- 進捗バー -->
+      <div class="progress-bar-container">
+        <label for="progress-bar">進捗:</label>
+        <progress id="progress-bar" value="0" max="10"></progress>
+        <span id="progress-ratio">0%</span>
+      </div>
 
-            <div class="navigation">
-                <button id="prev-btn" disabled><i class="fa-solid fa-arrow-left"></i> 前の問題</button>
-                <button id="next-btn">次の問題 <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-            <button id="back-btn"><i class="fa-solid fa-rotate-left"></i> 科目選択ページに戻る</button>
-        </section>
-    </main>
-    <footer>
-        <p>© 2024 医師国家試験予備試験過去問チャート</p>
-    </footer>
+      <!-- 問題文＆選択肢 -->
+      <p id="question-text">ここに問題が表示されます。</p>
+      <ul id="choices-list"></ul>
 
-    <!-- 外部JavaScriptファイルを読み込む -->
-    <script src="script.js"></script>
+      <!-- 問題の画像 -->
+      <img
+        id="question-image"
+        src=""
+        alt="問題の画像"
+        style="display: none;"
+      />
+
+      <!-- 解答表示ボタンと解答文 -->
+      <button id="answer-btn" class="answer-button">
+        <i class="fa-solid fa-check-circle"></i> 解答を表示
+      </button>
+      <p id="answer-text" class="answer-text" style="display: none;">
+        ここに解答が表示されます。
+      </p>
+
+      <!-- 解答の画像 -->
+      <img
+        id="answer-image"
+        src=""
+        alt="解答の画像"
+        style="display: none;"
+      />
+
+      <!-- ナビゲーションボタン -->
+      <div class="navigation">
+        <button id="prev-btn" disabled>
+          <i class="fa-solid fa-arrow-left"></i> 前の問題
+        </button>
+        <button id="next-btn">
+          次の問題 <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- 科目選択ページに戻るボタン -->
+      <button id="back-btn" class="back-button">
+        <i class="fa-solid fa-rotate-left"></i> 科目選択ページに戻る
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 医師国家試験予備試験過去問チャート</p>
+  </footer>
+
+  <!-- 外部JavaScriptファイルを読み込む -->
+  <script src="script.js"></script>
 </body>
 </html>
