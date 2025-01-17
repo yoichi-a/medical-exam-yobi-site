@@ -160,30 +160,52 @@
     text-align: right;
   }
   
-  /* === 問題文 === */
+  /* === 問題文 (#question-text) をあっさり差別化 === */
   #question-text {
     font-size: 1.15em;      /* 少し大きめの文字サイズ */
     line-height: 1.6;       /* 行間を広めに */
-    margin-bottom: 20px;
+    margin: 20px 0;
     text-align: justify;    /* 両端揃え */
+    background-color: #fdfdfd; /* 選択肢との区別を付けるため薄い色 */
+    padding: 10px 15px;     /* 少し余白 */
+    border-left: 5px solid var(--primary-color);
   }
   
-  /* === 選択肢リスト === */
+  /* === 選択肢リスト (#choices-list) はカード風 + FAアイコン === */
   #choices-list {
-    list-style-type: none;
+    list-style: none;        /* デフォルトの丸を消す */
     padding: 0;
     margin-bottom: 20px;
   }
+  
   #choices-list li {
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 12px;
+    padding: 12px 12px 12px 50px;  /* アイコンの分だけ左に余裕を確保 */
+    border-radius: 6px;
     border: 1px solid var(--border-color);
-    transition: background-color 0.2s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
+  
+  /* ::beforeでFAアイコンを表示（選択肢の先頭マーク） */
+  #choices-list li::before {
+    content: "\f054"; /* 例: fa-angle-right (\f105なども可) */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900; /* solidアイコンの場合 */
+    font-size: 1.1em;
+    color: var(--primary-color);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* ホバー時に微妙に浮き上がる */
   #choices-list li:hover {
-    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
   
   /* === 画像スタイル === */
