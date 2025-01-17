@@ -1,7 +1,7 @@
 /* === カラー変数の定義 === */
 :root {
     --primary-color: #00acc1;       /* ヘッダーとフッターの背景色 */
-    --secondary-color: #00796b;     /* 見出しの色 */
+    --secondary-color: #00796b;     /* サブ見出し等の強調色 */
     --background-color: #f0f8ff;    /* ページの背景色 */
     --notification-bg: #e0f7fa;     /* お知らせセクションの背景色 */
     --text-color: #333333;          /* 基本テキストの色 */
@@ -15,7 +15,10 @@
     --gradient-end: #00796b;
 }
 
-/* === ベーススタイル（PC向け） === */
+/* =========================================================================
+   ======================== ベーススタイル（PC向け） =======================
+   ========================================================================= */
+
 body {
     font-family: 'Noto Sans JP', Arial, sans-serif;
     background-color: var(--background-color);
@@ -27,6 +30,7 @@ body {
     min-height: 100vh;
 }
 
+/* === ヘッダー === */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -35,12 +39,12 @@ header {
     width: 100%;
     box-sizing: border-box;
 }
-
 header h1 {
     margin: 0;
+    font-size: 24px;
 }
 
-/* ナビゲーション */
+/* === ナビゲーション === */
 nav ul {
     list-style: none;
     padding: 0;
@@ -49,24 +53,21 @@ nav ul {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 nav ul li {
     margin: 0 15px;
 }
-
 nav a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
-
 nav a:hover,
 nav a:focus {
     text-decoration: underline;
     color: var(--link-hover-color);
 }
 
-/* メインコンテンツ */
+/* === メインコンテンツ領域 === */
 main {
     flex: 1;
     width: 100%;
@@ -76,7 +77,7 @@ main {
     padding: 0 10px;
 }
 
-/* フッター */
+/* === フッター === */
 footer {
     background-color: var(--primary-color);
     color: white;
@@ -87,32 +88,77 @@ footer {
     margin-top: auto;
     box-sizing: border-box;
 }
-
 footer p {
     margin: 0;
 }
 
-/* ▼ フッターの追加リンクを目立たせないためのスタイル ▼ */
+/* フッター内の追加リンク (.footer-links) を小さく目立たせない */
 .footer-links {
-    font-size: 0.8em;       /* 小さめの文字サイズ */
-    margin-top: 0.5em;      /* 少し余白 */
-    color: #ccc;            /* 薄めの色 */
+    font-size: 0.8em;
+    margin-top: 0.5em;
+    color: #ccc;
 }
-
 .footer-links a {
     text-decoration: none;
-    color: #ccc;            /* リンクも薄い色に */
+    color: #ccc;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
-
 .footer-links a:hover,
 .footer-links a:focus {
-    color: #fff;            /* ホバー・フォーカス時は白文字 */
+    color: #fff;
     text-decoration: underline;
 }
-/* ▲ フッターの追加リンクを目立たせないためのスタイル ▲ */
 
-/* === お知らせやその他セクション === */
+/* =========================================================================
+   ==================== 他ページで使われる要素のスタイル ===================
+   ========================================================================= */
+
+/* === お知らせ/通知セクション (.notifications) === */
+.notifications {
+    background-color: var(--notification-bg);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    /* カード風に少し影をつけて見栄えUP */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+.notifications h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.notifications ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.notifications ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 5px;
+    line-height: 1.6;
+}
+.notifications ul li:last-child {
+    border-bottom: none;
+}
+/* アイコンをつける例 (Font Awesome) */
+.notifications ul li::before {
+    content: "\f05a"; /* fa-circle-info (\f05a)など */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1em;
+}
+
+/* === 年度選択, 問い合わせ, 運営者メッセージ, 利用規約など === */
 .year-selection,
 .contact-section,
 .introduction,
@@ -123,28 +169,27 @@ footer p {
     box-sizing: border-box;
 }
 
+/* 年度選択セクション */
 .year-selection {
     text-align: center;
     margin-top: 50px;
 }
 
+/* 問い合わせセクション */
 .contact-section {
     text-align: center;
     margin-top: 50px;
 }
-
 .contact-section form {
     display: inline-block;
     text-align: left;
     width: 100%;
     max-width: 500px;
 }
-
 .contact-section label {
     display: block;
     margin-top: 10px;
 }
-
 .contact-section textarea {
     width: 100%;
     padding: 10px;
@@ -153,7 +198,6 @@ footer p {
     resize: vertical;
     box-sizing: border-box;
 }
-
 .contact-section select,
 .contact-section input[type="submit"] {
     padding: 10px;
@@ -165,41 +209,13 @@ footer p {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 .contact-section select:hover,
 .contact-section input[type="submit"]:hover {
     background-color: var(--link-hover-color);
     transform: translateY(-2px);
 }
 
-/* お知らせ */
-.notifications {
-    background-color: var(--notification-bg);
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-.notifications h2 {
-    color: var(--secondary-color);
-}
-
-.notifications ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.notifications ul li {
-    padding: 5px 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.notifications ul li:last-child {
-    border-bottom: none;
-}
-
-/* === 運営者からのメッセージセクションのスタイル === */
+/* 運営者からのメッセージや導入文 (.introduction) */
 .introduction {
     background-color: #ffffff;
     padding: 20px;
@@ -207,40 +223,34 @@ footer p {
     border-radius: 10px;
     box-sizing: border-box;
 }
-
 .introduction h2 {
     color: var(--secondary-color);
     text-align: center;
     margin-bottom: 20px;
     transition: color 0.3s ease;
 }
-
 .introduction p {
     line-height: 1.6;
     margin-bottom: 15px;
     text-align: justify;
 }
-
 .introduction hr {
     border: none;
     border-top: 1px solid var(--border-color);
     margin: 30px 0;
 }
-
-/* === リンクのホバー効果 === */
 .introduction a {
     color: var(--link-color);
     text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
-
 .introduction a:hover,
 .introduction a:focus {
     text-decoration: underline;
     color: var(--link-hover-color);
 }
 
-/* === 利用規約セクションのスタイル === */
+/* 利用規約 (.terms-of-use) */
 .terms-of-use {
     background-color: #ffffff;
     padding: 20px;
@@ -249,162 +259,71 @@ footer p {
     border-radius: 10px;
     box-sizing: border-box;
 }
-
 .terms-of-use h2 {
     color: var(--secondary-color);
     margin-bottom: 20px;
     text-align: center;
 }
-
 .terms-of-use h3 {
     color: var(--secondary-color);
     margin-top: 15px;
 }
-
 .terms-of-use p {
     line-height: 1.6;
     margin-bottom: 15px;
     text-align: justify;
 }
 
-/* === 画像のスタイル調整（問題表示で使う場合など） === */
-#question-image,
-#answer-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
+/* =========================================================================
+   ============= 模擬試験ページに登場する新しいセクションの例 =============
+   ========================================================================= */
+
+/* 各種セクションを白背景＆角丸にしてカード風にもできる */
+.mock-exam-details,
+.sample-questions,
+.mock-exam-purchase,
+.mock-exam-caution {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.mock-exam-details h3,
+.sample-questions h3,
+.mock-exam-purchase h3,
+.mock-exam-caution h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+.sample-questions h4 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
-/* === フォーカススタイルの追加 === */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-    outline: 2px dashed var(--focus-color);
-    outline-offset: 4px;
-}
-
-/* === アニメーションの追加 === */
-button,
-input[type="submit"] {
+/* ボタン装飾の一例 (例: 「模擬試験を購入する」ボタン) */
+.mock-exam-purchase button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-button:hover,
-input[type="submit"]:hover {
-    background-color: var(--link-hover-color);
+.mock-exam-purchase button:hover {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     transform: translateY(-2px);
 }
 
-.introduction h2,
-nav a {
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-/* === モバイル対応のスタイル（幅が768px以下の画面に適用） === */
-@media (max-width: 768px) {
-    header {
-        padding: 10px;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    main {
-        padding: 0 10px;
-    }
-
-    .year-selection,
-    .contact-section,
-    .introduction,
-    .terms-of-use {
-        padding: 0 10px;
-    }
-
-    .subject-selection h2,
-    .year-selection h2,
-    .introduction h2,
-    .terms-of-use h2 {
-        font-size: 24px;
-    }
-
-    .notifications,
-    .contact-section form,
-    .introduction,
-    .terms-of-use {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    footer {
-        padding: 20px;
-    }
-
-    /* 運営者からのメッセージセクションのモバイル調整 */
-    .introduction {
-        padding: 15px;
-    }
-
-    .introduction h2 {
-        font-size: 20px;
-    }
-
-    .introduction p {
-        font-size: 14px;
-    }
-
-    .terms-of-use h2 {
-        font-size: 20px;
-    }
-
-    .terms-of-use h3 {
-        font-size: 18px;
-    }
-
-    .terms-of-use p {
-        font-size: 14px;
-    }
-
-    /* 年度選択セクションのグリッドレイアウト調整 */
-    .years-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 20px;
-    }
-
-    /* ナビゲーションボタンの調整 */
-    .navigation {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navigation button {
-        width: 100%;
-        max-width: 300px;
-        margin: 5px 0;
-    }
-
-    /* ボタンのテキストサイズ調整 */
-    button,
-    input[type="submit"] {
-        font-size: 16px;
-    }
-}
-
 /* =========================================================================
-   ============== 以下、問題表示ページ用の追加スタイル ================
+   ========== 以下、問題表示ページ（.question-card 等）のスタイル =========
    ========================================================================= */
 
-/* === カード状の問題表示セクション === */
+/* カード状の問題表示セクション */
 .question-card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -418,7 +337,7 @@ nav a {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* === 問題数の表示 === */
+/* 問題数の表示 */
 .problem-count {
     font-size: 1.2em;
     margin-bottom: 10px;
@@ -428,11 +347,11 @@ nav a {
     color: var(--secondary-color);
 }
 
-/* === 進捗バー関連 (.progress-bar-container) === */
+/* 進捗バーなど */
 .progress-bar-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* 中央寄せ */
+    justify-content: center;
     margin-bottom: 20px;
     gap: 8px;
 }
@@ -440,7 +359,7 @@ nav a {
     font-weight: bold;
 }
 progress {
-    appearance: none; /* ブラウザデフォルトの見た目をリセット */
+    appearance: none;
     flex: 1;
     height: 20px;
     margin: 0 10px;
@@ -452,21 +371,13 @@ progress::-webkit-progress-bar {
     border-radius: 5px;
 }
 progress::-webkit-progress-value {
-    background: linear-gradient(
-        90deg,
-        var(--gradient-start),
-        var(--gradient-end)
-    );
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     border-radius: 5px;
     transition: width 0.3s ease;
 }
 /* Firefox 対応 */
 progress::-moz-progress-bar {
-    background: linear-gradient(
-        90deg,
-        var(--gradient-start),
-        var(--gradient-end)
-    );
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     border-radius: 5px;
 }
 #progress-ratio {
@@ -474,7 +385,7 @@ progress::-moz-progress-bar {
     text-align: right;
 }
 
-/* === 問題文 (例: #question-text) === */
+/* 問題文 */
 #question-text {
     font-size: 1.15em;
     line-height: 1.6;
@@ -485,14 +396,12 @@ progress::-moz-progress-bar {
     border-left: 5px solid var(--primary-color);
 }
 
-/* === 選択肢リスト (#choices-list) === */
+/* 選択肢リスト（カード風） */
 #choices-list {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
 }
-
-/* 選択肢をカード風に */
 #choices-list li {
     position: relative;
     background-color: #fff;
@@ -503,10 +412,9 @@ progress::-moz-progress-bar {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-/* Font Awesomeアイコンを疑似要素で表示 (fa-angle-right等) */
+/* アイコン */
 #choices-list li::before {
-    content: "\f054"; /* fa-angle-right (\f105) などお好みで */
+    content: "\f054"; /* fa-angle-right (\f105等) */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     font-size: 1.1em;
@@ -516,14 +424,21 @@ progress::-moz-progress-bar {
     top: 50%;
     transform: translateY(-50%);
 }
-
 /* ホバーで浮き上がり */
 #choices-list li:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* === 解答ボタンなど === */
+/* 画像スタイル (#question-image, #answer-image) */
+#question-image,
+#answer-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* 解答周りのボタンやテキスト */
 .answer-button {
     display: inline-block;
     margin-bottom: 20px;
@@ -537,11 +452,7 @@ progress::-moz-progress-bar {
     border-radius: 5px;
 }
 .answer-button:hover {
-    background: linear-gradient(
-        90deg,
-        var(--gradient-start),
-        var(--gradient-end)
-    );
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     transform: translateY(-2px);
 }
 .answer-text {
@@ -550,7 +461,7 @@ progress::-moz-progress-bar {
     margin-top: 10px;
 }
 
-/* === ナビゲーションボタン === */
+/* ナビゲーションボタン (前/次) */
 .navigation {
     display: flex;
     justify-content: center;
@@ -568,15 +479,11 @@ progress::-moz-progress-bar {
     background: var(--primary-color);
 }
 .navigation button:hover {
-    background: linear-gradient(
-        90deg,
-        var(--gradient-start),
-        var(--gradient-end)
-    );
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     transform: translateY(-2px);
 }
 
-/* 戻るボタン (.back-button) など */
+/* 戻るボタン */
 .back-button {
     margin-top: 20px;
     display: block;
@@ -592,10 +499,163 @@ progress::-moz-progress-bar {
     background: var(--primary-color);
 }
 .back-button:hover {
-    background: linear-gradient(
-        90deg,
-        var(--gradient-start),
-        var(--gradient-end)
-    );
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     transform: translateY(-2px);
+}
+
+/* =========================================================================
+   ========================== フォーカススタイルなど =========================
+   ========================================================================= */
+
+/* フォーカス時のアウトライン */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px dashed var(--focus-color);
+    outline-offset: 4px;
+}
+
+/* ボタンやsubmitのホバーアニメ */
+button,
+input[type="submit"] {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover,
+input[type="submit"]:hover {
+    background-color: var(--link-hover-color);
+    transform: translateY(-2px);
+}
+.introduction h2,
+nav a {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* =========================================================================
+   ====================== モバイル対応（幅768px以下） ======================
+   ========================================================================= */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    .year-selection,
+    .contact-section,
+    .introduction,
+    .terms-of-use {
+        padding: 0 10px;
+    }
+
+    /* 運営者メッセージや利用規約の文字サイズを小さめに */
+    .subject-selection h2,
+    .year-selection h2,
+    .introduction h2,
+    .terms-of-use h2 {
+        font-size: 24px;
+    }
+    .notifications,
+    .contact-section form,
+    .introduction,
+    .terms-of-use {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    /* introductionの文字サイズ */
+    .introduction {
+        padding: 15px;
+    }
+    .introduction h2 {
+        font-size: 20px;
+    }
+    .introduction p {
+        font-size: 14px;
+    }
+    .terms-of-use h2 {
+        font-size: 20px;
+    }
+    .terms-of-use h3 {
+        font-size: 18px;
+    }
+    .terms-of-use p {
+        font-size: 14px;
+    }
+
+    /* 年度選択セクションのグリッド */
+    .years-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    /* ボタンなどのレイアウト */
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navigation button {
+        width: 100%;
+        max-width: 300px;
+        margin: 5px 0;
+    }
+    button,
+    input[type="submit"] {
+        font-size: 16px;
+    }
+
+    /* 問題表示など */
+    .question-card {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+    #problem-title {
+        font-size: 1.4em;
+    }
+    #question-text {
+        font-size: 1.1em;
+    }
+    .answer-text {
+        font-size: 1em;
+    }
+
+    .answer-button,
+    .navigation button,
+    .back-button {
+        width: 100%;
+        max-width: 300px;
+        margin: 5px auto;
+        font-size: 0.95em;
+    }
+    .progress-bar-container {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    /* 模擬試験セクションのカードも少し縮める */
+    .mock-exam-details,
+    .sample-questions,
+    .mock-exam-purchase,
+    .mock-exam-caution {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
 }
