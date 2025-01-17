@@ -1,5 +1,3 @@
-// practice-script.js
-
 document.addEventListener("DOMContentLoaded", function() {
     // ★ 変更点 ★
     // GitHub Pages + 独自ドメインで、data/ や images/ がドメイン直下なら空文字にする
@@ -138,14 +136,32 @@ document.addEventListener("DOMContentLoaded", function() {
             if (q.choices) {
                 for (const [key, value] of Object.entries(q.choices)) {
                     const li = document.createElement('li');
+                    li.classList.add('choice-item');  // --- 追加: カードデザイン用クラス
+
                     const label = document.createElement('label');
                     const input = document.createElement('input');
                     input.type = 'radio';
                     input.name = 'choice';
                     input.value = key;
+
                     label.appendChild(input);
                     label.appendChild(document.createTextNode(`${key}: ${value}`));
                     li.appendChild(label);
+
+                    // === ここから追加: li全体をクリック可能に ===
+                    li.addEventListener('click', () => {
+                        // ラジオボタンをチェック
+                        input.checked = true;
+
+                        // 他の選択肢から .selected を外す
+                        const allLi = document.querySelectorAll('#choices-list li');
+                        allLi.forEach(liEl => liEl.classList.remove('selected'));
+
+                        // このliを選択状態に
+                        li.classList.add('selected');
+                    });
+                    // === 追加ここまで ===
+
                     choicesList.appendChild(li);
                 }
             }
@@ -341,4 +357,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ======== 実行 ========
     loadQuestions();
+
+    // --- 以下は必要に応じて使うシャッフル関数 (今回は未使用) ---
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
 });

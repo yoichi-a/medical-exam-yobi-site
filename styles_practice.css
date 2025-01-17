@@ -64,7 +64,7 @@ main {
     box-sizing: border-box;
 }
 
-/* === 既存の科目選択や利用規約などのスタイル === */
+/* === 科目選択や利用規約などの既存セクション === */
 .subject-selection h2 {
     color: var(--secondary-color);
     text-align: center;
@@ -169,10 +169,10 @@ footer {
 }
 
 /* =========================================================================
-   ==================== 以下、類似問題演習ページ向け追加 ===================
+   ===================== 以下、類似問題演習ページ向け =====================
    ========================================================================= */
 
-/* === 問題表示セクション全体をカード風に === */
+/* === 問題表示セクション (#question-section) === */
 #question-section {
     background-color: #ffffff;
     margin-top: 20px;
@@ -181,10 +181,9 @@ footer {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     box-sizing: border-box;
-    position: relative; /* 結果表示など重なる場合の拡張に備えて */
+    position: relative;
 }
 
-/* === 進捗表示 (#progress) === */
 #progress {
     font-size: 1.1em;
     margin-bottom: 15px;
@@ -195,7 +194,6 @@ footer {
     font-weight: bold;
 }
 
-/* === 問題文 (#question-text) === */
 #question-text {
     font-size: 1.15em;
     line-height: 1.6;
@@ -207,15 +205,15 @@ footer {
     text-align: justify;
 }
 
-/* === 選択肢リスト (#choices-list) === */
+/* === 選択肢リスト === */
 #choices-list {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
 }
 
-/* --- 選択肢をカード風に装飾 --- */
-#choices-list li {
+/* === 選択肢カード .choice-item === */
+.choice-item {
     background-color: #fff;
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -224,15 +222,22 @@ footer {
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     position: relative;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer; /* カード全体がクリックできるとわかる */
 }
-
-/* --- ホバーで浮き上がり演出 --- */
-#choices-list li:hover {
+.choice-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* === 解答送信ボタン (#submit-answer-btn) === */
+/* === 選択済み (.selected) のカードをハイライト === */
+.choice-item.selected {
+    border: 2px solid var(--button-color);
+    background-color: #e0f7f9;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* === 解答送信ボタン === */
 #submit-answer-btn {
     display: inline-block;
     background-color: var(--button-color);
@@ -250,7 +255,7 @@ footer {
     transform: translateY(-2px);
 }
 
-/* === フィードバック表示 (#feedback-text) & 解説 (#explanation-text) === */
+/* === フィードバック/解説 (#feedback-text, #explanation-text) === */
 #feedback-text,
 #explanation-text {
     font-size: 1em;
@@ -260,8 +265,7 @@ footer {
     border-radius: 5px;
 }
 
-/* 正解or不正解などによって色を変えたい場合のサンプル: 
-   例えば JSでclassを付け替える → .correct, .incorrect等 */
+/* 正解/不正解をカラーで分けたい場合 */
 .correct {
     background-color: #e0ffe0; /* 薄い緑 */
     border: 1px solid #66bb6a;
@@ -271,7 +275,7 @@ footer {
     border: 1px solid #ff8a80;
 }
 
-/* === ナビゲーションボタン (前の問題、次の問題) === */
+/* === ナビゲーションボタン (.navigation) === */
 .navigation {
     display: flex;
     justify-content: center;
@@ -341,6 +345,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     box-sizing: border-box;
+    display: none; /* 初期は非表示 */
 }
 #result-section h2 {
     color: var(--secondary-color);
@@ -382,7 +387,7 @@ footer {
     #question-text {
         font-size: 1.05em;
     }
-    #choices-list li {
+    .choice-item {
         padding: 10px;
         margin-bottom: 10px;
     }
