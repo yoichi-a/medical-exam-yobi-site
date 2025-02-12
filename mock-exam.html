@@ -118,7 +118,17 @@
         （メールアドレスが異なると解答解説および後日配信の成績連絡が正常に送付できない場合があります）<br><br>
         多くの受験者の中でのご自身の学習到達度を確認する絶好の機会です。ぜひチャレンジしてみてください。
       </p>
-      <button>模擬試験を購入する（テスト）</button>
+      <!-- 金額と用途の説明を追加 -->
+      <p class="price-note">
+        受験料：2,980円<br>
+        ※この料金はサイト運営の改善費用に充てられます。
+      </p>
+      <!-- Stripeの購入ボタンを導入 -->
+      <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+      <stripe-buy-button
+        buy-button-id="buy_btn_1QrhnGP5aRXrHnR9Jwdbqgaw"
+        publishable-key="pk_live_51QSiN5P5aRXrHnR9FvoeHjS3DneFj6xk5I2q0OBBg4miZghVfOiX9zYlDUILxSQyMwQIhTc3LZZM79uCgQu1FQmy00dKNOHp4Q">
+      </stripe-buy-button>
     </section>
 
     <section class="mock-exam-caution">
