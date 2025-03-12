@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // ★ 変更点 ★
     // GitHub Pages + 独自ドメインで、data/ や images/ がドメイン直下なら空文字にする
     const repositoryName = '';
 
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const progressBar = document.getElementById("progress-bar");
     const progressRatio = document.getElementById("progress-ratio");
 
-    // ★ 言語セレクトの要素
+    // 言語セレクトの要素
     const languageSelect = document.getElementById("language-select");
 
     // 要素の存在確認
@@ -82,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
 
-    // ★ 現在の言語を保持（デフォルトは日本語）
+    // 現在の言語を保持（デフォルトは日本語）
     let currentLanguage = 'ja';
 
     let questions = []; // 問題データを格納する配列
@@ -117,36 +116,30 @@ document.addEventListener("DOMContentLoaded", function() {
         if (questions.length > 0) {
             const currentQuestion = questions[currentQuestionIndex];
 
-            // ★ question が多言語対応の場合 (例: question["ja"], question["en"], question["zh"] など)
-            //   「currentQuestion.question」がオブジェクトなら、currentQuestion.question[currentLanguage]を参照
+            // question が多言語対応の場合
             if (currentQuestion.question && typeof currentQuestion.question === 'object') {
                 questionText.textContent =
                   currentQuestion.question[currentLanguage] || '問題文がありません。';
             } else {
-                // 従来通りの1言語のみの場合はこちらを使用
                 questionText.textContent =
                   currentQuestion.question || '問題文がありません。';
             }
 
-            // 選択肢の表示（多言語対応の場合）
+            // 選択肢の表示（多言語対応）
             choicesList.innerHTML = '';
             if (currentQuestion.choices) {
-                // choices が {a: {ja:xxx, en:yyy}, b: {...}, ...} のようなオブジェクトの場合
                 for (const [key, value] of Object.entries(currentQuestion.choices)) {
                     const li = document.createElement('li');
-
-                    // もし value が多言語オブジェクトなら対応する言語を表示
                     if (value && typeof value === 'object') {
                         li.textContent = `${key}: ${value[currentLanguage] || '---'}`;
                     } else {
-                        // 1言語のみならそのまま
                         li.textContent = `${key}: ${value}`;
                     }
                     choicesList.appendChild(li);
                 }
             }
 
-            // 問題の画像を表示
+            // 問題の画像
             if (currentQuestion.image) {
                 questionImage.src = `${repositoryName}/images/${currentQuestion.image}.png`;
                 questionImage.style.display = 'block';
@@ -154,15 +147,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 questionImage.style.display = 'none';
             }
 
-            // 解答と解答の画像を非表示に
+            // 解答部分を非表示に
             answerText.style.display = "none";
             answerText.textContent = "";
             answerImage.style.display = 'none';
 
-            // 現在の問題番号を表示 (1-based)
+            // 現在の問題番号
             currentNumber.textContent = currentQuestionIndex + 1;
 
-            // ナビゲーションボタンの状態を更新
+            // ナビゲーションボタンの状態
             prevBtn.disabled = (currentQuestionIndex === 0);
             nextBtn.disabled = (currentQuestionIndex === questions.length - 1);
             answerBtn.disabled = false;
@@ -173,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const percentage = Math.round(((currentQuestionIndex + 1) / questions.length) * 100);
             progressRatio.textContent = percentage + "%";
         } else {
-            // 問題データが空の場合
             questionText.textContent = '問題が見つかりません。';
             answerBtn.disabled = true;
             prevBtn.disabled = true;
@@ -186,26 +178,27 @@ document.addEventListener("DOMContentLoaded", function() {
         const currentQuestion = questions[currentQuestionIndex];
         answerText.style.display = "block";
 
-        // 正解が配列の場合は全て列挙
-        if (Array.isArray(currentQuestion.answer)) {
-            const correctAnswers = currentQuestion.answer.join(', ');
-            // 解説を言語別に持っている想定の場合:
-            if (currentQuestion.explanation && typeof currentQuestion.explanation === 'object') {
-                answerText.innerHTML = `正解：${correctAnswers}<br>${currentQuestion.explanation[currentLanguage] || '解説がありません。'}`;
-            } else {
-                // 1言語のみ
-                answerText.innerHTML = `正解：${correctAnswers}<br>${currentQuestion.explanation || '解説がありません。'}`;
-            }
+        // 解説文を多言語かどうか判定して取得
+        let rawExplanation = "";
+        if (currentQuestion.explanation && typeof currentQuestion.explanation === 'object') {
+            rawExplanation = currentQuestion.explanation[currentLanguage] || "解説がありません。";
         } else {
-            // 単一の答え
-            if (currentQuestion.explanation && typeof currentQuestion.explanation === 'object') {
-                answerText.innerHTML = `正解：${currentQuestion.answer}<br>${currentQuestion.explanation[currentLanguage] || '解説がありません。'}`;
-            } else {
-                answerText.innerHTML = `正解：${currentQuestion.answer}<br>${currentQuestion.explanation || '解説がありません。'}`;
-            }
+            rawExplanation = currentQuestion.explanation || "解説がありません。";
         }
 
-        // 解答の画像を表示
+        // 改行を <br> に置換してHTMLに反映
+        const explanationWithBreak = rawExplanation.replace(/\n/g, "<br>");
+
+        if (Array.isArray(currentQuestion.answer)) {
+            // 複数正解の場合
+            const correctAnswers = currentQuestion.answer.join(', ');
+            answerText.innerHTML = `正解：${correctAnswers}<br>${explanationWithBreak}`;
+        } else {
+            // 単一の答え
+            answerText.innerHTML = `正解：${currentQuestion.answer}<br>${explanationWithBreak}`;
+        }
+
+        // 解答画像
         if (currentQuestion.answerImage) {
             answerImage.src = `${repositoryName}/images/${currentQuestion.answerImage}.png`;
             answerImage.style.display = 'block';
@@ -217,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function() {
         answerBtn.disabled = true;
     });
 
-    // 次の問題に移動
+    // 次の問題へ
     nextBtn.addEventListener("click", function() {
         if (currentQuestionIndex < questions.length - 1) {
             currentQuestionIndex++;
@@ -225,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // 前の問題に移動
+    // 前の問題へ
     prevBtn.addEventListener("click", function() {
         if (currentQuestionIndex > 0) {
             currentQuestionIndex--;
@@ -251,10 +244,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // ★ セレクトボックスの変更イベント
+    // 言語セレクトボックス変更イベント
     languageSelect.addEventListener("change", function() {
         currentLanguage = languageSelect.value; // ja, en, zh のいずれか
-        // 言語を切り替えた状態で問題を再描画
+        // 言語切り替え後の問題再描画
         displayQuestion();
     });
 
