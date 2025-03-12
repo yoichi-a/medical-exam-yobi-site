@@ -120,8 +120,6 @@ footer p {
     margin-top: 20px;
     border-radius: 10px;
     box-sizing: border-box;
-
-    /* カード風に少し影をつけて見栄えUP */
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border: 1px solid var(--border-color);
 }
@@ -146,7 +144,6 @@ footer p {
 .notifications ul li:last-child {
     border-bottom: none;
 }
-/* アイコンをつける例 (Font Awesome) */
 .notifications ul li::before {
     content: "\f05a"; /* fa-circle-info (\f05a)など */
     font-family: "Font Awesome 6 Free";
@@ -278,7 +275,6 @@ footer p {
    ============= 模擬試験ページに登場する新しいセクションの例 =============
    ========================================================================= */
 
-/* 各種セクションを白背景＆角丸にしてカード風にもできる */
 .mock-exam-details,
 .sample-questions,
 .mock-exam-purchase,
@@ -303,7 +299,7 @@ footer p {
     font-size: 1.1em;
 }
 
-/* ボタン装飾の一例 (例: 「模擬試験を購入する」ボタン) */
+/* ボタン装飾の一例 */
 .mock-exam-purchase button {
     background-color: var(--primary-color);
     color: #fff;
@@ -365,7 +361,6 @@ progress {
     margin: 0 10px;
     border-radius: 5px;
 }
-/* Chrome/Edge/Safari 対応 */
 progress::-webkit-progress-bar {
     background-color: #eee;
     border-radius: 5px;
@@ -375,7 +370,6 @@ progress::-webkit-progress-value {
     border-radius: 5px;
     transition: width 0.3s ease;
 }
-/* Firefox 対応 */
 progress::-moz-progress-bar {
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     border-radius: 5px;
@@ -383,6 +377,25 @@ progress::-moz-progress-bar {
 #progress-ratio {
     width: 40px;
     text-align: right;
+}
+
+/* ★ 言語切り替えセレクトボックス周り */
+.language-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.language-container select {
+    padding: 5px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.language-container select:hover {
+    background-color: #f7f7f7;
 }
 
 /* 問題文 */
@@ -406,13 +419,12 @@ progress::-moz-progress-bar {
     position: relative;
     background-color: #fff;
     margin-bottom: 12px;
-    padding: 12px 12px 12px 50px;  /* アイコン分左余白 */
+    padding: 12px 12px 12px 50px;
     border-radius: 6px;
     border: 1px solid var(--border-color);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-/* アイコン */
 #choices-list li::before {
     content: "\f054"; /* fa-angle-right (\f105等) */
     font-family: "Font Awesome 6 Free";
@@ -424,7 +436,6 @@ progress::-moz-progress-bar {
     top: 50%;
     transform: translateY(-50%);
 }
-/* ホバーで浮き上がり */
 #choices-list li:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -507,7 +518,6 @@ progress::-moz-progress-bar {
    ========================== フォーカススタイルなど =========================
    ========================================================================= */
 
-/* フォーカス時のアウトライン */
 a:focus,
 button:focus,
 input:focus,
@@ -517,7 +527,6 @@ select:focus {
     outline-offset: 4px;
 }
 
-/* ボタンやsubmitのホバーアニメ */
 button,
 input[type="submit"] {
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -560,7 +569,6 @@ nav a {
         padding: 0 10px;
     }
 
-    /* 運営者メッセージや利用規約の文字サイズを小さめに */
     .subject-selection h2,
     .year-selection h2,
     .introduction h2,
@@ -579,7 +587,6 @@ nav a {
         padding: 20px;
     }
 
-    /* introductionの文字サイズ */
     .introduction {
         padding: 15px;
     }
@@ -599,14 +606,12 @@ nav a {
         font-size: 14px;
     }
 
-    /* 年度選択セクションのグリッド */
     .years-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 20px;
     }
 
-    /* ボタンなどのレイアウト */
     .navigation {
         display: flex;
         flex-direction: column;
@@ -622,7 +627,6 @@ nav a {
         font-size: 16px;
     }
 
-    /* 問題表示など */
     .question-card {
         padding: 15px;
         margin-bottom: 30px;
@@ -650,7 +654,6 @@ nav a {
         gap: 6px;
     }
 
-    /* 模擬試験セクションのカードも少し縮める */
     .mock-exam-details,
     .sample-questions,
     .mock-exam-purchase,

@@ -55,9 +55,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // 進捗表示用の要素
     const currentNumber = document.getElementById("current-number");
     const totalNumber = document.getElementById("total-number");
-    // 追加: プログレスバーの要素
     const progressBar = document.getElementById("progress-bar");
     const progressRatio = document.getElementById("progress-ratio");
+
+    // ★ 言語セレクトの要素
+    const languageSelect = document.getElementById("language-select");
 
     // 要素の存在確認
     if (
@@ -73,11 +75,15 @@ document.addEventListener("DOMContentLoaded", function() {
         !currentNumber ||
         !totalNumber ||
         !progressBar ||
-        !progressRatio
+        !progressRatio ||
+        !languageSelect
     ) {
         alert('必要な要素が見つかりません。ページの構造を確認してください。');
         return;
     }
+
+    // ★ 現在の言語を保持（デフォルトは日本語）
+    let currentLanguage = 'ja';
 
     let questions = []; // 問題データを格納する配列
     let currentQuestionIndex = 0; // 現在の問題番号を追跡
@@ -85,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 問題データを読み込む関数
     async function loadQuestions() {
         try {
+            // JSONファイルを取得
             const response = await fetch(`${repositoryName}/data/${year}/part${part}/${subject}.json`);
             if (!response.ok) {
                 throw new Error(`サーバーエラー: ${response.statusText}`);
@@ -109,14 +116,32 @@ document.addEventListener("DOMContentLoaded", function() {
     function displayQuestion() {
         if (questions.length > 0) {
             const currentQuestion = questions[currentQuestionIndex];
-            questionText.textContent = currentQuestion.question || '問題文がありません。';
 
-            // 選択肢の表示
+            // ★ question が多言語対応の場合 (例: question["ja"], question["en"], question["zh"] など)
+            //   「currentQuestion.question」がオブジェクトなら、currentQuestion.question[currentLanguage]を参照
+            if (currentQuestion.question && typeof currentQuestion.question === 'object') {
+                questionText.textContent =
+                  currentQuestion.question[currentLanguage] || '問題文がありません。';
+            } else {
+                // 従来通りの1言語のみの場合はこちらを使用
+                questionText.textContent =
+                  currentQuestion.question || '問題文がありません。';
+            }
+
+            // 選択肢の表示（多言語対応の場合）
             choicesList.innerHTML = '';
             if (currentQuestion.choices) {
+                // choices が {a: {ja:xxx, en:yyy}, b: {...}, ...} のようなオブジェクトの場合
                 for (const [key, value] of Object.entries(currentQuestion.choices)) {
                     const li = document.createElement('li');
-                    li.textContent = `${key}: ${value}`;
+
+                    // もし value が多言語オブジェクトなら対応する言語を表示
+                    if (value && typeof value === 'object') {
+                        li.textContent = `${key}: ${value[currentLanguage] || '---'}`;
+                    } else {
+                        // 1言語のみならそのまま
+                        li.textContent = `${key}: ${value}`;
+                    }
                     choicesList.appendChild(li);
                 }
             }
@@ -164,9 +189,20 @@ document.addEventListener("DOMContentLoaded", function() {
         // 正解が配列の場合は全て列挙
         if (Array.isArray(currentQuestion.answer)) {
             const correctAnswers = currentQuestion.answer.join(', ');
-            answerText.innerHTML = `正解：${correctAnswers}<br>${currentQuestion.explanation || '解説がありません。'}`;
+            // 解説を言語別に持っている想定の場合:
+            if (currentQuestion.explanation && typeof currentQuestion.explanation === 'object') {
+                answerText.innerHTML = `正解：${correctAnswers}<br>${currentQuestion.explanation[currentLanguage] || '解説がありません。'}`;
+            } else {
+                // 1言語のみ
+                answerText.innerHTML = `正解：${correctAnswers}<br>${currentQuestion.explanation || '解説がありません。'}`;
+            }
         } else {
-            answerText.innerHTML = `正解：${currentQuestion.answer}<br>${currentQuestion.explanation || '解説がありません。'}`;
+            // 単一の答え
+            if (currentQuestion.explanation && typeof currentQuestion.explanation === 'object') {
+                answerText.innerHTML = `正解：${currentQuestion.answer}<br>${currentQuestion.explanation[currentLanguage] || '解説がありません。'}`;
+            } else {
+                answerText.innerHTML = `正解：${currentQuestion.answer}<br>${currentQuestion.explanation || '解説がありません。'}`;
+            }
         }
 
         // 解答の画像を表示
@@ -214,6 +250,13 @@ document.addEventListener("DOMContentLoaded", function() {
             };
         }
     }
+
+    // ★ セレクトボックスの変更イベント
+    languageSelect.addEventListener("change", function() {
+        currentLanguage = languageSelect.value; // ja, en, zh のいずれか
+        // 言語を切り替えた状態で問題を再描画
+        displayQuestion();
+    });
 
     // 初期化：問題データを読み込む
     loadQuestions();
