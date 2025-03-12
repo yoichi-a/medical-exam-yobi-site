@@ -36,7 +36,7 @@
     <main>
         <!-- ===== 問題表示セクション ===== -->
         <section id="question-section">
-            <!-- ★ 追加: 問題番号ナビゲーションを表示するコンテナ -->
+            <!-- ★ 問題番号ナビゲーションを表示するコンテナ -->
             <div id="question-nav" class="question-nav"></div>
 
             <p id="progress">問題 <span id="current-number">1</span> / <span id="total-number"></span></p>
@@ -69,7 +69,7 @@
         <p>© 2025 医師国家試験予備試験過去問チャート</p>
     </footer>
 
-    <!-- ★ 追加: 部分スコア表示 (10問ごと+累計) 用モーダル -->
+    <!-- ★ 10問ごとの部分スコア表示モーダル -->
     <div id="partial-score-modal" class="modal" style="display: none;">
       <div class="modal-content">
         <span id="modal-close" class="close">&times;</span>
@@ -78,6 +78,25 @@
         <canvas id="scoreChart" width="400" height="200"></canvas>
         <div id="scoreDetails"></div>
         <button id="closeScoreBtn">閉じる</button>
+      </div>
+    </div>
+
+    <!-- ★★★ 新規追加: 前回の進捗がある場合に表示するカスタムモーダル（3択） -->
+    <div id="resume-dialog" class="modal" style="display: none;">
+      <div class="modal-content" style="max-width:400px;">
+        <h2>前回の進捗があります</h2>
+        <p>どうしますか？</p>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:15px;">
+          <button id="resume-continue-btn">
+            <i class="fa-solid fa-forward-step"></i> 前回の続き
+          </button>
+          <button id="resume-newstart-btn">
+            <i class="fa-solid fa-power-off"></i> 新規スタート
+          </button>
+          <button id="resume-goback-btn">
+            <i class="fa-solid fa-rotate-left"></i> 科目選択ページへ戻る
+          </button>
+        </div>
       </div>
     </div>
 

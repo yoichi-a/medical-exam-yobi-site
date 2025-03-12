@@ -61,6 +61,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const scoreDetails = document.getElementById('scoreDetails');
     let partialScoreChart = null;
 
+    // ★★★ 新規追加: 3択モーダル (前回続き / 新規 / 戻る)
+    const resumeDialog = document.getElementById('resume-dialog');
+    const resumeContinueBtn = document.getElementById('resume-continue-btn');
+    const resumeNewstartBtn = document.getElementById('resume-newstart-btn');
+    const resumeGobackBtn = document.getElementById('resume-goback-btn');
+
     // 問題データ格納用
     let questions = [];
     let currentQuestionIndex = 0;
@@ -94,25 +100,57 @@ document.addEventListener("DOMContentLoaded", function() {
                 totalNumber.textContent = questions.length;
             }
 
-            // 前回の進捗があれば復元
+            // ここで前回の進捗があるか確認（confirmは使わない）
             const savedData = localStorage.getItem(storageKey);
             if (savedData) {
-                if (confirm("前回の続きから再開しますか？")) {
-                    const parsedData = JSON.parse(savedData);
-                    currentQuestionIndex = parsedData.currentQuestionIndex || 0;
-                    userAnswers = parsedData.userAnswers || [];
-                }
+                // 前回の進捗データがある → カスタムモーダルを表示
+                // （モーダルをフェードインしたいならクラス付けでもOK）
+                resumeDialog.style.display = 'flex';
+            } else {
+                // 前回進捗が無い場合はそのまま問題表示開始
+                updateQuestionNav();
+                displayQuestion();
             }
-
-            // ナビゲーション更新＆問題表示
-            updateQuestionNav();
-            displayQuestion();
 
         } catch (err) {
             console.error(err);
             alert(`問題データの読み込みに失敗しました: ${err.message}`);
         }
     }
+
+    // ======= 3択モーダルのボタン処理 =======
+    // 前回の続き
+    resumeContinueBtn.addEventListener('click', () => {
+        const savedData = localStorage.getItem(storageKey);
+        if (savedData) {
+            const parsedData = JSON.parse(savedData);
+            currentQuestionIndex = parsedData.currentQuestionIndex || 0;
+            userAnswers = parsedData.userAnswers || [];
+        }
+        // モーダルを閉じる
+        resumeDialog.style.display = 'none';
+        // 問題表示
+        updateQuestionNav();
+        displayQuestion();
+    });
+
+    // 新規スタート
+    resumeNewstartBtn.addEventListener('click', () => {
+        // 前回進捗を消してゼロから始める
+        localStorage.removeItem(storageKey);
+        currentQuestionIndex = 0;
+        userAnswers = [];
+
+        resumeDialog.style.display = 'none';
+        updateQuestionNav();
+        displayQuestion();
+    });
+
+    // 科目選択ページに戻る
+    resumeGobackBtn.addEventListener('click', () => {
+        window.location.href = `${repositoryName}/similar-practice.html`;
+    });
+
 
     // ======= 問題番号ナビゲーションを更新 =======
     function updateQuestionNav() {

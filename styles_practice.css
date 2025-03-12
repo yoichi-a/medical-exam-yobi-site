@@ -430,9 +430,9 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-/* 解答済みのスタイル（正解/不正解で色分け） */
+/* 既存: 解答済みのスタイル */
 .question-btn.answered {
-    background-color: #c8e6c9; /* デフォルト:淡い緑 */
+    background-color: #c8e6c9; /* 淡い緑 */
     color: #000;
 }
 .question-btn.answered.correct {
@@ -450,49 +450,44 @@ footer {
    ======================== 10問ごとの部分スコア用モーダル =================
    ========================================================================= */
 .modal {
-  position: fixed;            /* 画面固定 */
+  position: fixed;            
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,0.5); /* 半透明の黒背景 */
-  display: none;              /* 初期は非表示 */
-  align-items: center;        /* 子要素（.modal-content）を上下中央に */
-  justify-content: center;    /* 子要素（.modal-content）を左右中央に */
-  z-index: 9999;              /* 最前面に */
+  background-color: rgba(0,0,0,0.5); 
+  display: none;             
+  align-items: center;        
+  justify-content: center;    
+  z-index: 9999;             
 }
 
-/* フェードイン/アウト時に付与するクラス */
 .modal.modal-show {
-  display: flex;                     /* flexで中央寄せ */
+  display: flex;                     
   animation: fadeIn 0.3s ease forwards;
 }
 .modal.modal-hide {
   animation: fadeOut 0.3s ease forwards;
 }
 
-/* フェードインアニメ */
 @keyframes fadeIn {
   from {opacity: 0;}
   to   {opacity: 1;}
 }
-/* フェードアウトアニメ */
 @keyframes fadeOut {
   from {opacity: 1;}
   to   {opacity: 0;}
 }
 
-/* モーダルの中身 */
 .modal-content {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   position: relative;
-  max-width: 600px; /* PC時は最大600px */
-  width: 90%;       /* スマホ等では幅90% */
+  max-width: 600px; 
+  width: 90%;       
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* 閉じるボタン（×） */
 .modal-content .close {
   position: absolute;
   top: 10px;
@@ -506,8 +501,6 @@ footer {
 .modal-content .close:hover {
   color: #444;
 }
-
-/* モーダル内のボタン */
 .modal-content button {
   background-color: var(--button-color);
   color: #fff;
@@ -517,9 +510,15 @@ footer {
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin: 10px 5px 0 5px; /* ボタンのレイアウト調整 */
+  margin: 10px 5px 0 5px;
 }
 .modal-content button:hover {
   background-color: var(--button-hover-color);
   transform: translateY(-2px);
+}
+
+/* ★ 追加: 3択モーダルを少しコンパクトにしたい場合 */
+#resume-dialog-content {
+  max-width: 400px;
+  width: 90%;
 }

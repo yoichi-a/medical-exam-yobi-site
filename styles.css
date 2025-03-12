@@ -76,29 +76,12 @@ header {
     color: white;
     width: 100%;
     box-sizing: border-box;
-    /* 
-     * ヒーローセクションをheaderの中に入れる場合は
-     * paddingや text-align を「.hero」に移動させるなど調整を。
-     * 今回は .hero を使う前提で、header自体のpaddingを0にしてもOK 
-     */
     padding: 0;
 }
 header h1 {
-    /* ヒーローセクションを使うなら、header h1は非表示または調整 */
     margin: 0;
     font-size: 24px;
 }
-
-/* === Sticky ナビゲーションにしたい場合のサンプル === 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: var(--primary-color);
-    padding: 10px 0;
-    box-sizing: border-box;
-}
-*/
 
 /* === ナビゲーション === */
 nav {
@@ -207,7 +190,7 @@ footer p {
     border-bottom: none;
 }
 .notifications ul li::before {
-    content: "\f05a"; /* fa-circle-info (\f05a)など */
+    content: "\f05a";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     color: var(--primary-color);
@@ -281,21 +264,18 @@ footer p {
     margin-bottom: 40px;
     border-radius: 10px;
     box-sizing: border-box;
-    /* カード風シャドウを軽く追加するなら */
-    /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
 }
 .introduction h2 {
     color: var(--secondary-color);
     text-align: center;
     margin-bottom: 20px;
     transition: color 0.3s ease;
-    font-size: 1.6em; /* 見出しを少し大きめに */
+    font-size: 1.6em;
 }
 .introduction p {
     line-height: 1.6;
     margin-bottom: 15px;
     text-align: justify;
-    /* 読みやすくするためのフォントサイズ微調整など */
     font-size: 1em;
 }
 .introduction hr {
@@ -322,8 +302,6 @@ footer p {
     margin-bottom: 40px;
     border-radius: 10px;
     box-sizing: border-box;
-    /* カード風シャドウを軽く追加するなら */
-    /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
 }
 .terms-of-use h2 {
     color: var(--secondary-color);
@@ -388,7 +366,7 @@ footer p {
 }
 
 /* =========================================================================
-   ========== 以下、問題表示ページ（.question-card 等）のスタイル =========
+   ========================== 問題表示ページ（.question-card 等）のスタイル =========
    ========================================================================= */
 
 /* カード状の問題表示セクション */
@@ -493,14 +471,14 @@ progress::-moz-progress-bar {
     position: relative;
     background-color: #fff;
     margin-bottom: 12px;
-    padding: 12px 12px 12px 50px;  /* アイコン分左余白 */
+    padding: 12px 12px 12px 50px;
     border-radius: 6px;
     border: 1px solid var(--border-color);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 #choices-list li::before {
-    content: "\f054"; /* fa-angle-right (\f105等) */
+    content: "\f054";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     font-size: 1.1em;
@@ -620,13 +598,11 @@ nav a {
    ====================== モバイル対応（幅768px以下） ======================
    ========================================================================= */
 @media (max-width: 768px) {
-    /* ヘッダー内の余白やテキスト位置 */
     header {
-        padding: 0; /* heroを入れるならheaderのpaddingは不要でもOK */
+        padding: 0;
         text-align: center;
     }
 
-    /* ヒーローセクションの調整 */
     .hero {
         padding: 40px 20px;
     }
@@ -643,7 +619,6 @@ nav a {
         padding: 12px 20px;
     }
 
-    /* ナビゲーション */
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -663,7 +638,6 @@ nav a {
         padding: 0 10px;
     }
 
-    /* 見出しサイズをやや小さめに */
     .subject-selection h2,
     .year-selection h2,
     .introduction h2,
@@ -757,81 +731,3 @@ nav a {
         margin-bottom: 20px;
     }
 }
-/* ================================
-   自前モーダル(3択ダイアログ)のスタイル
-   ================================ */
-
-/* 画面全体を覆う半透明背景 */
-.resume-dialog-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.5);
-    display: none; /* 初期は非表示 */
-    z-index: 9999; /* 最前面に */
-    justify-content: center; /* 中央寄せ */
-    align-items: center;
-  }
-  
-  /* モーダル本体 */
-  .resume-dialog-content {
-    background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    max-width: 450px;
-    width: 80%;
-    text-align: center;
-    position: relative;
-    animation: fadeIn 0.3s ease forwards;
-  }
-  
-  /* モーダルの3つのボタンを横並び */
-  .resume-dialog-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap; /* 狭い画面では折り返し */
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .resume-dialog-btn {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  .resume-dialog-btn:hover {
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-    transform: translateY(-2px);
-  }
-  
-  /* フェードイン・フェードアウト用 */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeOut {
-    from { opacity: 1; transform: translateY(0); }
-    to { opacity: 0; transform: translateY(10px); }
-  }
-  
-  /* 表示時に付けるクラス例 */
-  .resume-dialog-overlay.show {
-    display: flex; /* flexにして中央寄せ */
-    animation: fadeIn 0.3s ease forwards;
-  }
-  
-  /* 非表示時用にfadeOutアニメを付けたい場合、追加で以下を使う
-  .resume-dialog-overlay.hide {
-    animation: fadeOut 0.3s ease forwards;
-  }
-  */
-  
-  
