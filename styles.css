@@ -85,7 +85,6 @@ header {
 }
 header h1 {
     /* ヒーローセクションを使うなら、header h1は非表示または調整 */
-    display: none; /* もしくは別途用途に応じて調整 */
     margin: 0;
     font-size: 24px;
 }
