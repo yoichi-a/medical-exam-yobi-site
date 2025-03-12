@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const retryBtn = document.getElementById("retry-btn");
     const backToSelectionBtn = document.getElementById("back-to-selection-btn");
     const backButton = document.getElementById("back-btn");
+    const questionNavContainer = document.getElementById("question-nav");
 
     let questions = [];              // 問題データ
     let currentQuestionIndex = 0;    // 今の問題番号(0-based)
@@ -67,6 +68,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // localStorageキー (カテゴリー＆科目別に保持)
     const storageKey = `similarPracticeProgress-${category}-${subject}`;
+
+    // ★ 追加: 10問ごとの部分スコア表示用モーダル
+    const partialScoreModal = document.getElementById('partial-score-modal');
+    const modalClose = document.getElementById('modal-close');
+    const closeScoreBtn = document.getElementById('closeScoreBtn');
+    const scoreDetails = document.getElementById('scoreDetails');
+    let partialScoreChart = null; // Chart.jsインスタンス
 
     // ======== 問題データを読み込む関数 ========
     async function loadQuestions() {
@@ -81,9 +89,6 @@ document.addEventListener("DOMContentLoaded", function() {
             if (questions.length === 0) {
                 throw new Error('問題データが空です。');
             }
-
-            // (シャッフルはしない)
-            // shuffleArray(questions);
 
             // トータル問題数を表示
             if (totalNumber) {
@@ -100,10 +105,42 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
 
+            // ★ 追加: ナビゲーションを初期描画
+            updateQuestionNav();
+
             displayQuestion();
         } catch (error) {
             console.error(error);
             alert(`問題データの読み込みに失敗しました: ${error.message}`);
+        }
+    }
+
+    // ======== 問題番号ナビゲーションを作成/更新する関数 ========
+    function updateQuestionNav() {
+        if (!questionNavContainer) return;
+        questionNavContainer.innerHTML = '';
+        for (let i = 0; i < questions.length; i++) {
+            const btn = document.createElement('button');
+            btn.classList.add('question-btn');
+            btn.textContent = i + 1;
+            btn.dataset.index = i;
+
+            // 解答済みならansweredを付与
+            if (userAnswers[i]) {
+                btn.classList.add('answered');
+            }
+            // 現在の問題にcurrentを付与
+            if (i === currentQuestionIndex) {
+                btn.classList.add('current');
+            }
+
+            btn.addEventListener('click', () => {
+                currentQuestionIndex = i;
+                displayQuestion();
+                updateQuestionNav();
+                saveProgress();
+            });
+            questionNavContainer.appendChild(btn);
         }
     }
 
@@ -134,9 +171,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (choicesList) {
             choicesList.innerHTML = '';
             if (q.choices) {
-                for (const [key, value] of Object.entries(q.choices)) {
+                // choicesがオブジェクトの場合: Object.entries で取得
+                Object.entries(q.choices).forEach(([key, value]) => {
                     const li = document.createElement('li');
-                    li.classList.add('choice-item');  // --- 追加: カードデザイン用クラス
+                    li.classList.add('choice-item');  // --- カードデザイン用クラス
 
                     const label = document.createElement('label');
                     const input = document.createElement('input');
@@ -148,22 +186,18 @@ document.addEventListener("DOMContentLoaded", function() {
                     label.appendChild(document.createTextNode(`${key}: ${value}`));
                     li.appendChild(label);
 
-                    // === ここから追加: li全体をクリック可能に ===
+                    // li全体をクリックでラジオチェック
                     li.addEventListener('click', () => {
-                        // ラジオボタンをチェック
                         input.checked = true;
-
                         // 他の選択肢から .selected を外す
                         const allLi = document.querySelectorAll('#choices-list li');
                         allLi.forEach(liEl => liEl.classList.remove('selected'));
-
                         // このliを選択状態に
                         li.classList.add('selected');
                     });
-                    // === 追加ここまで ===
 
                     choicesList.appendChild(li);
-                }
+                });
             }
         }
 
@@ -213,10 +247,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // フィードバック (正誤)
             if (feedbackText) {
-                feedbackText.textContent = (userAnswer === correctAnswer)
+                const isCorrect = (userAnswer === correctAnswer);
+                feedbackText.textContent = isCorrect
                     ? '正解です！'
                     : `不正解です。正解は ${correctAnswer} です。`;
                 feedbackText.style.display = 'block';
+                feedbackText.className = isCorrect ? 'correct' : 'incorrect';
             }
 
             // 解説
@@ -236,20 +272,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // 進捗保存
             saveProgress();
+            // ナビゲーション更新
+            updateQuestionNav();
         });
     }
 
     // ======== 次の問題へ ========
     if (nextBtn) {
         nextBtn.addEventListener("click", function() {
-            // 10問ごとに部分採点 (例: 10, 20, 30...)
-            if ((currentQuestionIndex + 1) % 10 === 0) {
-                doPartialScore();
+            // ★ ここで doPartialScore() の代わりに、部分スコアモーダル表示
+            // 10問ごと or 最終問題などのタイミングで表示
+            if ((currentQuestionIndex + 1) % 10 === 0 && currentQuestionIndex < questions.length - 1) {
+                showPartialScoreModal();
             }
 
             if (currentQuestionIndex < questions.length - 1) {
                 currentQuestionIndex++;
                 displayQuestion();
+                updateQuestionNav();
             }
 
             // 進捗保存
@@ -263,28 +303,77 @@ document.addEventListener("DOMContentLoaded", function() {
             if (currentQuestionIndex > 0) {
                 currentQuestionIndex--;
                 displayQuestion();
+                updateQuestionNav();
             }
             // 進捗保存
             saveProgress();
         });
     }
 
-    // ======== 10問ごとに部分採点する ========
-    function doPartialScore() {
+    // ======== 10問ごとに部分採点する (モーダル表示) ========
+    function showPartialScoreModal() {
+        // 直近10問の範囲計算
         const endIndex = currentQuestionIndex;
-        const startIndex = endIndex - 9 >= 0 ? endIndex - 9 : 0;
-        let correctCount = 0;
-        let answeredCount = 0;
-
+        const startIndex = Math.max(0, endIndex - 9);
+        let answeredCountLocal = 0;
+        let correctCountLocal = 0;
         for (let i = startIndex; i <= endIndex; i++) {
-            if (!userAnswers[i]) continue; // 未回答スキップ
-            answeredCount++;
+            if (!userAnswers[i]) continue;
+            answeredCountLocal++;
             if (userAnswers[i].userAnswer === userAnswers[i].correctAnswer) {
-                correctCount++;
+                correctCountLocal++;
             }
         }
+        const recentRate = (answeredCountLocal > 0)
+            ? (correctCountLocal / answeredCountLocal * 100).toFixed(2)
+            : 0;
 
-        alert(`問題 ${startIndex + 1}～${endIndex + 1} の部分採点：\n${correctCount}問正解 / ${answeredCount}問回答`);
+        // 累計
+        let totalAnswered = 0;
+        let totalCorrect = 0;
+        userAnswers.forEach(ans => {
+            if (!ans) return;
+            totalAnswered++;
+            if (ans.userAnswer === ans.correctAnswer) {
+                totalCorrect++;
+            }
+        });
+        const totalRate = (totalAnswered > 0)
+            ? (totalCorrect / totalAnswered * 100).toFixed(2)
+            : 0;
+
+        // モーダル内テキスト更新
+        if (scoreDetails) {
+            scoreDetails.innerHTML = `
+                <p>直近 (${startIndex+1}～${endIndex+1} 問目) 正解率: ${recentRate}%<br>
+                累計正解率: ${totalRate}%</p>
+            `;
+        }
+
+        // ★ Chart.js でグラフ描画
+        const ctx = document.getElementById('scoreChart').getContext('2d');
+        if (partialScoreChart) {
+            partialScoreChart.destroy(); // 再生成のため破棄
+        }
+        partialScoreChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['直近10問', '累計'],
+                datasets: [{
+                    label: '正解率(%)',
+                    data: [Number(recentRate), Number(totalRate)],
+                    backgroundColor: ['#4caf50', '#2196f3']
+                }]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true, max: 100 }
+                },
+            }
+        });
+
+        // モーダルを表示
+        partialScoreModal.style.display = 'block';
     }
 
     // ======== 結果を表示 ========
@@ -323,12 +412,12 @@ document.addEventListener("DOMContentLoaded", function() {
         retryBtn.addEventListener("click", function() {
             currentQuestionIndex = 0;
             userAnswers = [];
-
             localStorage.removeItem(storageKey);
 
             if (resultSection) resultSection.style.display = 'none';
             document.getElementById('question-section').style.display = 'block';
             displayQuestion();
+            updateQuestionNav();
         });
     }
 
@@ -338,8 +427,6 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = `${repositoryName}/similar-practice.html`;
         });
     }
-
-    // ======== 戻るボタン ========
     if (backButton) {
         backButton.onclick = function() {
             window.location.href = `${repositoryName}/similar-practice.html`;
@@ -355,14 +442,18 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem(storageKey, JSON.stringify(dataToSave));
     }
 
+    // ======== モーダル閉じる処理 ========
+    if (modalClose) {
+        modalClose.addEventListener('click', () => {
+            partialScoreModal.style.display = 'none';
+        });
+    }
+    if (closeScoreBtn) {
+        closeScoreBtn.addEventListener('click', () => {
+            partialScoreModal.style.display = 'none';
+        });
+    }
+
     // ======== 実行 ========
     loadQuestions();
-
-    // --- 以下は必要に応じて使うシャッフル関数 (今回は未使用) ---
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-    }
 });

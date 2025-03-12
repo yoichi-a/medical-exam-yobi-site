@@ -9,7 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <!-- Font Awesome の追加 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 新しいスタイルシートのリンク（同フォルダにあると仮定） -->
+    <!-- Chart.js (10問ごとのスコア表示用) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Canvas Confetti (演出用、必要に応じて) -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <!-- 新しいスタイルシートのリンク（同フォルダにあるstyles_practice.cssと仮定） -->
     <link rel="stylesheet" href="styles_practice.css">
 
     <meta name="description" content="医師国家試験予備試験の類似問題演習ページです。">
@@ -31,6 +36,9 @@
     <main>
         <!-- ===== 問題表示セクション ===== -->
         <section id="question-section">
+            <!-- ★ 追加: 問題番号ナビゲーションを表示するコンテナ -->
+            <div id="question-nav" class="question-nav"></div>
+
             <p id="progress">問題 <span id="current-number">1</span> / <span id="total-number"></span></p>
             <p id="question-text">ここに問題が表示されます。</p>
             <ul id="choices-list"></ul>
@@ -58,10 +66,22 @@
     </main>
 
     <footer>
-        <p>© 2024 医師国家試験予備試験過去問チャート</p>
+        <p>© 2025 医師国家試験予備試験過去問チャート</p>
     </footer>
 
-    <!-- ===== JavaScriptを読み込む (同フォルダにあるpractice-script.jsを読み込む想定) ===== -->
+    <!-- ★ 追加: 部分スコア表示 (10問ごと+累計) 用モーダル -->
+    <div id="partial-score-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span id="modal-close" class="close">&times;</span>
+        <h2>部分スコア</h2>
+        <p>直近10問＋累計の正解率</p>
+        <canvas id="scoreChart" width="400" height="200"></canvas>
+        <div id="scoreDetails"></div>
+        <button id="closeScoreBtn">閉じる</button>
+      </div>
+    </div>
+
+    <!-- ===== JavaScriptを読み込む (同フォルダにあるpractice-script.js) ===== -->
     <script src="practice-script.js"></script>
 </body>
 </html>

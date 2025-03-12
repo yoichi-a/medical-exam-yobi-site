@@ -172,7 +172,6 @@ footer {
    ===================== 以下、類似問題演習ページ向け =====================
    ========================================================================= */
 
-/* === 問題表示セクション (#question-section) === */
 #question-section {
     background-color: #ffffff;
     margin-top: 20px;
@@ -212,7 +211,6 @@ footer {
     margin-bottom: 20px;
 }
 
-/* === 選択肢カード .choice-item === */
 .choice-item {
     background-color: #fff;
     border: 1px solid var(--border-color);
@@ -222,14 +220,13 @@ footer {
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     position: relative;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer; /* カード全体がクリックできるとわかる */
+    cursor: pointer;
 }
 .choice-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
-
-/* === 選択済み (.selected) のカードをハイライト === */
+/* 選択中のカード */
 .choice-item.selected {
     border: 2px solid var(--button-color);
     background-color: #e0f7f9;
@@ -255,7 +252,7 @@ footer {
     transform: translateY(-2px);
 }
 
-/* === フィードバック/解説 (#feedback-text, #explanation-text) === */
+/* フィードバック/解説 */
 #feedback-text,
 #explanation-text {
     font-size: 1em;
@@ -264,8 +261,6 @@ footer {
     padding: 15px;
     border-radius: 5px;
 }
-
-/* 正解/不正解をカラーで分けたい場合 */
 .correct {
     background-color: #e0ffe0; /* 薄い緑 */
     border: 1px solid #66bb6a;
@@ -275,7 +270,7 @@ footer {
     border: 1px solid #ff8a80;
 }
 
-/* === ナビゲーションボタン (.navigation) === */
+/* ナビゲーションボタン (.navigation) */
 .navigation {
     display: flex;
     justify-content: center;
@@ -297,7 +292,7 @@ footer {
     transform: translateY(-2px);
 }
 
-/* === 終了ボタン (#finish-btn) === */
+/* 終了ボタン (#finish-btn) */
 #finish-btn {
     display: inline-block;
     background-color: var(--button-color);
@@ -315,7 +310,7 @@ footer {
     transform: translateY(-2px);
 }
 
-/* === 戻るボタン (#back-btn) === */
+/* 戻るボタン (#back-btn) */
 #back-btn {
     display: inline-block;
     background-color: #fff;
@@ -336,7 +331,7 @@ footer {
     transform: translateY(-2px);
 }
 
-/* === 結果表示セクション (#result-section) === */
+/* 結果表示セクション (#result-section) */
 #result-section {
     background-color: #fff;
     margin-top: 20px;
@@ -345,7 +340,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     box-sizing: border-box;
-    display: none; /* 初期は非表示 */
+    display: none;
 }
 #result-section h2 {
     color: var(--secondary-color);
@@ -413,4 +408,71 @@ footer {
         max-width: 280px;
         margin: 5px auto;
     }
+}
+
+/* =========================================================================
+   ======================== ★ 追加: 問題番号ナビゲーション ==================
+   ========================================================================= */
+
+.question-nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* ボタンとして表示する問題番号 */
+.question-btn {
+    width: 2em;
+    height: 2em;
+    margin: 4px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.question-btn.answered {
+    background-color: #c8e6c9; /* 解答済み:淡い緑 */
+    color: #000;
+}
+.question-btn.current {
+    border: 2px solid var(--button-color);
+}
+
+/* =========================================================================
+   ==================== ★ 追加: 部分スコア表示モーダル =====================
+   ========================================================================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-sizing: border-box;
+}
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.close:hover {
+    color: #333;
 }
