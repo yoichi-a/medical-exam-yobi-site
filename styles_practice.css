@@ -430,20 +430,96 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-/* 既存：解答済みのスタイル（上書きされる可能性あり） */
+/* 解答済みのスタイル（正解/不正解で色分け） */
 .question-btn.answered {
-    background-color: #c8e6c9; /* 解答済み:淡い緑(仮) */
+    background-color: #c8e6c9; /* デフォルト:淡い緑 */
     color: #000;
+}
+.question-btn.answered.correct {
+    background-color: #c8e6c9;  /* 緑 */
+}
+.question-btn.answered.incorrect {
+    background-color: #ffcdd2;  /* 赤 */
 }
 /* 現在の問題を強調表示 */
 .question-btn.current {
     border: 2px solid var(--button-color);
 }
 
-/* ★ 追加: 正解した問題番号は淡い緑、不正解なら淡い赤 */
-.question-btn.answered.correct {
-    background-color: #c8e6c9;  /* 緑 */
+/* =========================================================================
+   ======================== 10問ごとの部分スコア用モーダル =================
+   ========================================================================= */
+.modal {
+  position: fixed;            /* 画面固定 */
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5); /* 半透明の黒背景 */
+  display: none;              /* 初期は非表示 */
+  align-items: center;        /* 子要素（.modal-content）を上下中央に */
+  justify-content: center;    /* 子要素（.modal-content）を左右中央に */
+  z-index: 9999;              /* 最前面に */
 }
-.question-btn.answered.incorrect {
-    background-color: #ffcdd2;  /* 赤 */
+
+/* フェードイン/アウト時に付与するクラス */
+.modal.modal-show {
+  display: flex;                     /* flexで中央寄せ */
+  animation: fadeIn 0.3s ease forwards;
+}
+.modal.modal-hide {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+/* フェードインアニメ */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
+/* フェードアウトアニメ */
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to   {opacity: 0;}
+}
+
+/* モーダルの中身 */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 600px; /* PC時は最大600px */
+  width: 90%;       /* スマホ等では幅90% */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* 閉じるボタン（×） */
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.modal-content .close:hover {
+  color: #444;
+}
+
+/* モーダル内のボタン */
+.modal-content button {
+  background-color: var(--button-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 10px 5px 0 5px; /* ボタンのレイアウト調整 */
+}
+.modal-content button:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-2px);
 }

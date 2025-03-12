@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     const japaneseSubjectName = subjectNames[subject] || '未知の科目';
 
-    // ID参照
+    // 各種要素のID参照
     const practiceTitle = document.getElementById('practice-title');
     const questionText = document.getElementById("question-text");
     const choicesList = document.getElementById("choices-list");
@@ -61,15 +61,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const scoreDetails = document.getElementById('scoreDetails');
     let partialScoreChart = null;
 
-    // 問題データ
+    // 問題データ格納用
     let questions = [];
     let currentQuestionIndex = 0;
     let userAnswers = [];
 
-    // localStorageキー
+    // localStorage キー
     const storageKey = `similarPracticeProgress-${category}-${subject}`;
 
-    // タイトル
+    // タイトルをセット
     if (practiceTitle) {
         practiceTitle.textContent = `類似問題演習 - ${japaneseSubjectName}`;
     }
@@ -77,7 +77,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // ======= 問題を読み込む =======
     async function loadQuestions() {
         try {
+            // JSONデータのパス
             const dataUrl = `${repositoryName}/data/similar/${category}/${subject}.json`;
+
             const response = await fetch(dataUrl);
             if (!response.ok) {
                 throw new Error(`サーバーエラー: ${response.status} ${response.statusText}`);
@@ -92,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 totalNumber.textContent = questions.length;
             }
 
-            // 進捗があれば復元
+            // 前回の進捗があれば復元
             const savedData = localStorage.getItem(storageKey);
             if (savedData) {
                 if (confirm("前回の続きから再開しますか？")) {
@@ -102,8 +104,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
 
+            // ナビゲーション更新＆問題表示
             updateQuestionNav();
             displayQuestion();
+
         } catch (err) {
             console.error(err);
             alert(`問題データの読み込みに失敗しました: ${err.message}`);
@@ -120,10 +124,10 @@ document.addEventListener("DOMContentLoaded", function() {
             btn.classList.add('question-btn');
             btn.textContent = i + 1;
 
+            // 解答済みかどうか
             if (userAnswers[i]) {
-                // 何らかの回答がある
                 btn.classList.add('answered');
-                // 正解/不正解で色分け
+                // 正解／不正解で色分け
                 const { userAnswer, correctAnswer } = userAnswers[i];
                 const isCorrect = (userAnswer === correctAnswer);
                 if (isCorrect) {
@@ -138,19 +142,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 btn.classList.add('current');
             }
 
+            // 問題番号クリック時
             btn.addEventListener('click', () => {
                 currentQuestionIndex = i;
                 displayQuestion();
                 updateQuestionNav();
                 saveProgress();
             });
+
             questionNavContainer.appendChild(btn);
         }
     }
 
-    // ======= 問題を表示 =======
+    // ======= 問題を表示する関数 =======
     function displayQuestion() {
         if (questions.length === 0) {
+            // データ無し
             if (questionText) questionText.textContent = '問題が見つかりません。';
             if (answerBtn) answerBtn.disabled = true;
             if (prevBtn) prevBtn.disabled = true;
@@ -159,17 +166,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const q = questions[currentQuestionIndex];
+
+        // 問題文
         if (questionText) {
             questionText.textContent = q.question || '問題文がありません。';
         }
+
+        // 現在の問題番号
         if (currentNumber) {
             currentNumber.textContent = currentQuestionIndex + 1;
         }
 
+        // 選択肢の表示をクリアして再生成
         if (choicesList) {
             choicesList.innerHTML = '';
             if (q.choices) {
-                // choicesが{A: '...',B: '...'}の形式の場合
+                // {A: '...', B: '...'} 形式をループ
                 Object.entries(q.choices).forEach(([key, value]) => {
                     const li = document.createElement('li');
                     li.classList.add('choice-item');
@@ -184,20 +196,22 @@ document.addEventListener("DOMContentLoaded", function() {
                     label.appendChild(document.createTextNode(`${key}: ${value}`));
                     li.appendChild(label);
 
-                    // liをクリックすると選択
+                    // リスト項目クリックで選択
                     li.addEventListener('click', () => {
                         input.checked = true;
+                        // すべての選択スタイルをリセット
                         document.querySelectorAll('#choices-list li').forEach(liEl => {
                             liEl.classList.remove('selected');
                         });
                         li.classList.add('selected');
                     });
+
                     choicesList.appendChild(li);
                 });
             }
         }
 
-        // フィードバック/解説リセット
+        // フィードバック/解説をリセット
         if (feedbackText) {
             feedbackText.style.display = 'none';
             feedbackText.textContent = '';
@@ -207,18 +221,18 @@ document.addEventListener("DOMContentLoaded", function() {
             explanationText.textContent = '';
         }
 
-        // ボタン制御
+        // ボタン状態を更新
         if (prevBtn) {
             prevBtn.disabled = (currentQuestionIndex === 0);
         }
         if (nextBtn) {
-            nextBtn.disabled = true; // 解答前は進めない
+            nextBtn.disabled = true; // 解答する前は「次へ」押せない
         }
         if (answerBtn) {
             answerBtn.disabled = false;
         }
         if (finishBtn) {
-            finishBtn.style.display = 'none';
+            finishBtn.style.display = 'none'; // 最終問題まで隠す
         }
     }
 
@@ -231,18 +245,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert('選択肢を選んでください。');
                 return;
             }
+
             const userAnswer = selected.value;
             const correctAnswer = q.answer;
             const isCorrect = (userAnswer === correctAnswer);
 
-            // 答えを保存
+            // 解答を保存
             userAnswers[currentQuestionIndex] = {
                 userAnswer,
                 correctAnswer,
                 isCorrect
             };
 
-            // フィードバック
+            // フィードバック表示
             if (feedbackText) {
                 feedbackText.style.display = 'block';
                 if (isCorrect) {
@@ -260,18 +275,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 explanationText.innerHTML = q.explanation || '解説がありません。';
             }
 
-            // 次へボタン
+            // 「次へ」ボタンの活性／非活性
             if (nextBtn) {
                 nextBtn.disabled = (currentQuestionIndex === questions.length - 1);
             }
-            // 最終問題なら結果表示ボタン
+            // 最終問題なら「結果を表示」ボタンを出す
             if (finishBtn && currentQuestionIndex === questions.length - 1) {
                 finishBtn.style.display = 'inline-block';
             }
 
+            // 解答送信ボタンは1回のみ有効
             answerBtn.disabled = true;
 
-            // 進捗保存 & ナビゲーション更新
+            // 保存＆ナビゲーション更新
             saveProgress();
             updateQuestionNav();
         });
@@ -280,12 +296,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // ======= 次の問題へ =======
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
-            // 10問ごとにモーダル表示
+            // 10問ごとにモーダルを表示（最後の問題には到達していない場合）
             if ((currentQuestionIndex + 1) % 10 === 0 && currentQuestionIndex < questions.length - 1) {
                 showPartialScoreModal();
             }
 
-            // 次の問題へ
+            // 次の問題を表示
             if (currentQuestionIndex < questions.length - 1) {
                 currentQuestionIndex++;
                 displayQuestion();
@@ -313,6 +329,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const startIndex = Math.max(0, endIndex - 9);
         let localAnswered = 0;
         let localCorrect = 0;
+
+        // 直近10問の正解率
         for (let i = startIndex; i <= endIndex; i++) {
             if (!userAnswers[i]) continue;
             localAnswered++;
@@ -324,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function() {
             ? ((localCorrect / localAnswered) * 100).toFixed(2)
             : 0;
 
-        // 累計
+        // 累計の正解率
         let totalAnswered = 0;
         let totalCorrect = 0;
         userAnswers.forEach(ans => {
@@ -338,7 +356,7 @@ document.addEventListener("DOMContentLoaded", function() {
             ? ((totalCorrect / totalAnswered) * 100).toFixed(2)
             : 0;
 
-        // モーダル内のテキスト
+        // モーダル内の表示テキスト
         if (scoreDetails) {
             scoreDetails.innerHTML = `
               <p>直近 (${startIndex+1}～${endIndex+1} 問目) 正答率: ${recentRate}%<br>
@@ -346,7 +364,7 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
         }
 
-        // Chart.js で描画
+        // Chart.js によるグラフ描画
         const ctx = document.getElementById('scoreChart').getContext('2d');
         if (partialScoreChart) {
             partialScoreChart.destroy();
@@ -363,12 +381,18 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             options: {
                 scales: {
-                    y: { beginAtZero: true, max: 100 }
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
                 }
             }
         });
 
-        partialScoreModal.style.display = 'block';
+        // モーダルをフェードイン表示
+        partialScoreModal.style.display = 'flex';
+        partialScoreModal.classList.remove('modal-hide');
+        partialScoreModal.classList.add('modal-show');
     }
 
     // ======= 結果を表示 =======
@@ -387,6 +411,7 @@ document.addEventListener("DOMContentLoaded", function() {
             totalQuestionsElement.textContent = total;
             accuracyElement.textContent = accuracy;
 
+            // 問題セクションを隠して結果セクションを表示
             document.getElementById('question-section').style.display = 'none';
             resultSection.style.display = 'block';
 
@@ -395,7 +420,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // ======= やり直し =======
+    // ======= もう一度やり直す =======
     if (retryBtn) {
         retryBtn.addEventListener('click', () => {
             currentQuestionIndex = 0;
@@ -421,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     }
 
-    // ======= ストレージ保存 =======
+    // ======= 進捗をlocalStorageに保存 =======
     function saveProgress() {
         const dataToSave = {
             currentQuestionIndex,
@@ -430,16 +455,28 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem(storageKey, JSON.stringify(dataToSave));
     }
 
-    // ======= モーダル操作 =======
+    // ======= モーダルの閉じるボタンイベント =======
     if (modalClose) {
         modalClose.addEventListener('click', () => {
-            partialScoreModal.style.display = 'none';
+            closeModalWithFadeOut();
         });
     }
     if (closeScoreBtn) {
         closeScoreBtn.addEventListener('click', () => {
-            partialScoreModal.style.display = 'none';
+            closeModalWithFadeOut();
         });
+    }
+
+    // ======= モーダルをフェードアウトして閉じる関数 =======
+    function closeModalWithFadeOut() {
+        partialScoreModal.classList.remove('modal-show');
+        partialScoreModal.classList.add('modal-hide');
+
+        // 0.3秒後に display: none; で完全に非表示
+        setTimeout(() => {
+            partialScoreModal.style.display = 'none';
+            partialScoreModal.classList.remove('modal-hide');
+        }, 300);
     }
 
     // ======= 実行 =======

@@ -4,82 +4,84 @@
     <meta charset="UTF-8">
     <!-- ビューポートのメタタグ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>類似問題演習 - 医師国家試験予備試験過去問チャート</title>
+    <title>類似問題演習 - 医師国家試験予備試験</title>
     <!-- Google Fonts の追加 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <!-- Font Awesome の追加 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 新しいスタイルシートのリンク -->
-    <link rel="stylesheet" href="styles_similar-practice.css">
-    <meta name="description" content="医師国家試験予備試験の類似問題演習を科目別に選択するページです。">
-    <meta name="keywords" content="医師国家試験, 予備試験, 類似問題, 科目選択, 医学, 試験対策">
+    <!-- Chart.js (10問ごとのスコア表示用) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Canvas Confetti (演出用、必要に応じて) -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <!-- 外部CSSファイルを読み込む -->
+    <link rel="stylesheet" href="styles_practice.css">
+
+    <meta name="description" content="医師国家試験予備試験の類似問題演習ページです。">
+    <meta name="keywords" content="医師国家試験, 予備試験, 類似問題, 問題演習, 医学, 試験対策">
 </head>
 <body>
     <header>
-        <h1>医師国家試験予備試験過去問チャート</h1>
+        <h1 id="practice-title">類似問題演習</h1>
         <nav>
             <ul>
-                <li><a href="index.html"><span class="fa-solid fa-house" aria-hidden="true"></span> ホーム</a></li>
-                <li><a href="year-selection.html"><span class="fa-solid fa-calendar-alt" aria-hidden="true"></span> 年度選択</a></li>
-                <li><a href="similar-practice.html"><span class="fa-solid fa-book-open" aria-hidden="true"></span> 類似問題演習</a></li>
-                <li><a href="contact.html"><span class="fa-solid fa-envelope" aria-hidden="true"></span> お問い合わせ</a></li>
+                <li><a href="index.html"><span class="fa-solid fa-house"></span> ホーム</a></li>
+                <li><a href="year-selection.html"><span class="fa-solid fa-calendar-alt"></span> 年度選択</a></li>
+                <li><a href="similar-practice.html"><span class="fa-solid fa-book-open"></span> 類似問題演習</a></li>
+                <li><a href="contact.html"><span class="fa-solid fa-envelope"></span> お問い合わせ</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="subject-selection">
-            <div class="subjects-grid">
-                <!-- 基礎医学の科目 -->
-                <div class="subject-category">
-                    <h3>基礎医学</h3>
-                    <ul>
-                        <li><a href="practice.html?category=basic&subject=anatomy"><i class="fa-solid fa-heart"></i> 解剖学</a></li>
-                        <li><a href="practice.html?category=basic&subject=physiology"><i class="fa-solid fa-lungs"></i> 生理学</a></li>
-                        <li><a href="practice.html?category=basic&subject=biochemistry"><i class="fa-solid fa-dna"></i> 生化学</a></li>
-                        <li><a href="practice.html?category=basic&subject=pharmacology"><i class="fa-solid fa-pills"></i> 薬理学</a></li>
-                        <li><a href="practice.html?category=basic&subject=pathology"><i class="fa-solid fa-microscope"></i> 病理学</a></li>
-                        <li><a href="practice.html?category=basic&subject=immunology"><i class="fa-solid fa-shield-virus"></i> 免疫学</a></li>
-                        <li><a href="practice.html?category=basic&subject=microbiology"><i class="fa-solid fa-virus"></i> 微生物学</a></li>
-                        <li><a href="practice.html?category=basic&subject=hygiene"><i class="fa-solid fa-soap"></i> 衛生学</a></li>
-                        <li><a href="practice.html?category=basic&subject=forensic_medicine"><i class="fa-solid fa-balance-scale"></i> 法医学</a></li>
-                    </ul>
-                </div>
-                <!-- 臨床医学の科目 -->
-                <div class="subject-category">
-                    <h3>臨床医学</h3>
-                    <ul>
-                        <li><a href="practice.html?category=clinical&subject=internal_medicine"><i class="fa-solid fa-stethoscope"></i> 内科学</a></li>
-                        <li><a href="practice.html?category=clinical&subject=surgery"><i class="fa-solid fa-user-md"></i> 外科学</a></li>
-                        <li><a href="practice.html?category=clinical&subject=pediatrics"><i class="fa-solid fa-baby"></i> 小児科学</a></li>
-                        <li><a href="practice.html?category=clinical&subject=psychiatry"><i class="fa-solid fa-brain"></i> 精神科学</a></li>
-                        <li><a href="practice.html?category=clinical&subject=orthopedics"><i class="fa-solid fa-bone"></i> 整形外科学</a></li>
-                        <li><a href="practice.html?category=clinical&subject=obstetrics_gynecology"><i class="fa-solid fa-female"></i> 産科・婦人科学</a></li>
-                        <li><a href="practice.html?category=clinical&subject=dermatology"><i class="fa-solid fa-hand-holding-droplet"></i> 皮膚科学</a></li>
-                        <li><a href="practice.html?category=clinical&subject=urology"><i class="fa-solid fa-toilet"></i> 泌尿器科学</a></li>
-                        <li><a href="practice.html?category=clinical&subject=otorhinolaryngology"><i class="fa-solid fa-ear-listen"></i> 耳鼻咽喉科学</a></li>
-                        <li><a href="practice.html?category=clinical&subject=ophthalmology"><i class="fa-solid fa-eye"></i> 眼科学</a></li>
-                        <li><a href="practice.html?category=clinical&subject=radiology"><i class="fa-solid fa-x-ray"></i> 放射線科学</a></li>
-                        <li><a href="practice.html?category=clinical&subject=emergency_medicine"><i class="fa-solid fa-ambulance"></i> 救急医学</a></li>
-                    </ul>
-                </div>
+        <!-- ===== 問題表示セクション ===== -->
+        <section id="question-section">
+            <!-- 問題番号ナビゲーションを表示するコンテナ -->
+            <div id="question-nav" class="question-nav"></div>
+
+            <p id="progress">問題 <span id="current-number">1</span> / <span id="total-number"></span></p>
+            <p id="question-text">ここに問題が表示されます。</p>
+            <ul id="choices-list"></ul>
+
+            <button id="submit-answer-btn"><i class="fa-solid fa-check-circle"></i> 解答を送信</button>
+            <p id="feedback-text" style="display: none;"></p>
+            <p id="explanation-text" style="display: none;"></p>
+
+            <div class="navigation">
+                <button id="prev-btn" disabled><i class="fa-solid fa-arrow-left"></i> 前の問題</button>
+                <button id="next-btn" disabled>次の問題 <i class="fa-solid fa-arrow-right"></i></button>
             </div>
+            <button id="finish-btn" style="display: none;"><i class="fa-solid fa-flag-checkered"></i> 結果を表示</button>
+            <button id="back-btn"><i class="fa-solid fa-rotate-left"></i> 科目選択ページに戻る</button>
         </section>
 
-        <section class="terms-of-use">
-            <h2>利用規約</h2>
-            <p>このサイトをご利用いただく前に、以下の利用規約をお読みください。本サイトを利用することで、これらの規約に同意したものとみなされます。</p>
-            <h3>著作権</h3>
-            <p>本サイトに掲載されている全てのコンテンツの著作権は、当サイト運営者またはコンテンツ提供者に帰属します。無断での転載、複製を禁じます。</p>
-            <h3>免責事項</h3>
-            <p>本サイトの情報は正確性を期しておりますが、その完全性や正確性を保証するものではありません。利用者が本サイトの情報を用いて行う行為について、一切の責任を負いません。</p>
-            <h3>リンクについて</h3>
-            <p>本サイトへのリンクは原則自由ですが、公序良俗に反するサイトからのリンクはお断りします。</p>
+        <!-- ===== 結果表示セクション ===== -->
+        <section id="result-section" style="display: none;">
+            <h2>結果</h2>
+            <p>正解数：<span id="correct-count">0</span> / <span id="total-questions">0</span></p>
+            <p>正答率：<span id="accuracy">0</span>%</p>
+            <button id="retry-btn"><i class="fa-solid fa-redo"></i> もう一度やり直す</button>
+            <button id="back-to-selection-btn"><i class="fa-solid fa-rotate-left"></i> 科目選択ページに戻る</button>
         </section>
     </main>
 
     <footer>
         <p>© 2025 医師国家試験予備試験過去問チャート</p>
     </footer>
+
+    <!-- 10問ごとの部分スコア表示モーダル -->
+    <div id="partial-score-modal" class="modal">
+      <div class="modal-content">
+        <span id="modal-close" class="close">&times;</span>
+        <h2>部分スコア</h2>
+        <p>直近10問＋累計の正解率</p>
+        <canvas id="scoreChart" width="400" height="200"></canvas>
+        <div id="scoreDetails"></div>
+        <button id="closeScoreBtn">閉じる</button>
+      </div>
+    </div>
+
+    <!-- 外部JavaScriptファイルを読み込む -->
+    <script src="practice-script.js"></script>
 </body>
 </html>
