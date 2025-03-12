@@ -226,7 +226,6 @@ footer {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
-/* 選択中のカード */
 .choice-item.selected {
     border: 2px solid var(--button-color);
     background-color: #e0f7f9;
@@ -372,7 +371,7 @@ footer {
     transform: translateY(-2px);
 }
 
-/* === スマホ対応 === */
+/* スマホ対応 */
 @media (max-width: 768px) {
     #question-section,
     #result-section {
@@ -411,9 +410,8 @@ footer {
 }
 
 /* =========================================================================
-   ======================== ★ 追加: 問題番号ナビゲーション ==================
+   ======================== 問題番号ナビゲーション =========================
    ========================================================================= */
-
 .question-nav {
     margin: 20px 0;
     text-align: center;
@@ -431,48 +429,21 @@ footer {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+/* 既存：解答済みのスタイル（上書きされる可能性あり） */
 .question-btn.answered {
-    background-color: #c8e6c9; /* 解答済み:淡い緑 */
+    background-color: #c8e6c9; /* 解答済み:淡い緑(仮) */
     color: #000;
 }
+/* 現在の問題を強調表示 */
 .question-btn.current {
     border: 2px solid var(--button-color);
 }
 
-/* =========================================================================
-   ==================== ★ 追加: 部分スコア表示モーダル =====================
-   ========================================================================= */
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 500;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.6);
+/* ★ 追加: 正解した問題番号は淡い緑、不正解なら淡い赤 */
+.question-btn.answered.correct {
+    background-color: #c8e6c9;  /* 緑 */
 }
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-    box-sizing: border-box;
-}
-.close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 24px;
-    color: #888;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-.close:hover {
-    color: #333;
+.question-btn.answered.incorrect {
+    background-color: #ffcdd2;  /* 赤 */
 }
