@@ -757,3 +757,81 @@ nav a {
         margin-bottom: 20px;
     }
 }
+/* ================================
+   自前モーダル(3択ダイアログ)のスタイル
+   ================================ */
+
+/* 画面全体を覆う半透明背景 */
+.resume-dialog-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: none; /* 初期は非表示 */
+    z-index: 9999; /* 最前面に */
+    justify-content: center; /* 中央寄せ */
+    align-items: center;
+  }
+  
+  /* モーダル本体 */
+  .resume-dialog-content {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    max-width: 450px;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease forwards;
+  }
+  
+  /* モーダルの3つのボタンを横並び */
+  .resume-dialog-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* 狭い画面では折り返し */
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .resume-dialog-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .resume-dialog-btn:hover {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    transform: translateY(-2px);
+  }
+  
+  /* フェードイン・フェードアウト用 */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(10px); }
+  }
+  
+  /* 表示時に付けるクラス例 */
+  .resume-dialog-overlay.show {
+    display: flex; /* flexにして中央寄せ */
+    animation: fadeIn 0.3s ease forwards;
+  }
+  
+  /* 非表示時用にfadeOutアニメを付けたい場合、追加で以下を使う
+  .resume-dialog-overlay.hide {
+    animation: fadeOut 0.3s ease forwards;
+  }
+  */
+  
+  

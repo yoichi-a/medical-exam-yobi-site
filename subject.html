@@ -22,10 +22,10 @@
     <h1 id="problem-title">問題表示</h1>
     <nav>
       <ul>
-        <li><a href="index.html"><span class="fa-solid fa-house" aria-hidden="true"></span> ホーム</a></li>
-        <li><a href="year-selection.html"><span class="fa-solid fa-calendar-alt" aria-hidden="true"></span> 年度選択</a></li>
-        <li><a href="similar-practice.html"><i class="fa-solid fa-book-open"></i> 類似問題演習</a></li>
-        <li><a href="contact.html"><span class="fa-solid fa-envelope" aria-hidden="true"></span> お問い合わせ</a></li>
+          <li><a href="index.html"><span class="fa-solid fa-house" aria-hidden="true"></span> ホーム</a></li>
+          <li><a href="year-selection.html"><span class="fa-solid fa-calendar-alt" aria-hidden="true"></span> 年度選択</a></li>
+          <li><a href="similar-practice.html"><i class="fa-solid fa-book-open"></i> 類似問題演習</a></li>
+          <li><a href="contact.html"><span class="fa-solid fa-envelope" aria-hidden="true"></span> お問い合わせ</a></li>
       </ul>
     </nav>
   </header>
@@ -45,7 +45,7 @@
         <span id="progress-ratio">0%</span>
       </div>
 
-      <!-- ★ 言語切り替え（セレクトボックス） -->
+      <!-- 言語切り替え（セレクトボックス） -->
       <div class="language-container">
         <label for="language-select"><i class="fa-solid fa-globe"></i> 言語選択:</label>
         <select id="language-select">
@@ -103,6 +103,25 @@
   <footer>
     <p>© 2025 医師国家試験予備試験過去問チャート</p>
   </footer>
+
+  <!-- ★★★ 自前モーダルのHTML ★★★ -->
+  <div id="resume-dialog" class="resume-dialog-overlay">
+    <div class="resume-dialog-content">
+      <h2>前回の進捗があります</h2>
+      <p>どうしますか？</p>
+      <div class="resume-dialog-buttons">
+        <button id="resume-continue-btn" class="resume-dialog-btn">
+          <i class="fa-solid fa-forward-step"></i> 前回の続き
+        </button>
+        <button id="resume-newstart-btn" class="resume-dialog-btn">
+          <i class="fa-solid fa-power-off"></i> 新規スタート
+        </button>
+        <button id="resume-goback-btn" class="resume-dialog-btn">
+          <i class="fa-solid fa-rotate-left"></i> 科目選択ページへ戻る
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- 外部JavaScriptファイルを読み込む -->
   <script src="script.js"></script>
