@@ -30,21 +30,84 @@ body {
     min-height: 100vh;
 }
 
+/* ------------------------------------------------
+   ヒーローセクション（ファーストビュー）
+   ------------------------------------------------ */
+.hero {
+    /* 背景をグラデーションにする場合 */
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px; /* 余白でヒーロー感を演出 */
+    box-sizing: border-box;
+}
+.hero h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+/* CTA ボタン */
+.cta-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #ffffff; /* メインカラーと対比させて目立たせる */
+    color: var(--primary-color);
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.cta-button:hover,
+.cta-button:focus {
+    background-color: var(--link-hover-color);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
 /* === ヘッダー === */
 header {
     background-color: var(--primary-color);
     color: white;
-    text-align: center;
-    padding: 20px;
     width: 100%;
     box-sizing: border-box;
+    /* 
+     * ヒーローセクションをheaderの中に入れる場合は
+     * paddingや text-align を「.hero」に移動させるなど調整を。
+     * 今回は .hero を使う前提で、header自体のpaddingを0にしてもOK 
+     */
+    padding: 0;
 }
 header h1 {
+    /* ヒーローセクションを使うなら、header h1は非表示または調整 */
+    display: none; /* もしくは別途用途に応じて調整 */
     margin: 0;
     font-size: 24px;
 }
 
+/* === Sticky ナビゲーションにしたい場合のサンプル === 
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+*/
+
 /* === ナビゲーション === */
+nav {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
 nav ul {
     list-style: none;
     padding: 0;
@@ -60,6 +123,7 @@ nav a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-weight: bold;
 }
 nav a:hover,
 nav a:focus {
@@ -91,8 +155,7 @@ footer {
 footer p {
     margin: 0;
 }
-
-/* フッター内の追加リンク (.footer-links) を小さく目立たせない */
+/* フッター追加リンク */
 .footer-links {
     font-size: 0.8em;
     margin-top: 0.5em;
@@ -219,17 +282,22 @@ footer p {
     margin-bottom: 40px;
     border-radius: 10px;
     box-sizing: border-box;
+    /* カード風シャドウを軽く追加するなら */
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
 }
 .introduction h2 {
     color: var(--secondary-color);
     text-align: center;
     margin-bottom: 20px;
     transition: color 0.3s ease;
+    font-size: 1.6em; /* 見出しを少し大きめに */
 }
 .introduction p {
     line-height: 1.6;
     margin-bottom: 15px;
     text-align: justify;
+    /* 読みやすくするためのフォントサイズ微調整など */
+    font-size: 1em;
 }
 .introduction hr {
     border: none;
@@ -255,20 +323,25 @@ footer p {
     margin-bottom: 40px;
     border-radius: 10px;
     box-sizing: border-box;
+    /* カード風シャドウを軽く追加するなら */
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
 }
 .terms-of-use h2 {
     color: var(--secondary-color);
     margin-bottom: 20px;
     text-align: center;
+    font-size: 1.6em;
 }
 .terms-of-use h3 {
     color: var(--secondary-color);
     margin-top: 15px;
+    font-size: 1.3em;
 }
 .terms-of-use p {
     line-height: 1.6;
     margin-bottom: 15px;
     text-align: justify;
+    font-size: 1em;
 }
 
 /* =========================================================================
@@ -361,6 +434,7 @@ progress {
     margin: 0 10px;
     border-radius: 5px;
 }
+/* Chrome/Edge/Safari */
 progress::-webkit-progress-bar {
     background-color: #eee;
     border-radius: 5px;
@@ -370,6 +444,7 @@ progress::-webkit-progress-value {
     border-radius: 5px;
     transition: width 0.3s ease;
 }
+/* Firefox */
 progress::-moz-progress-bar {
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     border-radius: 5px;
@@ -419,7 +494,7 @@ progress::-moz-progress-bar {
     position: relative;
     background-color: #fff;
     margin-bottom: 12px;
-    padding: 12px 12px 12px 50px;
+    padding: 12px 12px 12px 50px;  /* アイコン分左余白 */
     border-radius: 6px;
     border: 1px solid var(--border-color);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -436,6 +511,7 @@ progress::-moz-progress-bar {
     top: 50%;
     transform: translateY(-50%);
 }
+/* ホバーでふわっと浮く */
 #choices-list li:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -545,11 +621,30 @@ nav a {
    ====================== モバイル対応（幅768px以下） ======================
    ========================================================================= */
 @media (max-width: 768px) {
+    /* ヘッダー内の余白やテキスト位置 */
     header {
-        padding: 10px;
+        padding: 0; /* heroを入れるならheaderのpaddingは不要でもOK */
         text-align: center;
     }
 
+    /* ヒーローセクションの調整 */
+    .hero {
+        padding: 40px 20px;
+    }
+    .hero h1 {
+        font-size: 1.6em;
+        margin-bottom: 15px;
+    }
+    .hero p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    .cta-button {
+        font-size: 0.9em;
+        padding: 12px 20px;
+    }
+
+    /* ナビゲーション */
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -569,6 +664,7 @@ nav a {
         padding: 0 10px;
     }
 
+    /* 見出しサイズをやや小さめに */
     .subject-selection h2,
     .year-selection h2,
     .introduction h2,
