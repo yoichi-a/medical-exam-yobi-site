@@ -34,11 +34,10 @@ body {
    ヒーローセクション（ファーストビュー）
    ------------------------------------------------ */
 .hero {
-    /* 背景をグラデーションにする場合 */
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     color: #ffffff;
     text-align: center;
-    padding: 60px 20px; /* 余白でヒーロー感を演出 */
+    padding: 60px 20px;
     box-sizing: border-box;
 }
 .hero h1 {
@@ -51,11 +50,10 @@ body {
     margin-bottom: 30px;
     line-height: 1.6;
 }
-/* CTA ボタン */
 .cta-button {
     display: inline-block;
     padding: 14px 28px;
-    background-color: #ffffff; /* メインカラーと対比させて目立たせる */
+    background-color: #ffffff;
     color: var(--primary-color);
     font-size: 1em;
     font-weight: bold;
@@ -137,7 +135,6 @@ footer {
 footer p {
     margin: 0;
 }
-/* フッター追加リンク */
 .footer-links {
     font-size: 0.8em;
     margin-top: 0.5em;
@@ -157,8 +154,6 @@ footer p {
 /* =========================================================================
    ==================== 他ページで使われる要素のスタイル ===================
    ========================================================================= */
-
-/* === お知らせ/通知セクション (.notifications) === */
 .notifications {
     background-color: var(--notification-bg);
     padding: 20px;
@@ -200,7 +195,6 @@ footer p {
     font-size: 1em;
 }
 
-/* === 年度選択, 問い合わせ, 運営者メッセージ, 利用規約など === */
 .year-selection,
 .contact-section,
 .introduction,
@@ -211,7 +205,7 @@ footer p {
     box-sizing: border-box;
 }
 
-/* 年度選択セクション */
+/* 年度選択 */
 .year-selection {
     text-align: center;
     margin-top: 50px;
@@ -321,10 +315,7 @@ footer p {
     font-size: 1em;
 }
 
-/* =========================================================================
-   ============= 模擬試験ページに登場する新しいセクションの例 =============
-   ========================================================================= */
-
+/* 模擬試験ページ例 */
 .mock-exam-details,
 .sample-questions,
 .mock-exam-purchase,
@@ -348,8 +339,6 @@ footer p {
     margin-bottom: 10px;
     font-size: 1.1em;
 }
-
-/* ボタン装飾の一例 */
 .mock-exam-purchase button {
     background-color: var(--primary-color);
     color: #fff;
@@ -366,7 +355,7 @@ footer p {
 }
 
 /* =========================================================================
-   ========================== 問題表示ページ（.question-card 等）のスタイル =========
+   ========================== 問題表示ページ（.question-card 等） =================
    ========================================================================= */
 
 /* カード状の問題表示セクション */
@@ -523,6 +512,8 @@ progress::-moz-progress-bar {
     font-size: 1.05em;
     line-height: 1.6;
     margin-top: 10px;
+    /* 改行を通常の通り表示したい場合: */
+    white-space: normal;
 }
 
 /* ナビゲーションボタン (前/次) */
