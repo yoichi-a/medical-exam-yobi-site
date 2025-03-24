@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // GitHub Pages + 独自ドメインで、data/ や images/ がドメイン直下なら空文字にする
-    const repositoryName = '';
-
-    // URLからパラメータを取得
+    // ========================
+    // URLパラメータなどを取得
+    // ========================
+    const repositoryName = ''; // GitHub Pages等で階層がある場合に指定。なければ空
     const urlParams = new URLSearchParams(window.location.search);
-    const year = urlParams.get('year');
-    const part = urlParams.get('part');
-    const subject = urlParams.get('subject');
+    const year = urlParams.get('year');    // 例: "2025"
+    const part = urlParams.get('part');    // 例: "1"
+    const subject = urlParams.get('subject'); // 例: "anatomy"
 
-    // 科目名を日本語に変換するマッピング
+    // 科目名を日本語表記にするマッピング（必要に応じて拡張）
     const subjectNames = {
         anatomy: '解剖学',
         physiology: '生理学',
@@ -31,80 +31,53 @@ document.addEventListener("DOMContentLoaded", function() {
         ophthalmology: '眼科学',
         radiology: '放射線科学',
         emergency_medicine: '救急医学'
-        // 必要に応じて他の科目を追加
     };
 
-    // 科目名を日本語で取得
-    const japaneseSubjectName = subjectNames[subject] || '未知の科目';
-
-    // <h1>のテキストを更新
+    // タイトル更新
     const problemTitle = document.getElementById('problem-title');
-    problemTitle.textContent = `${year}年 ${japaneseSubjectName}`;
-
-    // HTML要素の参照
-    const questionText = document.getElementById("question-text");
-    const choicesList = document.getElementById("choices-list");
-    const questionImage = document.getElementById("question-image");
-    const answerText = document.getElementById("answer-text");
-    const answerImage = document.getElementById("answer-image");
-    const answerBtn = document.getElementById("answer-btn");
-    const prevBtn = document.getElementById("prev-btn");
-    const nextBtn = document.getElementById("next-btn");
-
-    // 進捗表示用の要素
-    const currentNumber = document.getElementById("current-number");
-    const totalNumber = document.getElementById("total-number");
-    const progressBar = document.getElementById("progress-bar");
-    const progressRatio = document.getElementById("progress-ratio");
-
-    // 言語セレクトの要素
-    const languageSelect = document.getElementById("language-select");
-
-    // 要素の存在確認
-    if (
-        !problemTitle ||
-        !questionText ||
-        !choicesList ||
-        !questionImage ||
-        !answerText ||
-        !answerImage ||
-        !answerBtn ||
-        !prevBtn ||
-        !nextBtn ||
-        !currentNumber ||
-        !totalNumber ||
-        !progressBar ||
-        !progressRatio ||
-        !languageSelect
-    ) {
-        alert('必要な要素が見つかりません。ページの構造を確認してください。');
-        return;
+    const japaneseSubjectName = subjectNames[subject] || '未知の科目';
+    if (problemTitle) {
+        problemTitle.textContent = `${year}年 ${japaneseSubjectName}`;
     }
 
-    // 現在の言語を保持（デフォルトは日本語）
-    let currentLanguage = 'ja';
+    // ========================
+    // HTML要素を取得
+    // ========================
+    const questionText   = document.getElementById("question-text");
+    const choicesList    = document.getElementById("choices-list");
+    const questionImage  = document.getElementById("question-image");
+    const answerText     = document.getElementById("answer-text");
+    const answerImage    = document.getElementById("answer-image");
+    const answerBtn      = document.getElementById("answer-btn");
+    const prevBtn        = document.getElementById("prev-btn");
+    const nextBtn        = document.getElementById("next-btn");
+    const currentNumber  = document.getElementById("current-number");
+    const totalNumber    = document.getElementById("total-number");
+    const progressBar    = document.getElementById("progress-bar");
+    const progressRatio  = document.getElementById("progress-ratio");
+    const languageSelect = document.getElementById("language-select");
+    const backButton     = document.getElementById("back-btn");
 
-    let questions = []; // 問題データを格納する配列
-    let currentQuestionIndex = 0; // 現在の問題番号を追跡
+    let questions = [];
+    let currentQuestionIndex = 0;
+    let currentLanguage = 'ja';  // 初期言語
 
-    // 問題データを読み込む関数
+    // ========================
+    // 問題データを読み込む
+    // ========================
     async function loadQuestions() {
         try {
-            // JSONファイルを取得
             // 例: data/2025/part1/anatomy.json
             const response = await fetch(`${repositoryName}/data/${year}/part${part}/${subject}.json`);
             if (!response.ok) {
                 throw new Error(`サーバーエラー: ${response.statusText}`);
             }
             questions = await response.json();
+
             if (questions.length === 0) {
                 throw new Error('問題データがありません。');
             }
-
-            // 全問題数を表示
             totalNumber.textContent = questions.length;
-
-            // 最初の問題を表示
             displayQuestion();
         } catch (error) {
             console.error(error);
@@ -112,26 +85,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // 問題を表示する関数
+    // ========================
+    // 問題を表示する
+    // ========================
     function displayQuestion() {
         if (questions.length > 0) {
             const currentQuestion = questions[currentQuestionIndex];
 
-            // ★ question が多言語対応の場合
+            // 問題文 (多言語対応)
             if (currentQuestion.question && typeof currentQuestion.question === 'object') {
-                questionText.textContent =
-                  currentQuestion.question[currentLanguage] || '問題文がありません。';
+                questionText.textContent = currentQuestion.question[currentLanguage] || '問題文がありません。';
             } else {
-                // 従来通りの1言語のみ
-                questionText.textContent =
-                  currentQuestion.question || '問題文がありません。';
+                questionText.textContent = currentQuestion.question || '問題文がありません。';
             }
 
-            // 選択肢の表示
+            // 選択肢リスト
             choicesList.innerHTML = '';
             if (currentQuestion.choices) {
                 for (const [key, value] of Object.entries(currentQuestion.choices)) {
                     const li = document.createElement('li');
+                    // 多言語オブジェクトなら
                     if (value && typeof value === 'object') {
                         li.textContent = `${key}: ${value[currentLanguage] || '---'}`;
                     } else {
@@ -141,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
 
-            // 問題の画像を表示
+            // 問題の画像
             if (currentQuestion.image) {
                 questionImage.src = `${repositoryName}/images/${currentQuestion.image}.png`;
                 questionImage.style.display = 'block';
@@ -149,24 +122,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 questionImage.style.display = 'none';
             }
 
-            // 解答や画像を非表示
+            // 解答テキスト類を初期非表示
             answerText.style.display = "none";
             answerText.textContent = "";
-            answerImage.style.display = 'none';
+            answerImage.style.display = "none";
 
-            // 現在の問題番号を表示
+            // 進捗表示
             currentNumber.textContent = currentQuestionIndex + 1;
-
-            // ナビゲーションボタンの状態を更新
             prevBtn.disabled = (currentQuestionIndex === 0);
             nextBtn.disabled = (currentQuestionIndex === questions.length - 1);
             answerBtn.disabled = false;
 
-            // 進捗バーの更新
+            // 進捗バー
             progressBar.value = currentQuestionIndex + 1;
             progressBar.max = questions.length;
-            const percentage = Math.round(((currentQuestionIndex + 1) / questions.length) * 100);
-            progressRatio.textContent = percentage + "%";
+            const percent = Math.round(((currentQuestionIndex + 1) / questions.length) * 100);
+            progressRatio.textContent = percent + "%";
         } else {
             questionText.textContent = '問題が見つかりません。';
             answerBtn.disabled = true;
@@ -175,35 +146,34 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // 解答を表示する
+    // 解答表示ボタン
     answerBtn.addEventListener("click", function() {
+        if (questions.length === 0) return;
         const currentQuestion = questions[currentQuestionIndex];
-        answerText.style.display = "block";
 
-        // 正解が配列の場合は全て列挙
-        // 多言語のexplanationを取得
+        answerText.style.display = "block";
+        // 解説 (多言語)
         let rawExplanation = "";
         if (currentQuestion.explanation && typeof currentQuestion.explanation === 'object') {
             rawExplanation = currentQuestion.explanation[currentLanguage] || "解説がありません。";
         } else {
             rawExplanation = currentQuestion.explanation || "解説がありません。";
         }
-
-        // --- \n → <br> の変換処理 ---
+        // 改行→<br> 変換
         rawExplanation = rawExplanation
-          .replace(/\r\n/g, "\n")   // Windows改行を \n に統一
-          .replace(/\n\n/g, "<br><br>") // 二重改行 → 空行扱い
-          .replace(/\n/g, "<br>");  // 単一改行 → <br>
+          .replace(/\r\n/g, "\n")
+          .replace(/\n\n/g, "<br><br>")
+          .replace(/\n/g, "<br>");
 
+        // 解答が配列の場合
         if (Array.isArray(currentQuestion.answer)) {
-            const correctAnswers = currentQuestion.answer.join(', ');
+            const correctAnswers = currentQuestion.answer.join(", ");
             answerText.innerHTML = `正解：${correctAnswers}<br>${rawExplanation}`;
         } else {
-            // 単一の答え
             answerText.innerHTML = `正解：${currentQuestion.answer}<br>${rawExplanation}`;
         }
 
-        // 解答の画像があれば表示
+        // 解答画像
         if (currentQuestion.answerImage) {
             answerImage.src = `${repositoryName}/images/${currentQuestion.answerImage}.png`;
             answerImage.style.display = 'block';
@@ -211,11 +181,10 @@ document.addEventListener("DOMContentLoaded", function() {
             answerImage.style.display = 'none';
         }
 
-        // 解答ボタンを無効化
         answerBtn.disabled = true;
     });
 
-    // 次の問題に移動
+    // 次の問題
     nextBtn.addEventListener("click", function() {
         if (currentQuestionIndex < questions.length - 1) {
             currentQuestionIndex++;
@@ -223,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // 前の問題に移動
+    // 前の問題
     prevBtn.addEventListener("click", function() {
         if (currentQuestionIndex > 0) {
             currentQuestionIndex--;
@@ -231,8 +200,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // 戻るリンク設定
-    const backButton = document.getElementById("back-btn");
+    // 戻るボタン (part1_2025.htmlなどへ)
     if (backButton) {
         if (year && part === '1') {
             backButton.onclick = function() {
@@ -249,13 +217,87 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // 言語セレクトの変更イベント
+    // 言語切り替え
     languageSelect.addEventListener("change", function() {
-        currentLanguage = languageSelect.value; // ja, en, zh
-        // 言語切り替え後に再描画
+        currentLanguage = languageSelect.value;
         displayQuestion();
     });
 
-    // 初期化：問題データを読み込む
+    // =======================
+    // 初期化：問題読み込み
+    // =======================
     loadQuestions();
+
+    // =======================
+    // フィードバック機能
+    // =======================
+    const feedbackGoodBtn   = document.getElementById("feedback-good-btn");
+    const feedbackBadBtn    = document.getElementById("feedback-bad-btn");
+    const feedbackModal     = document.getElementById("feedback-modal");
+    const feedbackForm      = document.getElementById("feedback-form");
+    const feedbackSendBtn   = document.getElementById("feedback-send-btn");
+    const feedbackCancelBtn = document.getElementById("feedback-cancel-btn");
+    const feedbackTargetLabel = document.getElementById("feedback-target-label");
+    const feedbackComments  = document.getElementById("feedback-comments");
+
+    // Googleフォーム(非表示フォーム)要素
+    const googleForm        = document.getElementById("google-form");
+    const gFormYear         = document.getElementById("gFormYear");
+    const gFormSubject      = document.getElementById("gFormSubject");
+    const gFormQuestionNo   = document.getElementById("gFormQuestionNo");
+    const gFormFeedbackType = document.getElementById("gFormFeedbackType");
+    const gFormItems        = document.getElementById("gFormItems");
+    const gFormComments     = document.getElementById("gFormComments");
+
+    // 良い評価ボタン
+    feedbackGoodBtn.addEventListener("click", () => {
+        openFeedbackModal("良い評価");
+    });
+    // 悪い評価ボタン
+    feedbackBadBtn.addEventListener("click", () => {
+        openFeedbackModal("悪い評価");
+    });
+
+    function openFeedbackModal(labelText) {
+        feedbackForm.reset();
+        feedbackComments.value = "";
+        feedbackTargetLabel.textContent = `評価種別: ${labelText}`;
+        feedbackModal.style.display = "block";
+    }
+
+    // キャンセル => モーダルを閉じる
+    feedbackCancelBtn.addEventListener("click", () => {
+        feedbackModal.style.display = "none";
+    });
+
+    // 送信ボタン => GoogleフォームにPOST
+    feedbackSendBtn.addEventListener("click", () => {
+        if (questions.length === 0) {
+            alert("問題データがありません。");
+            return;
+        }
+
+        // チェックボックスの取得
+        const selectedFeedbacks = Array.from(
+            feedbackForm.querySelectorAll('input[name="feedback"]:checked')
+        ).map(input => input.value);
+
+        const commentValue = feedbackComments.value;
+        const feedbackType = feedbackTargetLabel.textContent.replace("評価種別: ", "");
+        const questionNo   = currentQuestionIndex + 1;  // 1-based
+
+        // hiddenフォームに値をセット
+        gFormYear.value         = year || "";     // 例: "2025"
+        gFormSubject.value      = subject || "";  // 例: "anatomy"
+        gFormQuestionNo.value   = questionNo;
+        gFormFeedbackType.value = feedbackType;
+        gFormItems.value        = selectedFeedbacks.join(", ");
+        gFormComments.value     = commentValue;
+
+        // 送信 (画面遷移はしない)
+        googleForm.submit();
+
+        alert("フィードバックを送信しました。ありがとうございました。");
+        feedbackModal.style.display = "none";
+    });
 });

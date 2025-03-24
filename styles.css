@@ -251,7 +251,7 @@ footer p {
     transform: translateY(-2px);
 }
 
-/* 運営者からのメッセージや導入文 (.introduction) */
+/* 運営者からのメッセージ (.introduction) */
 .introduction {
     background-color: #ffffff;
     padding: 20px;
@@ -355,10 +355,10 @@ footer p {
 }
 
 /* =========================================================================
-   ========================== 問題表示ページ（.question-card 等） =================
+   ========================== 問題表示ページ (.question-card) =================
    ========================================================================= */
 
-/* カード状の問題表示セクション */
+/* カード状の問題表示 */
 .question-card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -400,7 +400,6 @@ progress {
     margin: 0 10px;
     border-radius: 5px;
 }
-/* Chrome/Edge/Safari */
 progress::-webkit-progress-bar {
     background-color: #eee;
     border-radius: 5px;
@@ -410,7 +409,6 @@ progress::-webkit-progress-value {
     border-radius: 5px;
     transition: width 0.3s ease;
 }
-/* Firefox */
 progress::-moz-progress-bar {
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     border-radius: 5px;
@@ -420,7 +418,7 @@ progress::-moz-progress-bar {
     text-align: right;
 }
 
-/* ★ 言語切り替えセレクトボックス周り */
+/* 言語切り替え */
 .language-container {
     display: flex;
     justify-content: center;
@@ -477,13 +475,12 @@ progress::-moz-progress-bar {
     top: 50%;
     transform: translateY(-50%);
 }
-/* ホバーでふわっと浮く */
 #choices-list li:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* 画像スタイル (#question-image, #answer-image) */
+/* 画像 */
 #question-image,
 #answer-image {
     max-width: 100%;
@@ -491,7 +488,7 @@ progress::-moz-progress-bar {
     margin-top: 10px;
 }
 
-/* 解答周りのボタンやテキスト */
+/* 解答ボタン */
 .answer-button {
     display: inline-block;
     margin-bottom: 20px;
@@ -512,11 +509,10 @@ progress::-moz-progress-bar {
     font-size: 1.05em;
     line-height: 1.6;
     margin-top: 10px;
-    /* 改行を通常の通り表示したい場合: */
-    white-space: normal;
+    white-space: normal; /* 改行を普通に扱う */
 }
 
-/* ナビゲーションボタン (前/次) */
+/* 前/次ボタン */
 .navigation {
     display: flex;
     justify-content: center;
@@ -561,7 +557,6 @@ progress::-moz-progress-bar {
 /* =========================================================================
    ========================== フォーカススタイルなど =========================
    ========================================================================= */
-
 a:focus,
 button:focus,
 input:focus,
@@ -570,7 +565,6 @@ select:focus {
     outline: 2px dashed var(--focus-color);
     outline-offset: 4px;
 }
-
 button,
 input[type="submit"] {
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -721,4 +715,71 @@ nav a {
         padding: 15px;
         margin-bottom: 20px;
     }
+}
+
+/* =========================================================================
+   ====================== フィードバック (モーダル関連) =====================
+   ========================================================================= */
+.feedback-button {
+  cursor: pointer;
+  margin: 5px;
+  padding: 8px 14px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #ccc;
+  color: #333;
+  transition: background 0.3s ease;
+}
+.feedback-button:hover {
+  background-color: #aaa;
+}
+
+/* モーダル全体の背景 (オーバーレイ) */
+.feedback-modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* スクロール用 */
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* モーダルの中身 */
+.feedback-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px; /* お好みで変更 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.feedback-modal-content h3 {
+  margin-top: 0;
+}
+
+.feedback-modal-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.feedback-modal-buttons button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.feedback-modal-buttons button:hover {
+  background-color: #ddd;
+}
+
+#feedback-comments {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  resize: vertical;
 }
