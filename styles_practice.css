@@ -430,7 +430,7 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-/* 解答済みのスタイル */
+/* 既存: 解答済みのスタイル */
 .question-btn.answered {
     background-color: #c8e6c9; /* 淡い緑 */
     color: #000;

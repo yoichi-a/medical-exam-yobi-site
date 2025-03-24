@@ -1,14 +1,11 @@
-/* =============================
-   メインスクリプト
-   ============================= */
-   document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     // GitHub Pages + 独自ドメイン用のパス指定 (空文字でもOK)
     const repositoryName = '';
 
     // URLパラメータ取得
     const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get('category') || 'basic';   // 例: basic
-    const subject = urlParams.get('subject') || 'anatomy';   // 例: anatomy
+    const category = urlParams.get('category') || 'basic';
+    const subject = urlParams.get('subject') || 'anatomy';
 
     // 科目名マッピング
     const subjectNames = {
@@ -36,7 +33,7 @@
     };
     const japaneseSubjectName = subjectNames[subject] || '未知の科目';
 
-    // 各種要素のID参照
+    // 各種要素
     const practiceTitle = document.getElementById('practice-title');
     const questionText = document.getElementById("question-text");
     const choicesList = document.getElementById("choices-list");
@@ -57,25 +54,25 @@
     const backButton = document.getElementById("back-btn");
     const questionNavContainer = document.getElementById("question-nav");
 
-    // 部分スコア表示用モーダル
+    // 部分スコアモーダル
     const partialScoreModal = document.getElementById('partial-score-modal');
     const modalClose = document.getElementById('modal-close');
     const closeScoreBtn = document.getElementById('closeScoreBtn');
     const scoreDetails = document.getElementById('scoreDetails');
     let partialScoreChart = null;
 
-    // ★★★ 新規追加: 3択モーダル (前回続き / 新規 / 戻る)
+    // 前回進捗モーダル
     const resumeDialog = document.getElementById('resume-dialog');
     const resumeContinueBtn = document.getElementById('resume-continue-btn');
     const resumeNewstartBtn = document.getElementById('resume-newstart-btn');
     const resumeGobackBtn = document.getElementById('resume-goback-btn');
 
-    // 問題データ格納用
+    // 問題データ
     let questions = [];
     let currentQuestionIndex = 0;
     let userAnswers = [];
 
-    // localStorage キー
+    // localStorageキー
     const storageKey = `similarPracticeProgress-${category}-${subject}`;
 
     // タイトルをセット
@@ -86,10 +83,7 @@
     // ======= 問題を読み込む =======
     async function loadQuestions() {
         try {
-            // JSONデータのパス
-            // 例: /data/similar/basic/anatomy.json
             const dataUrl = `${repositoryName}/data/similar/${category}/${subject}.json`;
-
             const response = await fetch(dataUrl);
             if (!response.ok) {
                 throw new Error(`サーバーエラー: ${response.status} ${response.statusText}`);
@@ -99,18 +93,15 @@
                 throw new Error('問題データが空です。');
             }
 
-            // 問題数を表示
             if (totalNumber) {
                 totalNumber.textContent = questions.length;
             }
 
-            // 前回の進捗があるか確認
+            // 前回の進捗があるか？
             const savedData = localStorage.getItem(storageKey);
             if (savedData) {
-                // 前回の進捗データがある → モーダル表示
                 resumeDialog.style.display = 'flex';
             } else {
-                // なければ普通に開始
                 updateQuestionNav();
                 displayQuestion();
             }
@@ -121,8 +112,7 @@
         }
     }
 
-    // ======= 3択モーダルのボタン処理 =======
-    // 前回の続き
+    // ===== 前回の続き / 新規スタート / 戻る =====
     resumeContinueBtn.addEventListener('click', () => {
         const savedData = localStorage.getItem(storageKey);
         if (savedData) {
@@ -135,23 +125,20 @@
         displayQuestion();
     });
 
-    // 新規スタート
     resumeNewstartBtn.addEventListener('click', () => {
         localStorage.removeItem(storageKey);
         currentQuestionIndex = 0;
         userAnswers = [];
-
         resumeDialog.style.display = 'none';
         updateQuestionNav();
         displayQuestion();
     });
 
-    // 科目選択ページに戻る
     resumeGobackBtn.addEventListener('click', () => {
         window.location.href = `${repositoryName}/similar-practice.html`;
     });
 
-    // ======= 問題番号ナビゲーションを更新 =======
+    // ===== 問題番号ナビゲーションを更新 =====
     function updateQuestionNav() {
         if (!questionNavContainer) return;
         questionNavContainer.innerHTML = '';
@@ -159,26 +146,22 @@
         for (let i = 0; i < questions.length; i++) {
             const btn = document.createElement('button');
             btn.classList.add('question-btn');
-            btn.textContent = i + 1; // 表示上は1始まり
+            btn.textContent = i + 1;
 
-            // 解答済みかどうか
             if (userAnswers[i]) {
                 btn.classList.add('answered');
                 const { userAnswer, correctAnswer } = userAnswers[i];
-                const isCorrect = (userAnswer === correctAnswer);
-                if (isCorrect) {
+                if (userAnswer === correctAnswer) {
                     btn.classList.add('correct');
                 } else {
                     btn.classList.add('incorrect');
                 }
             }
 
-            // 現在の問題を強調
             if (i === currentQuestionIndex) {
                 btn.classList.add('current');
             }
 
-            // クリック時
             btn.addEventListener('click', () => {
                 currentQuestionIndex = i;
                 displayQuestion();
@@ -190,7 +173,7 @@
         }
     }
 
-    // ======= 問題を表示する関数 =======
+    // ===== 問題を表示 =====
     function displayQuestion() {
         if (questions.length === 0) {
             if (questionText) questionText.textContent = '問題が見つかりません。';
@@ -202,17 +185,14 @@
 
         const q = questions[currentQuestionIndex];
 
-        // 問題文
         if (questionText) {
             questionText.textContent = q.question || '問題文がありません。';
         }
 
-        // 現在の問題番号
         if (currentNumber) {
             currentNumber.textContent = currentQuestionIndex + 1;
         }
 
-        // 選択肢リスト再生成
         if (choicesList) {
             choicesList.innerHTML = '';
             if (q.choices) {
@@ -230,7 +210,6 @@
                     label.appendChild(document.createTextNode(`${key}: ${value}`));
                     li.appendChild(label);
 
-                    // クリックで選択
                     li.addEventListener('click', () => {
                         input.checked = true;
                         document.querySelectorAll('#choices-list li').forEach(liEl => {
@@ -244,7 +223,6 @@
             }
         }
 
-        // フィードバック等リセット
         if (feedbackText) {
             feedbackText.style.display = 'none';
             feedbackText.textContent = '';
@@ -254,7 +232,6 @@
             explanationText.textContent = '';
         }
 
-        // ボタン状態
         if (prevBtn) {
             prevBtn.disabled = (currentQuestionIndex === 0);
         }
@@ -269,7 +246,7 @@
         }
     }
 
-    // ======= 解答を送信 =======
+    // ===== 解答送信 =====
     if (answerBtn) {
         answerBtn.addEventListener('click', () => {
             const q = questions[currentQuestionIndex];
@@ -289,7 +266,6 @@
                 isCorrect
             };
 
-            // フィードバック
             if (feedbackText) {
                 feedbackText.style.display = 'block';
                 if (isCorrect) {
@@ -300,8 +276,6 @@
                     feedbackText.className = 'incorrect';
                 }
             }
-
-            // 解説
             if (explanationText) {
                 explanationText.style.display = 'block';
                 explanationText.innerHTML = q.explanation || '解説がありません。';
@@ -315,21 +289,17 @@
             }
 
             answerBtn.disabled = true;
-
             saveProgress();
             updateQuestionNav();
         });
     }
 
-    // ======= 次の問題へ =======
+    // ===== 次の問題へ =====
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
-            // 10問ごとにモーダル
             if ((currentQuestionIndex + 1) % 10 === 0 && currentQuestionIndex < questions.length - 1) {
                 showPartialScoreModal();
             }
-
-            // 次の問題を表示
             if (currentQuestionIndex < questions.length - 1) {
                 currentQuestionIndex++;
                 displayQuestion();
@@ -339,7 +309,7 @@
         });
     }
 
-    // ======= 前の問題へ =======
+    // ===== 前の問題へ =====
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
             if (currentQuestionIndex > 0) {
@@ -351,7 +321,7 @@
         });
     }
 
-    // ======= 10問ごとの部分スコア (モーダル) =======
+    // ===== 10問ごとの部分スコア =====
     function showPartialScoreModal() {
         const endIndex = currentQuestionIndex;
         const startIndex = Math.max(0, endIndex - 9);
@@ -417,7 +387,7 @@
         partialScoreModal.classList.add('modal-show');
     }
 
-    // ======= 結果を表示 =======
+    // ===== 結果を表示 =====
     if (finishBtn) {
         finishBtn.addEventListener('click', () => {
             let correctCount = 0;
@@ -436,11 +406,13 @@
             document.getElementById('question-section').style.display = 'none';
             resultSection.style.display = 'block';
 
+            // confetti() など演出したい場合はここで
+
             localStorage.removeItem(storageKey);
         });
     }
 
-    // ======= もう一度やり直す =======
+    // ===== やり直す =====
     if (retryBtn) {
         retryBtn.addEventListener('click', () => {
             currentQuestionIndex = 0;
@@ -454,7 +426,7 @@
         });
     }
 
-    // ======= 戻るボタン =======
+    // ===== 戻る =====
     if (backToSelectionBtn) {
         backToSelectionBtn.addEventListener('click', () => {
             window.location.href = `${repositoryName}/similar-practice.html`;
@@ -466,7 +438,7 @@
         };
     }
 
-    // ======= 進捗をlocalStorageに保存 =======
+    // ===== 進捗保存 =====
     function saveProgress() {
         const dataToSave = {
             currentQuestionIndex,
@@ -475,7 +447,7 @@
         localStorage.setItem(storageKey, JSON.stringify(dataToSave));
     }
 
-    // ======= モーダルの閉じるボタン =======
+    // ===== モーダル閉じる =====
     if (modalClose) {
         modalClose.addEventListener('click', () => {
             closeModalWithFadeOut();
@@ -495,118 +467,86 @@
         }, 300);
     }
 
-    // ======= 実行 =======
+    // 実行
     loadQuestions();
 });
 
 /* ============================
-   評価＋コメント送信用スクリプト
-   (Googleフォーム + ローカルストレージ)
-============================= */
-
-// GoogleフォームのベースURL
-const formBaseUrl = "https://docs.google.com/forms/d/e/1FAIpQLSejXa2AzOHrOxzhKbCfNMwPQpELeanzo0-pw6AsG4AU4g5u-Q/viewform?usp=pp_url";
-
-// entry.xxx のID（問題ID / 評価 / コメント）
-const entryID_problem = "entry.2096008950"; // 問題ID
-const entryID_rating  = "entry.449810669";  // 評価 (👍 or 👎)
-const entryID_comment = "entry.1007552905"; // コメント
-
-// 評価情報を保存するためのlocalStorageキー
-const ratingStorageKey = "questionRatings";
-
-// 全問題の評価情報をオブジェクトで管理
-// { "anatomy-1": { rating: "👍", comment: "..." }, ... }
-let ratingData = {};
-
-// ページ読み込み時にストレージを読み込み、UIをセットアップ
+   ページ遷移なしでGoogleフォーム送信
+   ============================ */
 window.addEventListener("DOMContentLoaded", () => {
-  const savedRatings = localStorage.getItem(ratingStorageKey);
-  if (savedRatings) {
-    ratingData = JSON.parse(savedRatings);
-  }
-  setupRatingUI();
-});
+  const thumbsUpBtn       = document.getElementById("thumbs-up-btn");
+  const thumbsDownBtn     = document.getElementById("thumbs-down-btn");
+  const ratingValueSpan   = document.getElementById("rating-value");
+  const ratingCommentArea = document.getElementById("rating-comment");
+  const ratingSubmitBtn   = document.getElementById("rating-submit-btn");
+  const resultMessage     = document.getElementById("rating-result-message");
 
-/**
- * 評価UIの初期化
- */
-function setupRatingUI() {
-  const thumbsUpBtn     = document.getElementById("thumbs-up-btn");
-  const thumbsDownBtn   = document.getElementById("thumbs-down-btn");
-  const ratingValueSpan = document.getElementById("rating-value");
-  const ratingSubmitBtn = document.getElementById("rating-submit-btn");
-
-  if (!thumbsUpBtn || !thumbsDownBtn || !ratingValueSpan || !ratingSubmitBtn) {
+  if (!thumbsUpBtn || !thumbsDownBtn || !ratingValueSpan ||
+      !ratingCommentArea || !ratingSubmitBtn || !resultMessage) {
     return;
   }
 
-  function selectRating(value) {
-    ratingValueSpan.textContent = value; // 表示を更新
-  }
-
-  // クリックイベント
+  // 評価ボタン
   thumbsUpBtn.addEventListener("click", () => {
-    selectRating("👍");
+    ratingValueSpan.textContent = "👍";
   });
   thumbsDownBtn.addEventListener("click", () => {
-    selectRating("👎");
+    ratingValueSpan.textContent = "👎";
   });
 
-  // 「評価を送信」ボタンを押したら
+  // 「評価を送信」ボタン → 隠しフォームに値をセットしsubmit
   ratingSubmitBtn.addEventListener("click", () => {
-    const currentRating = ratingValueSpan.textContent;
-    const comment       = document.getElementById("rating-comment").value;
-    const questionId    = makeQuestionId(); // 現在の問題ID取得
+    const qidField     = document.getElementById("google-qid");
+    const ratingField  = document.getElementById("google-rating");
+    const commentField = document.getElementById("google-comment");
 
-    // ローカルストレージに保存
-    ratingData[questionId] = {
-      rating: currentRating,
-      comment: comment
-    };
-    localStorage.setItem(ratingStorageKey, JSON.stringify(ratingData));
+    const questionId = getCurrentQuestionId(); 
+    qidField.value     = questionId;
+    ratingField.value  = ratingValueSpan.textContent;
+    commentField.value = ratingCommentArea.value.trim();
 
-    // GoogleフォームのURLを組み立て
-    const formUrl = formBaseUrl
-      + `&${entryID_problem}=` + encodeURIComponent(questionId)
-      + `&${entryID_rating}=`  + encodeURIComponent(currentRating)
-      + `&${entryID_comment}=` + encodeURIComponent(comment);
+    // フォーム送信
+    const formEl = document.getElementById("google-form");
+    formEl.submit();
 
-    // 別タブでフォームを開く
-    window.open(formUrl, "_blank");
+    // 送信完了メッセージをとりあえず表示
+    resultMessage.style.display = "block";
+    resultMessage.textContent = "送信しました。ご協力ありがとうございます！";
 
     // コメント欄をクリア
-    document.getElementById("rating-comment").value = "";
+    ratingCommentArea.value = "";
   });
+});
+
+/**
+ * 現在の問題IDを "科目-問題番号" の形式で返す例
+ */
+function getCurrentQuestionId() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const subject = urlParams.get('subject') || 'unknown';
+
+  // localStorageから現在の問題インデックスを取得
+  const category = urlParams.get('category') || 'basic';
+  const storageKey = `similarPracticeProgress-${category}-${subject}`;
+  let currentIdx = 0;
+  const savedData = localStorage.getItem(storageKey);
+  if (savedData) {
+    try {
+      const parsed = JSON.parse(savedData);
+      if (typeof parsed.currentQuestionIndex === 'number') {
+        currentIdx = parsed.currentQuestionIndex;
+      }
+    } catch(e) {/* nop */}
+  }
+  return `${subject}-${currentIdx + 1}`;
 }
 
 /**
- * 「教科 + 問題番号」の形式で問題IDを作る例
- * 例: subject=anatomy, currentQuestionIndex=4 → "anatomy-5"
+ * フォーム送信時のイベントハンドラ
+ * 実際は特に何もしませんが、onGoogleFormSubmit() でtrueを返すと送信継続
  */
-function makeQuestionId() {
-  // URLクエリパラメータから教科を取得
-  const urlParams = new URLSearchParams(window.location.search);
-  const subject = urlParams.get('subject') || 'unknownSubject';
-
-  // もし「現在の問題番号(currentQuestionIndex)」をグローバルには参照しづらい場合は
-  //  localStorage などで管理している値を取得してもOKですが、
-  // ここでは簡易的に `localStorage["similarPracticeProgress-category-subject"]` を
-  //  解析して取得するやり方もあります。
-
-  // 例: localStorage から取り出し
-  const category = urlParams.get('category') || 'basic';
-  const storageKey = `similarPracticeProgress-${category}-${subject}`;
-  const saved = localStorage.getItem(storageKey);
-  let indexNow = 0; // デフォルト
-
-  if (saved) {
-    const parsed = JSON.parse(saved);
-    if (typeof parsed.currentQuestionIndex === 'number') {
-      indexNow = parsed.currentQuestionIndex;
-    }
-  }
-
-  // IDは: subject + "-" + (indexNow+1)
-  return subject + "-" + (indexNow + 1);
+function onGoogleFormSubmit() {
+  // ここで false を返すと送信中断になるので注意
+  return true;
 }

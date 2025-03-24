@@ -5,17 +5,16 @@
     <!-- ビューポートのメタタグ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>類似問題演習 - 医師国家試験予備試験</title>
-    
-    <!-- Google Fonts の追加 -->
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <!-- Font Awesome の追加 -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Chart.js (10問ごとのスコア表示用) -->
+    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Canvas Confetti (演出用、必要に応じて) -->
+    <!-- Canvas Confetti (演出用) -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    
+
     <!-- ********** 外部CSS ********** -->
     <link rel="stylesheet" href="styles_practice.css">
 
@@ -38,7 +37,6 @@
     <main>
         <!-- ===== 問題表示セクション ===== -->
         <section id="question-section">
-            <!-- ★ 問題番号ナビゲーションを表示するコンテナ -->
             <div id="question-nav" class="question-nav"></div>
 
             <p id="progress">問題 <span id="current-number">1</span> / <span id="total-number"></span></p>
@@ -48,22 +46,6 @@
             <button id="submit-answer-btn"><i class="fa-solid fa-check-circle"></i> 解答を送信</button>
             <p id="feedback-text" style="display: none;"></p>
             <p id="explanation-text" style="display: none;"></p>
-
-            <!-- ▼▼▼ 評価用UIを追加 ▼▼▼ -->
-            <div id="rating-container" style="margin: 20px 0;">
-              <p>この問題の評価を教えてください</p>
-              <div id="rating-buttons">
-                <button id="thumbs-up-btn" data-value="👍">👍</button>
-                <button id="thumbs-down-btn" data-value="👎">👎</button>
-              </div>
-              <div id="selected-rating" style="margin: 5px 0;">
-                選択された評価: <span id="rating-value">-</span>
-              </div>
-
-              <textarea id="rating-comment" rows="2" placeholder="ご意見・コメント等があれば入力してください" style="width: 95%;"></textarea><br>
-              <button id="rating-submit-btn">評価を送信</button>
-            </div>
-            <!-- ▲▲▲ 評価UIここまで ▲▲▲ -->
 
             <div class="navigation">
                 <button id="prev-btn" disabled><i class="fa-solid fa-arrow-left"></i> 前の問題</button>
@@ -80,6 +62,38 @@
             <p>正答率：<span id="accuracy">0</span>%</p>
             <button id="retry-btn"><i class="fa-solid fa-redo"></i> もう一度やり直す</button>
             <button id="back-to-selection-btn"><i class="fa-solid fa-rotate-left"></i> 科目選択ページに戻る</button>
+        </section>
+
+        <!-- ======= ★★★ ここから評価UIをページ下部に配置 ★★★ -->
+        <section id="rating-section" style="margin-top: 2em;">
+            <h2>この問題・問題セットへの評価</h2>
+            <p>学習に役立ちましたか？ ご意見・ご感想をお願いします。</p>
+
+            <!-- 評価(👍/👎)ボタン -->
+            <div style="margin-bottom:10px;">
+                <button id="thumbs-up-btn" data-value="👍">👍</button>
+                <button id="thumbs-down-btn" data-value="👎">👎</button>
+                <span style="margin-left: 15px;">
+                  選択された評価：<span id="rating-value">-</span>
+                </span>
+            </div>
+
+            <!-- コメント入力 -->
+            <textarea id="rating-comment" rows="2" placeholder="何かコメントがあれば入力してください" style="width: 95%;"></textarea><br>
+            <button id="rating-submit-btn" style="margin-top: 5px;">評価を送信</button>
+
+            <!-- ★★★ 隠しフォーム＋iframeでGoogleフォームに遷移せず送信 ★★★ -->
+            <form id="google-form" action="https://docs.google.com/forms/d/e/1FAIpQLSejXa2AzOHrOxzhKbCfNMwPQpELeanzo0-pw6AsG4AU4g5u-Q/formResponse"
+                  method="POST" target="hidden_iframe" onsubmit="return onGoogleFormSubmit();">
+                <!-- エントリIDに合わせたnameを設定 -->
+                <input type="hidden" name="entry.2096008950" id="google-qid"     value="">
+                <input type="hidden" name="entry.449810669"  id="google-rating"  value="">
+                <input type="hidden" name="entry.1007552905" id="google-comment" value="">
+            </form>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+            <!-- フォーム送信完了メッセージ -->
+            <p id="rating-result-message" style="color: green; display: none; margin-top: 10px;"></p>
         </section>
     </main>
 
