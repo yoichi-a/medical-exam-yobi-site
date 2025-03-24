@@ -5,16 +5,18 @@
     <!-- ビューポートのメタタグ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>類似問題演習 - 医師国家試験予備試験</title>
+    
     <!-- Google Fonts の追加 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <!-- Font Awesome の追加 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Chart.js (10問ごとのスコア表示用) -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Canvas Confetti (演出用、必要に応じて) -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-
-    <!-- 新しいスタイルシートのリンク（同フォルダにあるstyles_practice.cssと仮定） -->
+    
+    <!-- ********** 外部CSS ********** -->
     <link rel="stylesheet" href="styles_practice.css">
 
     <meta name="description" content="医師国家試験予備試験の類似問題演習ページです。">
@@ -46,6 +48,22 @@
             <button id="submit-answer-btn"><i class="fa-solid fa-check-circle"></i> 解答を送信</button>
             <p id="feedback-text" style="display: none;"></p>
             <p id="explanation-text" style="display: none;"></p>
+
+            <!-- ▼▼▼ 評価用UIを追加 ▼▼▼ -->
+            <div id="rating-container" style="margin: 20px 0;">
+              <p>この問題の評価を教えてください</p>
+              <div id="rating-buttons">
+                <button id="thumbs-up-btn" data-value="👍">👍</button>
+                <button id="thumbs-down-btn" data-value="👎">👎</button>
+              </div>
+              <div id="selected-rating" style="margin: 5px 0;">
+                選択された評価: <span id="rating-value">-</span>
+              </div>
+
+              <textarea id="rating-comment" rows="2" placeholder="ご意見・コメント等があれば入力してください" style="width: 95%;"></textarea><br>
+              <button id="rating-submit-btn">評価を送信</button>
+            </div>
+            <!-- ▲▲▲ 評価UIここまで ▲▲▲ -->
 
             <div class="navigation">
                 <button id="prev-btn" disabled><i class="fa-solid fa-arrow-left"></i> 前の問題</button>
@@ -81,7 +99,7 @@
       </div>
     </div>
 
-    <!-- ★★★ 新規追加: 前回の進捗がある場合に表示するカスタムモーダル（3択） -->
+    <!-- ★★★ 前回の進捗がある場合に表示するカスタムモーダル（3択） -->
     <div id="resume-dialog" class="modal" style="display: none;">
       <div class="modal-content" style="max-width:400px;">
         <h2>前回の進捗があります</h2>
@@ -100,7 +118,7 @@
       </div>
     </div>
 
-    <!-- ===== JavaScriptを読み込む (同フォルダにあるpractice-script.js) ===== -->
+    <!-- ********** 外部JS ********** -->
     <script src="practice-script.js"></script>
 </body>
 </html>
