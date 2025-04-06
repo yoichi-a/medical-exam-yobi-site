@@ -1,123 +1,402 @@
 [
-    {
-      "question": "自発的に流暢に話すことはできるが、文法的な誤り（錯文法）や単語の言い間違い（錯語）がみられる場合、障害されていると考えられる脳の部位はどれか。",
-      "choices": {
-        "a": "右前頭葉",
-        "b": "右頭頂葉",
-        "c": "左側頭葉",
-        "d": "左後頭葉",
-        "e": "中脳"
-      },
-      "answer": "c",
-      "explanation": "【解答解説】\n\n流暢に話すことはできるものの、意味のない言葉や文法の誤り（錯文法）が頻繁にみられるのはウェルニッケ失語の特徴です。ウェルニッケ失語では言語理解の障害も顕著になります。\n\nこの失語は左側頭葉の後上部（ブロードマン22野付近）の損傷によって起こります。多くの人では言語中枢は左半球にあり、側頭葉が障害されるとこのような症状が出現しやすいのです。\n\n【誤答選択肢について】\n- 右前頭葉：性格変化や注意障害が主体になることが多く、失語症状は典型的ではありません。\n- 右頭頂葉：半側空間無視などを起こす場合が多く、失語よりも視空間認知障害が目立ちます。\n- 左後頭葉：視覚野が主に存在する領域なので、視野欠損などが中心となります。\n- 中脳：言語中枢がある場所ではありません。\n\n【周辺知識】\n- 失語には流暢性と非流暢性があり、ウェルニッケ失語は流暢性失語、ブローカ失語は非流暢性失語の代表例です。\n- 病変部位によって発話の流暢さや理解力の低下のパターンが変わるため、どちらが優位に障害されているかを見極めることが診断に重要です。"
+  {
+    "question": {
+      "ja": "自発的に流暢に話すことはできるが、文法的な誤り（錯文法）や単語の言い間違い（錯語）がみられる場合、障害されていると考えられる脳の部位はどれか。",
+      "en": "If one can speak fluently spontaneously, but grammatical errors (paragrammatism) and word misstatements (paraphasia) are observed, which part of the brain is considered to be impaired?",
+      "zh": "如果一个人能够自发地流利说话，但出现语法错误（错误语法）和单词使用错误（错词），则被认为是大脑的哪个部位受损？"
     },
-    {
-      "question": "アポトーシスとネクローシスを比較した場合、アポトーシスの特徴はどれか。",
-      "choices": {
-        "a": "病的変化である",
-        "b": "集団的に一斉におこる",
-        "c": "周辺組織に炎症がおこる",
-        "d": "核にクロマチンの凝集がみられる",
-        "e": "ミトコンドリアの膨化がみられる"
+    "choices": {
+      "a": {
+        "ja": "右前頭葉",
+        "en": "Right frontal lobe",
+        "zh": "右额叶"
       },
-      "answer": "d",
-      "explanation": "【解答解説】\n\nアポトーシスはプログラムされた細胞死で、細胞の縮小と核のクロマチン凝集が典型的です。周囲組織に炎症を起こさず、生理的に起こることが多いという点が特徴になります。\n\n一方、ネクローシスは障害や虚血などによる病的な細胞死で、細胞膜が破れて内容物が流出し、炎症を引き起こす点が大きく異なります。\n\n【誤答選択肢について】\n- 病的変化（a）、集団的な細胞死（b）、炎症の誘発（c）、ミトコンドリア膨化（e）はネクローシスでみられます。\n\n【周辺知識】\n- アポトーシスを観察する手法として、TUNEL法などDNA断片化を検出する方法がよく用いられます。\n- がん治療ではアポトーシスを誘導する薬剤開発が重要視されています。"
+      "b": {
+        "ja": "右頭頂葉",
+        "en": "Right parietal lobe",
+        "zh": "右顶叶"
+      },
+      "c": {
+        "ja": "左側頭葉",
+        "en": "Left temporal lobe",
+        "zh": "左颞叶"
+      },
+      "d": {
+        "ja": "左後頭葉",
+        "en": "Left occipital lobe",
+        "zh": "左枕叶"
+      },
+      "e": {
+        "ja": "中脳",
+        "en": "Midbrain",
+        "zh": "中脑"
+      }
     },
-    {
-      "question": "レニンを産生する細胞はどれか。",
-      "choices": {
-        "a": "緻密斑",
-        "b": "傍糸球体細胞",
-        "c": "メサンギウム細胞",
-        "d": "Bowman裏の上皮細胞",
-        "e": "輸出細動脈の内皮細胞"
-      },
-      "answer": "b",
-      "explanation": "【解答解説】\n\nレニンは腎臓の傍糸球体細胞（JG細胞）から分泌されます。傍糸球体細胞は輸入細動脈の平滑筋細胞が変化したもので、血圧とナトリウム濃度の調節に大きく関わります。\n\nレニンは肝臓由来のアンジオテンシノーゲンをアンジオテンシンIに変換し、それがアンジオテンシン変換酵素（ACE）でアンジオテンシンIIとなり血圧上昇やアルドステロン分泌を促進します。\n\n【誤答選択肢について】\n- 緻密斑（a）は遠位尿細管のNaCl濃度を感知してレニン分泌を調節する役目がありますが、直接産生するわけではありません。\n- メサンギウム細胞（c）は糸球体内の支持細胞で、レニン分泌は行いません。\n- Bowman裏の上皮細胞（d）はボウマン嚢を構成する上皮細胞です。\n- 輸出細動脈の内皮細胞（e）は血管内皮であり、レニンの分泌はありません。\n\n【周辺知識】\n- レニン・アンジオテンシン・アルドステロン系（RAAS）は心不全や高血圧の治療でも重要です。アンジオテンシン変換酵素阻害薬（ACE阻害薬）はRAASを制御して血圧管理に活用されます。"
-    },
-    {
-      "question": "腕神経叢の後神経束から枝分かれする神経はどれか。",
-      "choices": {
-        "a": "腋窩神経",
-        "b": "筋皮神経",
-        "c": "尺骨神経",
-        "d": "鎖骨下筋神経",
-        "e": "内側上腕皮神経"
-      },
-      "answer": "a",
-      "explanation": "【解答解説】\n\n腕神経叢はC5～T1の前枝から成り、根・幹・部・束を経て末梢神経が分岐します。後神経束（posterior cord）からは腋窩神経と橈骨神経が分岐します。\n\n腋窩神経は三角筋と小円筋を支配し、上腕外側部の感覚も担っています。上腕骨外科頸骨折などで障害されやすく、障害時には三角筋の萎縮と肩外転不良が目立ちます。\n\n【誤答選択肢について】\n- 筋皮神経（b）は外側神経束から分岐し、上腕屈筋群を支配します。\n- 尺骨神経（c）は内側神経束から分岐します。\n- 鎖骨下筋神経（d）は腕神経叢の上幹（C5, C6）から直接分岐します。\n- 内側上腕皮神経（e）はその名のとおり内側神経束から出る感覚神経です。\n\n【周辺知識】\n- 腋窩神経は肩関節の外転（15～90度まで）が特に重要で、腋窩神経麻痺ではこの範囲の外転が困難になります。\n- 腕神経叢自体の構造や走行は複雑ですが、外傷や麻痺など臨床現場での問題がよく出題されます。"
-    },
-    {
-      "question": "心臓の構造で正しいのはどれか。",
-      "choices": {
-        "a": "冠状静脈洞は左心房に開口する",
-        "b": "肺動脈弁は大動脈弁の後方にある",
-        "c": "左心室の容量は右心室の容量より大きい",
-        "d": "房室束（His束）は右線維三角を通過する",
-        "e": "前室間枝（前下行枝）は右冠状動脈の枝である"
-      },
-      "answer": "d",
-      "explanation": "【解答解説】\n\n房室結節で作られた興奮は房室束（His束）を通って心室へ伝導されます。房室束は右線維三角を貫通することで、心房と心室の間の線維組織を通過します。\n\n【誤答選択肢について】\n- 冠状静脈洞は右心房に開口します（a）。\n- 肺動脈弁は大動脈弁より前方に位置します（b）。\n- 左心室と右心室の容量はおおよそ同じですが、左心室は壁が厚く高圧を生み出します（c は誤り）。\n- 前室間枝（前下行枝）は左冠状動脈から分岐します（e は誤り）。\n\n【周辺知識】\n- 心臓の電気生理では洞房結節、房室結節、房室束、プルキンエ系の順に興奮が伝わります。\n- 冠動脈やその枝の理解は虚血性心疾患の病変部位と関連してよく問われるポイントです。"
-    },
-    {
-      "question": "食道の構造で正しいのはどれか。",
-      "choices": {
-        "a": "漿膜に包まれている",
-        "b": "食道腺は筋層を貫く",
-        "c": "粘膜筋板がみられる",
-        "d": "横紋筋は横隔神経に支配される",
-        "e": "粘膜の内面は線毛上皮で覆われる"
-      },
-      "answer": "c",
-      "explanation": "【解答解説】\n\n食道は内側から粘膜、粘膜下層、筋層、外膜の順に構成されており、粘膜内には粘膜筋板が存在します。粘膜筋板は消化管壁の基本構造として重要です。\n\n【その他の特徴】\n- 食道の外層はほとんど漿膜に包まれておらず、胸部では外膜に相当します。\n- 筋層は上部3分の1が横紋筋、中部3分の1が横紋筋と平滑筋の混合、下部3分の1が平滑筋です。支配神経は迷走神経です。\n- 粘膜は重層扁平上皮であり、気管のような線毛上皮ではありません。\n\n【誤答選択肢について】\n- 漿膜に包まれている（a）は一部の腹部に入った食道下部のみで、多くは漿膜がありません。\n- 食道腺は粘膜下層にあり、筋層を貫通しません（b）。\n- 横紋筋が横隔神経に支配されるわけではなく、迷走神経が主です（d）。\n- 粘膜の内面は重層扁平上皮（e は誤り）。\n\n【周辺知識】\n- 食道の3つの生理的狭窄部位（咽頭食道移行部、大動脈交叉部、横隔膜貫通部）は内視鏡検査や食道炎症などの病変部位でよく問われます。"
-    },
-    {
-      "question": "第一腰椎の高さにあるのはどれか。",
-      "choices": {
-        "a": "臍",
-        "b": "噴門",
-        "c": "膵体部",
-        "d": "剣状突起",
-        "e": "上前腸骨棘"
-      },
-      "answer": "c",
-      "explanation": "【解答解説】\n\n第一腰椎（L1）の高さはトランスピロリックプレーンと呼ばれ、膵体部が位置する高さとして知られています。ここには幽門や脊髄円錐の終わりなども近い位置に存在します。\n\n【誤答選択肢について】\n- 臍（へそ）は通常L3の高さとされることが多いです。\n- 噴門はT10～T11の高さ付近に位置します。\n- 剣状突起はT9の高さ程度です。\n- 上前腸骨棘は腸骨稜の前端で、L1よりもさらに下方でL4付近と関連があるとされます。\n\n【周辺知識】\n- 膵臓は頭部・体部・尾部に分かれ、体部はL1付近、尾部は脾臓側に伸びています。\n- 解剖学的位置関係は画像検査（CTなど）の読影の際に非常に重要です。"
-    },
-    {
-      "question": "海綿静脈洞内を通過する神経はどれか。",
-      "choices": {
-        "a": "動眼神経",
-        "b": "滑車神経",
-        "c": "眼神経",
-        "d": "上顎神経",
-        "e": "外転神経"
-      },
-      "answer": "e",
-      "explanation": "【解答解説】\n\n海綿静脈洞には内頸動脈や多くの脳神経が近接しますが、海綿静脈洞の洞腔内を実際に通過するのは内頸動脈と外転神経（VI）です。動眼神経（III）、滑車神経（IV）、眼神経（V1）、上顎神経（V2）は洞の外側壁を走ります。\n\n海綿静脈洞血栓症や動静脈瘻が起こると、外転神経が最も傷害されやすく、複視（眼球外転障害）を訴えることが多いです。\n\n【誤答選択肢について】\n- 動眼神経（a）、滑車神経（b）、眼神経（c）、上顎神経（d）は海綿静脈洞の外側壁を走行します。\n\n【周辺知識】\n- 海綿静脈洞はトルコ鞍の両側に位置し、脳底部の重要な血管・神経の交差点です。感染症や炎症などでここが障害されると、しばしば多発神経麻痺を引き起こします。\n- 外転神経の麻痺は患者が複視を最も自覚しやすい麻痺の一つです。"
-    },
-    {
-      "question": "下肢の動脈で正しいのはどれか。",
-      "choices": {
-        "a": "閉鎖動脈は大腿動脈の枝である",
-        "b": "大腿深動脈は下殿動脈の枝である",
-        "c": "前脛骨動脈は膝窩動脈の枝である",
-        "d": "腓骨動脈は前脛骨動脈の枝である",
-        "e": "足背動脈は後脛骨動脈の枝である"
-      },
-      "answer": "c",
-      "explanation": "【解答解説】\n\n前脛骨動脈は膝窩動脈から分岐し、下腿前面を走行して足背へ至る動脈です。足背では足背動脈と呼ばれ、臨床では脈拍の触知点として重要視されます。\n\n【誤答選択肢について】\n- 閉鎖動脈（a）は内腸骨動脈から分岐します。\n- 大腿深動脈（b）は大腿動脈からの分岐であり、下殿動脈（内腸骨動脈の枝）とは無関係です。\n- 腓骨動脈（d）は後脛骨動脈の枝で、下腿外側を栄養します。\n- 足背動脈（e）は前脛骨動脈が名称を変えたもので、後脛骨動脈ではありません。\n\n【周辺知識】\n- 膝窩動脈は大腿動脈が膝の裏側に出た部分を指し、そこから前脛骨動脈と後脛骨動脈に分かれます。\n- 後脛骨動脈は足底へ、前脛骨動脈は足背へ流れ込みます。下肢の血管走行は末梢血管障害や虚血評価（ABI測定など）でも頻出のテーマです。"
-    },
-    {
-      "question": "鼠径部の構造で正しいのはどれか。",
-      "choices": {
-        "a": "精索は鼠径靭帯の下を通る",
-        "b": "精巣挙筋は内腹斜筋から起始する",
-        "c": "鼠径靭帯は下前腸骨棘に付着する",
-        "d": "大腿静脈は大腿動脈の外側を走る",
-        "e": "下腹壁動脈は内腸骨動脈の枝である"
-      },
-      "answer": "b",
-      "explanation": "【解答解説】\n\n精巣挙筋は内腹斜筋が変化して形成されます。精索を包み込み、精巣を引き上げたり温度調節を行う働きがあります。\n\n【誤答選択肢について】\n- 精索は鼠径管を通るのであって、鼠径靭帯の下ではありません（a）。\n- 鼠径靭帯は上前腸骨棘から恥骨結節に伸びる靭帯で、下前腸骨棘ではありません（c）。\n- 大腿静脈は大腿動脈の内側を走ります（d は誤り）。\n- 下腹壁動脈は外腸骨動脈の枝です（e は誤り）。\n\n【周辺知識】\n- 鼠径管は男性では精索が、女性では子宮円索が通過します。そこが弱点となり鼠径ヘルニアが起こりやすい構造です。\n- 大腿部では外側から大腿神経、大腿動脈、大腿静脈の順で並ぶことをNAVELと略すことがあります。大腿静脈は大腿動脈の内側です。\n- 下腹壁動脈は鼠径管の深部付近を走り、鼠径ヘルニアとの鑑別点としても出題されることがあります。"
+    "answer": "c",
+    "explanation": {
+      "ja": "【解答解説】\n\n流暢に話すことはできるものの、意味のない言葉や文法の誤り（錯文法）が頻繁にみられるのはウェルニッケ失語の特徴です。ウェルニッケ失語では言語理解の障害も顕著になります。\n\nこの失語は左側頭葉の後上部（ブロードマン22野付近）の損傷によって起こります。多くの人では言語中枢は左半球にあり、側頭葉が障害されるとこのような症状が出現しやすいのです。\n\n【誤答選択肢について】\n- 右前頭葉：性格変化や注意障害が主体になることが多く、失語症状は典型的ではありません。\n- 右頭頂葉：半側空間無視などを起こす場合が多く、失語よりも視空間認知障害が目立ちます。\n- 左後頭葉：視覚野が主に存在する領域なので、視野欠損などが中心となります。\n- 中脳：言語中枢がある場所ではありません。\n\n【周辺知識】\n- 失語には流暢性と非流暢性があり、ウェルニッケ失語は流暢性失語、ブローカ失語は非流暢性失語の代表例です。\n- 病変部位によって発話の流暢さや理解力の低下のパターンが変わるため、どちらが優位に障害されているかを見極めることが診断に重要です。",
+      "en": "[Answer Explanation]\n\nAlthough one can speak fluently, frequent use of meaningless words and grammatical errors (paragrammatism) is characteristic of Wernicke’s aphasia. In Wernicke’s aphasia, there is also a marked impairment in language comprehension.\n\nThis type of aphasia is caused by a lesion in the posterior superior portion of the left temporal lobe (around Brodmann area 22). In most people, the language center is located in the left hemisphere, and damage to the temporal lobe can easily cause these symptoms.\n\n[Regarding the Incorrect Choices]\n- Right frontal lobe: Often leads to personality changes or attention deficits rather than classic aphasia.\n- Right parietal lobe: Often causes hemispatial neglect, with more prominent visuospatial deficits than aphasia.\n- Left occipital lobe: Mainly contains the visual cortex, so visual field defects predominate.\n- Midbrain: Not the location of the language center.\n\n[Additional Information]\n- Aphasia can be classified into fluent and non-fluent types. Wernicke’s aphasia is a representative of fluent aphasia, while Broca’s aphasia is a representative of non-fluent aphasia.\n- The pattern of impairment in fluency and comprehension depends on the lesion’s location, making it crucial to identify which aspect is more prominently affected.",
+      "zh": "【答案解析】\n\n虽然患者能够流利地说话，但频繁出现无意义的词语和语法错误（错误语法）是韦尼克失语（Wernicke失语）的特征。在韦尼克失语中，语言理解也明显受损。\n\n这种失语是由于左颞叶后上部（大约在布罗德曼第22区）受损所致。对大多数人而言，语言中枢位于左半球，当颞叶受损时，容易出现此类症状。\n\n【关于错误的选项】\n- 右额叶：多表现为性格变化或注意障碍，典型失语并不常见。\n- 右顶叶：往往会出现半侧空间忽视，与失语相比，视空间认知障碍更明显。\n- 左枕叶：主要是视觉皮质所在区域，以视野缺损为主。\n- 中脑：并非语言中枢所在。\n\n【相关知识】\n- 失语可分为流利性和非流利性两种。韦尼克失语属于典型的流利性失语，而布罗卡失语是非流利性失语的代表。\n- 病变部位不同会导致语言流利度和理解能力下降的模式不同，明确哪方面障碍更突出对于诊断非常重要。"
     }
-  ]
-  
+  },
+  {
+    "question": {
+      "ja": "アポトーシスとネクローシスを比較した場合、アポトーシスの特徴はどれか。",
+      "en": "When comparing apoptosis and necrosis, which is a characteristic of apoptosis?",
+      "zh": "在比较细胞凋亡（apoptosis）与坏死（necrosis）时，下列哪项是细胞凋亡的特点？"
+    },
+    "choices": {
+      "a": {
+        "ja": "病的変化である",
+        "en": "It is a pathological change.",
+        "zh": "这是病理性变化。"
+      },
+      "b": {
+        "ja": "集団的に一斉におこる",
+        "en": "It occurs collectively in a group at once.",
+        "zh": "成群同时发生。"
+      },
+      "c": {
+        "ja": "周辺組織に炎症がおこる",
+        "en": "It causes inflammation in surrounding tissue.",
+        "zh": "会引起周围组织的炎症。"
+      },
+      "d": {
+        "ja": "核にクロマチンの凝集がみられる",
+        "en": "Chromatin condensation is observed in the nucleus.",
+        "zh": "细胞核中可见染色质凝集。"
+      },
+      "e": {
+        "ja": "ミトコンドリアの膨化がみられる",
+        "en": "Swelling of mitochondria is observed.",
+        "zh": "可见线粒体肿胀。"
+      }
+    },
+    "answer": "d",
+    "explanation": {
+      "ja": "【解答解説】\n\nアポトーシスはプログラムされた細胞死で、細胞の縮小と核のクロマチン凝集が典型的です。周囲組織に炎症を起こさず、生理的に起こることが多いという点が特徴になります。\n\n一方、ネクローシスは障害や虚血などによる病的な細胞死で、細胞膜が破れて内容物が流出し、炎症を引き起こす点が大きく異なります。\n\n【誤答選択肢について】\n- 病的変化（a）、集団的な細胞死（b）、炎症の誘発（c）、ミトコンドリア膨化（e）はネクローシスでみられます。\n\n【周辺知識】\n- アポトーシスを観察する手法として、TUNEL法などDNA断片化を検出する方法がよく用いられます。\n- がん治療ではアポトーシスを誘導する薬剤開発が重要視されています。",
+      "en": "[Answer Explanation]\n\nApoptosis is programmed cell death, typically involving cell shrinkage and chromatin condensation in the nucleus. A key characteristic of apoptosis is that it usually does not cause inflammation in surrounding tissue and often occurs in a physiological context.\n\nIn contrast, necrosis is a pathological cell death caused by injury or ischemia. The cell membrane ruptures, releasing contents that cause inflammation.\n\n[Regarding the Incorrect Choices]\n- Pathological change (a), simultaneous cell death in groups (b), triggering inflammation (c), and mitochondrial swelling (e) are characteristic of necrosis.\n\n[Additional Information]\n- Methods such as the TUNEL assay, which detects DNA fragmentation, are commonly used to observe apoptosis.\n- In cancer therapy, the development of drugs that induce apoptosis is of great importance.",
+      "zh": "【答案解析】\n\n细胞凋亡（apoptosis）是一种程序性细胞死亡，典型特征是细胞收缩以及细胞核内染色质的凝集。通常不会引起周围组织的炎症，多数情况下属于生理性过程。\n\n相比之下，坏死（necrosis）是由于损伤或缺血等因素导致的病理性细胞死亡。细胞膜破裂，内容物外泄并引发炎症，这是与细胞凋亡的主要区别。\n\n【关于错误的选项】\n- 病理性变化（a）、成群细胞同时死亡（b）、诱发炎症（c）、以及线粒体肿胀（e）都属于坏死的特征。\n\n【相关知识】\n- 常用TUNEL法等检测DNA断裂的方法来观察细胞凋亡。\n- 在癌症治疗中，诱导细胞凋亡的药物研发非常重要。"
+    }
+  },
+  {
+    "question": {
+      "ja": "レニンを産生する細胞はどれか。",
+      "en": "Which cells produce renin?",
+      "zh": "哪种细胞分泌肾素（renin）？"
+    },
+    "choices": {
+      "a": {
+        "ja": "緻密斑",
+        "en": "Macula densa",
+        "zh": "致密斑"
+      },
+      "b": {
+        "ja": "傍糸球体細胞",
+        "en": "Juxtaglomerular (JG) cells",
+        "zh": "近球旁细胞"
+      },
+      "c": {
+        "ja": "メサンギウム細胞",
+        "en": "Mesangial cells",
+        "zh": "系膜细胞"
+      },
+      "d": {
+        "ja": "Bowman裏の上皮細胞",
+        "en": "The epithelium on the backside of Bowman's capsule",
+        "zh": "鲍曼囊内侧的上皮细胞"
+      },
+      "e": {
+        "ja": "輸出細動脈の内皮細胞",
+        "en": "The endothelial cells of the efferent arteriole",
+        "zh": "输出小动脉的内皮细胞"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\nレニンは腎臓の傍糸球体細胞（JG細胞）から分泌されます。傍糸球体細胞は輸入細動脈の平滑筋細胞が変化したもので、血圧とナトリウム濃度の調節に大きく関わります。\n\nレニンは肝臓由来のアンジオテンシノーゲンをアンジオテンシンIに変換し、それがアンジオテンシン変換酵素（ACE）でアンジオテンシンIIとなり血圧上昇やアルドステロン分泌を促進します。\n\n【誤答選択肢について】\n- 緻密斑（a）は遠位尿細管のNaCl濃度を感知してレニン分泌を調節する役目がありますが、直接産生するわけではありません。\n- メサンギウム細胞（c）は糸球体内の支持細胞で、レニン分泌は行いません。\n- Bowman裏の上皮細胞（d）はボウマン嚢を構成する上皮細胞です。\n- 輸出細動脈の内皮細胞（e）は血管内皮であり、レニンの分泌はありません。\n\n【周辺知識】\n- レニン・アンジオテンシン・アルドステロン系（RAAS）は心不全や高血圧の治療でも重要です。アンジオテンシン変換酵素阻害薬（ACE阻害薬）はRAASを制御して血圧管理に活用されます。",
+      "en": "[Answer Explanation]\n\nRenin is secreted by the juxtaglomerular (JG) cells in the kidney. Juxtaglomerular cells are modified smooth muscle cells of the afferent arteriole and play a major role in regulating blood pressure and sodium concentration.\n\nRenin converts angiotensinogen (produced by the liver) into angiotensin I, which is then converted by angiotensin-converting enzyme (ACE) into angiotensin II. Angiotensin II raises blood pressure and promotes the secretion of aldosterone.\n\n[Regarding the Incorrect Choices]\n- The macula densa (a) senses the NaCl concentration in the distal tubule and regulates renin secretion but does not directly produce it.\n- Mesangial cells (c) are support cells in the glomerulus and do not secrete renin.\n- The epithelium on the backside of Bowman’s capsule (d) lines Bowman’s capsule.\n- Endothelial cells of the efferent arteriole (e) do not secrete renin.\n\n[Additional Information]\n- The renin-angiotensin-aldosterone system (RAAS) is important in the treatment of heart failure and hypertension. ACE inhibitors help control blood pressure by modulating the RAAS.",
+      "zh": "【答案解析】\n\n肾素（renin）由肾脏的近球旁细胞（JG细胞）分泌。近球旁细胞是输入小动脉的平滑肌细胞变形而来，对调节血压和钠浓度具有重要作用。\n\n肾素将肝脏产生的血管紧张素原转化为血管紧张素I，随后血管紧张素转化酶（ACE）将其转化为血管紧张素II，从而升高血压并促进醛固酮的分泌。\n\n【关于错误的选项】\n- 致密斑（a）感知远端小管中NaCl浓度并调节肾素分泌，但不直接分泌肾素。\n- 系膜细胞（c）是肾小球的支持细胞，不分泌肾素。\n- 鲍曼囊内侧的上皮细胞（d）构成鲍曼囊的上皮结构。\n- 输出小动脉的内皮细胞（e）并不分泌肾素。\n\n【相关知识】\n- 肾素-血管紧张素-醛固酮系统（RAAS）在心力衰竭和高血压的治疗中非常重要。血管紧张素转化酶抑制剂（ACEI）通过调控RAAS来控制血压。"
+    }
+  },
+  {
+    "question": {
+      "ja": "腕神経叢の後神経束から枝分かれする神経はどれか。",
+      "en": "Which nerve branches from the posterior cord of the brachial plexus?",
+      "zh": "从臂丛（腕神经丛）后束分出的神经是哪一条？"
+    },
+    "choices": {
+      "a": {
+        "ja": "腋窩神経",
+        "en": "Axillary nerve",
+        "zh": "腋神经"
+      },
+      "b": {
+        "ja": "筋皮神経",
+        "en": "Musculocutaneous nerve",
+        "zh": "肌皮神经"
+      },
+      "c": {
+        "ja": "尺骨神経",
+        "en": "Ulnar nerve",
+        "zh": "尺神经"
+      },
+      "d": {
+        "ja": "鎖骨下筋神経",
+        "en": "Nerve to subclavius",
+        "zh": "锁骨下肌神经"
+      },
+      "e": {
+        "ja": "内側上腕皮神経",
+        "en": "Medial brachial cutaneous nerve",
+        "zh": "内侧臂皮神经"
+      }
+    },
+    "answer": "a",
+    "explanation": {
+      "ja": "【解答解説】\n\n腕神経叢はC5～T1の前枝から成り、根・幹・部・束を経て末梢神経が分岐します。後神経束（posterior cord）からは腋窩神経と橈骨神経が分岐します。\n\n腋窩神経は三角筋と小円筋を支配し、上腕外側部の感覚も担っています。上腕骨外科頸骨折などで障害されやすく、障害時には三角筋の萎縮と肩外転不良が目立ちます。\n\n【誤答選択肢について】\n- 筋皮神経（b）は外側神経束から分岐し、上腕屈筋群を支配します。\n- 尺骨神経（c）は内側神経束から分岐します。\n- 鎖骨下筋神経（d）は腕神経叢の上幹（C5, C6）から直接分岐します。\n- 内側上腕皮神経（e）はその名のとおり内側神経束から出る感覚神経です。\n\n【周辺知識】\n- 腋窩神経は肩関節の外転（15～90度まで）が特に重要で、腋窩神経麻痺ではこの範囲の外転が困難になります。\n- 腕神経叢自体の構造や走行は複雑ですが、外傷や麻痺など臨床現場での問題がよく出題されます。",
+      "en": "[Answer Explanation]\n\nThe brachial plexus is formed by the anterior rami of C5–T1, which divide into roots, trunks, divisions, and cords before branching into peripheral nerves. The axillary nerve and the radial nerve branch from the posterior cord.\n\nThe axillary nerve innervates the deltoid and teres minor muscles and provides sensory innervation to the lateral aspect of the upper arm. It is susceptible to injury in surgical neck fractures of the humerus, leading to deltoid atrophy and difficulty abducting the arm.\n\n[Regarding the Incorrect Choices]\n- The musculocutaneous nerve (b) branches from the lateral cord and innervates the flexor muscles of the arm.\n- The ulnar nerve (c) branches from the medial cord.\n- The nerve to subclavius (d) branches directly from the upper trunk (C5, C6).\n- The medial brachial cutaneous nerve (e) arises from the medial cord.\n\n[Additional Information]\n- The axillary nerve is crucial for shoulder abduction (roughly 15–90°). Axillary nerve palsy commonly presents with weakness in this range.\n- Although the brachial plexus has a complex structure, questions about its injuries or neuropathies are frequent in clinical practice.",
+      "zh": "【答案解析】\n\n臂丛由C5～T1的前支构成，依次分为根、干、部、束，最终分支形成周围神经。腋神经和桡神经均来自后束（posterior cord）。\n\n腋神经支配三角肌和小圆肌，并向上臂外侧部提供感觉支配。肱骨外科颈骨折时，腋神经易受损，表现为三角肌萎缩和肩外展困难。\n\n【关于错误的选项】\n- 肌皮神经（b）来自外侧束，支配上臂的屈肌群。\n- 尺神经（c）来自内侧束。\n- 锁骨下肌神经（d）直接从臂丛的上干（C5, C6）分出。\n- 内侧臂皮神经（e）顾名思义来自内侧束，是一条感觉神经。\n\n【相关知识】\n- 腋神经对于肩关节从15°到90°的外展动作非常重要；腋神经麻痹常表现为这一范围内的外展受阻。\n- 虽然臂丛结构复杂，但其损伤或麻痹在临床实践中较为常见，也是考试常考内容。"
+    }
+  },
+  {
+    "question": {
+      "ja": "心臓の構造で正しいのはどれか。",
+      "en": "Which statement about the structure of the heart is correct?",
+      "zh": "关于心脏结构，以下哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "冠状静脈洞は左心房に開口する",
+        "en": "The coronary sinus opens into the left atrium.",
+        "zh": "冠状窦开口于左心房。"
+      },
+      "b": {
+        "ja": "肺動脈弁は大動脈弁の後方にある",
+        "en": "The pulmonary valve is located posterior to the aortic valve.",
+        "zh": "肺动脉瓣位于主动脉瓣的后方。"
+      },
+      "c": {
+        "ja": "左心室の容量は右心室の容量より大きい",
+        "en": "The volume of the left ventricle is larger than that of the right ventricle.",
+        "zh": "左心室的容量比右心室更大。"
+      },
+      "d": {
+        "ja": "房室束（His束）は右線維三角を通過する",
+        "en": "The atrioventricular (AV) bundle (Bundle of His) passes through the right fibrous trigone.",
+        "zh": "房室束（His束）穿过右纤维三角。"
+      },
+      "e": {
+        "ja": "前室間枝（前下行枝）は右冠状動脈の枝である",
+        "en": "The anterior interventricular branch (left anterior descending, LAD) is a branch of the right coronary artery.",
+        "zh": "前室间支（前降支）是右冠状动脉的分支。"
+      }
+    },
+    "answer": "d",
+    "explanation": {
+      "ja": "【解答解説】\n\n房室結節で作られた興奮は房室束（His束）を通って心室へ伝導されます。房室束は右線維三角を貫通することで、心房と心室の間の線維組織を通過します。\n\n【誤答選択肢について】\n- 冠状静脈洞は右心房に開口します（a）。\n- 肺動脈弁は大動脈弁より前方に位置します（b）。\n- 左心室と右心室の容量はおおよそ同じですが、左心室は壁が厚く高圧を生み出します（c は誤り）。\n- 前室間枝（前下行枝）は左冠状動脈から分岐します（e は誤り）。\n\n【周辺知識】\n- 心臓の電気生理では洞房結節、房室結節、房室束、プルキンエ系の順に興奮が伝わります。\n- 冠動脈やその枝の理解は虚血性心疾患の病変部位と関連してよく問われるポイントです。",
+      "en": "[Answer Explanation]\n\nElectrical impulses generated at the atrioventricular (AV) node travel through the atrioventricular bundle (Bundle of His) to the ventricles. The AV bundle passes through the right fibrous trigone, the fibrous tissue that separates the atria and ventricles.\n\n[Regarding the Incorrect Choices]\n- The coronary sinus opens into the right atrium (a).\n- The pulmonary valve is located anterior to the aortic valve (b).\n- The volumes of the left and right ventricles are roughly the same; the left ventricle has thicker walls and generates higher pressure (c is incorrect).\n- The anterior interventricular branch (left anterior descending) branches from the left coronary artery (e is incorrect).\n\n[Additional Information]\n- In cardiac electrophysiology, impulses travel from the sinoatrial node to the AV node, then through the AV bundle, and finally to the Purkinje fibers.\n- Understanding the coronary arteries and their branches is crucial for identifying lesion sites in ischemic heart disease.",
+      "zh": "【答案解析】\n\n房室结产生的电冲动通过房室束（His束）传递到心室。房室束穿过右纤维三角，即分隔心房和心室的纤维组织。\n\n【关于错误的选项】\n- 冠状窦开口于右心房（a）。\n- 肺动脉瓣位于主动脉瓣之前方（b）。\n- 左心室与右心室容量大致相当，但左心室壁更厚，压力更高（c错误）。\n- 前室间支（前降支）起源于左冠状动脉（e错误）。\n\n【相关知识】\n- 在心脏的电生理传导中，冲动依次经过窦房结、房室结、房室束和浦肯野纤维。\n- 冠状动脉及其分支的分布与缺血性心脏病的病变部位密切相关，是常考知识点。"
+    }
+  },
+  {
+    "question": {
+      "ja": "食道の構造で正しいのはどれか。",
+      "en": "Which statement about the structure of the esophagus is correct?",
+      "zh": "关于食管结构，以下哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "漿膜に包まれている",
+        "en": "It is covered by serosa.",
+        "zh": "被浆膜包裹。"
+      },
+      "b": {
+        "ja": "食道腺は筋層を貫く",
+        "en": "Esophageal glands penetrate the muscular layer.",
+        "zh": "食管腺穿过肌层。"
+      },
+      "c": {
+        "ja": "粘膜筋板がみられる",
+        "en": "A muscularis mucosae is present.",
+        "zh": "可见黏膜肌层。"
+      },
+      "d": {
+        "ja": "横紋筋は横隔神経に支配される",
+        "en": "The striated muscle is innervated by the phrenic nerve.",
+        "zh": "横纹肌由膈神经支配。"
+      },
+      "e": {
+        "ja": "粘膜の内面は線毛上皮で覆われる",
+        "en": "Its inner mucosal surface is lined with ciliated epithelium.",
+        "zh": "其黏膜内表面由纤毛上皮覆盖。"
+      }
+    },
+    "answer": "c",
+    "explanation": {
+      "ja": "【解答解説】\n\n食道は内側から粘膜、粘膜下層、筋層、外膜の順に構成されており、粘膜内には粘膜筋板が存在します。粘膜筋板は消化管壁の基本構造として重要です。\n\n【その他の特徴】\n- 食道の外層はほとんど漿膜に包まれておらず、胸部では外膜に相当します。\n- 筋層は上部3分の1が横紋筋、中部3分の1が横紋筋と平滑筋の混合、下部3分の1が平滑筋です。支配神経は迷走神経です。\n- 粘膜は重層扁平上皮であり、気管のような線毛上皮ではありません。\n\n【誤答選択肢について】\n- 漿膜に包まれている（a）は一部の腹部に入った食道下部のみで、多くは漿膜がありません。\n- 食道腺は粘膜下層にあり、筋層を貫通しません（b）。\n- 横紋筋が横隔神経に支配されるわけではなく、迷走神経が主です（d）。\n- 粘膜の内面は重層扁平上皮（e は誤り）。\n\n【周辺知識】\n- 食道の3つの生理的狭窄部位（咽頭食道移行部、大動脈交叉部、横隔膜貫通部）は内視鏡検査や食道炎症などの病変部位でよく問われます。",
+      "en": "[Answer Explanation]\n\nThe esophagus is composed of (from inside to outside) mucosa, submucosa, a muscular layer, and an external layer (adventitia or serosa). A muscularis mucosae is present within the mucosa and is an important part of the general structure of the digestive tract.\n\n[Additional Features]\n- Most of the esophagus is not covered by serosa. In the thoracic region, it is covered by adventitia.\n- The upper one-third of the esophagus contains striated muscle, the middle one-third is a mix of striated and smooth muscle, and the lower one-third is mainly smooth muscle, innervated primarily by the vagus nerve.\n- The mucosal surface is lined by stratified squamous epithelium, not ciliated epithelium as in the trachea.\n\n[Regarding the Incorrect Choices]\n- Being covered by serosa (a) only applies to the short abdominal segment of the esophagus; most of it lacks a serosal covering.\n- Esophageal glands are located in the submucosa and do not penetrate the muscular layer (b).\n- The striated muscle is mainly innervated by the vagus nerve, not the phrenic nerve (d).\n- The inner surface of the esophageal mucosa is lined with stratified squamous epithelium (e is incorrect).\n\n[Additional Information]\n- The esophagus has three physiological constrictions (pharyngoesophageal junction, crossing by the aorta, and where it passes through the diaphragm), which are common landmarks in endoscopy and sites of pathological change.",
+      "zh": "【答案解析】\n\n食管从内到外依次由黏膜、黏膜下层、肌层和外膜构成。在黏膜层中存在黏膜肌层（muscularis mucosae），这是消化道壁的基本结构之一。\n\n【其他特点】\n- 食管大部分外层为结缔组织（胸段），并没有被完整浆膜覆盖，只在进入腹腔的一段才有部分浆膜。\n- 肌层的上三分之一是横纹肌，中三分之一为横纹肌和平滑肌混合，下三分之一主要是平滑肌，主要由迷走神经支配。\n- 食管黏膜为复层鳞状上皮，而非像气管那样的纤毛上皮。\n\n【关于错误的选项】\n- 被浆膜包裹（a）仅适用于进入腹部的少部分食管，大部分并无浆膜覆盖。\n- 食管腺位于黏膜下层，不穿过肌层（b）。\n- 横纹肌主要由迷走神经支配，而非膈神经（d错误）。\n- 食管黏膜内表面是复层鳞状上皮（e错误）。\n\n【相关知识】\n- 食管有三个生理性狭窄：咽喉与食管连接处、与主动脉交叉处以及穿过横膈处，这些部位在内镜检查及病变中具有重要意义。"
+    }
+  },
+  {
+    "question": {
+      "ja": "第一腰椎の高さにあるのはどれか。",
+      "en": "Which structure is located at the level of the first lumbar vertebra (L1)?",
+      "zh": "在第一腰椎（L1）水平位于哪个结构？"
+    },
+    "choices": {
+      "a": {
+        "ja": "臍",
+        "en": "Umbilicus",
+        "zh": "肚脐"
+      },
+      "b": {
+        "ja": "噴門",
+        "en": "Cardia (of the stomach)",
+        "zh": "胃贲门"
+      },
+      "c": {
+        "ja": "膵体部",
+        "en": "Body of the pancreas",
+        "zh": "胰体部"
+      },
+      "d": {
+        "ja": "剣状突起",
+        "en": "Xiphoid process",
+        "zh": "剑突"
+      },
+      "e": {
+        "ja": "上前腸骨棘",
+        "en": "Anterior superior iliac spine (ASIS)",
+        "zh": "髂前上棘"
+      }
+    },
+    "answer": "c",
+    "explanation": {
+      "ja": "【解答解説】\n\n第一腰椎（L1）の高さはトランスピロリックプレーンと呼ばれ、膵体部が位置する高さとして知られています。ここには幽門や脊髄円錐の終わりなども近い位置に存在します。\n\n【誤答選択肢について】\n- 臍（へそ）は通常L3の高さとされることが多いです。\n- 噴門はT10～T11の高さ付近に位置します。\n- 剣状突起はT9の高さ程度です。\n- 上前腸骨棘は腸骨稜の前端で、L1よりもさらに下方でL4付近と関連があるとされます。\n\n【周辺知識】\n- 膵臓は頭部・体部・尾部に分かれ、体部はL1付近、尾部は脾臓側に伸びています。\n- 解剖学的位置関係は画像検査（CTなど）の読影の際に非常に重要です。",
+      "en": "[Answer Explanation]\n\nThe level of the first lumbar vertebra (L1) is known as the transpyloric plane and is recognized as the approximate location of the body of the pancreas. Structures such as the pylorus of the stomach and the conus medullaris (end of the spinal cord) are also near this level.\n\n[Regarding the Incorrect Choices]\n- The umbilicus is usually around L3.\n- The cardia of the stomach is around T10–T11.\n- The xiphoid process is around T9.\n- The anterior superior iliac spine is generally associated with the L4 level.\n\n[Additional Information]\n- The pancreas has a head, body, and tail. The body is near L1, and the tail extends toward the spleen.\n- Anatomical relationships are crucial in interpreting imaging studies such as CT scans.",
+      "zh": "【答案解析】\n\n第一腰椎（L1）水平被称为幽门平面（transpyloric plane），胰腺体部大约位于该平面附近。此处也接近幽门以及脊髓圆锥（脊髓终末）所在的高度。\n\n【关于错误的选项】\n- 肚脐通常位于L3高度。\n- 胃贲门一般位于T10～T11水平。\n- 剑突大约在T9水平。\n- 髂前上棘通常与L4水平相关。\n\n【相关知识】\n- 胰腺分为头部、体部和尾部，其中体部约在L1水平，尾部朝向脾脏延伸。\n- 解剖学上的位置关系对于CT等影像学检查的判读至关重要。"
+    }
+  },
+  {
+    "question": {
+      "ja": "海綿静脈洞内を通過する神経はどれか。",
+      "en": "Which cranial nerve passes through the cavernous sinus (within the sinus cavity itself)?",
+      "zh": "下列哪条脑神经实际穿过海绵窦的窦腔内部？"
+    },
+    "choices": {
+      "a": {
+        "ja": "動眼神経",
+        "en": "Oculomotor nerve (III)",
+        "zh": "动眼神经(III)"
+      },
+      "b": {
+        "ja": "滑車神経",
+        "en": "Trochlear nerve (IV)",
+        "zh": "滑车神经(IV)"
+      },
+      "c": {
+        "ja": "眼神経",
+        "en": "Ophthalmic nerve (V1)",
+        "zh": "眼神经(V1)"
+      },
+      "d": {
+        "ja": "上顎神経",
+        "en": "Maxillary nerve (V2)",
+        "zh": "上颌神经(V2)"
+      },
+      "e": {
+        "ja": "外転神経",
+        "en": "Abducent nerve (VI)",
+        "zh": "外展神经(VI)"
+      }
+    },
+    "answer": "e",
+    "explanation": {
+      "ja": "【解答解説】\n\n海綿静脈洞には内頸動脈や多くの脳神経が近接しますが、海綿静脈洞の洞腔内を実際に通過するのは内頸動脈と外転神経（VI）です。動眼神経（III）、滑車神経（IV）、眼神経（V1）、上顎神経（V2）は洞の外側壁を走ります。\n\n海綿静脈洞血栓症や動静脈瘻が起こると、外転神経が最も傷害されやすく、複視（眼球外転障害）を訴えることが多いです。\n\n【誤答選択肢について】\n- 動眼神経（a）、滑車神経（b）、眼神経（c）、上顎神経（d）は海綿静脈洞の外側壁を走行します。\n\n【周辺知識】\n- 海綿静脈洞はトルコ鞍の両側に位置し、脳底部の重要な血管・神経の交差点です。感染症や炎症などでここが障害されると、しばしば多発神経麻痺を引き起こします。\n- 外転神経の麻痺は患者が複視を最も自覚しやすい麻痺の一つです。",
+      "en": "[Answer Explanation]\n\nAlthough the internal carotid artery and several cranial nerves run in or near the cavernous sinus, the only structure passing through the sinus cavity itself is the internal carotid artery and the abducent nerve (cranial nerve VI). The oculomotor nerve (III), trochlear nerve (IV), and the ophthalmic (V1) and maxillary (V2) divisions of the trigeminal nerve run in the lateral wall of the sinus.\n\nCavernous sinus thrombosis or arteriovenous fistula often damages the abducent nerve first, leading to diplopia (due to impaired lateral rectus function).\n\n[Regarding the Incorrect Choices]\n- The oculomotor (a), trochlear (b), ophthalmic (c), and maxillary (d) nerves run in the lateral wall of the cavernous sinus.\n\n[Additional Information]\n- The cavernous sinus is located on either side of the sella turcica and is a major crossroads for vessels and nerves at the base of the skull. Lesions here often cause multiple cranial nerve palsies.\n- Abducent nerve palsy is one of the most common causes of diplopia recognized by patients.",
+      "zh": "【答案解析】\n\n尽管颈内动脉和多条颅神经都在海绵窦区域经过，但真正穿过海绵窦窦腔的是颈内动脉和外展神经（VI）。动眼神经（III）、滑车神经（IV）以及三叉神经的眼支（V1）和上颌支（V2）均行走于海绵窦的外侧壁。\n\n当发生海绵窦血栓或动静脉瘘时，外展神经最易受损，往往出现外展障碍导致复视。\n\n【关于错误的选项】\n- 动眼神经（a）、滑车神经（b）、眼神经（c）、上颌神经（d）都走行于海绵窦外侧壁。\n\n【相关知识】\n- 海绵窦位于蝶鞍两侧，是颅底重要的血管与神经交叉点，若感染或炎症累及此处，往往会出现多条颅神经麻痹。\n- 外展神经麻痹常导致患者明显的复视，是临床上最容易被察觉的一种眼球运动障碍。"
+    }
+  },
+  {
+    "question": {
+      "ja": "下肢の動脈で正しいのはどれか。",
+      "en": "Which statement about the arteries of the lower limb is correct?",
+      "zh": "关于下肢动脉，以下哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "閉鎖動脈は大腿動脈の枝である",
+        "en": "The obturator artery is a branch of the femoral artery.",
+        "zh": "闭孔动脉是股动脉的分支。"
+      },
+      "b": {
+        "ja": "大腿深動脈は下殿動脈の枝である",
+        "en": "The deep femoral artery is a branch of the inferior gluteal artery.",
+        "zh": "股深动脉是臀下动脉的分支。"
+      },
+      "c": {
+        "ja": "前脛骨動脈は膝窩動脈の枝である",
+        "en": "The anterior tibial artery is a branch of the popliteal artery.",
+        "zh": "前胫动脉是腘动脉的分支。"
+      },
+      "d": {
+        "ja": "腓骨動脈は前脛骨動脈の枝である",
+        "en": "The fibular (peroneal) artery is a branch of the anterior tibial artery.",
+        "zh": "腓动脉是前胫动脉的分支。"
+      },
+      "e": {
+        "ja": "足背動脈は後脛骨動脈の枝である",
+        "en": "The dorsalis pedis artery is a branch of the posterior tibial artery.",
+        "zh": "足背动脉是后胫动脉的分支。"
+      }
+    },
+    "answer": "c",
+    "explanation": {
+      "ja": "【解答解説】\n\n前脛骨動脈は膝窩動脈から分岐し、下腿前面を走行して足背へ至る動脈です。足背では足背動脈と呼ばれ、臨床では脈拍の触知点として重要視されます。\n\n【誤答選択肢について】\n- 閉鎖動脈（a）は内腸骨動脈から分岐します。\n- 大腿深動脈（b）は大腿動脈からの分岐であり、下殿動脈（内腸骨動脈の枝）とは無関係です。\n- 腓骨動脈（d）は後脛骨動脈の枝で、下腿外側を栄養します。\n- 足背動脈（e）は前脛骨動脈が名称を変えたもので、後脛骨動脈ではありません。\n\n【周辺知識】\n- 膝窩動脈は大腿動脈が膝の裏側に出た部分を指し、そこから前脛骨動脈と後脛骨動脈に分かれます。\n- 後脛骨動脈は足底へ、前脛骨動脈は足背へ流れ込みます。下肢の血管走行は末梢血管障害や虚血評価（ABI測定など）でも頻出のテーマです。",
+      "en": "[Answer Explanation]\n\nThe anterior tibial artery branches from the popliteal artery and travels down the anterior compartment of the lower leg to the dorsum of the foot, where it is known as the dorsalis pedis artery. This artery is an important pulse point in clinical practice.\n\n[Regarding the Incorrect Choices]\n- The obturator artery (a) branches from the internal iliac artery.\n- The deep femoral artery (b) branches from the femoral artery, not the inferior gluteal artery.\n- The fibular (peroneal) artery (d) branches from the posterior tibial artery, supplying the lateral compartment of the leg.\n- The dorsalis pedis artery (e) is the continuation of the anterior tibial artery, not a branch of the posterior tibial artery.\n\n[Additional Information]\n- The popliteal artery is the continuation of the femoral artery behind the knee, dividing into the anterior and posterior tibial arteries.\n- The posterior tibial artery supplies the plantar foot, while the anterior tibial artery supplies the dorsum of the foot. Knowledge of lower limb vascular anatomy is crucial for evaluating peripheral vascular disease and ischemia (e.g., via the Ankle-Brachial Index).",
+      "zh": "【答案解析】\n\n前胫动脉源自腘动脉，沿小腿前区向下走行至足背，在足背部称作足背动脉，是临床上触诊脉搏的重要部位。\n\n【关于错误的选项】\n- 闭孔动脉（a）起源于内髂动脉。\n- 股深动脉（b）从股动脉分支，与臀下动脉无关。\n- 腓动脉（d）是后胫动脉的分支，为小腿外侧部提供血供。\n- 足背动脉（e）是前胫动脉在足背延续的名称，并非后胫动脉的分支。\n\n【相关知识】\n- 腘动脉是股动脉在膝关节后方的延续，后续分为前胫动脉和后胫动脉。\n- 后胫动脉供应足底，前胫动脉供应足背。了解下肢血管走行对于外周血管病及缺血评估（如踝肱指数）非常重要。"
+    }
+  },
+  {
+    "question": {
+      "ja": "鼠径部の構造で正しいのはどれか。",
+      "en": "Which statement about the structure of the inguinal region is correct?",
+      "zh": "关于腹股沟区域（鼠径部）的结构，以下哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "精索は鼠径靭帯の下を通る",
+        "en": "The spermatic cord passes beneath the inguinal ligament.",
+        "zh": "精索从腹股沟韧带下方通过。"
+      },
+      "b": {
+        "ja": "精巣挙筋は内腹斜筋から起始する",
+        "en": "The cremaster muscle originates from the internal oblique muscle.",
+        "zh": "提睾肌起源于腹内斜肌。"
+      },
+      "c": {
+        "ja": "鼠径靭帯は下前腸骨棘に付着する",
+        "en": "The inguinal ligament attaches to the inferior anterior iliac spine.",
+        "zh": "腹股沟韧带附着于下前髂棘。"
+      },
+      "d": {
+        "ja": "大腿静脈は大腿動脈の外側を走る",
+        "en": "The femoral vein runs lateral to the femoral artery.",
+        "zh": "股静脉位于股动脉的外侧。"
+      },
+      "e": {
+        "ja": "下腹壁動脈は内腸骨動脈の枝である",
+        "en": "The inferior epigastric artery is a branch of the internal iliac artery.",
+        "zh": "下腹壁动脉是内髂动脉的分支。"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\n精巣挙筋は内腹斜筋が変化して形成されます。精索を包み込み、精巣を引き上げたり温度調節を行う働きがあります。\n\n【誤答選択肢について】\n- 精索は鼠径管を通るのであって、鼠径靭帯の下ではありません（a）。\n- 鼠径靭帯は上前腸骨棘から恥骨結節に伸びる靭帯で、下前腸骨棘ではありません（c）。\n- 大腿静脈は大腿動脈の内側を走ります（d は誤り）。\n- 下腹壁動脈は外腸骨動脈の枝です（e は誤り）。\n\n【周辺知識】\n- 鼠径管は男性では精索が、女性では子宮円索が通過します。そこが弱点となり鼠径ヘルニアが起こりやすい構造です。\n- 大腿部では外側から大腿神経、大腿動脈、大腿静脈の順で並ぶことをNAVELと略すことがあります。大腿静脈は大腿動脈の内側です。\n- 下腹壁動脈は鼠径管の深部付近を走り、鼠径ヘルニアとの鑑別点としても出題されることがあります。",
+      "en": "[Answer Explanation]\n\nThe cremaster muscle originates from the internal oblique muscle. It encloses the spermatic cord and helps elevate the testis, playing a role in temperature regulation.\n\n[Regarding the Incorrect Choices]\n- The spermatic cord passes through the inguinal canal, not beneath the inguinal ligament (a).\n- The inguinal ligament extends from the anterior superior iliac spine (ASIS) to the pubic tubercle, not from the inferior anterior iliac spine (c).\n- The femoral vein runs medial to the femoral artery (d is incorrect).\n- The inferior epigastric artery is a branch of the external iliac artery, not the internal iliac artery (e is incorrect).\n\n[Additional Information]\n- In men, the spermatic cord passes through the inguinal canal; in women, the round ligament of the uterus passes through it. This area is a weak point where inguinal hernias frequently occur.\n- In the thigh, from lateral to medial, we find the femoral nerve, femoral artery, and femoral vein (often remembered by the mnemonic NAVEL). The femoral vein is on the medial side of the femoral artery.\n- The inferior epigastric artery travels near the deep inguinal ring and is used to differentiate types of inguinal hernias.",
+      "zh": "【答案解析】\n\n提睾肌（cremaster muscle）起源于腹内斜肌，包绕精索，可提升睾丸并帮助调节温度。\n\n【关于错误的选项】\n- 精索是经过腹股沟管，而不是在腹股沟韧带下方通过（a错误）。\n- 腹股沟韧带从髂前上棘（ASIS）延伸至耻骨结节，并非从下前髂棘起（c错误）。\n- 股静脉位于股动脉的内侧（d错误）。\n- 下腹壁动脉是外髂动脉的分支，而非内髂动脉（e错误）。\n\n【相关知识】\n- 在男性，精索通过腹股沟管；在女性，子宫圆韧带通过此管。由于此部位是腹壁薄弱区，易发生腹股沟疝。\n- 在大腿部，自外向内依次为股神经、股动脉、股静脉（NAVEL），股静脉位于股动脉的内侧。\n- 下腹壁动脉在腹股沟管深环附近走行，是区分不同类型腹股沟疝的解剖学标志之一。"
+    }
+  }
+]
