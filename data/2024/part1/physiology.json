@@ -1,125 +1,405 @@
 [
   {
-    "question": "赤血球膜でHCO₃⁻と交換輸送されるのはどれか。",
+    "question": {
+      "ja": "赤血球膜でHCO₃⁻と交換輸送されるのはどれか。",
+      "en": "Which ion is exchanged with HCO₃⁻ across the red blood cell membrane?",
+      "zh": "在红细胞膜上与HCO₃⁻进行交换运输的是哪种离子？"
+    },
     "choices": {
-      "a": "H⁺",
-      "b": "K⁺",
-      "c": "Cl⁻",
-      "d": "Na⁺",
-      "e": "Ca²⁺"
+      "a": {
+        "ja": "H⁺",
+        "en": "H⁺",
+        "zh": "H⁺"
+      },
+      "b": {
+        "ja": "K⁺",
+        "en": "K⁺",
+        "zh": "K⁺"
+      },
+      "c": {
+        "ja": "Cl⁻",
+        "en": "Cl⁻",
+        "zh": "Cl⁻"
+      },
+      "d": {
+        "ja": "Na⁺",
+        "en": "Na⁺",
+        "zh": "Na⁺"
+      },
+      "e": {
+        "ja": "Ca²⁺",
+        "en": "Ca²⁺",
+        "zh": "Ca²⁺"
+      }
     },
     "answer": "c",
-    "explanation": "【解答解説】\n\n赤血球膜では、重炭酸イオン (HCO₃⁻) と塩化物イオン (Cl⁻) が交換輸送される現象が起こり、これをクロライドシフト (Hamburger現象) と呼びます。組織から血液に取り込まれた二酸化炭素 (CO₂) は赤血球内で主にHCO₃⁻に変換されて血漿中へ放出され、その際にCl⁻が赤血球内に取り込まれることで電荷のバランスを保ちます。\n\n【誤答選択肢について】\n- a: H⁺と直接交換されるわけではありません。赤血球内のH⁺は主にヘモグロビンと結合して緩衝に寄与します。\n- b: K⁺との交換輸送ではなく、K⁺濃度勾配は主にNa⁺/K⁺ポンプによって維持されます。\n- d: Na⁺は赤血球膜でHCO₃⁻と直接交換しません。\n- e: Ca²⁺もHCO₃⁻との交換輸送は行われていません。\n\n【周辺知識】\n- クロライドシフトは末梢組織だけでなく肺でも逆向きに起こり、CO₂排出を促します。\n- CO₂の多くはHCO₃⁻として血漿に運ばれ、肺で再びCO₂に戻って呼気中に放出されます。"
+    "explanation": {
+      "ja": "【解答解説】\n\n赤血球膜では、重炭酸イオン (HCO₃⁻) と塩化物イオン (Cl⁻) が交換輸送されるクロライドシフト（ハンバーガー現象）が起こります。CO₂が組織から血液へ取り込まれ、赤血球内でHCO₃⁻に変換され血漿へ出る際に、電荷のバランスをとるためCl⁻が赤血球内に取り込まれます。\n\n【誤答選択肢について】\n- a: H⁺と直接交換されるわけではありません。H⁺は主にヘモグロビンによって緩衝されます。\n- b, d, e: K⁺、Na⁺、Ca²⁺はいずれもHCO₃⁻と交換されません。",
+      "en": "[Answer Explanation]\n\nIn the red blood cell membrane, bicarbonate (HCO₃⁻) is exchanged for chloride (Cl⁻), known as the chloride shift (Hamburger phenomenon). When CO₂ enters RBCs from tissues, it is converted to HCO₃⁻ and exits into the plasma; Cl⁻ moves inward to maintain charge balance.\n\n[Regarding the Incorrect Choices]\n- (a) H⁺ is not directly exchanged; it is buffered mostly by hemoglobin.\n- (b), (d), and (e) K⁺, Na⁺, and Ca²⁺ are not exchanged with HCO₃⁻.",
+      "zh": "【答案解析】\n\n在红细胞膜上进行HCO₃⁻与Cl⁻的交换运输称为氯离子移动（氯化物转移，Hamburger现象）。当组织中的CO₂进入红细胞并转化为HCO₃⁻后，HCO₃⁻排出细胞，Cl⁻进入红细胞以维持电荷平衡。\n\n【错误选项说明】\n- (a) H⁺并非直接与HCO₃⁻交换，而是主要被血红蛋白缓冲。\n- (b)、(d)、(e) K⁺、Na⁺、Ca²⁺均不与HCO₃⁻进行此类交换。"
+    }
   },
   {
-    "question": "肝硬変が食後高血糖および空腹時低血糖をきたしやすい理由はどれか。",
+    "question": {
+      "ja": "肝硬変が食後高血糖および空腹時低血糖をきたしやすい理由はどれか。",
+      "en": "Why does cirrhosis often lead to postprandial hyperglycemia and fasting hypoglycemia?",
+      "zh": "为何肝硬化患者易出现餐后高血糖及空腹时低血糖？"
+    },
     "choices": {
-      "a": "低インスリン血症が生じるため。",
-      "b": "インスリンの作用が亢進するため。",
-      "c": "肝臓でグリコーゲン合成が低下するため。",
-      "d": "小腸でグルコースの吸収が低下するため。",
-      "e": "肝臓でグルコースの取り込みが亢進するため。"
+      "a": {
+        "ja": "低インスリン血症が生じるため。",
+        "en": "Because insulin levels are low.",
+        "zh": "由于胰岛素分泌不足导致。"
+      },
+      "b": {
+        "ja": "インスリンの作用が亢進するため。",
+        "en": "Because insulin action is enhanced.",
+        "zh": "由于胰岛素作用增强导致。"
+      },
+      "c": {
+        "ja": "肝臓でグリコーゲン合成が低下するため。",
+        "en": "Because glycogen synthesis in the liver is impaired.",
+        "zh": "由于肝脏合成糖原的能力下降。"
+      },
+      "d": {
+        "ja": "小腸でグルコースの吸収が低下するため。",
+        "en": "Because intestinal glucose absorption is reduced.",
+        "zh": "由于小肠对葡萄糖的吸收降低。"
+      },
+      "e": {
+        "ja": "肝臓でグルコースの取り込みが亢進するため。",
+        "en": "Because hepatic glucose uptake is increased.",
+        "zh": "由于肝脏对葡萄糖的摄取亢进。"
+      }
     },
     "answer": "c",
-    "explanation": "【解答解説】\n\n肝硬変では肝細胞の機能が低下し、グリコーゲン合成能や糖新生能が十分に発揮されにくくなります。食後に生じる過剰な血糖を肝臓がうまくグリコーゲンとして貯蔵できないため、食後高血糖を招きます。また、空腹時には十分なグリコーゲン分解や糖新生が行えず、空腹時低血糖になりやすいです。\n\n【誤答選択肢について】\n- a: 低インスリン血症よりも、肝機能の障害が主因。\n- b: インスリン作用がむしろ抑制される場合もあり、亢進はしません。\n- d: 小腸の吸収障害ではなく、肝の貯蔵障害が本質。\n- e: 肝臓へのグルコース取り込み自体が亢進するわけではなく、取り込んだ後の処理(合成・分解)が破綻することが問題です。\n\n【周辺知識】\n- 正常な肝臓は食後に血糖を取り込みグリコーゲンを合成、空腹時には分解して血糖を一定に保ちます。\n- 肝硬変でこれらの調節が破綻すると、血糖値の変動幅が増大しやすくなります。"
+    "explanation": {
+      "ja": "【解答解説】\n\n肝硬変では肝細胞が障害され、グリコーゲン合成や糖新生能力が低下します。食後血糖上昇時に十分なグリコーゲンとしての貯蔵ができず高血糖となり、また空腹時にはグリコーゲン分解や糖新生が不十分で低血糖を起こしやすい。\n\n【誤答選択肢】\n- a, b: インスリン分泌や作用そのものよりも肝の合成・分解機能低下が問題。\n- d, e: 小腸吸収や肝取り込みの亢進などは主原因ではない。",
+      "en": "[Answer Explanation]\n\nIn cirrhosis, damaged hepatocytes cannot adequately perform glycogen synthesis or gluconeogenesis. After a meal, insufficient glycogen storage causes hyperglycemia; during fasting, inadequate glycogenolysis and gluconeogenesis lead to hypoglycemia.\n\n[Regarding the Incorrect Choices]\n- (a) & (b) Insulin secretion/action itself is not the main issue; the key problem lies in the liver’s reduced capacity.\n- (d) & (e) Intestinal absorption and hepatic uptake changes are not the primary reasons here.",
+      "zh": "【答案解析】\n\n肝硬化时，肝细胞功能受损，糖原合成及糖异生能力下降。餐后血糖升高时，肝脏不能充分储存为糖原，导致血糖偏高；空腹时因糖原分解和糖异生不足，易出现低血糖。\n\n【错误选项说明】\n- (a) (b) 问题主要在肝脏储存/分解能力受损，而非胰岛素分泌或作用异常。\n- (d) (e) 小肠吸收或肝脏对葡萄糖摄取并非主要原因。"
+    }
   },
   {
-    "question": "単シナプス反射はどれか。",
+    "question": {
+      "ja": "単シナプス反射はどれか。",
+      "en": "Which of the following is a monosynaptic reflex?",
+      "zh": "下列哪一种属于单突触反射？"
+    },
     "choices": {
-      "a": "瞬目反射",
-      "b": "対光反射",
-      "c": "逃避反射",
-      "d": "膝蓋腱反射",
-      "e": "Golgi腱反射"
+      "a": {
+        "ja": "瞬目反射",
+        "en": "Blink reflex",
+        "zh": "瞬目反射（眨眼反射）"
+      },
+      "b": {
+        "ja": "対光反射",
+        "en": "Pupillary light reflex",
+        "zh": "对光反射"
+      },
+      "c": {
+        "ja": "逃避反射",
+        "en": "Withdrawal reflex",
+        "zh": "逃避反射（缩手反射）"
+      },
+      "d": {
+        "ja": "膝蓋腱反射",
+        "en": "Patellar tendon reflex",
+        "zh": "膝反射（膝盖腱反射）"
+      },
+      "e": {
+        "ja": "Golgi腱反射",
+        "en": "Golgi tendon reflex",
+        "zh": "高尔基腱器官反射"
+      }
     },
     "answer": "d",
-    "explanation": "【解答解説】\n\n膝蓋腱反射は筋紡錘を介した単シナプス反射の代表例です。伸張された大腿四頭筋の筋紡錘からの求心性線維が脊髄前角の運動ニューロンへ直接シナプスし、大腿四頭筋を収縮させます。\n\n【誤答選択肢について】\n- a: 瞬目反射(まばたき反射)は多シナプスを介する反射。\n- b: 対光反射(瞳孔収縮)も脳幹レベルで複数のシナプスを介する多シナプス反射。\n- c: 逃避反射(痛み刺激に対する反射)も多シナプスが関与。\n- e: Golgi腱反射は腱受容器を介する抑制的反射で、抑制性介在ニューロンが入り多シナプスとなります。\n\n【周辺知識】\n- 単シナプス反射は感覚ニューロン(求心)と運動ニューロン(遠心)が1つのシナプスだけでつながる単純な反射経路を指します。"
+    "explanation": {
+      "ja": "【解答解説】\n\n膝蓋腱反射は筋紡錘を介する単シナプス反射で、大腿四頭筋が伸張刺激を受けると、脊髄前角の運動ニューロンが直接興奮して筋収縮が起こる。ほかの選択肢は多シナプス反射。\n\n【その他選択肢】\n- a: 瞬目反射(まばたき)は多シナプス。\n- b: 対光反射は中脳で複数のシナプスを介す。\n- c: 逃避反射は痛覚経路＋介在ニューロンを介した多シナプス。\n- e: Golgi腱反射も抑制性介在ニューロンを経由する多シナプス。",
+      "en": "[Answer Explanation]\n\nThe patellar tendon reflex (knee-jerk) is a monosynaptic reflex involving the muscle spindle of the quadriceps. When the tendon is tapped, afferent fibers synapse directly on motor neurons in the spinal cord, causing muscle contraction. The other reflexes involve multiple synapses.\n\n[Other Choices]\n- (a) Blink reflex: polysynaptic.\n- (b) Pupillary light reflex: multiple synapses in the midbrain.\n- (c) Withdrawal reflex: involves nociceptive pathways with interneurons.\n- (e) Golgi tendon reflex: inhibitory interneurons, hence polysynaptic.",
+      "zh": "【答案解析】\n\n膝盖腱反射是通过肌梭引发的单突触反射；当大腿四头肌腱受到敲击时，传入纤维在脊髓前角与运动神经元直接突触，从而导致肌肉收缩。其他选项均为多突触反射。\n\n【其他选项】\n- (a) 瞬目反射（眨眼反射）为多突触。\n- (b) 对光反射在中脑等处有多个突触。\n- (c) 逃避反射需痛觉传入和中间神经元，多突触。\n- (e) 高尔基腱器官反射有抑制性中间神经元，因此也是多突触。"
+    }
   },
   {
-    "question": "血清蛋白電気泳動の図を示す。\n\n生理的状態で膠質浸透圧維持に不可欠な蛋白質が含まれる分画はどれか。",
+    "question": {
+      "ja": "血清蛋白電気泳動の図を示す。\n\n生理的状態で膠質浸透圧維持に不可欠な蛋白質が含まれる分画はどれか。",
+      "en": "Which serum protein electrophoretic fraction includes the protein that maintains colloid osmotic pressure under normal conditions?",
+      "zh": "在血清蛋白电泳图中，哪个区段包含维持生理性胶体渗透压所必需的蛋白质？"
+    },
     "image": "2024seiri4",
     "choices": {
-      "a": "①",
-      "b": "②",
-      "c": "③",
-      "d": "④",
-      "e": "⑤"
+      "a": {
+        "ja": "①",
+        "en": "Fraction ①",
+        "zh": "分段①"
+      },
+      "b": {
+        "ja": "②",
+        "en": "Fraction ②",
+        "zh": "分段②"
+      },
+      "c": {
+        "ja": "③",
+        "en": "Fraction ③",
+        "zh": "分段③"
+      },
+      "d": {
+        "ja": "④",
+        "en": "Fraction ④",
+        "zh": "分段④"
+      },
+      "e": {
+        "ja": "⑤",
+        "en": "Fraction ⑤",
+        "zh": "分段⑤"
+      }
     },
     "answer": "a",
-    "explanation": "【解答解説】\n\n血清蛋白電気泳動では、最も陽極側(先に移動)に大きく出る分画がアルブミン分画です。アルブミンは血漿中で最も多量に存在し、膠質浸透圧の維持に最も大きく寄与します。したがって、生理的状態の膠質浸透圧維持に不可欠な蛋白は分画①となります。\n\n【誤答選択肢について】\n- ②: α₁グロブリン(α₁-アンチトリプシンなど)\n- ③: α₂グロブリン(ハプトグロビンなど)\n- ④: βグロブリン(トランスフェリンや補体成分)\n- ⑤: γグロブリン(免疫グロブリン)\n\n【周辺知識】\n- アルブミンが低下すると浮腫や腹水が生じやすくなります(肝硬変やネフローゼ症候群など)。\n- γ分画が異常に高値を示す場合、多発性骨髄腫などを疑います。"
+    "explanation": {
+      "ja": "【解答解説】\n\n血清蛋白電気泳動では最も移動度が高い(陽極側)のピークがアルブミン分画。アルブミンは血漿で最も多く存在し、膠質浸透圧維持に重要な役割を担います。よって①がアルブミン。\n\n【その他分画】\n- ②：α₁グロブリン\n- ③：α₂グロブリン\n- ④：βグロブリン\n- ⑤：γグロブリン",
+      "en": "[Answer Explanation]\n\nIn serum protein electrophoresis, the fastest-migrating (most anodal) peak is the albumin fraction. Albumin is the most abundant plasma protein and is crucial for colloid osmotic (oncotic) pressure. Hence, fraction ① represents albumin.\n\n[Other Fractions]\n- ②: α₁-globulins\n- ③: α₂-globulins\n- ④: β-globulins\n- ⑤: γ-globulins",
+      "zh": "【答案解析】\n\n血清蛋白电泳中移动速度最快（最接近阳极）的峰是白蛋白。白蛋白是血浆中含量最高的蛋白质，对于维持胶体渗透压至关重要，因此分段①代表白蛋白。\n\n【其他区段】\n- ②：α₁球蛋白\n- ③：α₂球蛋白\n- ④：β球蛋白\n- ⑤：γ球蛋白"
+    }
   },
   {
-    "question": "心周期における左心室の圧容量変化を図に示す。\n\n僧帽弁が閉鎖するのはどれか。",
+    "question": {
+      "ja": "心周期における左心室の圧容量変化を図に示す。\n\n僧帽弁が閉鎖するのはどれか。",
+      "en": "In the left ventricular pressure-volume loop, at which point does the mitral valve close?",
+      "zh": "左心室压容曲线图中，二尖瓣在哪个阶段关闭？"
+    },
     "image": "2024seiri5",
     "choices": {
-      "a": "①",
-      "b": "②",
-      "c": "③",
-      "d": "④",
-      "e": "⑤"
+      "a": {
+        "ja": "①",
+        "en": "Point ①",
+        "zh": "时刻①"
+      },
+      "b": {
+        "ja": "②",
+        "en": "Point ②",
+        "zh": "时刻②"
+      },
+      "c": {
+        "ja": "③",
+        "en": "Point ③",
+        "zh": "时刻③"
+      },
+      "d": {
+        "ja": "④",
+        "en": "Point ④",
+        "zh": "时刻④"
+      },
+      "e": {
+        "ja": "⑤",
+        "en": "Point ⑤",
+        "zh": "时刻⑤"
+      }
     },
     "answer": "b",
-    "explanation": "【解答解説】\n\n左心室圧容量ループでは、左心室の拡張終期 (容量が最大) の段階で僧帽弁が閉鎖します。その後、等容収縮期へ移行し、急激に圧が上昇します。問題文では②がこれに該当します。\n\n【誤答選択肢について】\n- ①などは充満期の途中を表す可能性があり、まだ弁が閉じるタイミングではない。\n- ③,④,⑤は大動脈弁の開閉や等容弛緩など別のフェーズと考えられます。\n\n【周辺知識】\n- 心周期は拡張期に僧帽弁が開き血液流入→拡張終期(容量最大)→僧帽弁閉鎖→等容収縮期→大動脈弁開放→駆出期→大動脈弁閉鎖→等容弛緩期→再び僧帽弁開放の順です。"
+    "explanation": {
+      "ja": "【解答解説】\n\n左心室の拡張終期(容量が最大の時点)に僧帽弁が閉じ、そこから等容収縮期へ移行して左心室圧が急上昇します。問題の図では②がそのタイミングに相当します。\n\n【誤答選択肢】\n- ①：まだ充満期途中\n- ③,④,⑤：大動脈弁の開閉や等容弛緩期など別のフェーズに該当",
+      "en": "[Answer Explanation]\n\nDuring late diastole, the left ventricle is at its end-diastolic volume (maximum). The mitral valve then closes, and the ventricle enters the isovolumic contraction phase. In the provided loop diagram, point ② indicates this moment.\n\n[Other Points]\n- (①) is still in the filling phase.\n- (③), (④), and (⑤) represent other events such as aortic valve opening/closing or isovolumic relaxation.",
+      "zh": "【答案解析】\n\n左心室舒张末期（血液充盈至最大容量）时，二尖瓣关闭，随后心室开始等容收缩，左心室压力急剧上升。在题目图中，时刻②对应此事件。\n\n【其他选项】\n- (①) 仍处于心室充盈期\n- (③)(④)(⑤) 分别对应主动脉瓣开放/关闭、等容舒张期等阶段"
+    }
   },
   {
-    "question": "ヘモグロビン-酸素解離曲線を図に示す。\n\n②を成人型ヘモグロビン、Vを静脈血、Aを動脈血の酸素分圧としたとき、胎児型ヘモグロビンの解離曲線はどれか。",
+    "question": {
+      "ja": "ヘモグロビン-酸素解離曲線を図に示す。\n\n②を成人型ヘモグロビン、Vを静脈血、Aを動脈血の酸素分圧としたとき、胎児型ヘモグロビンの解離曲線はどれか。",
+      "en": "Referring to the hemoglobin-oxygen dissociation curve, with ② representing adult hemoglobin, V the venous PO₂, and A the arterial PO₂, which curve corresponds to fetal hemoglobin (HbF)?",
+      "zh": "在血红蛋白-氧离曲线中，若②为成人血红蛋白，V表示静脉血氧分压，A表示动脉血氧分压，则哪个曲线表示胎儿型血红蛋白(HbF)？"
+    },
     "image": "2024seiri6",
     "choices": {
-      "a": "①",
-      "b": "②",
-      "c": "③",
-      "d": "④",
-      "e": "⑤"
+      "a": {
+        "ja": "①",
+        "en": "Curve ①",
+        "zh": "曲线①"
+      },
+      "b": {
+        "ja": "②",
+        "en": "Curve ②",
+        "zh": "曲线②"
+      },
+      "c": {
+        "ja": "③",
+        "en": "Curve ③",
+        "zh": "曲线③"
+      },
+      "d": {
+        "ja": "④",
+        "en": "Curve ④",
+        "zh": "曲线④"
+      },
+      "e": {
+        "ja": "⑤",
+        "en": "Curve ⑤",
+        "zh": "曲线⑤"
+      }
     },
     "answer": "a",
-    "explanation": "【解答解説】\n\n胎児型ヘモグロビン(HbF)は成人型(HbA)より酸素親和性が高く、酸素解離曲線は左方にシフトします。問題文では①が成人型の②より左に位置しているため、①が胎児型ヘモグロビンを示します。\n\n【誤答選択肢について】\n- bの②は成人型(HbA)の基準曲線。\n- c, d, e は酸素親和性が変化した様々なパターン(右方・左方移動など)を想定する場合がありますが、HbFほど顕著には左方になりません。\n\n【周辺知識】\n- 胎児期にはHbFが主に働き、出生後にはHbAに置き換わっていきます。\n- HbFは2,3-DPGとの結合力が弱いため、酸素保持力が高いとされます。"
+    "explanation": {
+      "ja": "【解答解説】\n\n胎児型ヘモグロビン(HbF)は成人型ヘモグロビン(HbA)より酸素親和性が高く、解離曲線は左方に位置します。図では①が②(成人型)より左にあり、HbFに相当します。\n\n【その他選択肢】\n- ②：成人型(HbA)\n- ③,④,⑤：他の条件下での右方・左方シフトを仮定した場合。",
+      "en": "[Answer Explanation]\n\nFetal hemoglobin (HbF) has a higher oxygen affinity than adult hemoglobin (HbA), thus its dissociation curve is shifted to the left. In the figure, curve ① is left of curve ② (adult Hb), so curve ① corresponds to HbF.\n\n[Other Choices]\n- ②: Adult hemoglobin (HbA)\n- ③, ④, ⑤: Hypothetical right/left shifts under different conditions.",
+      "zh": "【答案解析】\n\n胎儿型血红蛋白(HbF)比成人型血红蛋白(HbA)具有更高的氧亲和力，因此解离曲线会左移。在图中，曲线①在曲线②(成人型)左侧，故①代表HbF。\n\n【其他选项】\n- ②：成人型(HbA)\n- ③,④,⑤：在不同生理或病理条件下的右移或左移情况"
+    }
   },
   {
-    "question": "腎機能検査の目的で血中クレアチニン濃度、尿中クレアチニン濃度、および1日尿量を測定したところ、血中クレアチニン濃度2.0 mg/dL、尿中クレアチニン濃度72 mg/dL、1日尿量2Lだった。\n\nクレアチニンクリアランス（mL/分）の数値はどれか。ただし、年齢および体表面積での補正はないものとする。",
+    "question": {
+      "ja": "腎機能検査の目的で血中クレアチニン濃度、尿中クレアチニン濃度、および1日尿量を測定したところ、血中クレアチニン濃度2.0 mg/dL、尿中クレアチニン濃度72 mg/dL、1日尿量2Lだった。\n\nクレアチニンクリアランス（mL/分）の数値はどれか。ただし、年齢および体表面積での補正はないものとする。",
+      "en": "For renal function testing, blood creatinine was 2.0 mg/dL, urine creatinine was 72 mg/dL, and total daily urine volume was 2 liters. What is the approximate creatinine clearance (mL/min), without correction for age or body surface area?",
+      "zh": "为评估肾功能测定：血肌酐2.0 mg/dL，尿肌酐72 mg/dL，24小时尿量2 L（2000 mL）。在未考虑年龄及体表面积校正的情况下，肌酐清除率（mL/分）约为多少？"
+    },
     "choices": {
-      "a": "20",
-      "b": "36",
-      "c": "50",
-      "d": "72",
-      "e": "144"
+      "a": {
+        "ja": "20",
+        "en": "20",
+        "zh": "20"
+      },
+      "b": {
+        "ja": "36",
+        "en": "36",
+        "zh": "36"
+      },
+      "c": {
+        "ja": "50",
+        "en": "50",
+        "zh": "50"
+      },
+      "d": {
+        "ja": "72",
+        "en": "72",
+        "zh": "72"
+      },
+      "e": {
+        "ja": "144",
+        "en": "144",
+        "zh": "144"
+      }
     },
     "answer": "c",
-    "explanation": "【解答解説】\n\nクレアチニンクリアランス(Ccr)は以下の式で求められます。\n\nCcr = (尿中クレアチニン濃度 × 尿量) ÷ 血中クレアチニン濃度\n\n問題文:\n- 血中Cr: 2.0 mg/dL\n- 尿中Cr: 72 mg/dL\n- 1日尿量: 2L=2000mL\n\n1日の尿量を分あたりに直すと2000mL÷1440分 ≈1.39 mL/分。\n\nCcr ≈ (72 mg/dL × 1.39 mL/分) ÷ 2.0 mg/dL = 50 mL/分程度。\n\n【誤答選択肢について】\n- a, b: 計算の途中で間違うと出てきそうな小さい値。\n- d, e: 大幅に過大評価した場合の値。\n\n【周辺知識】\n- クレアチニンクリアランスは腎糸球体濾過量(GFR)の目安です。\n- 現在では年齢や性別を加味したeGFR(推算GFR)が臨床でよく用いられます。"
+    "explanation": {
+      "ja": "【解答解説】\n\nクレアチニンクリアランス(Ccr)は以下の式で求められます。\n\nCcr (mL/分) = (尿中Cr濃度 × 尿流量) / 血中Cr濃度\n\n- 血中Cr: 2.0 mg/dL\n- 尿中Cr: 72 mg/dL\n- 1日尿量: 2L = 2000mL/24時間 = 2000mL / 1440分 ≈ 1.39 mL/分\n\n計算:\n72 (mg/dL) × 1.39 (mL/分) / 2.0 (mg/dL) ≈ 50 mL/分\n\n【周辺知識】\n- クレアチニンクリアランスは腎糸球体濾過量(GFR)の指標。\n- eGFRなどは性別や年齢、体表面積を加味して算出される。",
+      "en": "[Answer Explanation]\n\nCreatinine clearance (Ccr) is calculated by:\n\nCcr (mL/min) = (Urine Cr concentration × Urine flow rate) / Plasma Cr concentration\n\n- Plasma Cr: 2.0 mg/dL\n- Urine Cr: 72 mg/dL\n- 24-hour urine volume: 2 L = 2000 mL / 1440 min ≈ 1.39 mL/min\n\nHence:\n(72 mg/dL × 1.39 mL/min) / (2.0 mg/dL) ≈ 50 mL/min.\n\n[Additional Information]\n- Creatinine clearance approximates the glomerular filtration rate (GFR).\n- eGFR uses age, sex, and body surface area for a more precise estimate.",
+      "zh": "【答案解析】\n\n肌酐清除率（Ccr）计算公式：\n\nCcr（mL/分钟）=（尿肌酐浓度×尿流量）÷ 血肌酐浓度\n\n- 血Cr：2.0 mg/dL\n- 尿Cr：72 mg/dL\n- 24小时尿量：2 L = 2000 mL/24小时 = 2000mL/1440分钟≈1.39 mL/分钟\n\n代入计算：\n(72 mg/dL × 1.39 mL/分钟) / 2.0 mg/dL ≈ 50 mL/分钟\n\n【补充说明】\n- 肌酐清除率近似评估肾小球滤过率（GFR）。\n- eGFR在临床中常结合年龄、性别、体表面积等因素进行推算。"
+    }
   },
   {
-    "question": "グルタミン酸を神経伝達物質とするニューロンAとGABAを神経伝達物質とするニューロンBがシナプス後ニューロンとそれぞれシナプスを形成している。50msの間隔でA→Bの順序で活動電位が発生したとき、シナプス後ニューロンに生じる膜電位変化はどれか。\n\nただし、EPSPは促進性シナプス後電位、IPSPは抑制性シナプス後電位とする。",
+    "question": {
+      "ja": "グルタミン酸を神経伝達物質とするニューロンAとGABAを神経伝達物質とするニューロンBがシナプス後ニューロンとそれぞれシナプスを形成している。50msの間隔でA→Bの順序で活動電位が発生したとき、シナプス後ニューロンに生じる膜電位変化はどれか。\n\nただし、EPSPは促進性シナプス後電位、IPSPは抑制性シナプス後電位とする。",
+      "en": "Neurons A (using glutamate) and B (using GABA) each form synapses on a postsynaptic neuron. If action potentials fire in A then B, 50 ms apart, what membrane potential changes occur in the postsynaptic neuron? (EPSP = excitatory postsynaptic potential, IPSP = inhibitory postsynaptic potential)",
+      "zh": "A神经元（以谷氨酸为递质）与B神经元（以GABA为递质）分别与同一个突触后神经元形成突触连接。当A和B以50毫秒的间隔先后放电（顺序A→B）时，突触后神经元膜电位发生何种变化？（EPSP=兴奋性突触后电位，IPSP=抑制性突触后电位）"
+    },
     "choices": {
-      "a": "EPSPが一つ生じる。",
-      "b": "IPSPが一つ生じる。",
-      "c": "膜電位変化は生じない。",
-      "d": "まずEPSPが生じ、次いでIPSPが生じる。",
-      "e": "まずIPSPが生じ、次いでEPSPが生じる。"
+      "a": {
+        "ja": "EPSPが一つ生じる。",
+        "en": "Only one EPSP occurs.",
+        "zh": "仅产生一个EPSP。"
+      },
+      "b": {
+        "ja": "IPSPが一つ生じる。",
+        "en": "Only one IPSP occurs.",
+        "zh": "仅产生一个IPSP。"
+      },
+      "c": {
+        "ja": "膜電位変化は生じない。",
+        "en": "No membrane potential changes occur.",
+        "zh": "没有膜电位变化发生。"
+      },
+      "d": {
+        "ja": "まずEPSPが生じ、次いでIPSPが生じる。",
+        "en": "An EPSP occurs first, followed by an IPSP.",
+        "zh": "先出现EPSP，随后出现IPSP。"
+      },
+      "e": {
+        "ja": "まずIPSPが生じ、次いでEPSPが生じる。",
+        "en": "An IPSP occurs first, followed by an EPSP.",
+        "zh": "先出现IPSP，随后出现EPSP。"
+      }
     },
     "answer": "d",
-    "explanation": "【解答解説】\n\n- ニューロンA: グルタミン酸作動 → 興奮性 (EPSP)\n- ニューロンB: GABA作動 → 抑制性 (IPSP)\n\nAが先に活動電位を発した後、50ms遅れてBが活動電位を起こすため、シナプス後ニューロンには「まずEPSPが生じ、その後IPSP」が起こります。\n\n【誤答選択肢について】\n- a: EPSPのみ → B由来のIPSPを無視している。\n- b: IPSPのみ → AのEPSPが考慮されていない。\n- c: どちらも生じないわけではない。\n- e: IPSP→EPSPの順番とは逆。\n\n【周辺知識】\n- シナプス後ニューロンの膜電位は複数のシナプス入力(EPSP, IPSP)の時間的・空間的和で決まります。\n- 興奮性と抑制性のタイミングの差により、活動電位発火が促進または抑制されることがあります。"
+    "explanation": {
+      "ja": "【解答解説】\n\nニューロンA：興奮性(グルタミン酸)、ニューロンB：抑制性(GABA)。Aが先に興奮すればシナプス後ニューロンにEPSPを生じ、その後Bが興奮してIPSPが生じる。よって「まずEPSPが生じ、その後IPSPが生じる」が正解。\n\n【誤答選択肢】\n- a: B由来のIPSPを無視。\n- b: A由来のEPSPを無視。\n- c: 両方とも無視。\n- e: 順序が逆。",
+      "en": "[Answer Explanation]\n\nNeuron A is excitatory (glutamate), and neuron B is inhibitory (GABA). If A fires first, the postsynaptic neuron experiences an EPSP, then when B fires 50 ms later, an IPSP follows. Thus, “An EPSP occurs first, followed by an IPSP” is correct.\n\n[Regarding the Other Choices]\n- (a), (b), and (c) ignore one or both of the potentials.\n- (e) Reverses the actual order.",
+      "zh": "【答案解析】\n\nA神经元释放谷氨酸，属于兴奋性；B神经元释放GABA，属于抑制性。当A先放电时，突触后细胞首先出现EPSP；紧接着B放电时产生IPSP。所以，先EPSP再IPSP。\n\n【其他选项】\n- (a)(b)(c) 忽略了对方电位或两者，\n- (e) 顺序反了。"
+    }
   },
   {
-    "question": "骨格筋でT管に活動電位が到達した際に生じるのはどれか。",
+    "question": {
+      "ja": "骨格筋でT管に活動電位が到達した際に生じるのはどれか。",
+      "en": "When an action potential reaches the T-tubule in skeletal muscle, which event occurs?",
+      "zh": "骨骼肌T管接收到动作电位时，以下哪个事件会发生？"
+    },
     "choices": {
-      "a": "細胞外Ca²⁺の流入",
-      "b": "リアノジン受容体活性化",
-      "c": "筋小胞体へのCa²⁺取り込み",
-      "d": "ミオシン頭部とATPの結合",
-      "e": "神経終末からのアセチルコリン分泌"
+      "a": {
+        "ja": "細胞外Ca²⁺の流入",
+        "en": "Influx of extracellular Ca²⁺",
+        "zh": "细胞外Ca²⁺流入"
+      },
+      "b": {
+        "ja": "リアノジン受容体活性化",
+        "en": "Activation of ryanodine receptors",
+        "zh": "激活Ryanodine受体"
+      },
+      "c": {
+        "ja": "筋小胞体へのCa²⁺取り込み",
+        "en": "Ca²⁺ reuptake into the sarcoplasmic reticulum",
+        "zh": "将Ca²⁺重新摄入肌浆网"
+      },
+      "d": {
+        "ja": "ミオシン頭部とATPの結合",
+        "en": "Binding of ATP to the myosin head",
+        "zh": "肌球蛋白头与ATP结合"
+      },
+      "e": {
+        "ja": "神経終末からのアセチルコリン分泌",
+        "en": "Release of acetylcholine from the nerve terminal",
+        "zh": "神经末梢释放乙酰胆碱"
+      }
     },
     "answer": "b",
-    "explanation": "【解答解説】\n\n骨格筋の興奮収縮連関では、T管に活動電位が到達するとジヒドロピリジン(DHP)受容体が電位変化を感知し、筋小胞体膜上のリアノジン受容体(RyR)を機械的に開きます。これによりCa²⁺が筋小胞体から放出されて収縮が始まります。したがって、リアノジン受容体の活性化が先に起こります。\n\n【誤答選択肢について】\n- a: 骨格筋では心筋ほど細胞外Ca²⁺依存性ではなく、主に筋小胞体内のCa²⁺が放出されます。\n- c: 筋小胞体へのCa²⁺取り込みは弛緩期に行われます(SERCAポンプ)。\n- d: ミオシン頭部とATPの結合は収縮サイクルの一部ですが、まずCa²⁺放出が起きてアクチンとミオシンが相互作用可能になる必要があります。\n- e: アセチルコリン分泌は運動神経終末で起こる事象であり、筋繊維側のT管ではありません。"
+    "explanation": {
+      "ja": "【解答解説】\n\n骨格筋の興奮収縮連関では、T管電位変化がジヒドロピリジン受容体(DHP)を介してリアノジン受容体(RyR)を開き、筋小胞体からのCa²⁺放出を引き起こす。よって「リアノジン受容体活性化」がまず起こる。\n\n【誤答選択肢】\n- a: 骨格筋では心筋ほど細胞外Ca²⁺流入への依存度は低い。\n- c: Ca²⁺再取り込みは弛緩期に行われる。\n- d: ATP与合は收缩循环中需要，但不是T管动作电位到达时首要事件。\n- e: ACh释放发生在运动神经末梢与肌纤维间（神经肌接头），非T管部位。",
+      "en": "[Answer Explanation]\n\nIn skeletal muscle excitation-contraction coupling, the T-tubule depolarization activates dihydropyridine receptors (DHP), which then mechanically open ryanodine receptors (RyR) on the sarcoplasmic reticulum, releasing Ca²⁺. Thus, “Activation of ryanodine receptors” is the key event.\n\n[Regarding the Other Choices]\n- (a) Skeletal muscle is less dependent on extracellular Ca²⁺ influx than cardiac muscle.\n- (c) Ca²⁺ reuptake happens during relaxation.\n- (d) ATP binding to the myosin head is part of the cross-bridge cycle but not the immediate effect of T-tubule depolarization.\n- (e) Acetylcholine release occurs at the neuromuscular junction, not in the T-tubule region.",
+      "zh": "【答案解析】\n\n在骨骼肌的兴奋-收缩耦联中，T管动作电位会激活DHP受体，并通过机械偶联使RyR（Ryanodine受体）打开，从肌浆网释放Ca²⁺。因此激活Ryanodine受体是首要事件。\n\n【错误选项】\n- (a) 骨骼肌对细胞外Ca²⁺依赖度不如心肌高。\n- (c) Ca²⁺被重新摄入肌浆网发生在舒张期。\n- (d) 肌球蛋白头与ATP结合为收缩周期一部分，但非T管到达动作电位的直接后果。\n- (e) ACh释放发生在神经肌接头（NMJ）处，而非T管。"
+    }
   },
   {
-    "question": "成人女性で卵胞期にみられるのはどれか。",
+    "question": {
+      "ja": "成人女性で卵胞期にみられるのはどれか。",
+      "en": "Which finding is observed in the follicular phase of the menstrual cycle in an adult woman?",
+      "zh": "在成年女性的卵泡期会出现下列哪种现象？"
+    },
     "choices": {
-      "a": "基礎体温上昇",
-      "b": "子宮内膜増殖",
-      "c": "子宮平滑筋弛緩",
-      "d": "子宮内膜腺分泌増加",
-      "e": "プロゲステロン分泌増加"
+      "a": {
+        "ja": "基礎体温上昇",
+        "en": "Rise in basal body temperature",
+        "zh": "基础体温升高"
+      },
+      "b": {
+        "ja": "子宮内膜増殖",
+        "en": "Proliferation of the endometrium",
+        "zh": "子宫内膜增生"
+      },
+      "c": {
+        "ja": "子宮平滑筋弛緩",
+        "en": "Relaxation of the uterine smooth muscle",
+        "zh": "子宫平滑肌松弛"
+      },
+      "d": {
+        "ja": "子宮内膜腺分泌増加",
+        "en": "Increase in endometrial gland secretion",
+        "zh": "子宫内膜腺体分泌增多"
+      },
+      "e": {
+        "ja": "プロゲステロン分泌増加",
+        "en": "Increased progesterone secretion",
+        "zh": "孕激素分泌增多"
+      }
     },
     "answer": "b",
-    "explanation": "【解答解説】\n\n卵胞期(生理開始から排卵直前まで)ではエストロゲンが増加し、子宮内膜は「増殖期」に入ります。内膜の厚みが増し、排卵後の着床に備える準備段階が進行します。\n\n【誤答選択肢について】\n- a: 基礎体温の上昇は黄体期(排卵後)で、プロゲステロンによる作用。\n- c: エストロゲンは子宮平滑筋にむしろ収縮的に働き、弛緩を促すホルモンではありません。\n- d: 子宮内膜腺の分泌増加は黄体期でプロゲステロン支配時に起こる。\n- e: プロゲステロンの本格的増加は黄体期(黄体で産生)です。\n\n【周辺知識】\n- 卵胞期はエストロゲン優位、黄体期はプロゲステロン優位と覚えておくと月経周期の把握がしやすいです。\n- エストロゲンによって内膜が増殖し、排卵後にはプロゲステロンにより分泌機能が活発化(分泌期)します。"
+    "explanation": {
+      "ja": "【解答解説】\n\n卵胞期はエストロゲンが優位になる時期であり、子宮内膜は増殖期に相当する。したがって「子宮内膜増殖」がみられる。\n\n【誤答選択肢】\n- a: 基礎体温上昇は排卵後の黄体期（プロゲステロンの作用）。\n- c: 子宮平滑筋へのエストロゲン作用はむしろ収縮を助長する場合がある。\n- d, e: 内膜腺分泌増加やプロゲステロン増加は黄体期の特徴。",
+      "en": "[Answer Explanation]\n\nDuring the follicular phase, estrogen predominates, causing the proliferative phase of the endometrium. Thus, “proliferation of the endometrium” occurs.\n\n[Regarding the Other Choices]\n- (a) Basal body temperature rises in the luteal phase (after ovulation) due to progesterone.\n- (c) Estrogen can actually enhance uterine contractility.\n- (d) and (e) Both increased endometrial gland secretion and heightened progesterone levels are features of the luteal phase.",
+      "zh": "【答案解析】\n\n卵泡期（滤泡期）以雌激素（雌二醇）为主导，对应子宫内膜增殖期，因此子宫内膜处于增生状态。\n\n【错误选项】\n- (a) 基础体温在排卵后黄体期在孕激素作用下升高。\n- (c) 雌激素反而会促进子宫平滑肌收缩。\n- (d) (e) 内膜腺体分泌增加及孕激素增加属于排卵后黄体期的特征。"
+    }
   }
 ]

@@ -1,123 +1,402 @@
 [
-    {
-      "question": "薬物代謝におけるグルクロン酸の付加で正しいのはどれか。",
-      "choices": {
-        "a": "水溶性を上昇させる。",
-        "b": "通常、薬物を活性化する。",
-        "c": "シトクロムP450が関与する。",
-        "d": "成人と新生児で同じ速度である。",
-        "e": "薬物に対する第1相反応である。"
-      },
-      "answer": "a",
-      "explanation": "【解答解説】\n\nグルクロン酸抱合は主に薬物代謝の第2相反応(Phase II)に分類され、水溶性の向上を図ることで腎排泄を促進します。\n\n- グルクロン酸付加により薬物は極性が高くなり、胆汁や尿中への排泄が容易になります。\n- 一般に薬物の“無毒化”や排泄促進が主目的であり、薬理活性を高めることは通常ありません(まれな例外を除く)。\n- シトクロムP450は主に酸化・還元・加水分解などを担う第1相反応に関連します。\n- 新生児ではグルクロン酸抱合能が未熟な場合があり、ビリルビン代謝などにも影響を及ぼします。"
+  {
+    "question": {
+      "ja": "薬物代謝におけるグルクロン酸の付加で正しいのはどれか。",
+      "en": "Which statement about glucuronidation in drug metabolism is correct?",
+      "zh": "关于药物代谢中葡糖醛酸结合的描述，下列哪项是正确的？"
     },
-    {
-      "question": "薬物の作用機序で誤っているのはどれか。",
-      "choices": {
-        "a": "部分アゴニストは受容体の最大活性を生じる。",
-        "b": "余剰受容体説では受容体数は効果器より多い。",
-        "c": "逆アゴニストは非刺激状態の受容体の活性を抑制する。",
-        "d": "アロステリックアゴニストは内因性作動物質の結合部位以外に結合する。",
-        "e": "競合的アンタゴニストはアゴニストの用量反応曲線を右に平行移動する。"
+    "choices": {
+      "a": {
+        "ja": "水溶性を上昇させる。",
+        "en": "It increases water solubility.",
+        "zh": "可提高药物的水溶性。"
       },
-      "answer": "a",
-      "explanation": "【解答解説】\n\n- 部分アゴニスト(partial agonist)は受容体に結合して活性化を起こしますが、その最大作用はフルアゴニストほどには達しません。したがって「受容体の最大活性を生じる」は誤りであり、選択肢aが間違いとなります。\n- 余剰受容体説(spare receptor)では、実際には最大反応を発揮するのに必要な受容体数よりも多くの受容体が存在すると考えられます。\n- 逆アゴニストは、受容体自体がもつ基礎的(構成的)な活性を抑制する方向に働きます。\n- アロステリックアゴニストは、作動物質(アゴニスト)の結合部位とは異なる部位に結合し、作動物質の作用を増強するなどの効果を示します。\n- 競合的アンタゴニストは受容体とアゴニストが同じ部位を取り合い、結果として用量反応曲線は右方向へ平行移動します(最大効果Emaxは変わらない)。"
+      "b": {
+        "ja": "通常、薬物を活性化する。",
+        "en": "It usually activates the drug.",
+        "zh": "通常令药物活性增强。"
+      },
+      "c": {
+        "ja": "シトクロムP450が関与する。",
+        "en": "It involves cytochrome P450.",
+        "zh": "有细胞色素P450参与。"
+      },
+      "d": {
+        "ja": "成人と新生児で同じ速度である。",
+        "en": "It proceeds at the same rate in adults and neonates.",
+        "zh": "成人与新生儿反应速度相同。"
+      },
+      "e": {
+        "ja": "薬物に対する第1相反応である。",
+        "en": "It is a Phase I reaction in drug metabolism.",
+        "zh": "属于药物代谢的第一相反应。"
+      }
     },
-    {
-      "question": "薬物代謝で正しいのはどれか。",
-      "choices": {
-        "a": "舌下投与薬は初回通過効果を受ける。",
-        "b": "分布容積が少ない薬物は血中濃度が低くなる。",
-        "c": "血中蛋白と結合した結合型の薬物は代謝される。",
-        "d": "胃内容排出速度は薬物の吸収速度に影響を与えない。",
-        "e": "脂溶性薬物の排泄では代謝により水溶性が低くなる。"
-      },
-      "answer": "a",
-      "explanation": "【解答解説】\n\n本来、舌下投与は口腔粘膜を介して直接血中に吸収されるため、門脈→肝臓を通る経路を回避し、初回通過効果(First-pass effect)を大きく受けないとされます。\n\nしかし、本問題では厚生労働省の解答・採点基準により「a: 舌下投与薬は初回通過効果を受ける」が相対的正解として採用されています（他選択肢の誤りがより明確だという形での出題意図）。\n\n【他選択肢の誤り】\n- b: 分布容積が小さい薬物は体内であまり組織に分布せず、血中にとどまるため血中濃度は比較的高くなります。\n- c: 血中蛋白結合型薬物は一般に生理活性や代謝の標的となりにくく、遊離型薬物の割合が実際に代謝されやすい部分です。\n- d: 胃内容排出速度が速いと、薬物がより早く小腸へ到達し吸収が進むため、吸収速度に大きく影響します。\n- e: 脂溶性薬物は肝代謝(主に第1相・第2相反応)により水溶性が高くなり、排泄が促進されます。水溶性が低くなるわけではありません。"
-    },
-    {
-      "question": "B2アドレナリン作動薬の作用で正しいのはどれか。",
-      "choices": {
-        "a": "K分泌",
-        "b": "血管収縮",
-        "c": "血糖降下",
-        "d": "子宮弛緩",
-        "e": "心拍数減少"
-      },
-      "answer": "d",
-      "explanation": "【解答解説】\n\nB₂アドレナリン作動薬は気管支拡張、血管拡張、子宮平滑筋弛緩などの作用を示し、代表的にはリトドリン(早産抑制)やサルブタモール(気管支喘息治療)などが知られています。\n\n- 選択肢dの「子宮弛緩」はB₂作用の代表的効果の1つです。\n\n【誤答選択肢について】\n- a: K⁺分泌は主にアルドステロンなどの鉱質コルチコイド作用に関与。B₂作動で直接K⁺分泌が促されるわけではなく、むしろ一時的に血中K⁺の低下(取り込み促進)が指摘されることがあります。\n- b: 血管はむしろ拡張方向へ働き、血管収縮はα₁作用が主です。\n- c: 血糖はB₂刺激によりやや上昇しやすく、降下はしません。\n- e: B₂刺激が心拍数を減少させることはありません(むしろβ₁が心機能に密接ですが、B₂刺激でも反射性に心拍数が上がることもあります)。"
-    },
-    {
-      "question": "アセチルコリン投与が禁忌となるのはどれか。",
-      "choices": {
-        "a": "高血圧",
-        "b": "緑内障",
-        "c": "気管支喘息",
-        "d": "神経因性膀胱",
-        "e": "麻痺性イレウス"
-      },
-      "answer": "c",
-      "explanation": "【解答解説】\n\nアセチルコリン(ACh)は副交感神経作動薬として気管支平滑筋を収縮させ、気管支分泌も増大させます。気管支喘息患者では気道が狭窄しやすく、症状を悪化させる恐れがあるため「禁忌」となります。\n\n【他選択肢について】\n- a: 高血圧でアセチルコリン投与を禁忌とする決定的要因はありません。\n- b: 緑内障ではむしろ縮瞳作用を利用して房水排出を助け、眼圧低下に用いられる場合があります(ピロカルピンなど) 。\n- d: 神経因性膀胱では排尿促進目的でコリン作動薬が使われる場合があります。\n- e: 麻痺性イレウスでも腸管運動亢進を誘導するため、コリン作動薬が治療に使われる場合があります。"
-    },
-    {
-      "question": "臨床薬効評価で正しいのはどれか。",
-      "choices": {
-        "a": "治験審査委員会(IRB)は医療関係者の専門家で構成される。",
-        "b": "新薬開発の第I相臨床試験では薬物の有効性や安全性を評価する。",
-        "c": "フリッジング試験ではジェネリック医薬品の有効性や安全性を評価する。",
-        "d": "ヘルシンキ宣言は臨床試験の実施方法を定めた世界医師会の宣言である。",
-        "e": "被験者が治験への参加同意を取り消すには治験審査委員会(IRB)の審査が必要である。"
-      },
-      "answer": "b",
-      "explanation": "【解答解説】\n\n- 第I相試験(Phase I)は少数の健康成人被験者(または患者)で実施し、主に安全性や忍容性、薬物動態を評価します。最近では、初期の有効性情報(探索的有効性)を得る試験を行うケースもあります。よって選択肢bが最も適切と言えます。\n\n【他の選択肢について】\n- a: IRB(治験審査委員会)は医療関係者だけでなく、法律や倫理の専門家、一般市民など多職種で構成されることが義務づけられています。\n- c: 「フリッジング試験(Bridging study)」は、主に海外データを国内に適用する際の補完的試験などを指す文脈で使われます。ジェネリック医薬品の有効性・安全性評価とは必ずしも一致しません。\n- d: ヘルシンキ宣言は臨床研究における倫理指針を示した宣言です。GCP(医薬品の臨床試験の実施基準)とはやや内容が異なります。\n- e: 被験者が途中で治験への参加同意を撤回することは、いつでも自由に行えます。IRBの審査は不要であり、被験者の権利として保障されています。"
-    },
-    {
-      "question": "抗Parkinson病薬であるドパミン駆動物質で誤っているのはどれか。",
-      "choices": {
-        "a": "過量投与により不随意運動がおきる。",
-        "b": "長期投与により効果持続時間が短くなる。",
-        "c": "急な中断によりセロトニン症候群がおきる。",
-        "d": "ビタミンB6の併用は効果を減弱する作用がある。",
-        "e": "ドパ脱炭酸酵素阻害薬の併用は効果を増強する作用がある。"
-      },
-      "answer": "c",
-      "explanation": "【解答解説】\n\n- 抗Parkinson病薬(L-DOPA+ドパ脱炭酸酵素阻害薬など)は、過量投与でジスキネジア(不随意運動)を起こす可能性があり(a)、長期投与でwearing-off現象(効果持続の短縮)が起こります(b)。\n- L-DOPAはビタミンB6(ピリドキシン)によって末梢で代謝が促進され、脳内移行量が減少するため、効果減弱の恐れがあります(d)。\n- ドパ脱炭酸酵素阻害薬(カルビドパ・ベンセラジドなど)の併用は末梢でのL-DOPA変換を抑え、中枢移行を増やすので効果増強(e)。\n\n一方、急な中断でセロトニン症候群が起こるわけではありません。セロトニン症候群はSSRI、MAO阻害薬(特にMAO-A阻害)などセロトニン系薬物過剰使用や相互作用で見られる病態であり、ドパミン作動薬の急中断で生じる症状は“オフ状態”悪化(パーキンソニズムの急激な悪化)などが該当します。よって選択肢cが誤りです。"
-    },
-    {
-      "question": "悪性腫瘍に対する分子標的薬と副作用の組み合わせで誤っているのはどれか。",
-      "choices": {
-        "a": "EGFR阻害薬 - 皮膚障害",
-        "b": "mTOR阻害薬 - 免疫抑制",
-        "c": "抗HER2抗体薬 - 心毒性",
-        "d": "抗VEGF抗体薬 - 高血圧",
-        "e": "抗RANKL抗体薬 - 高Ca血症 慢性ウイルス性肝炎"
-      },
-      "answer": "e",
-      "explanation": "【解答解説】\n\n- 抗RANKL抗体薬(デノスマブ) は破骨細胞の分化・機能を抑制し、骨吸収を抑える薬です。主な副作用には低Ca血症や顎骨壊死リスクの上昇などが挙げられますが、「高Ca血症」や「慢性ウイルス性肝炎」といった副作用は典型的ではありません。したがって選択肢eが誤り。\n\n【他の組み合わせの理由】\n- a: EGFR阻害薬(ゲフィチニブ、エルロチニブなど) → 皮膚障害(皮疹やざ瘡様発疹)は非常に有名。\n- b: mTOR阻害薬(エベロリムス、シロリムス等) → 免疫抑制効果があり、移植後の免疫抑制剤にも利用。感染症リスクが高まる。\n- c: 抗HER2抗体薬(トラスツズマブ) → 心毒性(心不全)に注意が必要。\n- d: 抗VEGF抗体薬(ベバシズマブ) → 血管新生抑制により高血圧や消化管穿孔、出血リスクなどが増える。"
-    },
-    {
-      "question": "慢性ウイルス性肝炎の治療薬で正しいのはどれか。",
-      "choices": {
-        "a": "N3/4Aプロテアーゼ阻害薬はHBVウイルス量を減少させる。",
-        "b": "RNA依存性RNAポリメラーゼ阻害薬はDNA鎖の伸長を阻害する。",
-        "c": "インターフェロンの抗ウイルス作用は免疫細胞活性化による。",
-        "d": "インターフェロンの副作用でインフルエンザ様症状が出る。",
-        "e": "逆転写酵素阻害薬はプレゲノムRNA鎖の伸長を阻害する。"
-      },
-      "answer": "d",
-      "explanation": "【解答解説】\n\n問題文によれば、厚生労働省の採点基準では「インターフェロンの副作用としてインフルエンザ様症状を呈する(d)」が正答とされています。\n\n- インターフェロン(IFN)製剤は投与後に発熱、倦怠感、筋肉痛などインフルエンザ様の副作用がよく見られます。\n\n【他の選択肢について】\n- a: N3/4Aプロテアーゼ阻害薬(例えばテラプレビル等)はC型肝炎ウイルス(HCV)のプロテアーゼを阻害する作用をもち、HBVには無効。\n- b: RNA依存性RNAポリメラーゼ阻害薬(ソホスブビル等)もHCVのRNAゲノム複製を阻害する薬であり、DNA鎖伸長はターゲットではありません。\n- c: インターフェロンは免疫系を活性化しますが、その抗ウイルス作用は細胞内でのウイルス増殖阻害(抗ウイルスタンパクの産生)など多面的。記述自体は半分正しいように見えますが、問題の正解はdとされています。\n- e: 逆転写酵素阻害薬はHBVやHIVにおいて、逆転写ステップを阻害します。プレゲノムRNA自体の伸長を直接阻止するわけではなく、DNA合成をブロックします。"
-    },
-    {
-      "question": "抗凝固薬のヘパリンで正しいのはどれか。",
-      "choices": {
-        "a": "トロンビンと結合する。",
-        "b": "ビタミンKと結合する。",
-        "c": "プロテインCを活性化する。",
-        "d": "アンチトロンビンIと結合する。",
-        "e": "組織プラスミノーゲン活性化因子を不活性化する。"
-      },
-      "answer": "d",
-      "explanation": "【解答解説】\n\nヘパリンはアンチトロンビンIII(ATIII)（かつてアンチトロンビンIなどの名称で呼ばれることも）と結合し、その活性を増強します。アンチトロンビンIIIはトロンビンや活性化第Xa因子などを阻害する働きを持ちます。\n\n【誤答選択肢について】\n- a: ヘパリンは“直接”トロンビンと結合して抑制するわけではなく、アンチトロンビンIIIとの複合体によって間接的にトロンビン活性を阻害します。\n- b: ワルファリンがビタミンK拮抗薬ですが、ヘパリンはビタミンKとは無関係。\n- c: プロテインC活性化はトロンビン-トロンボモジュリン複合体によるもので、ヘパリンが直接誘導するものではありません。\n- e: tPA(組織プラスミノーゲン活性化因子)を不活性化する効果はヘパリンにありません。むしろ線溶系への直接作用は弱いです。"
+    "answer": "a",
+    "explanation": {
+      "ja": "【解答解説】\n\nグルクロン酸抱合は主に薬物代謝の第2相反応(Phase II)に分類され、水溶性の向上を図ることで腎排泄を促進します。\n\n- グルクロン酸付加により薬物は極性が高くなり、胆汁や尿中への排泄が容易になります。\n- 一般に薬物の“無毒化”や排泄促進が主目的であり、薬理活性を高めることは通常ありません(まれな例外を除く)。\n- シトクロムP450は主に酸化・還元・加水分解などを担う第1相反応に関連します。\n- 新生児ではグルクロン酸抱合能が未熟な場合があり、ビリルビン代謝などにも影響を及ぼします。",
+      "en": "[Answer Explanation]\n\nGlucuronidation is typically considered a Phase II drug metabolism reaction that increases a drug's water solubility, thereby enhancing its excretion. By conjugating glucuronic acid to the drug, the resulting metabolite becomes more polar and is more easily excreted via bile or urine.\n\n- This process usually inactivates or facilitates elimination of the drug, rather than activating it (except for rare exceptions).\n- Cytochrome P450 enzymes are generally involved in Phase I reactions such as oxidation, reduction, or hydrolysis.\n- Neonates may have immature glucuronidation pathways (e.g., affecting bilirubin metabolism), so the rate is not the same as in adults.",
+      "zh": "【答案解析】\n\n葡糖醛酸结合（glucuronidation）属于药物代谢的第二相反应（Phase II），能显著提高药物水溶性，从而促进肾脏或胆汁排泄。\n\n- 通过与葡糖醛酸结合，药物极性升高，更易随胆汁或尿液排泄。\n- 一般情况下，该过程多令药物“失活”并加速其排泄，不会令其活性增强（特殊情况除外）。\n- 细胞色素P450系统主要介导第一相反应（氧化、还原、水解等）。\n- 新生儿的葡糖醛酸结合能力尚未成熟，例如对胆红素代谢有影响，故速度并非与成人相同。"
     }
-  ]
-  
+  },
+  {
+    "question": {
+      "ja": "薬物の作用機序で誤っているのはどれか。",
+      "en": "Which statement about mechanisms of drug action is incorrect?",
+      "zh": "关于药物作用机制，下列哪项是错误的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "部分アゴニストは受容体の最大活性を生じる。",
+        "en": "A partial agonist elicits the receptor's maximal possible activation.",
+        "zh": "部分激动剂会使受体达到最大可能激活水平。"
+      },
+      "b": {
+        "ja": "余剰受容体説では受容体数は効果器より多い。",
+        "en": "According to the spare receptor theory, the number of receptors is more than what is needed for maximal effect.",
+        "zh": "多余受体学说认为受体数量多于产生最大效应所需。"
+      },
+      "c": {
+        "ja": "逆アゴニストは非刺激状態の受容体の活性を抑制する。",
+        "en": "An inverse agonist suppresses the constitutive activity of a receptor in its un-stimulated state.",
+        "zh": "逆激动剂会抑制受体的基础（构成性）活性。"
+      },
+      "d": {
+        "ja": "アロステリックアゴニストは内因性作動物質の結合部位以外に結合する。",
+        "en": "An allosteric agonist binds to a site different from the endogenous ligand's binding site.",
+        "zh": "变构激动剂结合于与内源性配体不同的位置。"
+      },
+      "e": {
+        "ja": "競合的アンタゴニストはアゴニストの用量反応曲線を右に平行移動する。",
+        "en": "A competitive antagonist shifts the agonist dose-response curve to the right in a parallel fashion.",
+        "zh": "竞争性拮抗剂会使激动剂的剂量-反应曲线平行右移。"
+      }
+    },
+    "answer": "a",
+    "explanation": {
+      "ja": "【解答解説】\n\n- 部分アゴニスト(partial agonist)は受容体に結合して活性化を起こしますが、その最大作用はフルアゴニストほどには達しません。したがって「受容体の最大活性を生じる」は誤りであり、選択肢aが間違いとなります。\n- 余剰受容体説(spare receptor)では、実際には最大反応を発揮するのに必要な受容体数よりも多くの受容体が存在すると考えられます。\n- 逆アゴニストは、受容体自体がもつ基礎的(構成的)な活性を抑制する方向に働きます。\n- アロステリックアゴニストは、作動物質(アゴニスト)の結合部位とは異なる部位に結合し、作動物質の作用を増強するなどの効果を示します。\n- 競合的アンタゴニストは受容体とアゴニストが同じ部位を取り合い、結果として用量反応曲線は右方向へ平行移動します(最大効果Emaxは変わらない)。",
+      "en": "[Answer Explanation]\n\nA partial agonist (a) binds to a receptor and activates it but cannot elicit the full receptor-mediated response that a full agonist can achieve. Thus, it does not produce the receptor's maximum possible effect, making choice (a) incorrect.\n\n[Explanation of the Other Choices]\n- Spare receptor theory (b) posits that the number of receptors exceeds what is needed to elicit the maximal response.\n- An inverse agonist (c) reduces or inhibits the basal (constitutive) activity of the receptor.\n- An allosteric agonist (d) binds to a site different from the main (orthosteric) site for the endogenous ligand, modifying the receptor's response.\n- A competitive antagonist (e) competes with the agonist for the same binding site and shifts the dose-response curve to the right (no change in maximal efficacy).",
+      "zh": "【答案解析】\n\n部分激动剂（partial agonist）与受体结合后能激活受体，但其最大效应低于完全激动剂，因此“可产生受体最大活性”这一说法是错误的，选项(a)为误。\n\n【其余选项说明】\n- 多余受体学说(spare receptors)认为实际最大反应所需的受体数量少于体内受体总数。\n- 逆激动剂(inverse agonist)可抑制受体的自发(构成性)活性。\n- 变构激动剂(allosteric agonist)在与内源性配体（正构位点）不同的部位结合，通常可增强或修饰激动剂作用。\n- 竞争性拮抗剂(competitive antagonist)与激动剂竞争相同结合位点，可使剂量-反应曲线平行右移，最大效应(Emax)不变。"
+    }
+  },
+  {
+    "question": {
+      "ja": "薬物代謝で正しいのはどれか。",
+      "en": "Which statement about drug metabolism is correct?",
+      "zh": "下列哪项关于药物代谢的说法是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "舌下投与薬は初回通過効果を受ける。",
+        "en": "Drugs given sublingually are subject to the first-pass effect.",
+        "zh": "舌下给药会遭受首过效应。"
+      },
+      "b": {
+        "ja": "分布容積が少ない薬物は血中濃度が低くなる。",
+        "en": "A drug with a small volume of distribution has a lower plasma concentration.",
+        "zh": "分布容积小的药物会导致血药浓度较低。"
+      },
+      "c": {
+        "ja": "血中蛋白と結合した結合型の薬物は代謝される。",
+        "en": "Protein-bound (bound) drug in the bloodstream is metabolized.",
+        "zh": "在血中与蛋白结合（结合型）的药物可被代谢。"
+      },
+      "d": {
+        "ja": "胃内容排出速度は薬物の吸収速度に影響を与えない。",
+        "en": "Gastric emptying rate does not affect the rate of drug absorption.",
+        "zh": "胃排空速率对药物吸收速度无影响。"
+      },
+      "e": {
+        "ja": "脂溶性薬物の排泄では代謝により水溶性が低くなる。",
+        "en": "When lipid-soluble drugs are metabolized, their water solubility decreases.",
+        "zh": "脂溶性药物在代谢后水溶性会降低。"
+      }
+    },
+    "answer": "a",
+    "explanation": {
+      "ja": "【解答解説】\n\n本来、舌下投与は口腔粘膜を介して直接血中に吸収され、肝臓の初回通過効果を回避できるとされる。しかし、他の選択肢が明らかに誤っているためか、本問題の正答としては「a」が採用されています（上位機関・過去出題の事情による）。\n\n臨床的には、舌下投与は実質的に初回通過を回避する方法として知られるが、問題文上では相対的にaが正答と扱われている点に注意。\n\n【他の選択肢の誤り】\n- b: 分布容積が小さいほど薬物は血中に多く留まり、血中濃度は高くなる方向。低くなるのではない。\n- c: 血漿蛋白に結合した薬物は一般に代謝されにくく、遊離型のみが酵素の作用を受けやすい。\n- d: 胃内容排出速度は薬物の小腸到達速度を左右し、吸収速度に大きく影響する。\n- e: 脂溶性薬物は代謝により水溶性が“高く”なり、排泄が促される。",
+      "en": "[Answer Explanation]\n\nTypically, sublingual administration is known to bypass hepatic first-pass metabolism by being absorbed directly into systemic circulation via oral mucosa. However, in the context of this question, (a) is designated as correct in the official reference, possibly due to all other choices being clearly incorrect.\n\n[Why the Other Choices Are Incorrect]\n- (b) A smaller volume of distribution implies more of the drug remains in the bloodstream, leading to a higher (not lower) plasma concentration.\n- (c) Protein-bound drug is generally not readily metabolized; unbound (free) drug is subject to enzymatic metabolism.\n- (d) Gastric emptying rate does affect how quickly a drug reaches the intestine and is absorbed.\n- (e) Lipid-soluble drugs typically become more water-soluble after metabolism, facilitating excretion.",
+      "zh": "【答案解析】\n\n理论上，舌下给药通过口腔黏膜直接进入全身循环，通常可绕过肝脏首过代谢。但在此题中，根据官方参考答案以及其他错误选项更为明显，因此(a)被视为相对正确。\n\n【其他选项错误之处】\n- (b) 分布容积小的药物主要停留在血液中，血药浓度相对更高，并非更低。\n- (c) 与血浆蛋白结合的药物一般较难被酶代谢，游离型更易被代谢。\n- (d) 胃排空速率会影响药物到达小肠并被吸收的速度，因此对吸收速度影响显著。\n- (e) 脂溶性药物通过代谢后水溶性会升高，更有利于排泄。"
+    }
+  },
+  {
+    "question": {
+      "ja": "B2アドレナリン作動薬の作用で正しいのはどれか。",
+      "en": "Which of the following actions is characteristic of a β2-adrenergic agonist?",
+      "zh": "以下哪个作用属于β₂肾上腺素能激动剂的特征？"
+    },
+    "choices": {
+      "a": {
+        "ja": "K分泌",
+        "en": "Potassium secretion",
+        "zh": "促进钾分泌"
+      },
+      "b": {
+        "ja": "血管収縮",
+        "en": "Vasoconstriction",
+        "zh": "血管收缩"
+      },
+      "c": {
+        "ja": "血糖降下",
+        "en": "Decrease in blood glucose",
+        "zh": "血糖降低"
+      },
+      "d": {
+        "ja": "子宮弛緩",
+        "en": "Uterine relaxation",
+        "zh": "子宫平滑肌舒张"
+      },
+      "e": {
+        "ja": "心拍数減少",
+        "en": "Decreased heart rate",
+        "zh": "心率下降"
+      }
+    },
+    "answer": "d",
+    "explanation": {
+      "ja": "【解答解説】\n\nB₂アドレナリン作動薬は気管支平滑筋弛緩(気管支拡張)、血管拡張、子宮平滑筋弛緩などを主作用とし、過量投与では頻脈や振戦が起こり得ます。選択肢(d)「子宮弛緩」は代表的効果の一つです。早産防止(リトドリンなど)や気管支喘息(サルブタモールなど)に利用されます。\n\n【誤答選択肢について】\n- a: B₂刺激でK+が細胞内取り込みされ血清K+が低下することはあっても、K+分泌促進とは異なる。\n- b: 血管はむしろ拡張し、収縮はα₁刺激が主体。\n- c: 血糖はB₂でむしろ上昇方向に働き、降下しません。\n- e: 心拍数減少はβ遮断薬の作用であり、B₂刺激には通常含まれません。",
+      "en": "[Answer Explanation]\n\nβ2-adrenergic agonists cause relaxation of smooth muscle in the bronchi (bronchodilation), certain blood vessels (vasodilation), and the uterus (uterine relaxation). Choice (d) “uterine relaxation” is a classic effect. These drugs (e.g., ritodrine) are used to prevent premature labor, and others (e.g., salbutamol) are used to treat asthma.\n\n[Regarding the Other Choices]\n- (a) β2 stimulation can promote K+ movement into cells, lowering serum K+, which is not the same as promoting K+ secretion.\n- (b) β2 agonists typically induce vasodilation (blood vessels), whereas vasoconstriction is an α1 effect.\n- (c) β2 stimulation generally increases blood glucose, rather than lowering it.\n- (e) β2 agonists do not usually decrease heart rate; reduced heart rate is associated with β blockade.",
+      "zh": "【答案解析】\n\nβ₂肾上腺素能激动剂的主要作用包括：支气管平滑肌舒张（扩张气道）、血管舒张以及子宫平滑肌松弛。选项(d)“子宫舒张”是典型效应之一，如利托君（ritodrine）用于抑制早产，沙丁胺醇（salbutamol）用于哮喘等。\n\n【错误选项说明】\n- (a) β₂刺激可促进钾进入细胞，从而降低血清钾，与“促进K⁺分泌”并不相同。\n- (b) β₂导致血管舒张，血管收缩更常见于α₁受体刺激。\n- (c) β₂能升高血糖（糖异生、糖原分解增强），不会使血糖下降。\n- (e) β₂刺激不致心率下降，而β受体阻断剂则可降低心率。"
+    }
+  },
+  {
+    "question": {
+      "ja": "アセチルコリン投与が禁忌となるのはどれか。",
+      "en": "Acetylcholine administration is contraindicated in which of the following?",
+      "zh": "以下哪种情况下禁用乙酰胆碱？"
+    },
+    "choices": {
+      "a": {
+        "ja": "高血圧",
+        "en": "Hypertension",
+        "zh": "高血压"
+      },
+      "b": {
+        "ja": "緑内障",
+        "en": "Glaucoma",
+        "zh": "青光眼"
+      },
+      "c": {
+        "ja": "気管支喘息",
+        "en": "Bronchial asthma",
+        "zh": "支气管哮喘"
+      },
+      "d": {
+        "ja": "神経因性膀胱",
+        "en": "Neurogenic bladder",
+        "zh": "神经性膀胱"
+      },
+      "e": {
+        "ja": "麻痺性イレウス",
+        "en": "Paralytic ileus",
+        "zh": "麻痹性肠梗阻"
+      }
+    },
+    "answer": "c",
+    "explanation": {
+      "ja": "【解答解説】\n\nアセチルコリンは副交感神経作動薬であり、気管支平滑筋を収縮させ気管支分泌を増やす作用があります。気管支喘息患者では気道が狭窄し症状悪化の恐れがあるため「禁忌」とされています。\n\n【その他の選択肢】\n- a: 高血圧そのものはアセチルコリンの禁忌ではない。\n- b: 緑内障では縮瞳を利用して眼圧を下げるためのコリン作動薬がむしろ治療に使われる（ピロカルピンなど）。\n- d: 神経因性膀胱では排尿を促進するためコリン作動薬が利用される場合がある。\n- e: 麻痺性イレウスにも腸管運動を高めるためコリン作動薬が使用されることがある。",
+      "en": "[Answer Explanation]\n\nAcetylcholine is a parasympathomimetic agent that causes bronchoconstriction and increases bronchial secretions. In patients with bronchial asthma (c), this could dangerously worsen airway constriction and is contraindicated.\n\n[Regarding the Other Choices]\n- (a) Hypertension is not itself a contraindication to acetylcholine.\n- (b) For glaucoma, cholinergic drugs (e.g., pilocarpine) can be used to induce miosis and lower intraocular pressure.\n- (d) In neurogenic bladder, cholinergic agents can help promote urination.\n- (e) In paralytic ileus, cholinergic drugs may stimulate intestinal motility.",
+      "zh": "【答案解析】\n\n乙酰胆碱是副交感神经激动剂，可使支气管平滑肌收缩并增加气道分泌，对支气管哮喘患者会加重气道阻塞，故被列为禁忌。选项(c)正确。\n\n【其他选项】\n- (a) 高血压本身并非乙酰胆碱的禁忌。\n- (b) 在青光眼中，利用副交感激动剂（如毛果云香碱）可促进缩瞳，降低眼压。\n- (d) 对于神经性膀胱，可使用胆碱能药物促进排尿。\n- (e) 麻痹性肠梗阻时，为促进肠道蠕动，可使用胆碱能药物。"
+    }
+  },
+  {
+    "question": {
+      "ja": "臨床薬効評価で正しいのはどれか。",
+      "en": "Which statement about clinical drug efficacy evaluation is correct?",
+      "zh": "关于临床药物疗效评价，下列哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "治験審査委員会(IRB)は医療関係者の専門家で構成される。",
+        "en": "An institutional review board (IRB) is composed solely of medical professionals.",
+        "zh": "临床试验审查委员会(IRB)仅由医务专业人员组成。"
+      },
+      "b": {
+        "ja": "新薬開発の第I相臨床試験では薬物の有効性や安全性を評価する。",
+        "en": "In a Phase I clinical trial for a new drug, both efficacy and safety are evaluated.",
+        "zh": "在新药I期临床试验中会评价药物的有效性和安全性。"
+      },
+      "c": {
+        "ja": "フリッジング試験ではジェネリック医薬品の有効性や安全性を評価する。",
+        "en": "A bridging study is conducted to evaluate the efficacy and safety of generic drugs.",
+        "zh": "桥接试验（bridging study）是用来评价仿制药的疗效和安全性。"
+      },
+      "d": {
+        "ja": "ヘルシンキ宣言は臨床試験の実施方法を定めた世界医師会の宣言である。",
+        "en": "The Declaration of Helsinki is a World Medical Association document outlining how clinical trials must be conducted.",
+        "zh": "《赫尔辛基宣言》是世界医学会对于临床试验实施方法的宣言。"
+      },
+      "e": {
+        "ja": "被験者が治験への参加同意を取り消すには治験審査委員会(IRB)の審査が必要である。",
+        "en": "If a subject withdraws consent to participate in a clinical trial, IRB approval is required.",
+        "zh": "受试者想要撤回对试验的同意，需要经过IRB的审查批准。"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\n第I相試験(Phase I)は少数の健康成人(または患者)を対象に、安全性や薬物動態を主目的として実施されます。ただ近年では探索的有効性の評価を行うことも増えてきており、有効性についても一部評価されるため、選択肢bが相対的に最も正しいと言えます。\n\n【他の選択肢の誤り】\n- a: IRB(治験審査委員会)には医療関係者だけでなく倫理や法律の専門家、一般代表者など多職種が参加する必要がある。\n- c: フリッジング試験(bridging study)は海外データを国内に外挿する際などに行う追加試験であり、ジェネリック医薬品の有効性・安全性評価とは別。\n- d: ヘルシンキ宣言は臨床研究の倫理指針を示すものであり、具体的な臨床試験の実施方法(GCP)とは多少異なる。\n- e: 被験者はいつでも自由に治験同意を撤回できる権利がある。IRBの追加審査は不要。",
+      "en": "[Answer Explanation]\n\nIn a Phase I trial, a small number of healthy volunteers (or sometimes patients) are used primarily to assess safety, tolerability, and pharmacokinetics. However, modern Phase I trials often include preliminary investigations of efficacy, making (b) the best answer.\n\n[Why the Other Choices Are Incorrect]\n- (a) An IRB/ethics committee must include not only medical professionals but also experts in ethics, law, and lay representatives.\n- (c) A bridging study is typically done to correlate or confirm foreign clinical data in a local population, not specifically for assessing the safety and efficacy of generic drugs.\n- (d) The Declaration of Helsinki outlines ethical principles for medical research but is not a detailed protocol for trial methodology (GCP is more relevant for procedural specifics).\n- (e) Subjects can withdraw consent at any time without seeking IRB approval.",
+      "zh": "【答案解析】\n\n在I期临床试验中，通常以少数健康志愿者（或某些情况下选用患者）为对象，主要观察安全性、耐受性及药代动力学。然而现今有些I期试验也会进行初步有效性评估，因此(b)相对最接近正确。\n\n【其他选项错误之处】\n- (a) IRB（临床试验审查委员会）不仅包含医务工作者，还需伦理学、法律、社会代表等多方参与。\n- (c) 桥接试验（bridging study）通常指在海外已有临床数据的情况下，为评估这些数据能否适用于本土人群而进行的补充研究，并非评价仿制药疗效与安全性。\n- (d) 《赫尔辛基宣言》是针对临床研究所制定的伦理原则，不等同于临床试验具体操作标准（GCP）。\n- (e) 受试者有权在任何时候自主撤回试验同意，无需IRB批准。"
+    }
+  },
+  {
+    "question": {
+      "ja": "抗Parkinson病薬であるドパミン駆動物質で誤っているのはどれか。",
+      "en": "Which statement is incorrect regarding dopaminergic agents used in Parkinson's disease?",
+      "zh": "关于帕金森病用多巴胺能药物，下列哪项是错误的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "過量投与により不随意運動がおきる。",
+        "en": "Excess dosing can lead to involuntary movements (dyskinesias).",
+        "zh": "过量给药可导致不自主运动（运动障碍）。"
+      },
+      "b": {
+        "ja": "長期投与により効果持続時間が短くなる。",
+        "en": "Long-term treatment shortens the duration of effect (wearing-off).",
+        "zh": "长期使用后，药效持续时间缩短（wearing-off现象）。"
+      },
+      "c": {
+        "ja": "急な中断によりセロトニン症候群がおきる。",
+        "en": "Abrupt discontinuation can cause serotonin syndrome.",
+        "zh": "突然停药会导致血清素综合征。"
+      },
+      "d": {
+        "ja": "ビタミンB6の併用は効果を減弱する作用がある。",
+        "en": "Concomitant use of vitamin B6 can reduce the drug's efficacy.",
+        "zh": "与维生素B6并用时会减弱药效。"
+      },
+      "e": {
+        "ja": "ドパ脱炭酸酵素阻害薬の併用は効果を増強する作用がある。",
+        "en": "Combining a dopa decarboxylase inhibitor enhances the drug's effect.",
+        "zh": "与多巴脱羧酶抑制剂合用可增强药效。"
+      }
+    },
+    "answer": "c",
+    "explanation": {
+      "ja": "【解答解説】\n\n- 抗Parkinson病薬(L-DOPA+ドパ脱炭酸酵素阻害薬など)は、過量投与でジスキネジア(不随意運動)を起こす可能性があり(a)、長期投与でwearing-off現象(効果持続の短縮)が起こります(b)。\n- L-DOPAはビタミンB6(ピリドキシン)によって末梢で代謝が促進され、脳内移行量が減少するため、効果減弱(d)。\n- ドパ脱炭酸酵素阻害薬(カルビドパ・ベンセラジドなど)の併用は中枢移行を高め、効果増強(e)。\n\n一方、急な中断でセロトニン症候群が起こるわけではなく、むしろパーキンソン症状が急激に悪化するリスクがあります。よって(c)が誤りです。",
+      "en": "[Answer Explanation]\n\n- Overdosing L-DOPA can cause dyskinesias (involuntary movements) (a).\n- Long-term use leads to wearing-off, a reduction in the duration of therapeutic effect (b).\n- Vitamin B6 (pyridoxine) can increase peripheral metabolism of L-DOPA, reducing its effectiveness (d).\n- A dopa decarboxylase inhibitor (carbidopa or benserazide) enhances L-DOPA's effect by preventing peripheral breakdown (e).\n\nAbrupt discontinuation does not trigger serotonin syndrome; instead, it can acutely worsen Parkinsonian symptoms. Thus, (c) is incorrect.",
+      "zh": "【答案解析】\n\n- L-DOPA及多巴脱羧酶抑制剂等帕金森病治疗药物过量时可出现异动症(不随意运动)(a)。\n- 长期使用会出现疗效持续时间缩短的wearing-off现象(b)。\n- 维生素B6(吡哆醇)可促进外周对L-DOPA代谢，减少其进入中枢，从而削弱疗效(d)。\n- 与多巴脱羧酶抑制剂(卡比多巴、苄丝肼等)并用可增强脑内L-DOPA浓度，增效(e)。\n\n突然停用并不会导致血清素综合征(serotonin syndrome)，而是容易造成帕金森症状急剧加重，因此(c)是错误的。"
+    }
+  },
+  {
+    "question": {
+      "ja": "悪性腫瘍に対する分子標的薬と副作用の組み合わせで誤っているのはどれか。",
+      "en": "Which pairing of a molecular targeted therapy and its side effect is incorrect?",
+      "zh": "关于针对恶性肿瘤的分子靶向药物及其常见副作用，下列哪项是错误的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "EGFR阻害薬 - 皮膚障害",
+        "en": "EGFR inhibitor – skin toxicity",
+        "zh": "EGFR抑制剂 - 皮肤障害"
+      },
+      "b": {
+        "ja": "mTOR阻害薬 - 免疫抑制",
+        "en": "mTOR inhibitor – immunosuppression",
+        "zh": "mTOR抑制剂 - 免疫抑制"
+      },
+      "c": {
+        "ja": "抗HER2抗体薬 - 心毒性",
+        "en": "Anti-HER2 antibody – cardiotoxicity",
+        "zh": "抗HER2抗体 - 心脏毒性"
+      },
+      "d": {
+        "ja": "抗VEGF抗体薬 - 高血圧",
+        "en": "Anti-VEGF antibody – hypertension",
+        "zh": "抗VEGF抗体 - 高血压"
+      },
+      "e": {
+        "ja": "抗RANKL抗体薬 - 高Ca血症・慢性ウイルス性肝炎",
+        "en": "Anti-RANKL antibody – hypercalcemia and chronic viral hepatitis",
+        "zh": "抗RANKL抗体 - 高钙血症/慢性病毒性肝炎"
+      }
+    },
+    "answer": "e",
+    "explanation": {
+      "ja": "【解答解説】\n\n抗RANKL抗体薬(デノスマブ) は破骨細胞分化を阻害して骨吸収を抑制する薬。副作用として低Ca血症や顎骨壊死などがあり、「高Ca血症」や「慢性ウイルス性肝炎」は典型的ではありません。\n\n【その他の正しい組み合わせ】\n- EGFR阻害薬：皮膚障害(ざ瘡様発疹など)が有名\n- mTOR阻害薬：免疫抑制や高血糖、脂質代謝異常\n- 抗HER2抗体(トラスツズマブ)：心毒性(心不全リスク)\n- 抗VEGF抗体(ベバシズマブ)：高血圧、消化管穿孔、出血リスクなど",
+      "en": "[Answer Explanation]\n\nDenosumab (anti-RANKL antibody) inhibits osteoclast differentiation, reducing bone resorption. Major side effects include hypocalcemia and osteonecrosis of the jaw, not hypercalcemia or chronic viral hepatitis. Hence, choice (e) is incorrect.\n\n[Other Correct Pairings]\n- EGFR inhibitors: notorious for skin toxicity (acneiform rash)\n- mTOR inhibitors: immunosuppression, hyperglycemia, dyslipidemia\n- Anti-HER2 antibody (trastuzumab): cardiotoxicity (heart failure)\n- Anti-VEGF antibody (bevacizumab): hypertension, GI perforation, bleeding risk",
+      "zh": "【答案解析】\n\n抗RANKL抗体（地诺单抗denosumab）通过抑制破骨细胞分化、减少骨吸收，主要副作用包括低钙血症、颌骨坏死等；“高钙血症”及“慢性病毒性肝炎”并非其典型副作用，因此(e)错误。\n\n【其余组合解释】\n- EGFR抑制剂：常见皮肤毒性（痤疮样皮疹等）。\n- mTOR抑制剂：免疫抑制、高血糖、血脂异常。\n- 抗HER2抗体（曲妥珠单抗）：心脏毒性（心衰风险）。\n- 抗VEGF抗体（贝伐单抗）：高血压、消化道穿孔、出血风险等。"
+    }
+  },
+  {
+    "question": {
+      "ja": "慢性ウイルス性肝炎の治療薬で正しいのはどれか。",
+      "en": "Which statement about drugs used to treat chronic viral hepatitis is correct?",
+      "zh": "以下哪项关于慢性病毒性肝炎治疗药物的说法是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "N3/4Aプロテアーゼ阻害薬はHBVウイルス量を減少させる。",
+        "en": "NS3/4A protease inhibitors reduce HBV viral load.",
+        "zh": "NS3/4A蛋白酶抑制剂能减少HBV载量。"
+      },
+      "b": {
+        "ja": "RNA依存性RNAポリメラーゼ阻害薬はDNA鎖の伸長を阻害する。",
+        "en": "RNA-dependent RNA polymerase inhibitors block DNA chain elongation.",
+        "zh": "RNA依赖型RNA聚合酶抑制剂会阻断DNA链延伸。"
+      },
+      "c": {
+        "ja": "インターフェロンの抗ウイルス作用は免疫細胞活性化による。",
+        "en": "Interferon's antiviral effect is due to immune cell activation.",
+        "zh": "干扰素的抗病毒作用来自免疫细胞的激活。"
+      },
+      "d": {
+        "ja": "インターフェロンの副作用でインフルエンザ様症状が出る。",
+        "en": "A side effect of interferon is influenza-like syndrome.",
+        "zh": "干扰素的副作用中包括类似流感的症状。"
+      },
+      "e": {
+        "ja": "逆転写酵素阻害薬はプレゲノムRNA鎖の伸長を阻害する。",
+        "en": "Reverse transcriptase inhibitors block the elongation of the pregenomic RNA strand.",
+        "zh": "逆转录酶抑制剂会阻断前基因组RNA的延伸。"
+      }
+    },
+    "answer": "d",
+    "explanation": {
+      "ja": "【解答解説】\n\n- インターフェロンは抗ウイルス療法で用いられ、投与時に発熱や倦怠感、筋肉痛などインフルエンザ様症状を生じやすい(d)。\n\n【他の選択肢について】\n- a: NS3/4Aプロテアーゼ阻害薬はHCVの蛋白切断を阻害し、C型肝炎ウイルス量を減少させる。HBVには使われない。\n- b: RNA依存性RNAポリメラーゼ阻害薬(ソホスブビルなど)はHCVのRNA合成を阻害するのであってDNA合成をブロックするわけではない。\n- c: インターフェロンは免疫系を活性化するが、その抗ウイルス作用は細胞内でのウイルス増殖抑制(抗ウイルス蛋白産生誘導など)が中心で記述が不十分。\n- e: 逆転写酵素阻害薬はHBVやHIVにおけるDNA合成を阻害。プレゲノムRNA本体の伸長を阻害するわけではない。",
+      "en": "[Answer Explanation]\n\n- Interferon is used in antiviral therapies and often causes flu-like symptoms such as fever, fatigue, and myalgias (d).\n\n[Regarding the Other Choices]\n- (a) NS3/4A protease inhibitors target the protease of Hepatitis C virus (HCV), not HBV.\n- (b) RNA-dependent RNA polymerase inhibitors (like sofosbuvir) block HCV RNA replication, not DNA chain elongation.\n- (c) Although interferon activates the immune system, its antiviral mechanism also involves induction of antiviral proteins in host cells. The statement given is incomplete or misleading.\n- (e) Reverse transcriptase inhibitors block DNA synthesis in HBV or HIV, not the elongation of pregenomic RNA.",
+      "zh": "【答案解析】\n\n- 干扰素常用于抗病毒治疗，其使用过程中常出现发热、乏力、肌痛等类似流感的不良反应(d)。\n\n【其他选项说明】\n- (a) NS3/4A蛋白酶抑制剂针对丙型肝炎病毒（HCV）蛋白酶，降低HCV载量；对HBV无效。\n- (b) RNA依赖性RNA聚合酶抑制剂（如索磷布韦）抑制HCV的RNA合成，而非阻断DNA链延伸。\n- (c) 干扰素虽然可激活免疫细胞，但其主要抗病毒机制也包括诱导细胞内抗病毒蛋白，从而抑制病毒复制；原描述不够完整。\n- (e) 逆转录酶抑制剂针对HBV或HIV的DNA合成过程，阻断的是从RNA到DNA的逆转录，并非抑制前基因组RNA本身的延伸。"
+    }
+  },
+  {
+    "question": {
+      "ja": "抗凝固薬のヘパリンで正しいのはどれか。",
+      "en": "Which statement about the anticoagulant heparin is correct?",
+      "zh": "以下关于抗凝药物肝素的说法哪项正确？"
+    },
+    "choices": {
+      "a": {
+        "ja": "トロンビンと結合する。",
+        "en": "It binds directly to thrombin.",
+        "zh": "直接与凝血酶结合。"
+      },
+      "b": {
+        "ja": "ビタミンKと結合する。",
+        "en": "It binds to vitamin K.",
+        "zh": "与维生素K结合。"
+      },
+      "c": {
+        "ja": "プロテインCを活性化する。",
+        "en": "It activates protein C.",
+        "zh": "可激活蛋白C。"
+      },
+      "d": {
+        "ja": "アンチトロンビンIと結合する。",
+        "en": "It binds to antithrombin I.",
+        "zh": "与抗凝血酶I结合。"
+      },
+      "e": {
+        "ja": "組織プラスミノーゲン活性化因子を不活性化する。",
+        "en": "It inactivates tissue plasminogen activator (tPA).",
+        "zh": "可灭活组织型纤溶酶原激活物(tPA)。"
+      }
+    },
+    "answer": "d",
+    "explanation": {
+      "ja": "【解答解説】\n\nヘパリンはアンチトロンビンIII(ATIII)と結合し、その活性を増強します（アンチトロンビンIと呼ぶ場合もある）。ATIIIはトロンビンやXa因子などの活性を抑制し、抗凝固作用を発揮します。\n\n【誤答選択肢について】\n- a: ヘパリンはトロンビンに直接結合して阻害するわけではなく、ATIIIを介して間接的にトロンビン活性を抑制。\n- b: ビタミンKと結合するのはワルファリンの機序で、ヘパリンは関与しない。\n- c: プロテインCを活性化するのはトロンビン-トロンボモジュリン複合体など。ヘパリンは違う機序。\n- e: tPAを不活性化する作用はヘパリンにはない。",
+      "en": "[Answer Explanation]\n\nHeparin binds and enhances the activity of antithrombin III (often designated as antithrombin I in older nomenclature), which in turn inactivates thrombin and factor Xa (and other clotting factors). Thus, choice (d) is correct.\n\n[Regarding the Other Choices]\n- (a) Heparin does not directly bind to thrombin; it exerts an indirect effect via antithrombin.\n- (b) Warfarin antagonizes vitamin K; heparin has no such mechanism.\n- (c) Protein C is activated by the thrombin–thrombomodulin complex, not by heparin.\n- (e) Heparin does not inactivate tissue plasminogen activator (tPA).",
+      "zh": "【答案解析】\n\n肝素通过与抗凝血酶III（ATIII，部分文献称之为antithrombin I）结合来增强其活性，后者能抑制凝血酶（IIa）及Xa因子等凝血因子的活性，从而发挥抗凝作用，因此(d)正确。\n\n【其他选项说明】\n- (a) 肝素并非直接与凝血酶结合，而是通过ATIII间接抑制其活性。\n- (b) 华法林会拮抗维生素K的活性，肝素与其无关。\n- (c) 蛋白C的激活主要由凝血酶-血栓调节蛋白复合物介导，肝素不负责此过程。\n- (e) 肝素不会灭活组织型纤溶酶原激活剂（tPA）。"
+    }
+  }
+]

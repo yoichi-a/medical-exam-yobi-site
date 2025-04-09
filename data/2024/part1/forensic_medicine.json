@@ -1,123 +1,402 @@
 [
-    {
-      "question": "死後経過時間の推定に有用でないのはどれか。",
-      "choices": {
-        "a": "直腸温",
-        "b": "角膜の混濁",
-        "c": "死斑の色調",
-        "d": "腐敗血管網",
-        "e": "死後硬直の程度"
-      },
-      "answer": "c",
-      "explanation": "【解答解説】\n\n死後経過時間（PMI）の推定に用いられる代表的な所見としては、直腸温の測定や角膜の混濁の進行、死後硬直の出現・進展程度などが挙げられます。また、遺体の腐敗状態（腐敗血管網の形成など）も大まかな時間推定に役立ちます。\n\n一方、死斑（死後に皮膚表面へ浮き出す血液貯留）の色調は、周囲環境や照明条件によって見え方が大きく変化しやすく、個体差や死後の保管環境によっても変化しやすいため、死後経過時間の客観的な指標としては扱いにくいとされています。\n\n【周辺知識】\n- 直腸温は一般に死後2～3時間で急激に低下し、その後は緩やかに下がっていくため、ある程度の時間範囲を推測できます。\n- 死後硬直はおよそ数時間後に始まり、12時間前後で全身に及んで強固化し、さらに12時間程度で弛緩するという経過をたどることが多いです（環境や個体差による変動あり）。\n- 角膜混濁は室温や遺体の開眼状態によって進行が異なるので、合わせて注意が必要です。"
+  {
+    "question": {
+      "ja": "死後経過時間の推定に有用でないのはどれか。",
+      "en": "Which of the following is not useful for estimating the postmortem interval?",
+      "zh": "以下哪项对推定死亡后经过的时间无用？"
     },
-    {
-      "question": "死亡診断書で正しいのはどれか。",
-      "choices": {
-        "a": "病院が届け出る。",
-        "b": "部検所は記載しない。",
-        "c": "外因死では発行できない。",
-        "d": "主治医以外は記載できない。",
-        "e": "死因の欄に「老衰」と書いてよい。"
+    "choices": {
+      "a": {
+        "ja": "直腸温",
+        "en": "Rectal temperature",
+        "zh": "直肠温度"
       },
-      "answer": "d",
-      "explanation": "【解答解説】\n\n死亡診断書は、実際に死亡した患者の診療にあたり、経過を把握していた医師（通常は主治医）が、死亡の事実と死因を記載する文書です。主治医以外が記載する場合は、正確な死亡経過や直接死因を把握していない可能性があり、不適切とされます。\n\n【その他の選択肢について】\n- a 病院そのものが届け出をするのではなく、記載および署名・押印は医師個人が行います。\n- b 死亡診断書の部検所欄（病理解剖などを行う部門を示す欄）も、必要に応じて記載する場合があります。\n- c 外因死（事故・自殺・他殺）の可能性がある場合でも、警察の許可や法医学的介入後に死亡診断書（あるいは死体検案書）を作成するケースがあります。外因死だからといって必ず発行不可になるわけではありません。\n- e 高齢者が死亡した場合、「老衰」と診断できることはありますが、医学的に他の原因が無いなどの条件が満たされる必要があります。安易に「老衰」と書くべきではなく、慎重な判断が求められます。"
+      "b": {
+        "ja": "角膜の混濁",
+        "en": "Corneal clouding",
+        "zh": "角膜混浊"
+      },
+      "c": {
+        "ja": "死斑の色調",
+        "en": "Coloration of livor mortis",
+        "zh": "尸斑的颜色"
+      },
+      "d": {
+        "ja": "腐敗血管網",
+        "en": "Marbling (putrefactive venous pattern)",
+        "zh": "腐败血管网"
+      },
+      "e": {
+        "ja": "死後硬直の程度",
+        "en": "Degree of rigor mortis",
+        "zh": "尸僵硬度"
+      }
     },
-    {
-      "question": "死亡診断書の虚偽記載が規定されている法律はどれか。",
-      "choices": {
-        "a": "刑法",
-        "b": "民法",
-        "c": "医師法",
-        "d": "医療法",
-        "e": "死体解剖保存法"
-      },
-      "answer": "a",
-      "explanation": "【解答解説】\n\n死亡診断書は公的書類としての性格を持つため、虚偽の記載は刑法の「公文書偽造罪」や「虚偽有印公文書作成罪」などに該当しうると解釈されています。重大な刑事罰を受ける可能性があり、医師法においても業務停止や免許取消しなど、行政処分の対象となる可能性があります。\n\n【周辺知識】\n- 医療法や医師法は、医療提供体制や医師としての業務遂行上の規範を定める法律ですが、虚偽記載の刑事罰については刑法が根拠となります。\n- 死体解剖保存法は法医解剖などに関する規定であり、死亡診断書の虚偽記載そのものを直接取り締まる法ではありません。"
-    },
-    {
-      "question": "挫傷で正しいのはどれか。",
-      "choices": {
-        "a": "鋭器損傷である。",
-        "b": "創底に骨折を伴う。",
-        "c": "皮膚割線に平行に生じる。",
-        "d": "創洞面に架橋形成がある。",
-        "e": "皮膚の牽引によって生じる。"
-      },
-      "answer": "d",
-      "explanation": "【解答解説】\n\nここで扱われている「挫傷」は、一般に鈍器などの打撃によって皮膚や組織が裂かれた「挫創（ラセレーション）」のことを指すと考えられます。挫創の特徴は、創の内部（創洞面）に皮下組織や小血管などの「架橋（ブリッジング）」が残る点です。鋭器損傷（切創や刺創）と区別するための重要な所見とされています。\n\n【その他の選択肢について】\n- a 鋭器損傷は切創や刺創。挫傷は鈍器損傷であり、皮膚表面が裂けても創縁は不整形になります。\n- b 創底に骨折を伴うかどうかは外力の大きさや部位によって異なり、挫傷特有の所見ではありません。\n- c 切創などでしばしば「皮膚割線に沿うと裂開しにくい」などはありますが、挫創は必ずしも皮膚割線と関連しません。\n- e 皮膚の牽引による損傷（剥脱創など）とは別概念です。\n\n【周辺知識】\n- 鈍的外力による創傷では、周辺組織の損傷や皮下出血などが顕著になりやすく、外観だけでは鋭器損傷との鑑別が難しい場合があります。創洞面の観察が法医鑑定の重要な手がかりとなります。"
-    },
-    {
-      "question": "定型縊頸で閉塞する可能性がないのはどれか。",
-      "choices": {
-        "a": "気管",
-        "b": "総頸動脈",
-        "c": "椎骨動脈",
-        "d": "内頸静脈",
-        "e": "腕頭動脈"
-      },
-      "answer": "e",
-      "explanation": "【解答解説】\n\n定型縊頸（いわゆる首吊り）が行われた場合、縄（索条）のかかる位置により、気管や総頸動脈、内頸静脈、椎骨動脈などが圧迫されて呼吸不全や脳血流遮断が生じます。しかし、腕頭動脈（大動脈弓から分岐し、右総頸動脈と右鎖骨下動脈に分かれる大血管）は解剖学的位置の関係上、通常の定型縊頸では圧迫されにくいとされます。\n\n【周辺知識】\n- 首吊りによる死因は、頸部圧迫による脳血流遮断が主とされていますが、完全閉塞がどの血管に及ぶかは姿勢や索条のかかり方次第で変動します。\n- 定型縊頸とは、結び目が後頭部付近に位置し、顎の下から後頭部に向けて吊り上げられる形を指すことが多いです。非定型縊頸は結び目が横や前にずれるなど、定型と異なる位置になるものをいいます。"
-    },
-    {
-      "question": "頭蓋底の輪状骨折が生じる可能性があるのはどれか。",
-      "choices": {
-        "a": "金属バットで殴打される。",
-        "b": "手拳で顔面を殴打される。",
-        "c": "転倒して後頭部を打撲する。",
-        "d": "倒れたピアノの下敷きになる。",
-        "e": "高所から墜落して臀部から叩きつけられる。"
-      },
-      "answer": "e",
-      "explanation": "【解答解説】\n\n頭蓋底の輪状骨折は、脊柱を介して強い軸圧が頭蓋骨に伝わる際に生じやすい骨折です。高所からの墜落で臀部から地面に激突した場合、衝撃は骨盤から脊柱を経由して頭蓋底にまで波及し、輪状骨折を引き起こす可能性があります。\n\n【その他の状況について】\n- 金属バットでの殴打（a）や顔面殴打（b）、転倒で後頭部をぶつける（c）などは、局所に強い衝撃が加わりますが、必ずしも輪状骨折が起こるとは限りません。\n- 大型の物体の下敷きになる（d）場合も、衝撃の伝わり方によっては頭部骨折を伴うことがありますが、輪状骨折特有のメカニズム（軸圧負荷）とは異なります。"
-    },
-    {
-      "question": "感電で正しいのはどれか。",
-      "choices": {
-        "a": "周波数が高いほど危険である。",
-        "b": "交流よりも直流の方が危険である。",
-        "c": "電気抵抗が最も低いのは皮膚である。",
-        "d": "電流斑は電流の流入部のみに生じる。",
-        "e": "傷害の程度は電流に依存する。"
-      },
-      "answer": "e",
-      "explanation": "【解答解説】\n\n感電による身体損傷や致死性は、主に体内を流れる電流量（アンペア数）によって左右されます。周波数や直流・交流の違い、電圧なども影響を及ぼしますが、最終的に流れる電流の大きさこそが組織障害や致死リスクを決定づける最大要因です。\n\n【その他の選択肢について】\n- 感電事故で比較的危険なのは一般家庭用交流（50～60Hz）の範囲とされ、極端に高い周波数では感電リスクのパターンが異なります。\n- 直流と交流を比較すると、一般に同じ電圧でも交流の方が危険とされる場合が多いです。\n- 電気抵抗が最も低い組織は体内の血液や筋肉などで、皮膚はむしろ抵抗が高い層に入ります。\n- 電流斑（電気マーク）は流入部・流出部の両方にみられる可能性があり、流れた経路上にも認められる場合があります。"
-    },
-    {
-      "question": "覚醒剤の乱用歴を判断するのに適切な検体はどれか。",
-      "choices": {
-        "a": "爪",
-        "b": "尿",
-        "c": "血液",
-        "d": "唾液",
-        "e": "毛髪"
-      },
-      "answer": "e",
-      "explanation": "【解答解説】\n\n覚醒剤などの薬物使用歴を長期間にわたって調べるには、毛髪が適切な検体とされます。毛髪は血液や尿と比べて、薬物が長く蓄積され、一定期間の使用状況をさかのぼって検出できる点が大きな特徴です。\n\n【その他の検体について】\n- 尿は使用後数日から1週間程度の薬物使用が検出可能です。短期的な使用確認には優れていますが、長期歴の把握には不向きです。\n- 血液や唾液は、検出期間がさらに短く、主に直近の使用を捉えるために利用されます。\n- 爪も長期的蓄積をみる方法として研究されることがありますが、毛髪検査ほど確立されてはいません。"
-    },
-    {
-      "question": "死体検案で頭部外傷を示唆する所見で誤っているのはどれか。",
-      "choices": {
-        "a": "耳出血",
-        "b": "角膜混濁",
-        "c": "血性髄液",
-        "d": "バトル徴候",
-        "e": "ブラックアイ"
-      },
-      "answer": "b",
-      "explanation": "【解答解説】\n\n頭部外傷が疑われる特徴的な所見には、以下が挙げられます。\n- 耳出血：側頭骨骨折などで耳から出血が認められることがあります。\n- 血性髄液：脳脊髄液に血液が混在しているケースで、頭蓋内出血や頭蓋底骨折を示唆します。\n- バトル徴候（Battle’s sign）：耳の後ろの乳様突起部周囲に青紫色の皮下出血斑が現れる現象で、頭蓋底骨折の存在を疑う所見です。\n- ブラックアイ（パンダの目、Raccoon eyes）：両眼周囲が出血斑で黒ずんで見える所見で、これも頭蓋底骨折を示唆します。\n\n角膜混濁（b）は死後変化やドライアイ状態、保存条件などでも見られる現象で、頭部外傷の有無にかかわらず起こり得るため、直接的な外傷所見とは言えません。"
-    },
-    {
-      "question": "死因究明に関して法医解剖と比較して死後CTの有用性が高いのはどれか。",
-      "choices": {
-        "a": "脊髄損傷",
-        "b": "緊張性気胸",
-        "c": "頭蓋底骨折",
-        "d": "大動脈解離",
-        "e": "腸間膜損傷"
-      },
-      "answer": "b",
-      "explanation": "【解答解説】\n\n死後CT（オートプシー・イメージング）は、遺体に対し解剖を行わなくても速やかに画像評価できる手法です。緊張性気胸のように胸腔内の空気貯留や肺虚脱の確認はCT画像によって容易に把握できます。死因に直結する病態が可視化しやすいため、解剖の前段階や補助的手段として高い有用性があります。\n\n【その他の選択肢について】\n- 脊髄損傷はCTでも確認が可能ですが、軟部組織や神経系の詳細な評価にはMRIや直接的な解剖観察がより有用です。\n- 頭蓋底骨折（c）や大動脈解離（d）はCTで判別可能ですが、法医解剖による直接的所見確認が重視される場合もあります。\n- 腸間膜損傷（e）はガスや血液貯留などの間接所見で推測はできますが、微細な断裂や出血巣は解剖による直接観察の方が正確です。"
+    "answer": "c",
+    "explanation": {
+      "ja": "【解答解説】\n\n死後経過時間（PMI）の推定に用いられる代表的な所見としては、直腸温の測定や角膜の混濁の進行、死後硬直の出現・進展程度などが挙げられます。また、遺体の腐敗状態（腐敗血管網の形成など）も大まかな時間推定に役立ちます。\n\n一方、死斑（死後に皮膚表面へ浮き出す血液貯留）の色調は、周囲環境や照明条件によって見え方が大きく変化しやすく、個体差や死後の保管環境によっても変化しやすいため、死後経過時間の客観的な指標としては扱いにくいとされています。\n\n【周辺知識】\n- 直腸温は一般に死後2～3時間で急激に低下し、その後は緩やかに下がっていくため、ある程度の時間範囲を推測できます。\n- 死後硬直はおよそ数時間後に始まり、12時間前後で全身に及んで強固化し、さらに12時間程度で弛緩するという経過をたどることが多いです（環境や個体差による変動あり）。\n- 角膜混濁は室温や遺体の開眼状態によって進行が異なるので、合わせて注意が必要です。",
+      "en": "[Answer Explanation]\n\nCommon indicators used to estimate the postmortem interval (PMI) include measuring the rectal temperature, observing the progression of corneal clouding, and assessing the onset and progression of rigor mortis. Additionally, the degree of decomposition (such as marbling) can provide a rough time frame.\n\nHowever, the coloration of livor mortis (postmortem hypostasis) is greatly influenced by environmental and lighting conditions, as well as individual factors and storage conditions after death. Thus, it is not considered a reliable, objective indicator of PMI.\n\n[Additional Information]\n- Rectal temperature generally drops rapidly for about 2–3 hours after death and then continues to fall more gradually, allowing a rough estimate of the time since death.\n- Rigor mortis typically starts a few hours postmortem, reaches its maximum around 12 hours, and then dissipates over another 12 hours (though this can vary based on the environment and individual differences).\n- The rate of corneal clouding depends on ambient temperature and whether the eyes are open or closed, so these factors must also be taken into account.",
+      "zh": "【答案解析】\n\n用于推定死亡后经过时间（PMI）的主要指标包括测量直肠温度、观察角膜混浊的进展以及评估尸僵的出现与发展程度。此外，遗体腐败程度（例如腐败血管网的形成）也能大致帮助推测死亡时间。\n\n然而，尸斑（死后皮下血液淤积形成）的颜色容易受到环境、光线条件以及个体差异和死后保存条件的影响，因此难以作为估算死亡时间的客观指标。\n\n【相关知识】\n- 直肠温度通常在死亡后2～3小时内迅速下降，随后缓慢下降，可大致推断死亡时间范围。\n- 尸僵通常在死亡后数小时出现，大约在12小时左右到达全身并变得强固，再过大约12小时左右开始缓解（受环境与个体因素影响而变化）。\n- 角膜混浊随室温以及遗体眼睑是否闭合而进展不同，判断时需结合这些条件进行考虑。"
     }
-  ]
-  
+  },
+  {
+    "question": {
+      "ja": "死亡診断書で正しいのはどれか。",
+      "en": "Which statement about the death certificate is correct?",
+      "zh": "关于死亡诊断书，下列哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "病院が届け出る。",
+        "en": "It is filed by the hospital.",
+        "zh": "由医院进行申报。"
+      },
+      "b": {
+        "ja": "部検所は記載しない。",
+        "en": "There is no need to record the department of pathology/autopsy.",
+        "zh": "无需记录病理检验（部检所）信息。"
+      },
+      "c": {
+        "ja": "外因死では発行できない。",
+        "en": "It cannot be issued in cases of death from external causes.",
+        "zh": "若因外部原因死亡，则无法开具死亡诊断书。"
+      },
+      "d": {
+        "ja": "主治医以外は記載できない。",
+        "en": "No one other than the attending physician may fill it out.",
+        "zh": "除主治医外，其他人无权填写。"
+      },
+      "e": {
+        "ja": "死因の欄に「老衰」と書いてよい。",
+        "en": "It is acceptable to write “old age” (natural senescence) under cause of death.",
+        "zh": "在死因一栏中可填写“老衰”。"
+      }
+    },
+    "answer": "d",
+    "explanation": {
+      "ja": "【解答解説】\n\n死亡診断書は、実際に死亡した患者の診療にあたり、経過を把握していた医師（通常は主治医）が、死亡の事実と死因を記載する文書です。主治医以外が記載する場合は、正確な死亡経過や直接死因を把握していない可能性があり、不適切とされます。\n\n【その他の選択肢について】\n- a 病院そのものが届け出をするのではなく、記載および署名・押印は医師個人が行います。\n- b 死亡診断書の部検所欄（病理解剖などを行う部門を示す欄）も、必要に応じて記載する場合があります。\n- c 外因死（事故・自殺・他殺）の可能性がある場合でも、警察の許可や法医学的介入後に死亡診断書（あるいは死体検案書）を作成するケースがあります。外因死だからといって必ず発行不可になるわけではありません。\n- e 高齢者が死亡した場合、「老衰」と診断できることはありますが、医学的に他の原因が無いなどの条件が満たされる必要があります。安易に「老衰」と書くべきではなく、慎重な判断が求められます。",
+      "en": "[Answer Explanation]\n\nA death certificate is a document completed by the physician who actually attended the patient and was familiar with the clinical course (usually the attending physician). When completed by someone other than the attending physician, there may be insufficient knowledge of the actual course of death and the direct cause, which is generally considered inappropriate.\n\n[Regarding the Other Choices]\n- (a) It is not the hospital as an institution that files it; rather, the individual physician fills it out, signs it, and stamps it.\n- (b) The department or section that performed an autopsy (if applicable) can be recorded in the designated space, if necessary.\n- (c) Even in cases of potential external causes of death (accident, suicide, homicide), it is possible to issue a death certificate (or a postmortem certificate) following police clearance and forensic procedures. External causes do not automatically preclude its issuance.\n- (e) Writing “old age” as the cause of death can be acceptable for elderly patients, provided no other medical factors are identified. However, this must be determined with caution and only when justified clinically.",
+      "zh": "【答案解析】\n\n死亡诊断书应由对患者病情及死亡经过有充分了解的医师（通常是主治医生）填写，记载其死亡事实及死因。如果由非主治医师填写，则可能对实际死亡过程和直接死因不了解，因此通常被认为不合适。\n\n【其他选项】\n- (a) 并非医院整体申报，而是由负责诊治的医师个人填写并签字、盖章。\n- (b) 死亡诊断书上关于进行病理检验或解剖的部门（部检所）一栏，在必要时也可以填写。\n- (c) 即使是外因死（如事故、自杀、他杀），在警方允许或法医学介入后，也可能由医师开具死亡诊断书（或死体检案书），并非一定不能开具。\n- (e) 对于高龄死亡患者，如无其他明确医学原因时，确有可能填写“老衰”，但应在排除其他死因并谨慎判断后再行填写。"
+    }
+  },
+  {
+    "question": {
+      "ja": "死亡診断書の虚偽記載が規定されている法律はどれか。",
+      "en": "Which law stipulates penalties for falsifying a death certificate?",
+      "zh": "下列哪部法律规定了对虚假记载死亡诊断书的处罚？"
+    },
+    "choices": {
+      "a": {
+        "ja": "刑法",
+        "en": "Penal Code (Criminal Law)",
+        "zh": "刑法"
+      },
+      "b": {
+        "ja": "民法",
+        "en": "Civil Code",
+        "zh": "民法"
+      },
+      "c": {
+        "ja": "医師法",
+        "en": "Medical Practitioners’ Act",
+        "zh": "医师法"
+      },
+      "d": {
+        "ja": "医療法",
+        "en": "Medical Care Act",
+        "zh": "医疗法"
+      },
+      "e": {
+        "ja": "死体解剖保存法",
+        "en": "Act on Dissection and Preservation of Corpses",
+        "zh": "死体解剖保存法"
+      }
+    },
+    "answer": "a",
+    "explanation": {
+      "ja": "【解答解説】\n\n死亡診断書は公的書類としての性格を持つため、虚偽の記載は刑法の「公文書偽造罪」や「虚偽有印公文書作成罪」などに該当しうると解釈されています。重大な刑事罰を受ける可能性があり、医師法においても業務停止や免許取消しなど、行政処分の対象となる可能性があります。\n\n【周辺知識】\n- 医療法や医師法は、医療提供体制や医師としての業務遂行上の規範を定める法律ですが、虚偽記載の刑事罰については刑法が根拠となります。\n- 死体解剖保存法は法医解剖などに関する規定であり、死亡診断書の虚偽記載そのものを直接取り締まる法ではありません。",
+      "en": "[Answer Explanation]\n\nA death certificate is considered a type of official document. Falsifying it can fall under crimes specified in the Penal Code (such as “forgery of official documents” or “making false entries in officially sealed documents”). Convictions can result in serious criminal penalties. Under the Medical Practitioners’ Act, administrative punishments such as suspension or revocation of one’s license may also apply.\n\n[Additional Information]\n- The Medical Care Act and Medical Practitioners’ Act set regulations for healthcare provision and medical practice, but criminal penalties for falsification of documents come from the Penal Code.\n- The Act on Dissection and Preservation of Corpses covers regulations regarding autopsies and the handling of bodies, and does not directly address falsification of death certificates.",
+      "zh": "【答案解析】\n\n死亡诊断书属于具有公文性质的文件，若在其中进行虚假记载，可能构成刑法中“公文书伪造罪”或“伪造有印公文书罪”等，面临严重的刑事处罚。此外，根据《医师法》，还可能面临停业或吊销执照等行政处分。\n\n【相关知识】\n- 《医疗法》和《医师法》主要规定了医疗服务体系和医师执业的相关规范，但对伪造文书的刑事处罚主要依据《刑法》。\n- 《死体解剖保存法》侧重于法医解剖和遗体处置的相关规定，并未直接规定对虚假填写死亡诊断书的处罚。"
+    }
+  },
+  {
+    "question": {
+      "ja": "挫傷で正しいのはどれか。",
+      "en": "Which statement about laceration (contused wound) is correct?",
+      "zh": "以下关于挫伤（皮肤或组织被钝器撕裂性损伤）哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "鋭器損傷である。",
+        "en": "It is an injury caused by a sharp instrument.",
+        "zh": "由锐器所致的损伤。"
+      },
+      "b": {
+        "ja": "創底に骨折を伴う。",
+        "en": "It is always accompanied by a fracture at the wound base.",
+        "zh": "在创口底部必定伴有骨折。"
+      },
+      "c": {
+        "ja": "皮膚割線に平行に生じる。",
+        "en": "It occurs parallel to Langer’s cleavage lines of the skin.",
+        "zh": "沿皮肤割线平行产生。"
+      },
+      "d": {
+        "ja": "創洞面に架橋形成がある。",
+        "en": "Bridging structures remain in the wound cavity (bridging fibers).",
+        "zh": "在创口洞面可见组织架桥。"
+      },
+      "e": {
+        "ja": "皮膚の牽引によって生じる。",
+        "en": "It is caused by traction on the skin.",
+        "zh": "由对皮肤的牵拉而造成。"
+      }
+    },
+    "answer": "d",
+    "explanation": {
+      "ja": "【解答解説】\n\nここで扱われている「挫傷」は、一般に鈍器などの打撃によって皮膚や組織が裂かれた「挫創（ラセレーション）」のことを指すと考えられます。挫創の特徴は、創の内部（創洞面）に皮下組織や小血管などの「架橋（ブリッジング）」が残る点です。鋭器損傷（切創や刺創）と区別するための重要な所見とされています。\n\n【その他の選択肢について】\n- a 鋭器損傷は切創や刺創。挫傷は鈍器損傷であり、皮膚表面が裂けても創縁は不整形になります。\n- b 創底に骨折を伴うかどうかは外力の大きさや部位によって異なり、挫傷特有の所見ではありません。\n- c 切創などでしばしば「皮膚割線に沿うと裂開しにくい」などはありますが、挫創は必ずしも皮膚割線と関連しません。\n- e 皮膚の牽引による損傷（剥脱創など）とは別概念です。\n\n【周辺知識】\n- 鈍的外力による創傷では、周辺組織の損傷や皮下出血などが顕著になりやすく、外観だけでは鋭器損傷との鑑別が難しい場合があります。創洞面の観察が法医鑑定の重要な手がかりとなります。",
+      "en": "[Answer Explanation]\n\n“Contused laceration” generally refers to tearing of the skin or tissue by blunt force. One hallmark of a laceration is the presence of bridging structures (subcutaneous tissue or small vessels) spanning the wound cavity, a key feature distinguishing it from sharp-force injuries such as incisions or stab wounds.\n\n[Regarding the Other Choices]\n- (a) Sharp-force injuries include cuts and stabs. Lacerations, caused by blunt trauma, typically have irregular wound edges.\n- (b) Whether a fracture exists at the wound base depends on the force and location. It is not a defining characteristic.\n- (c) While certain incised wounds may appear less gaping if aligned with Langer’s lines, lacerations are not necessarily related to these skin tension lines.\n- (e) Traction injuries of the skin (such as avulsion wounds) differ from blunt-force lacerations.\n\n[Additional Information]\n- Blunt-force trauma can cause extensive injury to surrounding tissues (including subcutaneous hemorrhage), making a superficial examination alone insufficient to differentiate from sharp-force injuries. Examining the wound cavity for bridging fibers is critical in forensic assessment.",
+      "zh": "【答案解析】\n\n此处所说的“挫伤”通常是指钝器打击导致皮肤或组织被撕裂而形成的挫创（laceration）。其特点是创口内部（创洞面）残存皮下组织或小血管等“架桥（bridging）”结构，这是区分其与锐器损伤（切创、刺创）的关键标志。\n\n【其他选项】\n- (a) 锐器损伤是指切创或刺创，而挫伤由钝器作用所致，创口边缘通常呈不规则状。\n- (b) 是否伴有骨折取决于外力大小和部位，并非挫伤特有征象。\n- (c) 切创有时与皮肤割线（Langer线）平行会减少创口裂开，但挫创并不一定与皮肤割线相关。\n- (e) 皮肤牵拉导致的剥脱创等与钝器撕裂形成的挫创不是同一概念。\n\n【相关知识】\n- 钝器作用导致的外伤常可造成周围组织损伤或皮下出血，外观上有时难以与锐器损伤区分，需在法医鉴定中通过观察创口内部是否存在组织架桥来加以鉴别。"
+    }
+  },
+  {
+    "question": {
+      "ja": "定型縊頸で閉塞する可能性がないのはどれか。",
+      "en": "In a typical hanging, which of the following vessels or structures is least likely to be compressed?",
+      "zh": "在典型性上吊（定型縊颈）中，下列哪条血管或结构最不可能被压迫？"
+    },
+    "choices": {
+      "a": {
+        "ja": "気管",
+        "en": "Trachea",
+        "zh": "气管"
+      },
+      "b": {
+        "ja": "総頸動脈",
+        "en": "Common carotid artery",
+        "zh": "颈总动脉"
+      },
+      "c": {
+        "ja": "椎骨動脈",
+        "en": "Vertebral artery",
+        "zh": "椎动脉"
+      },
+      "d": {
+        "ja": "内頸静脈",
+        "en": "Internal jugular vein",
+        "zh": "颈内静脉"
+      },
+      "e": {
+        "ja": "腕頭動脈",
+        "en": "Brachiocephalic trunk",
+        "zh": "头臂干"
+      }
+    },
+    "answer": "e",
+    "explanation": {
+      "ja": "【解答解説】\n\n定型縊頸（いわゆる首吊り）が行われた場合、縄（索条）のかかる位置により、気管や総頸動脈、内頸静脈、椎骨動脈などが圧迫されて呼吸不全や脳血流遮断が生じます。しかし、腕頭動脈（大動脈弓から分岐し、右総頸動脈と右鎖骨下動脈に分かれる大血管）は解剖学的位置の関係上、通常の定型縊頸では圧迫されにくいとされます。\n\n【周辺知識】\n- 首吊りによる死因は、頸部圧迫による脳血流遮断が主とされていますが、完全閉塞がどの血管に及ぶかは姿勢や索条のかかり方次第で変動します。\n- 定型縊頸とは、結び目が後頭部付近に位置し、顎の下から後頭部に向けて吊り上げられる形を指すことが多いです。非定型縊頸は結び目が横や前にずれるなど、定型と異なる位置になるものをいいます。",
+      "en": "[Answer Explanation]\n\nIn a typical hanging (where the knot is positioned near the occipital region and the rope runs under the jaw to the back of the head), the trachea, common carotid artery, internal jugular vein, and even the vertebral artery can be compressed, leading to asphyxia or cerebral ischemia. However, the brachiocephalic trunk, which arises from the aortic arch and branches into the right common carotid and right subclavian arteries, is anatomically positioned such that it is less likely to be compressed in a typical hanging scenario.\n\n[Additional Information]\n- The main mechanism of death in hanging is often the occlusion of cerebral blood flow due to neck compression, though the exact vessels compressed can vary depending on body position and rope placement.\n- A “typical hanging” generally refers to having the knot around the occipital region, while “atypical hanging” involves the knot placed elsewhere (e.g., lateral or anterior position).",
+      "zh": "【答案解析】\n\n在典型性上吊（结扣通常置于后枕部，绳索从下颌至后脑勺）的情况下，可能压迫到气管、颈总动脉、颈内静脉，甚至椎动脉，从而导致窒息或脑部缺血。然而，头臂干（从主动脉弓分出，进而分支为右颈总动脉和右锁骨下动脉）因其解剖位置所限，在典型上吊时通常不易受到压迫。\n\n【相关知识】\n- 上吊致死的主要机制通常是由于颈部被压迫，脑部血流中断所致，但具体会压迫哪些血管取决于身体姿势以及绳索位置。\n- “定型性上吊”通常指打结点位于后枕部，“非定型性上吊”则指打结点在侧面或前方等与典型位置不同的情况。"
+    }
+  },
+  {
+    "question": {
+      "ja": "頭蓋底の輪状骨折が生じる可能性があるのはどれか。",
+      "en": "Which scenario is most likely to produce a ring fracture at the base of the skull?",
+      "zh": "以下哪种情形最可能导致颅底环状骨折？"
+    },
+    "choices": {
+      "a": {
+        "ja": "金属バットで殴打される。",
+        "en": "Being struck with a metal bat.",
+        "zh": "被金属球棒击打。"
+      },
+      "b": {
+        "ja": "手拳で顔面を殴打される。",
+        "en": "Being punched in the face by a fist.",
+        "zh": "被拳头击打面部。"
+      },
+      "c": {
+        "ja": "転倒して後頭部を打撲する。",
+        "en": "Falling and hitting the occipital region of the head.",
+        "zh": "跌倒后后枕部着地撞击。"
+      },
+      "d": {
+        "ja": "倒れたピアノの下敷きになる。",
+        "en": "Being pinned under a fallen piano.",
+        "zh": "被倒下的钢琴压住。"
+      },
+      "e": {
+        "ja": "高所から墜落して臀部から叩きつけられる。",
+        "en": "Falling from a height and landing on the buttocks.",
+        "zh": "从高处坠落并以臀部着地。"
+      }
+    },
+    "answer": "e",
+    "explanation": {
+      "ja": "【解答解説】\n\n頭蓋底の輪状骨折は、脊柱を介して強い軸圧が頭蓋骨に伝わる際に生じやすい骨折です。高所からの墜落で臀部から地面に激突した場合、衝撃は骨盤から脊柱を経由して頭蓋底にまで波及し、輪状骨折を引き起こす可能性があります。\n\n【その他の状況について】\n- 金属バットでの殴打（a）や顔面殴打（b）、転倒で後頭部をぶつける（c）などは、局所に強い衝撃が加わりますが、必ずしも輪状骨折が起こるとは限りません。\n- 大型の物体の下敷きになる（d）場合も、衝撃の伝わり方によっては頭部骨折を伴うことがありますが、輪状骨折特有のメカニズム（軸圧負荷）とは異なります。",
+      "en": "[Answer Explanation]\n\nA ring fracture at the base of the skull is most commonly caused by strong axial force transmitted through the spine to the skull. In a fall from a great height where the person lands on the buttocks, the shock travels from the pelvis up through the vertebral column to the skull base, potentially causing a ring fracture.\n\n[Regarding the Other Options]\n- A blow from a metal bat (a), a punch to the face (b), or a fall striking the back of the head (c) can result in significant local trauma, but do not necessarily produce a ring fracture.\n- Being crushed under a large object (d) can cause skull fractures depending on how the force is transmitted, but the specific mechanism leading to a ring fracture (direct axial loading through the spine) is less typical in such scenarios.",
+      "zh": "【答案解析】\n\n颅底环状骨折多发生于通过脊柱向颅骨传递强大轴向应力时。从高处坠落并以臀部着地的情况下，冲击力由骨盆经脊柱传导至颅底，可能产生环状骨折。\n\n【其他情形】\n- 被金属球棒击打（a）、拳击面部（b）或跌倒撞击后枕部（c）会造成局部严重创伤，但未必导致环状骨折。\n- 被大型物体压住（d）也可能出现颅骨骨折，但与环状骨折所需的“通过脊柱产生的轴向负荷”机制并不完全相同。"
+    }
+  },
+  {
+    "question": {
+      "ja": "感電で正しいのはどれか。",
+      "en": "Which statement about electrocution is correct?",
+      "zh": "以下关于触电的说法，哪项正确？"
+    },
+    "choices": {
+      "a": {
+        "ja": "周波数が高いほど危険である。",
+        "en": "Higher frequencies are always more dangerous.",
+        "zh": "频率越高就越危险。"
+      },
+      "b": {
+        "ja": "交流よりも直流の方が危険である。",
+        "en": "Direct current (DC) is more dangerous than alternating current (AC).",
+        "zh": "直流比交流更危险。"
+      },
+      "c": {
+        "ja": "電気抵抗が最も低いのは皮膚である。",
+        "en": "The skin has the lowest electrical resistance.",
+        "zh": "皮肤的电阻最低。"
+      },
+      "d": {
+        "ja": "電流斑は電流の流入部のみに生じる。",
+        "en": "Electrical marks appear only at the point where current enters the body.",
+        "zh": "触电斑只出现在电流进入点。"
+      },
+      "e": {
+        "ja": "傷害の程度は電流に依存する。",
+        "en": "The extent of injury depends on the current (amperage).",
+        "zh": "损伤程度取决于通过的电流强度。"
+      }
+    },
+    "answer": "e",
+    "explanation": {
+      "ja": "【解答解説】\n\n感電による身体損傷や致死性は、主に体内を流れる電流量（アンペア数）によって左右されます。周波数や直流・交流の違い、電圧なども影響を及ぼしますが、最終的に流れる電流の大きさこそが組織障害や致死リスクを決定づける最大要因です。\n\n【その他の選択肢について】\n- 感電事故で比較的危険なのは一般家庭用交流（50～60Hz）の範囲とされ、極端に高い周波数では感電リスクのパターンが異なります。\n- 直流と交流を比較すると、一般に同じ電圧でも交流の方が危険とされる場合が多いです。\n- 電気抵抗が最も低い組織は体内の血液や筋肉などで、皮膚はむしろ抵抗が高い層に入ります。\n- 電流斑（電気マーク）は流入部・流出部の両方にみられる可能性があり、流れた経路上にも認められる場合があります。",
+      "en": "[Answer Explanation]\n\nThe severity and lethality of electrocution primarily depend on the amount of current (amperage) passing through the body. Although frequency (Hz), voltage, and whether it is AC or DC also matter, the magnitude of the current ultimately determines the extent of tissue damage and the risk of death.\n\n[Regarding the Other Options]\n- Standard household AC (50–60 Hz) is considered particularly dangerous. Extremely high frequencies carry different patterns of risk.\n- Under the same voltage, AC is generally considered more dangerous than DC.\n- Tissues with the lowest electrical resistance in the body include blood and muscle, not the skin, which typically has a relatively high resistance.\n- Electrical marks (electrical burns) can appear both at the entry and exit sites, and sometimes along the path of the current.",
+      "zh": "【答案解析】\n\n触电的损伤程度和致死性主要取决于流经人体的电流强度（安培数）。虽然频率、直流或交流以及电压等因素也会产生影响，但电流强度最终决定了组织破坏程度和死亡风险。\n\n【其他选项】\n- 家用交流电（50～60Hz）被认为相对危险，极高频下的触电风险机制也不同。\n- 一般来说，在相同电压下交流电比直流电更具危险性。\n- 人体内电阻最低的组织通常是血液和肌肉，皮肤的电阻相对更高。\n- 电流斑（电击伤痕）可出现在电流的输入点和输出点，有时在电流流经的通路上也会出现。"
+    }
+  },
+  {
+    "question": {
+      "ja": "覚醒剤の乱用歴を判断するのに適切な検体はどれか。",
+      "en": "Which sample is most suitable for determining a history of stimulant abuse?",
+      "zh": "下列哪种样本最适合判断兴奋剂（如冰毒）滥用史？"
+    },
+    "choices": {
+      "a": {
+        "ja": "爪",
+        "en": "Nail",
+        "zh": "指（趾）甲"
+      },
+      "b": {
+        "ja": "尿",
+        "en": "Urine",
+        "zh": "尿液"
+      },
+      "c": {
+        "ja": "血液",
+        "en": "Blood",
+        "zh": "血液"
+      },
+      "d": {
+        "ja": "唾液",
+        "en": "Saliva",
+        "zh": "唾液"
+      },
+      "e": {
+        "ja": "毛髪",
+        "en": "Hair",
+        "zh": "毛发"
+      }
+    },
+    "answer": "e",
+    "explanation": {
+      "ja": "【解答解説】\n\n覚醒剤などの薬物使用歴を長期間にわたって調べるには、毛髪が適切な検体とされます。毛髪は血液や尿と比べて、薬物が長く蓄積され、一定期間の使用状況をさかのぼって検出できる点が大きな特徴です。\n\n【その他の検体について】\n- 尿は使用後数日から1週間程度の薬物使用が検出可能です。短期的な使用確認には優れていますが、長期歴の把握には不向きです。\n- 血液や唾液は、検出期間がさらに短く、主に直近の使用を捉えるために利用されます。\n- 爪も長期的蓄積をみる方法として研究されることがありますが、毛髪検査ほど確立されてはいません。",
+      "en": "[Answer Explanation]\n\nHair is generally the most suitable sample for detecting a long-term history of stimulant or other drug abuse. Compared with blood or urine, drugs remain in hair for a much longer period, allowing detection of past usage over an extended timeframe.\n\n[Regarding Other Samples]\n- Urine can detect drug usage for several days to about a week, which is good for confirming recent use but not suitable for uncovering a longer history.\n- Blood and saliva have an even shorter detection window and are used mainly for identifying very recent drug use.\n- Nails have also been researched for long-term accumulation, but hair analysis is more established and commonly used.",
+      "zh": "【答案解析】\n\n要追溯兴奋剂等药物的长期使用情况，通常以毛发作为检测样本更为适宜。与血液或尿液相比，药物在毛发中可存留更长时间，能有效追溯较长时间内的使用情况。\n\n【其他检体】\n- 尿液可检测数日到一周左右的药物使用情况，适合判断近期使用，但对长期使用史的判断不够。\n- 血液和唾液的检测时间窗口更短，主要用于发现非常近期的使用。\n- 爪也被研究用于评估长期药物蓄积，但相较之下，毛发检测的应用更成熟、更常见。"
+    }
+  },
+  {
+    "question": {
+      "ja": "死体検案で頭部外傷を示唆する所見で誤っているのはどれか。",
+      "en": "Which of the following findings that suggest head trauma in a postmortem examination is incorrect?",
+      "zh": "在尸体检案中可提示头部外伤的所见，下列哪项是错误的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "耳出血",
+        "en": "Bleeding from the ear",
+        "zh": "耳部出血"
+      },
+      "b": {
+        "ja": "角膜混濁",
+        "en": "Corneal clouding",
+        "zh": "角膜混浊"
+      },
+      "c": {
+        "ja": "血性髄液",
+        "en": "Blood-tinged cerebrospinal fluid",
+        "zh": "血性脑脊液"
+      },
+      "d": {
+        "ja": "バトル徴候",
+        "en": "Battle’s sign",
+        "zh": "乳突瘀斑（Battle征）"
+      },
+      "e": {
+        "ja": "ブラックアイ",
+        "en": "Black eye (Raccoon eyes)",
+        "zh": "熊猫眼（Black eye）"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\n頭部外傷が疑われる特徴的な所見には、以下が挙げられます。\n- 耳出血：側頭骨骨折などで耳から出血が認められることがあります。\n- 血性髄液：脳脊髄液に血液が混在しているケースで、頭蓋内出血や頭蓋底骨折を示唆します。\n- バトル徴候（Battle’s sign）：耳の後ろの乳様突起部周囲に青紫色の皮下出血斑が現れる現象で、頭蓋底骨折の存在を疑う所見です。\n- ブラックアイ（パンダの目、Raccoon eyes）：両眼周囲が出血斑で黒ずんで見える所見で、これも頭蓋底骨折を示唆します。\n\n角膜混濁（b）は死後変化やドライアイ状態、保存条件などでも見られる現象で、頭部外傷の有無にかかわらず起こり得るため、直接的な外傷所見とは言えません。",
+      "en": "[Answer Explanation]\n\nCommon signs suggestive of head trauma include:\n- Bleeding from the ear: May be observed with temporal bone fractures.\n- Blood-tinged CSF (cerebrospinal fluid): Indicates intracranial hemorrhage or a basilar skull fracture.\n- Battle’s sign: A bluish discoloration behind the ear over the mastoid process, suggesting a basilar skull fracture.\n- Black eye (Raccoon eyes): Periorbital ecchymosis, also indicating a basilar skull fracture.\n\nCorneal clouding (b) can be due to postmortem changes, drying (exposure of the cornea), or storage conditions and is not in itself a specific indicator of head trauma.",
+      "zh": "【答案解析】\n\n提示头部外伤的常见征象包括：\n- 耳出血：可见于颞骨骨折等情况。\n- 血性脑脊液：表明脑脊液中混有血液，提示颅内出血或颅底骨折。\n- 乳突瘀斑（Battle征）：耳后乳突区出现青紫色瘀斑，为颅底骨折的征象。\n- 熊猫眼（Raccoon eyes）：指两侧眶周皮肤出现瘀斑，亦提示颅底骨折。\n\n而角膜混浊（b）则可能由于死后变化、角膜暴露干燥或存放条件等原因造成，与是否存在头部外伤并无特异关联，不能作为直接判断头部外伤的指征。"
+    }
+  },
+  {
+    "question": {
+      "ja": "死因究明に関して法医解剖と比較して死後CTの有用性が高いのはどれか。",
+      "en": "Which of the following conditions can be more readily identified by postmortem CT than by forensic autopsy?",
+      "zh": "以下哪种病变相比法医解剖，更易通过尸体CT（死后CT）进行识别？"
+    },
+    "choices": {
+      "a": {
+        "ja": "脊髄損傷",
+        "en": "Spinal cord injury",
+        "zh": "脊髓损伤"
+      },
+      "b": {
+        "ja": "緊張性気胸",
+        "en": "Tension pneumothorax",
+        "zh": "张力性气胸"
+      },
+      "c": {
+        "ja": "頭蓋底骨折",
+        "en": "Basilar skull fracture",
+        "zh": "颅底骨折"
+      },
+      "d": {
+        "ja": "大動脈解離",
+        "en": "Aortic dissection",
+        "zh": "主动脉夹层"
+      },
+      "e": {
+        "ja": "腸間膜損傷",
+        "en": "Mesenteric injury",
+        "zh": "肠系膜损伤"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\n死後CT（オートプシー・イメージング）は、遺体に対し解剖を行わなくても速やかに画像評価できる手法です。緊張性気胸のように胸腔内の空気貯留や肺虚脱の確認はCT画像によって容易に把握できます。死因に直結する病態が可視化しやすいため、解剖の前段階や補助的手段として高い有用性があります。\n\n【その他の選択肢について】\n- 脊髄損傷はCTでも確認が可能ですが、軟部組織や神経系の詳細な評価にはMRIや直接的な解剖観察がより有用です。\n- 頭蓋底骨折（c）や大動脈解離（d）はCTで判別可能ですが、法医解剖による直接的所見確認が重視される場合もあります。\n- 腸間膜損傷（e）はガスや血液貯留などの間接所見で推測はできますが、微細な断裂や出血巣は解剖による直接観察の方が正確です。",
+      "en": "[Answer Explanation]\n\nPostmortem CT (autopsy imaging) allows quick imaging without an invasive procedure. In cases of tension pneumothorax, detecting air accumulation in the thoracic cavity or lung collapse is relatively straightforward with CT, making it highly useful for identifying this potentially fatal condition. It can be used before or in addition to a traditional autopsy to visualize certain life-threatening pathologies.\n\n[Regarding the Other Choices]\n- While spinal cord injury can be seen on CT, more detailed assessment of soft tissue and nerves often requires MRI or direct autopsy.\n- Basilar skull fractures (c) and aortic dissection (d) can certainly be identified on CT, but direct forensic autopsy might still be preferred in many cases to confirm details.\n- Mesenteric injuries (e) can sometimes be inferred from evidence of gas or fluid on CT, but subtle tears or localized hemorrhages may be more accurately identified through direct autopsy.",
+      "zh": "【答案解析】\n\n尸体CT（死后CT）是一种无需进行侵入性操作便可快速获取影像的检查方法。对于张力性气胸而言，通过CT可迅速观察胸腔内空气积聚以及肺萎陷等情况，清晰显示这种可能导致死亡的病理变化。可在法医解剖前或作为补充手段来评估此类情况。\n\n【其他选项】\n- 脊髓损伤可在CT上看到一定程度的改变，但对于软组织及神经的细节，更需要MRI或解剖进行精细评估。\n- 颅底骨折（c）和主动脉夹层（d）虽然也可通过CT诊断，但很多情况下仍会通过法医解剖进行更详细的确认。\n- 肠系膜损伤（e）可通过CT间接推测（如气体或积液情况），但微小撕裂或局部出血更易在解剖中被确切观察到。"
+    }
+  }
+]

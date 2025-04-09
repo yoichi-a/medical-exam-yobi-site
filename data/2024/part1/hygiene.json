@@ -1,122 +1,403 @@
 [
     {
-        "question": "二次予防はどれか。",
-        "choices": {
-            "a": "がん検診",
-            "b": "禁煙指導",
-            "c": "麻疹の予防接種",
-            "d": "脳梗塞後の理学療法",
-            "e": "精神障害者の作業療法"
+      "question": {
+        "ja": "二次予防はどれか。",
+        "en": "Which of the following constitutes a secondary prevention measure?",
+        "zh": "下列哪项属于二级预防措施？"
+      },
+      "choices": {
+        "a": {
+          "ja": "がん検診",
+          "en": "Cancer screening",
+          "zh": "癌症筛查"
         },
-        "answer": "a",
-        "explanation": "【解答解説】\n\n二次予防(secondary prevention)とは、「疾病の早期発見・早期治療」を目的とする予防活動です。\n\nがん検診(a)は、まさに早期発見によって重症化を防ぐ二次予防の典型例です。\n\n\n【誤答選択肢について】\n- b: 禁煙指導 → 主に疾病の発症そのものを防ぐ一次予防(primary prevention)にあたります。\n- c: 麻疹の予防接種 → 疾病の発症を予防する一次予防に該当します。\n- d: 脳梗塞後の理学療法 → リハビリテーションによる再発予防や機能回復を目的とする三次予防(tertiary prevention)にあたります。\n- e: 精神障害者の作業療法 → 社会復帰や再発防止を図る三次予防にあたります。\n\n\n【周辺知識】\n- 一次予防：健康的な生活習慣の啓発、予防接種、禁煙指導など「健康増進・疾病予防」が中心。\n- 二次予防：病気の早期発見・早期治療。健診やスクリーニング検査が典型例。\n- 三次予防：既に発症した疾患の進行・再発防止と後遺症の軽減を目指す。リハビリテーションや再発予防が含まれます。"
+        "b": {
+          "ja": "禁煙指導",
+          "en": "Smoking cessation guidance",
+          "zh": "戒烟指导"
+        },
+        "c": {
+          "ja": "麻疹の予防接種",
+          "en": "Measles vaccination",
+          "zh": "麻疹疫苗接种"
+        },
+        "d": {
+          "ja": "脳梗塞後の理学療法",
+          "en": "Physical therapy after a cerebral infarction",
+          "zh": "脑梗塞后的物理治疗"
+        },
+        "e": {
+          "ja": "精神障害者の作業療法",
+          "en": "Occupational therapy for individuals with mental disorders",
+          "zh": "对精神障碍患者的作业治疗"
+        }
+      },
+      "answer": "a",
+      "explanation": {
+        "ja": "【解答解説】\n\n二次予防(secondary prevention)とは、「疾病の早期発見・早期治療」を目的とする予防活動です。\n\nがん検診(a)は、まさに早期発見によって重症化を防ぐ二次予防の典型例です。\n\n【誤答選択肢について】\n- b: 禁煙指導 → 主に疾病の発症そのものを防ぐ一次予防(primary prevention)にあたります。\n- c: 麻疹の予防接種 → 疾病の発症を予防する一次予防に該当します。\n- d: 脳梗塞後の理学療法 → リハビリテーションによる再発予防や機能回復を目的とする三次予防(tertiary prevention)にあたります。\n- e: 精神障害者の作業療法 → 社会復帰や再発防止を図る三次予防にあたります。\n\n【周辺知識】\n- 一次予防：健康的な生活習慣の啓発、予防接種、禁煙指導など「健康増進・疾病予防」が中心。\n- 二次予防：病気の早期発見・早期治療。健診やスクリーニング検査が典型例。\n- 三次予防：既に発症した疾患の進行・再発防止と後遺症の軽減を目指す。リハビリテーションや再発予防が含まれます。",
+        "en": "[Answer Explanation]\n\nSecondary prevention focuses on the early detection and treatment of diseases. Cancer screening (a) is a classic example of secondary prevention, as it aims to detect cancer early and prevent progression.\n\n[Regarding the Incorrect Choices]\n- (b) Smoking cessation guidance is primarily a form of primary prevention, aimed at preventing disease onset.\n- (c) Measles vaccination is also primary prevention, preventing the disease before it occurs.\n- (d) Physical therapy after a cerebral infarction serves as tertiary prevention, focusing on preventing recurrence and improving functional recovery.\n- (e) Occupational therapy for mental disorders is also part of tertiary prevention, assisting with social reintegration and preventing relapses.\n\n[Additional Information]\n- Primary prevention: Efforts to prevent the onset of disease (e.g., healthy lifestyles, vaccinations, smoking cessation).\n- Secondary prevention: Screening and early treatment (e.g., health checkups, cancer screenings).\n- Tertiary prevention: Minimizing the impact of an already established disease (e.g., rehabilitation, preventing recurrence).",
+        "zh": "【答案解析】\n\n二级预防（secondary prevention）指的是为了“早期发现、早期治疗疾病”而采取的预防措施。\n\n癌症筛查(a)是典型的二级预防，通过尽早发现癌症来避免病情加重。\n\n【错误选项说明】\n- (b) 戒烟指导 → 主要属于预防疾病发生的一级预防（primary prevention）。\n- (c) 麻疹疫苗接种 → 防止疾病发生，也属于一级预防。\n- (d) 脑梗塞后的物理治疗 → 通过康复来预防复发、促进功能恢复，属于三级预防（tertiary prevention）。\n- (e) 对精神障碍患者的作业治疗 → 旨在社会回归、预防复发，也属于三级预防。\n\n【补充说明】\n- 一级预防：侧重于健康生活方式教育、疫苗接种、戒烟等，预防疾病发生。\n- 二级预防：早期发现、早期治疗，如健康检查、筛查等。\n- 三级预防：对已发病患者进行治疗与康复，防止加重或复发。"
+      }
     },
     {
-        "question": "医療法に基づく医療計画の記載事項に含まれないのはどれか。",
-        "choices": {
-            "a": "救急医療",
-            "b": "地域医療構想 二次医療圏の設定",
-            "c": "市町村保健センターの設置",
-            "d": "新興感染症等の感染拡大時における医療",
-            "e": "その他"
+      "question": {
+        "ja": "医療法に基づく医療計画の記載事項に含まれないのはどれか。",
+        "en": "Which of the following is not included in the medical care plans stipulated by the Medical Care Act?",
+        "zh": "根据《医疗法》制定的医疗计划中，下列哪项不属于其规定内容？"
+      },
+      "choices": {
+        "a": {
+          "ja": "救急医療",
+          "en": "Emergency medical services",
+          "zh": "急救医疗"
         },
-        "answer": "d",
-        "explanation": "【解答解説】\n\n医療法に基づく医療計画では、基本的に地域における医療提供体制の確保を目的として救急医療、災害時医療、へき地医療などを含めて定めます。また、地域医療構想や医療圏の設定なども含まれます。\n\n一方、「新興感染症等の感染拡大時における医療(d)」については、感染症法など別の法制度での対応が中心となり、医療計画の主要記載事項からは外されています。\n\n\n【誤答選択肢について】\n- a: 救急医療 → 医療計画の重要な柱として規定され、救急搬送体制や救急病院の整備などが盛り込まれます。\n- b: 地域医療構想 二次医療圏の設定 → 医療計画における大きな項目で、都道府県が病床の機能分化や地域連携を推進するために策定します。\n- c: 市町村保健センターの設置 → 医療計画には、地域保健との連携も含まれるため市町村保健センターに関する事項も盛り込まれます。\n- e: その他 → 災害時の医療体制、周産期医療体制、在宅医療体制など幅広い内容が含まれます。\n\n\n【周辺知識】\n- 新型インフルエンザ等の新興感染症対策は、感染症法や新型インフルエンザ等対策特別措置法などが中心になります。医療計画は、主に地域の通常医療提供体制をどう構築するかを規定する制度です。"
+        "b": {
+          "ja": "地域医療構想 二次医療圏の設定",
+          "en": "Regional healthcare vision and establishment of secondary medical service areas",
+          "zh": "地区医疗构想及二级医疗圈的设定"
+        },
+        "c": {
+          "ja": "市町村保健センターの設置",
+          "en": "Establishment of municipal health centers",
+          "zh": "市町村保健中心的设立"
+        },
+        "d": {
+          "ja": "新興感染症等の感染拡大時における医療",
+          "en": "Medical care in the event of emerging infectious disease outbreaks",
+          "zh": "针对新发传染病等扩散时的医疗措施"
+        },
+        "e": {
+          "ja": "その他",
+          "en": "Other (additional provisions)",
+          "zh": "其他（附加内容）"
+        }
+      },
+      "answer": "d",
+      "explanation": {
+        "ja": "【解答解説】\n\n医療法に基づく医療計画では、基本的に地域における医療提供体制の確保を目的として救急医療、災害時医療、へき地医療などを含めて定めます。また、地域医療構想や医療圏の設定なども含まれます。\n\n一方、「新興感染症等の感染拡大時における医療(d)」については、感染症法など別の法制度での対応が中心となり、医療計画の主要記載事項からは外されています。\n\n【誤答選択肢について】\n- a: 救急医療 → 医療計画の重要な柱として規定され、救急搬送体制や救急病院の整備などが盛り込まれます。\n- b: 地域医療構想 二次医療圏の設定 → 医療計画における大きな項目で、都道府県が病床の機能分化や地域連携を推進するために策定します。\n- c: 市町村保健センターの設置 → 医療計画には、地域保健との連携も含まれるため市町村保健センターに関する事項も盛り込まれます。\n- e: その他 → 災害時の医療体制、周産期医療体制、在宅医療体制など幅広い内容が含まれます。\n\n【周辺知識】\n- 新型インフルエンザ等の新興感染症対策は、感染症法や新型インフルエンザ等対策特別措置法などが中心になります。医療計画は、主に地域の通常医療提供体制をどう構築するかを規定する制度です。",
+        "en": "[Answer Explanation]\n\nUnder the Medical Care Act, medical care plans focus on ensuring an adequate local healthcare delivery system, typically addressing emergency care, disaster medicine, healthcare in remote areas, and establishing medical service areas. They also include the regional healthcare vision and specific plans for coordinating healthcare resources.\n\nMedical care concerning large-scale outbreaks of emerging infectious diseases (d) is primarily covered by separate legislation, such as the Infectious Diseases Control Law, and is not a main component in these regional medical care plans.\n\n[Regarding the Other Choices]\n- (a) Emergency medical services are a key aspect of medical care plans, detailing emergency transportation and hospital preparedness.\n- (b) Regional healthcare visions and secondary medical service areas are central to planning for hospital bed allocation and regional collaboration.\n- (c) Municipal health centers may be included under local health cooperation provisions.\n- (e) Other aspects include disaster response, perinatal care systems, home healthcare, and more.\n\n[Additional Information]\n- Measures against novel influenza or emerging infectious diseases are handled under laws like the Infectious Diseases Control Law or the Act on Special Measures for Pandemic Influenza. The medical care plan primarily outlines the usual (non-epidemic) healthcare framework in a region.",
+        "zh": "【答案解析】\n\n根据《医疗法》制定的医疗计划，主要目的是确保当地医疗提供体系的完善，一般涉及急救医疗、灾害时医疗、偏远地区医疗及医疗圈（地域医療構想）的设定等。但对于新发传染病大规模扩散时所需的医疗(d)，通常由《传染病法》等其他法律来应对，并非医疗计划的主要记载内容。\n\n【其他选项】\n- (a) 急救医疗 → 医疗计划的重要组成部分，包括急救运送体制以及急救医院建设等。\n- (b) 地区医疗构想及二级医疗圈设定 → 医疗计划中的核心项目，通常由都道府县制定，用于推进病床功能分化以及区域协作。\n- (c) 市町村保健中心的设立 → 由于医疗计划也需与地方保健工作衔接，因此可能纳入相关内容。\n- (e) 其他 → 覆盖灾害时医疗体制、围产期医疗体制、居家医疗体制等多方面。\n\n【补充说明】\n- 对于新型流感等新发传染病的防控，主要依赖《传染病法》以及《新型流感等对策特别措施法》等。医疗计划主要规定地区常规医疗服务框架的建设。"
+      }
     },
     {
-        "question": "介入研究はどれか。",
-        "choices": {
-            "a": "横断研究",
-            "b": "コホート研究",
-            "c": "症例対照研究",
-            "d": "ケースシリーズ研究",
-            "e": "ランダム化比較試験 (RCT)"
+      "question": {
+        "ja": "介入研究はどれか。",
+        "en": "Which of the following is an interventional study?",
+        "zh": "以下哪项属于干预性研究？"
+      },
+      "choices": {
+        "a": {
+          "ja": "横断研究",
+          "en": "Cross-sectional study",
+          "zh": "横断研究"
         },
-        "answer": "e",
-        "explanation": "【解答解説】\n\n介入研究(interventional study)とは、研究者が積極的に介入（治療や予防法などを導入）した上でその効果や安全性を評価する研究デザインです。代表例が「ランダム化比較試験(RCT)(e)」です。\n\n\n【誤答選択肢について】\n- a: 横断研究(cross-sectional study) → 観察研究の一種で、ある時点での集団の状態を調べる。\n- b: コホート研究(cohort study) → 観察研究の一種で、要因がある群・ない群を前向きに追跡し、疾病の発生率を比較。\n- c: 症例対照研究(case-control study) → 観察研究の一種で、疾患のある群・ない群を後ろ向きに調査し、要因曝露の有無を比較。\n- d: ケースシリーズ研究(case series) → 少数例の患者をまとめて報告する観察的研究であり、比較群を持ちません。\n\n\n【周辺知識】\n- 介入研究では、因果関係の推定やバイアスの低減のためにランダム化(R)や盲検化（マスキング）が重視されます。\n- 観察研究は、自然のまま（研究者が介入せず）因子と疾病との関連を調査します。"
+        "b": {
+          "ja": "コホート研究",
+          "en": "Cohort study",
+          "zh": "队列研究"
+        },
+        "c": {
+          "ja": "症例対照研究",
+          "en": "Case-control study",
+          "zh": "病例对照研究"
+        },
+        "d": {
+          "ja": "ケースシリーズ研究",
+          "en": "Case series",
+          "zh": "病例系列研究"
+        },
+        "e": {
+          "ja": "ランダム化比較試験 (RCT)",
+          "en": "Randomized controlled trial (RCT)",
+          "zh": "随机对照试验（RCT）"
+        }
+      },
+      "answer": "e",
+      "explanation": {
+        "ja": "【解答解説】\n\n介入研究(interventional study)とは、研究者が積極的に介入（治療や予防法などを導入）した上でその効果や安全性を評価する研究デザインです。代表例が「ランダム化比較試験(RCT)(e)」です。\n\n【誤答選択肢について】\n- a: 横断研究(cross-sectional study) → 観察研究の一種で、ある時点での集団の状態を調べる。\n- b: コホート研究(cohort study) → 観察研究の一種で、要因がある群・ない群を前向きに追跡し、疾病の発生率を比較。\n- c: 症例対照研究(case-control study) → 観察研究の一種で、疾患のある群・ない群を後ろ向きに調査し、要因曝露の有無を比較。\n- d: ケースシリーズ研究(case series) → 少数例の患者をまとめて報告する観察的研究であり、比較群を持ちません。\n\n【周辺知識】\n- 介入研究では、因果関係の推定やバイアスの低減のためにランダム化(R)や盲検化（マスキング）が重視されます。\n- 観察研究は、自然のまま（研究者が介入せず）因子と疾病との関連を調査します。",
+        "en": "[Answer Explanation]\n\nAn interventional study is one where researchers actively intervene (for example, by providing a treatment or preventive measure) to evaluate its effect or safety. A randomized controlled trial (RCT) (e) is a prime example of such an interventional design.\n\n[Regarding the Incorrect Choices]\n- (a) Cross-sectional studies involve observing a population at a single point in time, without intervention.\n- (b) Cohort studies (prospective) compare the incidence of disease in groups with or without certain exposures.\n- (c) Case-control studies (retrospective) compare exposure levels in groups with or without a certain disease.\n- (d) Case series compile and describe characteristics of a small number of patients without a control group.\n\n[Additional Information]\n- In interventional studies, techniques such as randomization and blinding are crucial to minimize bias and better infer causality.\n- Observational studies investigate associations between factors and outcomes as they naturally occur, without researcher intervention.",
+        "zh": "【答案解析】\n\n干预性研究（interventional study）是指研究者主动对受试者进行干预（如给予某种治疗或预防措施）并评估其疗效或安全性。随机对照试验（RCT）(e)正是这类研究的典型代表。\n\n【错误选项说明】\n- (a) 横断研究（cross-sectional study）→ 观察性研究的一种，在某一时点调查人群状况，不进行干预。\n- (b) 队列研究（cohort study）→ 也是观察性研究，将有某种暴露因素与无暴露因素的两组进行前瞻性随访，对比疾病发生率。\n- (c) 病例对照研究（case-control study）→ 观察性研究，通过回顾性调查对比患病组与对照组的暴露情况。\n- (d) 病例系列研究（case series）→ 报告少数患者的临床特征，无对照组，也属于观察性研究。\n\n【补充说明】\n- 干预性研究中，为了更好地推断因果关系并减少偏倚，通常非常重视随机化和盲法。\n- 观察性研究是在自然状态下调查因素与疾病之间的关联，研究者不做主动干预。"
+      }
     },
     {
-        "question": "診断後、直ちに届け出なければならないのはどれか。",
-        "choices": {
-            "a": "梅毒",
-            "b": "麻疹",
-            "c": "破傷風",
-            "d": "クリプトスポリジウム症",
-            "e": "後天性免疫不全症候群 (AIDS)"
+      "question": {
+        "ja": "診断後、直ちに届け出なければならないのはどれか。",
+        "en": "Which disease must be reported immediately after diagnosis?",
+        "zh": "在确诊后需要立即上报的是哪种疾病？"
+      },
+      "choices": {
+        "a": {
+          "ja": "梅毒",
+          "en": "Syphilis",
+          "zh": "梅毒"
         },
-        "answer": "b",
-        "explanation": "【解答解説】\n\n麻疹(b)は感染症法に基づき、診断後速やか（直ちに）届け出が必要と定められている疾患の一つです。発生があれば公共衛生上、迅速に対策が求められるため報告が厳格です。\n\n\n【誤答選択肢について】\n- a: 梅毒 → 届出が必要ですが、直ちにではなく7日以内など指定があり、麻疹ほどの速やかな報告義務とは異なります。\n- c: 破傷風 → 法定感染症ではあるが、麻疹のように即日（24時間以内）報告の対象ではありません。\n- d: クリプトスポリジウム症 → 診断後の届出義務はありますが、麻疹ほど直ちに報告とはされていません。\n- e: AIDS → 届出義務があり、保健所への報告が必要ですが、「診断後直ちに」という緊急性があるものではありません。\n\n\n【周辺知識】\n- 感染症法における届け出のタイミングは、疾患の危険度や感染力などにより区分されています。麻疹は伝播性が非常に高いため、早急な封じ込めが求められます。\n- 類似例では、風疹なども指定されていますが、報告期限やカテゴリーは年々改訂される可能性があるため最新の法令を確認する必要があります。"
+        "b": {
+          "ja": "麻疹",
+          "en": "Measles",
+          "zh": "麻疹"
+        },
+        "c": {
+          "ja": "破傷風",
+          "en": "Tetanus",
+          "zh": "破伤风"
+        },
+        "d": {
+          "ja": "クリプトスポリジウム症",
+          "en": "Cryptosporidiosis",
+          "zh": "隐孢子虫病"
+        },
+        "e": {
+          "ja": "後天性免疫不全症候群 (AIDS)",
+          "en": "Acquired Immunodeficiency Syndrome (AIDS)",
+          "zh": "获得性免疫缺陷综合征 (AIDS)"
+        }
+      },
+      "answer": "b",
+      "explanation": {
+        "ja": "【解答解説】\n\n麻疹(b)は感染症法に基づき、診断後速やか（直ちに）届け出が必要と定められている疾患の一つです。発生があれば公共衛生上、迅速に対策が求められるため報告が厳格です。\n\n【誤答選択肢について】\n- a: 梅毒 → 届出が必要ですが、直ちにではなく7日以内など指定があり、麻疹ほどの速やかな報告義務とは異なります。\n- c: 破傷風 → 法定感染症ではあるが、麻疹のように即日（24時間以内）報告の対象ではありません。\n- d: クリプトスポリジウム症 → 診断後の届出義務はありますが、麻疹ほど直ちに報告とはされていません。\n- e: AIDS → 届出義務があり、保健所への報告が必要ですが、「診断後直ちに」という緊急性があるものではありません。\n\n【周辺知識】\n- 感染症法における届け出のタイミングは、疾患の危険度や感染力などにより区分されています。麻疹は伝播性が非常に高いため、早急な封じ込めが求められます。\n- 類似例では、風疹なども指定されていますが、報告期限やカテゴリーは年々改訂される可能性があるため最新の法令を確認する必要があります。",
+        "en": "[Answer Explanation]\n\nMeasles (b) is one of the diseases that must be reported immediately (promptly) under the Infectious Diseases Control Law. Because of its high infectivity, rapid containment measures are crucial.\n\n[Regarding the Other Choices]\n- (a) Syphilis: Reporting is required within a certain period (e.g., within 7 days), but not necessarily immediately.\n- (c) Tetanus: Although it is a notifiable disease, it does not require immediate (within 24 hours) notification like measles.\n- (d) Cryptosporidiosis: Also notifiable, but not with the urgency of measles.\n- (e) AIDS: Reporting is mandatory, but it is not classified under the “immediate” reporting category.\n\n[Additional Information]\n- Under the Infectious Diseases Control Law, reporting timelines depend on the severity and contagiousness of the disease. Measles is highly transmissible, thus requiring quick action.\n- Some other diseases (like rubella) may have similar reporting requirements, but details can change over time. Always refer to the latest regulations.",
+        "zh": "【答案解析】\n\n麻疹(b)根据《传染病法》的规定，一旦确诊需“立即”上报。由于其传染性极强，为公共卫生防控需要，报告要求非常严格。\n\n【其他选项】\n- (a) 梅毒 → 虽然也需要上报，但通常规定在确诊后一定时间内（如7天内），并非“立即”上报。\n- (c) 破伤风 → 尽管属于法定传染病，但不像麻疹那样要求24小时内即刻上报。\n- (d) 隐孢子虫病 → 需要上报，但紧急程度不及麻疹。\n- (e) AIDS → 需上报至保健所，但并非要求“诊断后立即”上报。\n\n【补充说明】\n- 在《传染病法》框架下，疾病的报告时限根据危害程度和传染力有所区别。麻疹由于具有极高的传染性，必须快速采取隔离等防控措施。\n- 类似地，风疹等也属于指定上报疾病，但其报告期限和类别可能随着法令更新而有所变动，需要关注最新规定。"
+      }
     },
     {
-        "question": "総務省統計局の人口推計（2022年）における我が国の生産年齢人口の割合に最も近いのはどれか。",
-        "choices": {
-            "a": "39%",
-            "b": "49%",
-            "c": "59%",
-            "d": "69%",
-            "e": "79%"
+      "question": {
+        "ja": "総務省統計局の人口推計（2022年）における我が国の生産年齢人口の割合に最も近いのはどれか。",
+        "en": "According to the 2022 population estimates by the Ministry of Internal Affairs and Communications (Statistics Bureau), which figure is closest to Japan’s working-age population ratio?",
+        "zh": "根据日本总务省统计局（2022年）的推计数据，最接近我国（日本）劳动年龄人口占比的是下列哪项？"
+      },
+      "choices": {
+        "a": {
+          "ja": "39%",
+          "en": "39%",
+          "zh": "39%"
         },
-        "answer": "c",
-        "explanation": "【解答解説】\n\n生産年齢人口は15～64歳に相当します。総務省統計局の2022年の推計によれば、日本の生産年齢人口の割合は約59%となっています。\n\n\n【誤答選択肢について】\n- a, b, d, e は極端に低い、または高い数値であり、現行の日本の実態にはあてはまりません。\n\n\n【周辺知識】\n- 日本は少子高齢化が進行しており、生産年齢人口の割合が年々減少し、高齢化率が上昇しています。\n- この動向は、社会保障費や労働力不足、経済成長などの政策的課題と密接に関わってきます。"
+        "b": {
+          "ja": "49%",
+          "en": "49%",
+          "zh": "49%"
+        },
+        "c": {
+          "ja": "59%",
+          "en": "59%",
+          "zh": "59%"
+        },
+        "d": {
+          "ja": "69%",
+          "en": "69%",
+          "zh": "69%"
+        },
+        "e": {
+          "ja": "79%",
+          "en": "79%",
+          "zh": "79%"
+        }
+      },
+      "answer": "c",
+      "explanation": {
+        "ja": "【解答解説】\n\n生産年齢人口は15～64歳に相当します。総務省統計局の2022年の推計によれば、日本の生産年齢人口の割合は約59%となっています。\n\n【誤答選択肢について】\n- a, b, d, e は極端に低い、または高い数値であり、現行の日本の実態にはあてはまりません。\n\n【周辺知識】\n- 日本は少子高齢化が進行しており、生産年齢人口の割合が年々減少し、高齢化率が上昇しています。\n- この動向は、社会保障費や労働力不足、経済成長などの政策的課題と密接に関わってきます。",
+        "en": "[Answer Explanation]\n\nThe working-age population is generally defined as those aged 15 to 64. According to the 2022 estimates by the Statistics Bureau (Ministry of Internal Affairs and Communications), approximately 59% of Japan’s population falls into this category.\n\n[Regarding the Other Choices]\n- (a), (b), (d), and (e) are either too low or too high compared to the actual data.\n\n[Additional Information]\n- Japan is experiencing an aging society with a declining birth rate, leading to a year-on-year decrease in the working-age population ratio and an increase in the elderly proportion.\n- This demographic trend has significant implications for social security costs, labor shortages, and economic growth.",
+        "zh": "【答案解析】\n\n劳动年龄人口一般指15～64岁人群。根据日本总务省统计局2022年的推计数据，日本劳动年龄人口占总人口比例约为59%。\n\n【其他选项说明】\n- (a)、(b)、(d)、(e) 所示数值要么明显偏低，要么明显偏高，都不符合目前日本的实际情况。\n\n【补充说明】\n- 日本正处于少子高龄化阶段，劳动年龄人口比例逐年下降，老年人口比例上升。\n- 这一趋势与社会保障负担、劳动力短缺及经济增长等政策性问题密切相关。"
+      }
     },
     {
-        "question": "我が国の喫煙の現状と対策で誤っているのはどれか。",
-        "choices": {
-            "a": "たばこ規制枠組条約を批准している。",
-            "b": "受動喫煙の防止は健康増進法に規定されている。",
-            "c": "ニコチン依存症の治療は医療保険が適用される。",
-            "d": "2019年の成人男性の喫煙習慣者の割合は10%未満である。",
-            "e": "健康日本21 (第三次)では20歳未満の者の喫煙をなくすことを目標としている。"
+      "question": {
+        "ja": "我が国の喫煙の現状と対策で誤っているのはどれか。",
+        "en": "Which statement about smoking prevalence and control measures in Japan is incorrect?",
+        "zh": "关于我国（日本）吸烟现状及对策，下列哪项不正确？"
+      },
+      "choices": {
+        "a": {
+          "ja": "たばこ規制枠組条約を批准している。",
+          "en": "Japan has ratified the WHO Framework Convention on Tobacco Control (FCTC).",
+          "zh": "日本已批准世界卫生组织《烟草控制框架公约》。"
         },
-        "answer": "d",
-        "explanation": "【解答解説】\n\n2019年の厚生労働省や関連調査などの推計では、成人男性の喫煙率は約28％前後と報告されています。10％未満という選択肢は明らかに誤りです。\n\n\n【誤答選択肢について】\n- a: 日本は世界保健機関(WHO)のたばこ規制枠組条約(FCTC)を2004年に批准しています。\n- b: 受動喫煙防止は健康増進法により規定され、改正により公共施設や飲食店などで分煙や禁煙措置が進んでいます。\n- c: ニコチン依存症の治療(禁煙外来)は医療保険の適用を受けることができます。（一定の条件を満たす必要あり）\n- e: 健康日本21 (第二次→第三次へと引き継がれています)では、20歳未満の喫煙をなくすことが目標に含まれています。\n\n\n【周辺知識】\n- 喫煙率は徐々に減少傾向にありますが、依然として生活習慣病やがん予防の観点から重要な課題です。\n- 若年層の喫煙や受動喫煙の防止も大きな政策課題のひとつです。"
+        "b": {
+          "ja": "受動喫煙の防止は健康増進法に規定されている。",
+          "en": "Prevention of secondhand smoke is stipulated in the Health Promotion Act.",
+          "zh": "《健康增进法》对防止被动吸烟作了规定。"
+        },
+        "c": {
+          "ja": "ニコチン依存症の治療は医療保険が適用される。",
+          "en": "Nicotine dependence treatment is covered by national health insurance.",
+          "zh": "尼古丁依赖治疗纳入医疗保险报销范围。"
+        },
+        "d": {
+          "ja": "2019年の成人男性の喫煙習慣者の割合は10%未満である。",
+          "en": "In 2019, the smoking rate among adult men was below 10%.",
+          "zh": "2019年成年男性的吸烟率不足10%。"
+        },
+        "e": {
+          "ja": "健康日本21 (第三次)では20歳未満の者の喫煙をなくすことを目標としている。",
+          "en": "Health Japan 21 (third edition) includes the goal of eliminating smoking among individuals under 20.",
+          "zh": "《健康日本21（第三次）》将杜绝20岁以下人群吸烟作为目标。"
+        }
+      },
+      "answer": "d",
+      "explanation": {
+        "ja": "【解答解説】\n\n2019年の厚生労働省や関連調査などの推計では、成人男性の喫煙率は約28％前後と報告されています。10％未満という選択肢は明らかに誤りです。\n\n【誤答選択肢について】\n- a: 日本は世界保健機関(WHO)のたばこ規制枠組条約(FCTC)を2004年に批准しています。\n- b: 受動喫煙防止は健康増進法により規定され、改正により公共施設や飲食店などで分煙や禁煙措置が進んでいます。\n- c: ニコチン依存症の治療(禁煙外来)は医療保険の適用を受けることができます。（一定の条件を満たす必要あり）\n- e: 健康日本21 (第二次→第三次へと引き継がれています)では、20歳未満の喫煙をなくすことが目標に含まれています。\n\n【周辺知識】\n- 喫煙率は徐々に減少傾向にありますが、依然として生活習慣病やがん予防の観点から重要な課題です。\n- 若年層の喫煙や受動喫煙の防止も大きな政策課題のひとつです。",
+        "en": "[Answer Explanation]\n\nAccording to surveys by the Ministry of Health, Labour and Welfare (and related studies), the smoking rate among adult men in 2019 was around 28%. The claim that it was below 10% is clearly incorrect.\n\n[Regarding the Other Choices]\n- (a) Japan ratified the WHO Framework Convention on Tobacco Control (FCTC) in 2004.\n- (b) The Health Promotion Act includes provisions to prevent secondhand smoke, with recent amendments strengthening smoking restrictions in public facilities and restaurants.\n- (c) Treatment for nicotine dependence (e.g., smoking cessation outpatient services) can be covered by health insurance, subject to certain conditions.\n- (e) Health Japan 21 (transitioning from its second to its third edition) aims to eliminate smoking among individuals under 20.\n\n[Additional Information]\n- Although smoking rates are gradually declining, it remains a significant public health issue with respect to lifestyle-related diseases and cancer prevention.\n- Preventing smoking among youth and reducing secondhand smoke exposure are major policy focuses.",
+        "zh": "【答案解析】\n\n根据日本厚生劳动省及相关调查，2019年成年男性的吸烟率约为28%左右，“不足10%”明显不正确。\n\n【其他选项】\n- (a) 日本于2004年批准了WHO的《烟草控制框架公约》。\n- (b) 《健康增进法》规定了防止被动吸烟，修订后强化了在公共场所和餐饮店等实施禁烟或分隔吸烟的措施。\n- (c) 尼古丁依赖（如戒烟门诊）在满足一定条件的情况下可以纳入医保报销。\n- (e) 《健康日本21》（从第二次到第三次）将杜绝20岁以下人群吸烟列为目标之一。\n\n【补充说明】\n- 虽然日本吸烟率在逐步下降，但在预防生活习惯病及癌症的角度仍是重大课题。\n- 预防青少年吸烟与减少被动吸烟也是政策关注的重点。"
+      }
     },
     {
-        "question": "介護保険における要介護認定に必要なのはどれか。",
-        "choices": {
-            "a": "主治医意見書",
-            "b": "家族の所得情報",
-            "c": "訪問看護指示書",
-            "d": "保健所長の許可",
-            "e": "ケアプランの作成"
+      "question": {
+        "ja": "介護保険における要介護認定に必要なのはどれか。",
+        "en": "Which of the following is required to obtain a long-term care insurance (kaigo hoken) certification of need (yōkaigo nintei)?",
+        "zh": "在介护保险制度下申请要护理认定（要介护认定）需要什么？"
+      },
+      "choices": {
+        "a": {
+          "ja": "主治医意見書",
+          "en": "A primary care physician’s opinion report",
+          "zh": "主治医意见书"
         },
-        "answer": "a",
-        "explanation": "【解答解説】\n\n介護保険による要介護認定を受けるためには、市町村に申請し、認定調査と「主治医意見書(a)」が必要となります。主治医意見書を基に介護認定審査会が要介護度を判定します。\n\n\n【誤答選択肢について】\n- b: 家族の所得情報 → 介護保険料や自己負担割合を判断する際に参照されることはありますが、要介護認定の直接的な要件ではありません。\n- c: 訪問看護指示書 → 訪問看護を受ける際に主治医が作成するものですが、要介護認定の必須書類ではありません。\n- d: 保健所長の許可 → 要介護認定との直接的関係はなく、市町村が認定業務を行います。\n- e: ケアプランの作成 → 要介護認定を受けた後、居宅介護支援事業所などでケアプランが作成されます。認定前の要件ではありません。\n\n\n【周辺知識】\n- 要介護認定を受けた後、利用者やケアマネジャーと相談してケアプランを作成し、介護サービスを受けられるようになります。\n- 要支援認定の仕組みも同様ですが、サービス内容は要支援向け(介護予防サービス)と要介護向けで異なります。"
+        "b": {
+          "ja": "家族の所得情報",
+          "en": "Family income information",
+          "zh": "家庭收入信息"
+        },
+        "c": {
+          "ja": "訪問看護指示書",
+          "en": "A home-visit nursing instruction form",
+          "zh": "上门护理指示书"
+        },
+        "d": {
+          "ja": "保健所長の許可",
+          "en": "Approval from the public health center director",
+          "zh": "保健所长的许可"
+        },
+        "e": {
+          "ja": "ケアプランの作成",
+          "en": "A care plan creation",
+          "zh": "制定护理计划"
+        }
+      },
+      "answer": "a",
+      "explanation": {
+        "ja": "【解答解説】\n\n介護保険による要介護認定を受けるためには、市町村に申請し、認定調査と「主治医意見書(a)」が必要となります。主治医意見書を基に介護認定審査会が要介護度を判定します。\n\n【誤答選択肢について】\n- b: 家族の所得情報 → 介護保険料や自己負担割合を判断する際に参照されることはありますが、要介護認定の直接的な要件ではありません。\n- c: 訪問看護指示書 → 訪問看護を受ける際に主治医が作成するものですが、要介護認定の必須書類ではありません。\n- d: 保健所長の許可 → 要介護認定との直接的関係はなく、市町村が認定業務を行います。\n- e: ケアプランの作成 → 要介護認定を受けた後、居宅介護支援事業所などでケアプランが作成されます。認定前の要件ではありません。\n\n【周辺知識】\n- 要介護認定を受けた後、利用者やケアマネジャーと相談してケアプランを作成し、介護サービスを受けられるようになります。\n- 要支援認定の仕組みも同様ですが、サービス内容は要支援向け(介護予防サービス)と要介護向けで異なります。",
+        "en": "[Answer Explanation]\n\nTo receive a long-term care insurance (kaigo hoken) certification of need, one must apply to the local municipal office, undergo an assessment, and submit a Primary Care Physician’s opinion report (a). Based on this report, a review panel determines the level of needed care.\n\n[Regarding the Other Choices]\n- (b) Family income information may affect insurance premiums or co-pay rates but is not a direct requirement for need certification.\n- (c) A home-visit nursing instruction form is used if home-visit nursing care is prescribed by a physician but is not mandatory for the certification application.\n- (d) Approval from the public health center director is not involved in the certification process; the municipal government handles the assessment.\n- (e) A care plan is developed after one is certified for care; it is not needed beforehand.\n\n[Additional Information]\n- Once certified, the patient (and/or their family) works with a care manager to create a care plan and arrange care services.\n- A similar process applies for “Need of Support” certification, though the specific services differ from those for full care needs.",
+        "zh": "【答案解析】\n\n要申请介护保险（kaigo hoken）下的要介护认定，需要向市町村提交申请，进行认定调查，并且需要提供主治医意见书(a)。评审委员会会根据该意见书来判断需要的护理等级。\n\n【其他选项说明】\n- (b) 家庭收入信息 → 虽在判断介护保险费或个人承担比例时会参考，但并非要介护认定的直接条件。\n- (c) 上门护理指示书 → 当需要上门护理服务时，由主治医开具，但并不是申请要介护认定的必需材料。\n- (d) 保健所长的许可 → 与要介护认定无直接关系，由市町村负责认定业务。\n- (e) 护理计划的制定 → 在获得要介护认定后，居家护理支援机构等会与申请人共同制定护理计划，并实施护理服务，非认定前所需。\n\n【补充说明】\n- 完成要介护认定后，会与护理经理（Care Manager）协商制定护理计划，从而使用各种介护服务。\n- “要支援认定”流程与此类似，但所提供的服务（介护预防服务等）与“要介护”有所不同。"
+      }
     },
     {
-        "question": "作業環境管理はどれか。",
-        "choices": {
-            "a": "暑熱作業の時間制限",
-            "b": "特殊健康診断の実施",
-            "c": "防塵マスク使用の徹底",
-            "d": "有害物質使用工程の密閉化",
-            "e": "安全な手順のマニュアルの整備"
+      "question": {
+        "ja": "作業環境管理はどれか。",
+        "en": "Which of the following is an example of workplace (occupational) environment management?",
+        "zh": "下列哪项属于作业环境管理？"
+      },
+      "choices": {
+        "a": {
+          "ja": "暑熱作業の時間制限",
+          "en": "Limiting work time in hot environments",
+          "zh": "限制在高温环境下的作业时间"
         },
-        "answer": "d",
-        "explanation": "【解答解説】\n\n作業環境管理とは、有害要因（粉じん、化学物質、騒音、放射線など）を作業現場そのものから低減・除去し、労働者が安全な環境で作業できるようにする管理手法です。選択肢dの「有害物質使用工程の密閉化」は、作業環境そのものからの暴露を根本的に減らす工程管理であり、典型的な作業環境管理の手段です。\n\n\n【誤答選択肢について】\n- a: 暑熱作業の時間制限 → これは労働時間やシフトを工夫する「作業管理」や「作業方法管理」に近い措置です。\n- b: 特殊健康診断の実施 → 労働者自身の健康状態を把握するものであり「健康管理」に当たります。\n- c: 防塵マスク使用の徹底 → 個人用保護具（PPE）による「個人防護管理」であり、環境管理ではありません。\n- e: 安全な手順のマニュアルの整備 → 「作業管理」「教育訓練」の一環であり、作業環境そのものを変えているわけではありません。\n\n\n【周辺知識】\n- 労働衛生の3管理：①作業環境管理、②作業管理、③健康管理に区分されます。\n- 作業環境管理は「源流対策」であり、最も基本的かつ重要な対策です。"
+        "b": {
+          "ja": "特殊健康診断の実施",
+          "en": "Conducting special health examinations",
+          "zh": "实施特殊健康检查"
+        },
+        "c": {
+          "ja": "防塵マスク使用の徹底",
+          "en": "Ensuring consistent use of dust masks",
+          "zh": "彻底执行防尘口罩的使用"
+        },
+        "d": {
+          "ja": "有害物質使用工程の密閉化",
+          "en": "Sealing off processes involving hazardous substances",
+          "zh": "对使用有害物质的工艺进行密闭化"
+        },
+        "e": {
+          "ja": "安全な手順のマニュアルの整備",
+          "en": "Developing manuals for safe work procedures",
+          "zh": "完善安全作业程序手册"
+        }
+      },
+      "answer": "d",
+      "explanation": {
+        "ja": "【解答解説】\n\n作業環境管理とは、有害要因（粉じん、化学物質、騒音、放射線など）を作業現場そのものから低減・除去し、労働者が安全な環境で作業できるようにする管理手法です。選択肢dの「有害物質使用工程の密閉化」は、作業環境そのものからの暴露を根本的に減らす工程管理であり、典型的な作業環境管理の手段です。\n\n【誤答選択肢について】\n- a: 暑熱作業の時間制限 → これは労働時間やシフトを工夫する「作業管理」や「作業方法管理」に近い措置です。\n- b: 特殊健康診断の実施 → 労働者自身の健康状態を把握するものであり「健康管理」に当たります。\n- c: 防塵マスク使用の徹底 → 個人用保護具（PPE）による「個人防護管理」であり、環境管理ではありません。\n- e: 安全な手順のマニュアルの整備 → 「作業管理」「教育訓練」の一環であり、作業環境そのものを変えているわけではありません。\n\n【周辺知識】\n- 労働衛生の3管理：①作業環境管理、②作業管理、③健康管理に区分されます。\n- 作業環境管理は「源流対策」であり、最も基本的かつ重要な対策です。",
+        "en": "[Answer Explanation]\n\nOccupational environment management focuses on reducing or eliminating hazards (dust, chemicals, noise, radiation, etc.) from the workplace itself, ensuring workers can perform tasks in a safe environment. Option (d) — sealing off processes that use hazardous substances — is a prime example of controlling exposure at its source.\n\n[Regarding the Other Choices]\n- (a) Limiting work time in hot environments is more related to work management or scheduling.\n- (b) Conducting special health examinations falls under health management, monitoring the condition of workers.\n- (c) Enforcing the use of dust masks is a form of personal protective equipment (PPE), categorized under individual protection, not an environmental control.\n- (e) Providing manuals for safe work procedures is part of work management/education, rather than altering the environment.\n\n[Additional Information]\n- In occupational health, “Three Managements” are commonly distinguished: (1) Work Environment Management, (2) Work Management, and (3) Health Management.\n- Work environment management (source control) is fundamental and typically the most effective initial approach.",
+        "zh": "【答案解析】\n\n所谓作业环境管理，指的是从作业现场本身降低或去除有害因素（如粉尘、化学物质、噪音、放射线等），以便让劳动者在安全的环境中工作。选项(d)“将使用有害物质的工艺进行密闭化”就是通过源头管理降低暴露的典型作业环境管理手段。\n\n【其他选项说明】\n- (a) 限制高温环境作业时长 → 更偏向作业管理或排班方式的管理。\n- (b) 实施特殊健康检查 → 属于对劳动者健康状况进行监测的“健康管理”。\n- (c) 彻底执行防尘口罩的使用 → 这是属于个人防护装备（PPE）的范畴，即“个人防护管理”，而非对环境本身的管理。\n- (e) 完善安全作业程序手册 → 这属于“作业管理”或培训教育措施，并未改变作业环境本身。\n\n【补充说明】\n- 劳动卫生学上常提到“三个管理”：①作业环境管理，②作业管理，③健康管理。\n- 作业环境管理属于“源头治理”，往往是最基础和优先的手段。"
+      }
     },
     {
-        "question": "市町村保健センターの業務はどれか。",
-        "choices": {
-            "a": "住民の健康相談",
-            "b": "労働災害の認定",
-            "c": "医療機関への立入検査",
-            "d": "食中毒発生時の原因調査",
-            "e": "指定難病の医療費助成の申請窓口"
+      "question": {
+        "ja": "市町村保健センターの業務はどれか。",
+        "en": "Which of the following is a role performed by municipal health centers?",
+        "zh": "下列哪项属于市町村保健中心的工作？"
+      },
+      "choices": {
+        "a": {
+          "ja": "住民の健康相談",
+          "en": "Providing health consultations for residents",
+          "zh": "为居民提供健康咨询"
         },
-        "answer": "a",
-        "explanation": "【解答解説】\n\n市町村保健センターは、地域住民への身近な保健サービス拠点として、健康相談(a)や健康教育・健康診査等を行う機関です。各家庭や地域の健康づくりのサポートが主な役割となります。\n\n\n【誤答選択肢について】\n- b: 労働災害の認定 → 労働基準監督署が行う業務であり、市町村保健センターの管轄ではありません。\n- c: 医療機関への立入検査 → 保健所の業務であり、市町村保健センターとは職域が異なります。\n- d: 食中毒発生時の原因調査 → これも保健所などが中心となり行う業務です。\n- e: 指定難病の医療費助成の申請窓口 → 都道府県(保健所)などが窓口になる場合が多く、市町村保健センターは直接受理機関とはなりません。\n\n\n【周辺知識】\n- 保健所は都道府県や政令指定都市などが設置する地域保健の拠点であり、医療機関の指導監督、感染症対策、食品衛生などを担います。\n- 一方、市町村保健センターはより住民に近い場所で健康増進や母子保健、地域予防活動などを行う機関です。"
+        "b": {
+          "ja": "労働災害の認定",
+          "en": "Certifying occupational accidents",
+          "zh": "认定劳动灾害"
+        },
+        "c": {
+          "ja": "医療機関への立入検査",
+          "en": "Conducting on-site inspections of medical institutions",
+          "zh": "对医疗机构进行现场检查"
+        },
+        "d": {
+          "ja": "食中毒発生時の原因調査",
+          "en": "Investigating causes of food poisoning outbreaks",
+          "zh": "在食物中毒事件中进行病因调查"
+        },
+        "e": {
+          "ja": "指定難病の医療費助成の申請窓口",
+          "en": "Serving as the application window for designated intractable disease subsidies",
+          "zh": "作为指定难病医疗费补助申请的窗口"
+        }
+      },
+      "answer": "a",
+      "explanation": {
+        "ja": "【解答解説】\n\n市町村保健センターは、地域住民への身近な保健サービス拠点として、健康相談(a)や健康教育・健康診査等を行う機関です。各家庭や地域の健康づくりのサポートが主な役割となります。\n\n【誤答選択肢について】\n- b: 労働災害の認定 → 労働基準監督署が行う業務であり、市町村保健センターの管轄ではありません。\n- c: 医療機関への立入検査 → 保健所の業務であり、市町村保健センターとは職域が異なります。\n- d: 食中毒発生時の原因調査 → これも保健所などが中心となり行う業務です。\n- e: 指定難病の医療費助成の申請窓口 → 都道府県(保健所)などが窓口になる場合が多く、市町村保健センターは直接受理機関とはなりません。\n\n【周辺知識】\n- 保健所は都道府県や政令指定都市などが設置する地域保健の拠点であり、医療機関の指導監督、感染症対策、食品衛生などを担います。\n- 一方、市町村保健センターはより住民に近い場所で健康増進や母子保健、地域予防活動などを行う機関です。",
+        "en": "[Answer Explanation]\n\nMunicipal health centers provide accessible public health services to local residents, including health consultations (a), health education, and checkups. Their primary role is to support the health and well-being of families and communities.\n\n[Regarding the Other Choices]\n- (b) Certifying occupational accidents is handled by the Labor Standards Inspection Office, not a municipal health center.\n- (c) Conducting on-site inspections of medical institutions is the responsibility of public health centers (hokenjo), not municipal ones.\n- (d) Investigating the causes of food poisoning is also primarily undertaken by public health centers.\n- (e) Applications for financial support for designated intractable diseases are generally processed at the prefectural level or via public health centers, not typically through municipal health centers.\n\n[Additional Information]\n- Public health centers (hokenjo) are operated by prefectural governments or designated cities and handle broader oversight, including licensing of medical facilities, infectious disease control, and food sanitation.\n- Municipal health centers, meanwhile, focus on local health promotion, maternal and child health services, and preventive programs.",
+        "zh": "【答案解析】\n\n市町村保健中心是为当地居民提供就近保健服务的机构，主要开展健康咨询(a)、健康教育、健康体检等工作，为家庭和社区的健康促进提供支持。\n\n【其他选项】\n- (b) 劳动灾害认定 → 由劳动基准监督署负责，不属于市町村保健中心的职责范围。\n- (c) 对医疗机构的现场检查 → 由保健所（hokenjo）负责，与市町村保健中心职能不同。\n- (d) 食物中毒原因调查 → 也主要由保健所牵头执行。\n- (e) 指定难病医疗费补助的申请窗口 → 多由都道府县（保健所）负责，市町村保健中心一般不直接受理。\n\n【补充说明】\n- 保健所通常由都道府县或政令指定城市设立，承担更广泛的公共卫生工作，如对医疗机构的监管、传染病防控、食品卫生监管等。\n- 市町村保健中心则更贴近居民，为当地提供健康促进、母子保健及预防保健等服务。"
+      }
     },
     {
-        "question": "気候変動枠組条約に基づくのはどれか。",
-        "choices": {
-            "a": "パリ協定",
-            "b": "オタワ憲章",
-            "c": "バンコク憲章",
-            "d": "リスボン宣言",
-            "e": "アルマ・アタ宣言"
+      "question": {
+        "ja": "気候変動枠組条約に基づくのはどれか。",
+        "en": "Which of the following was established under the United Nations Framework Convention on Climate Change (UNFCCC)?",
+        "zh": "下列哪一项基于《联合国气候变化框架公约》（UNFCCC）而制定？"
+      },
+      "choices": {
+        "a": {
+          "ja": "パリ協定",
+          "en": "Paris Agreement",
+          "zh": "《巴黎协定》"
         },
-        "answer": "a",
-        "explanation": "【解答解説】\n\n気候変動枠組条約（UNFCCC）は地球温暖化対策を国際的に進めるための条約で、そこから派生した具体的な国際合意が「パリ協定(a)」です（2015年採択）。\n\n\n【誤答選択肢について】\n- b: オタワ憲章(1986) → WHOが提唱したヘルスプロモーションに関する憲章。\n- c: バンコク憲章(2005) → ヘルスプロモーションの拡大と強化に関するWHOの国際文書。\n- d: リスボン宣言 → 医療倫理や患者権利に関する宣言として知られています。\n- e: アルマ・アタ宣言(1978) → プライマリ・ヘルス・ケア(Primary Health Care)を推進する国際宣言。\n\n\n【周辺知識】\n- パリ協定は温室効果ガスの排出量削減目標を各国が自主的に設定し、地球温暖化の緩和を図るための主要な取り組みを定める国際的枠組みです。\n- 気候変動は公衆衛生の面でも熱中症や感染症の増加など重大な影響が懸念されており、対策が急務とされています。"
+        "b": {
+          "ja": "オタワ憲章",
+          "en": "Ottawa Charter",
+          "zh": "《渥太华宪章》"
+        },
+        "c": {
+          "ja": "バンコク憲章",
+          "en": "Bangkok Charter",
+          "zh": "《曼谷宪章》"
+        },
+        "d": {
+          "ja": "リスボン宣言",
+          "en": "Lisbon Declaration",
+          "zh": "《里斯本宣言》"
+        },
+        "e": {
+          "ja": "アルマ・アタ宣言",
+          "en": "Alma-Ata Declaration",
+          "zh": "《阿拉木图宣言》"
+        }
+      },
+      "answer": "a",
+      "explanation": {
+        "ja": "【解答解説】\n\n気候変動枠組条約（UNFCCC）は地球温暖化対策を国際的に進めるための条約で、そこから派生した具体的な国際合意が「パリ協定(a)」です（2015年採択）。\n\n【誤答選択肢について】\n- b: オタワ憲章(1986) → WHOが提唱したヘルスプロモーションに関する憲章。\n- c: バンコク憲章(2005) → ヘルスプロモーションの拡大と強化に関するWHOの国際文書。\n- d: リスボン宣言 → 医療倫理や患者権利に関する宣言として知られています。\n- e: アルマ・アタ宣言(1978) → プライマリ・ヘルス・ケア(Primary Health Care)を推進する国際宣言。\n\n【周辺知識】\n- パリ協定は温室効果ガスの排出量削減目標を各国が自主的に設定し、地球温暖化の緩和を図るための主要な取り組みを定める国際的枠組みです。\n- 気候変動は公衆衛生の面でも熱中症や感染症の増加など重大な影響が懸念されており、対策が急務とされています。",
+        "en": "[Answer Explanation]\n\nThe UN Framework Convention on Climate Change (UNFCCC) is the foundation for international efforts to combat global warming. The Paris Agreement (a), adopted in 2015, is a major international accord derived from the UNFCCC.\n\n[Regarding the Other Choices]\n- (b) The Ottawa Charter (1986) is a WHO document on health promotion.\n- (c) The Bangkok Charter (2005) is another WHO document aimed at expanding and strengthening health promotion.\n- (d) The Lisbon Declaration is known for addressing medical ethics and patient rights.\n- (e) The Alma-Ata Declaration (1978) is an international statement promoting primary health care.\n\n[Additional Information]\n- Under the Paris Agreement, individual countries set voluntary greenhouse gas reduction targets to mitigate global warming.\n- Climate change significantly affects public health, leading to concerns over heat-related illnesses and the spread of infectious diseases, underscoring the urgency of climate action.",
+        "zh": "【答案解析】\n\n《联合国气候变化框架公约》（UNFCCC）是国际社会应对全球变暖的基本条约，而在此基础上诞生的主要国际协议即为2015年通过的《巴黎协定》(a)。\n\n【其他选项】\n- (b) 《渥太华宪章》（1986） → 世界卫生组织（WHO）提出的健康促进宪章。\n- (c) 《曼谷宪章》（2005） → 旨在扩大和强化健康促进的WHO国际文件。\n- (d) 《里斯本宣言》 → 主要与医学伦理和患者权利相关的宣言。\n- (e) 《阿拉木图宣言》（1978） → 推动初级卫生保健（Primary Health Care）的国际性宣言。\n\n【补充说明】\n- 《巴黎协定》要求各国自主设定温室气体减排目标，以减缓全球变暖，是当前国际应对气候变化的重要框架。\n- 气候变化同样对公共卫生带来严峻挑战，例如中暑和传染病增加等，亟需各国采取有效措施。"
+      }
     }
-]
+  ]
+  

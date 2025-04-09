@@ -1,123 +1,402 @@
 [
-    {
-      "question": "細胞傷害への適応でないのはどれか。",
-      "choices": {
-        "a": "萎縮（atrophy）",
-        "b": "過形成（hyperplasia）",
-        "c": "肥大（hypertrophy）",
-        "d": "化生（metaplasia）",
-        "e": "新生物（neoplasia）"
-      },
-      "answer": "e",
-      "explanation": "【解答解説】\n\n細胞傷害や刺激に対する細胞の適応反応としては、萎縮・過形成・肥大・化生などが挙げられますが、これらは可逆的・生理的または病的刺激に対する応答です。\n\n- **萎縮（atrophy）**：臓器や組織が縮小し、細胞が大きさや数を減らす変化。\n- **過形成（hyperplasia）**：細胞数が増加し、組織量が増える変化。\n- 肥大（hypertrophy）：細胞の大きさが増大することで組織や臓器が大きくなる変化。\n- 化生（metaplasia）：ある成熟した細胞が別の成熟した細胞に置き換わる変化。\n\n一方、新生物（neoplasia） は細胞増殖の制御が失われた腫瘍性増殖を指し、適応反応ではなく、腫瘍が自律的に増殖を続ける病的なプロセスです。したがって、細胞傷害への“適応”とはみなされません。"
+  {
+    "question": {
+      "ja": "細胞傷害への適応でないのはどれか。",
+      "en": "Which of the following is not an adaptation to cellular injury?",
+      "zh": "以下哪项不属于细胞对损伤的适应反应？"
     },
-    {
-      "question": "壊死と疾患の組み合わせで正しいのはどれか。",
-      "choices": {
-        "a": "凝固壊死　慢性膵炎",
-        "b": "融解壊死　化膿性肺炎",
-        "c": "乾酪壊死　膠原病関連血管炎",
-        "d": "類線維素壊死　心筋梗塞",
-        "e": "脂肪壊死　肺結核"
+    "choices": {
+      "a": {
+        "ja": "萎縮（atrophy）",
+        "en": "Atrophy",
+        "zh": "萎缩（atrophy）"
       },
-      "answer": "b",
-      "explanation": "【解答解説】\n\n- 融解壊死（liquefactive necrosis）：組織が液状化する壊死。脳梗塞や化膿性炎（膿）の場面で代表的にみられます。化膿性肺炎では好中球の酵素により組織が融解壊死を起こし、膿を形成するため、本選択肢が正解となります。\n\n【他の壊死について】\n- 凝固壊死（coagulative necrosis）：代表例は心筋梗塞、腎梗塞、脾梗塞など。組織構造は残るものの、細胞成分は凝固状に変化します。\n- 乾酪壊死（caseous necrosis）：代表例は結核病巣。チーズ状の外観を呈し、膠原病関連血管炎（選択肢c）ではなく結核性肉芽腫などでみられます。\n- 類線維素壊死（fibrinoid necrosis）：代表例は膠原病（全身性エリテマトーデスなど）や悪性高血圧などの血管壁の病変。心筋梗塞（選択肢d）は典型的には凝固壊死です。\n- 脂肪壊死（fat necrosis）：代表例は急性膵炎などで、膵酵素による脂肪組織の分解が起こります（肺結核でなく、急性膵炎や外傷性脂肪壊死）。"
+      "b": {
+        "ja": "過形成（hyperplasia）",
+        "en": "Hyperplasia",
+        "zh": "增生（hyperplasia）"
+      },
+      "c": {
+        "ja": "肥大（hypertrophy）",
+        "en": "Hypertrophy",
+        "zh": "肥大（hypertrophy）"
+      },
+      "d": {
+        "ja": "化生（metaplasia）",
+        "en": "Metaplasia",
+        "zh": "化生（metaplasia）"
+      },
+      "e": {
+        "ja": "新生物（neoplasia）",
+        "en": "Neoplasia",
+        "zh": "新生物（neoplasia）"
+      }
     },
-    {
-      "question": "砂粒小体がみられる腫瘍はどれか。",
-      "choices": {
-        "a": "下垂体腺腫",
-        "b": "甲状腺濾胞癌",
-        "c": "髄膜腫",
-        "d": "類内膜癌",
-        "e": "リンパ管腫"
-      },
-      "answer": "c",
-      "explanation": "【解答解説】\n\n- 砂粒小体（psammoma body）：層状の同心円構造を持つ石灰沈着物。髄膜腫(c)や乳頭状甲状腺癌、漿液性乳頭状腺癌（卵巣）、乳頭状腎細胞癌などでよく認められます。髄膜腫は硬膜に付着する脳腫瘍で、組織標本上の砂粒小体が特徴的な所見のひとつです。\n\n【誤答選択肢について】\n- a: 下垂体腺腫 → 砂粒小体形成は典型的でなく、ホルモン産生の有無に応じた症状が主。\n- b: 甲状腺濾胞癌 → 甲状腺の乳頭癌なら砂粒小体を伴うことが多いが、濾胞癌では典型的でない。\n- d: 類内膜癌（子宮体癌） → 砂粒小体は典型的には認めにくい。\n- e: リンパ管腫 → 砂粒小体とは無関係。"
-    },
-    {
-      "question": "急性心筋梗塞の発症からの時間経過と組織変化の組み合わせで正しいのはどれか。",
-      "choices": {
-        "a": "1時間：変化なし",
-        "b": "2時間：筋細胞の凝固壊死",
-        "c": "4時間：多数の多核白血球の浸潤",
-        "d": "24時間：マクロファージによる壊死細胞の貪食",
-        "e": "72時間：肉芽組織の出現"
-      },
-      "answer": "a",
-      "explanation": "【解答解説】\n\n急性心筋梗塞で生じる病理学的変化のタイムコースは大まかに以下のようになります。\n\n- 発症後 ～4時間：光学顕微鏡的にはほとんど変化が認められない。1時間程度であれば変化なし(a)が正しい。\n- 4〜12時間：エオジン好性の上昇、波状線の消失などの初期変化がみられるが、多核白血球の本格的浸潤はまだ。\n- 12〜24時間：好中球が浸潤し始める。\n- 1〜3日：好中球が最も顕著に浸潤。\n- 3〜7日：マクロファージが増加し、壊死組織の貪食が進行。\n- 1〜2週：肉芽組織の形成（線維芽細胞・新生血管など）。\n- 1ヶ月以降：瘢痕化が進行。\n\nよって、選択肢aの「1時間：変化なし」が最も正確です。\n\n【周辺知識】\n- 早期診断が重要ですが、病理所見が顕著に現れ始めるのは数時間後からであり、臨床現場ではトロポニンT/Iなどのバイオマーカーや症状・心電図変化に基づく診断が主となります。"
-    },
-    {
-      "question": "急性放射線障害を生じにくい臓器はどれか。",
-      "choices": {
-        "a": "脳",
-        "b": "胸腺",
-        "c": "性腺",
-        "d": "消化管",
-        "e": "リンパ節"
-      },
-      "answer": "a",
-      "explanation": "【解答解説】\n\n放射線感受性は、細胞の分裂・増殖能が高いほど高くなります。急性放射線障害は増殖サイクルが活発な組織（リンパ系、造血系、腸上皮、性腺など）で顕著に起こりやすい。\n\n- 脳(a) は分裂能の非常に低い細胞から成り、急性放射線障害は相対的に生じにくいとされます。\n\n【その他選択肢】\n- b: 胸腺 → T細胞が成熟する場であり、小児期には増殖盛んなため放射線感受性が高い。\n- c: 性腺 → 生殖細胞の増殖が盛んなため放射線感受性が高い。\n- d: 消化管 → 特に小腸上皮などはターンオーバーが速いので障害を受けやすい。\n- e: リンパ節 → 造血・免疫系細胞が活発に分裂しており、放射線感受性が高い。\n\n【周辺知識】\n- 放射線障害は「急性放射線症候群」に加え、晩期合併症(発がんリスクなど)も問題となりますが、急性期では特に増殖が盛んな組織が最初に被害を受けます。"
-    },
-    {
-      "question": "全身性アミロイドーシスの原因タンパクと背景疾患の組み合わせで正しいのはどれか。",
-      "choices": {
-        "a": "カルシトニン - 甲状腺髄様癌",
-        "b": "血清アミロイドA - 急性唾液腺炎",
-        "c": "トランスサイレチン - 2型糖尿病",
-        "d": "免疫グロブリン軽鎖 - 多発性骨髄腫",
-        "e": "β2-ミクログロブリン - ネフローゼ症候群"
-      },
-      "answer": "d",
-      "explanation": "【解答解説】\n\n- 免疫グロブリン軽鎖(AL)アミロイドーシスは多発性骨髄腫など、形質細胞が産生する免疫グロブリンの軽鎖が不適切に沈着するタイプ。選択肢dが正解です。\n\n【他のアミロイドについて】\n- a: カルシトニン由来(ＡＣal, amyloid calcitonin) → 甲状腺髄様癌(局所性)でみられるアミロイド。\n- b: 血清アミロイドA(SAA)由来(AAアミロイド) → 慢性炎症(リウマチなど)で上昇するSAAが原因となる。急性唾液腺炎は短期間の炎症であり、アミロイド沈着のリスクは低い。\n- c: トランスサイレチン(TTR) → 家族性アミロイドポリニューロパチー(FAP)や老人性全身性アミロイドーシスの原因タンパク。ただし、2型糖尿病のアミロイドはIAPP(インスリン分泌顆粒由来アミリン)が主。\n- e: β2-ミクログロブリン → 血液透析患者で沈着しやすく、骨関節の障害を起こすDialysis-related amyloidosisとして有名。ネフローゼ症候群自体ではなく長期透析が関連。\n\n【周辺知識】\n- アミロイドーシスは臓器へアミロイド蛋白が沈着し、機能障害を引き起こします。沈着する蛋白の種類によって分類され、全身性アミロイドーシスは多臓器に及ぶため重篤になりやすい。"
-    },
-    {
-      "question": "急性炎症の特徴とメディエーターの組み合わせで正しいのはどれか。",
-      "choices": {
-        "a": "疼痛 - IL-6",
-        "b": "発熱 - IL-1",
-        "c": "発赤 - トロンボキサン",
-        "d": "白血球遊走 - ブラジキニン",
-        "e": "血管透過性亢進 - INF-α"
-      },
-      "answer": "b",
-      "explanation": "【解答解説】\n\n急性炎症の5主徴は「発赤、熱感、腫脹、疼痛、機能障害」。これに関わる代表的メディエーターは下記の通りです。\n\n- 発熱：IL-1(b)、TNF-α、IL-6、PGE₂(視床下部の体温調節中枢へ作用)\n  - 特にIL-1は内因性発熱物質としてよく知られています。\n\n【誤答選択肢について】\n- a: 疼痛はプロスタグランジン(PGE₂)やブラジキニンが主な原因。IL-6は発熱や急性期タンパク質産生誘導などに関与。\n- c: 発赤は血管拡張が主因で、ヒスタミンやNO、プロスタグランジンなどが関わる。トロンボキサンは血小板凝集・血管収縮を引き起こすことが多い。\n- d: 白血球の遊走にはケモカイン(C5aやIL-8など)が主役で、ブラジキニンは血管透過性亢進・疼痛に関与が強い。\n- e: 血管透過性亢進はヒスタミンやブラジキニン、PAFなど。INF-αはウイルス感染時の抗ウイルス作用がメインで炎症性透過性亢進には直接関与しません。\n\n【周辺知識】\n- 炎症性サイトカインとしてIL-1、TNF-α、IL-6が代表的。発熱、白血球増加、急性期蛋白(CRP等)増加などの全身性炎症反応を誘導します。\n- 疼痛においてはプロスタグランジンの産生(特にPGE₂)が重要で、NSAIDs(非ステロイド性抗炎症薬)はCOXを阻害してこの産生を抑制し、鎮痛効果を発揮します。"
-    },
-    {
-      "question": "癌の発生・進展で、基底膜が破壊され、さらにE-cadherinの減少で細胞の結合低下が生じる段階はどれか。",
-      "choices": {
-        "a": "化生",
-        "b": "異形成",
-        "c": "癌の転移",
-        "d": "上皮内癌",
-        "e": "微小浸潤癌"
-      },
-      "answer": "e",
-      "explanation": "【解答解説】\n\n腫瘍が「上皮内癌」(d)の段階では基底膜を超えていないため、浸潤・転移を起こしていません。基底膜破壊は「浸潤」へ進行した証拠です。さらに癌細胞同士の接着を担うE-cadherinの低下により、細胞間結合が弱まり、浸潤・転移能が高まります。\n\n- 微小浸潤癌(e)：上皮内癌から基底膜を破り、間質に浸潤し始めた初期の浸潤癌を指すことが多いです。\n- 化生(a)、異形成(b) は前癌病変や可逆的変化が含まれる段階であり、基底膜は基本的に破壊されていません。\n- 癌の転移(c) はもっと進行した段階で、血行性またはリンパ行性に他臓器へ広がります。\n\nよって、基底膜の破壊とE-cadherinの減少が明確になった段階は「微小浸潤癌(e)」が適切です。"
-    },
-    {
-      "question": "高齢男性、重喫煙者の肺中枢側に発生した癌の特徴で正しいのはどれか。",
-      "choices": {
-        "a": "細胞の胞体は好塩基性を示す。",
-        "b": "癌細胞は核偏在性を示す。",
-        "c": "癌細胞は粘液産生像を示す。",
-        "d": "胞巣中心に好酸性角化巣を認める。",
-        "e": "肺胞構造を破壊せず進展する。"
-      },
-      "answer": "d",
-      "explanation": "【解答解説】\n\n肺癌のうち、扁平上皮癌 は典型的に以下の特徴があります：\n\n- 喫煙との強い関連\n- 中枢気道（肺門部）に好発\n- 組織所見で“角化”や“細胞間橋”が認められる\n- 部分的に“胞巣中心に好酸性角化巣”形成(d)\n\n【その他タイプとの比較】\n- 腺癌：周辺部発生が多く、粘液産生能あり、女性や非喫煙者にも多い。\n- 小細胞癌：神経内分泌系で、高度悪性度・喫煙関連強いが通常は角化巣は作らない。\n- 大細胞癌：未分化な大きな多形細胞が多いが特徴が少ない。\n\n【誤答選択肢について】\n- a: 細胞の胞体が好塩基性を示すよりは好酸性角化巣が特徴。\n- b: 核偏在性は腺癌などでも起こりうる一般的な悪性所見。扁平上皮癌特有とは言いづらい。\n- c: 粘液産生は腺癌が特徴。\n- e: 肺胞構造を破壊せずに進展するわけではなく、浸潤性に増殖し構造を破壊します。"
-    },
-    {
-      "question": "転移性肝癌に最も多くみられる組織型はどれか。",
-      "choices": {
-        "a": "印環細胞癌",
-        "b": "管状腺癌",
-        "c": "小細胞癌",
-        "d": "尿路上皮癌",
-        "e": "扁平上皮癌"
-      },
-      "answer": "b",
-      "explanation": "【解答解説】\n\n肝臓は門脈系からの血流が集まりやすいため、消化管（特に大腸）の癌が転移しやすい臓器です。大腸癌や胃癌の多くは腺癌（管状腺癌）であり、転移性肝癌では管状腺癌構造(b)をとる病巣が最も多くみられます。\n\n【誤答選択肢について】\n- a: 印環細胞癌 → 胃癌などで見られる特殊型腺癌。転移性肝癌としてみられる場合もありますが、頻度としては一般的な管状腺癌が多い。\n- c: 小細胞癌 → 肺の小細胞癌などが転移することもありますが、消化管腺癌の方が多いです。\n- d: 尿路上皮癌(移行上皮癌) → 膀胱などで発生しうるが、肝転移頻度は比較的少ない。\n- e: 扁平上皮癌 → 食道や肺扁平上皮癌からの転移はありえますが、全体として腺癌由来転移が最も多い。\n\n【周辺知識】\n- 転移先臓器の種類を知ることは臨床的に非常に重要です。肝、肺、骨、脳は代表的な転移好発部位です。\n- 大腸癌からの肝転移は手術や化学療法の対象になることが多く、治療戦略上重要です。"
+    "answer": "e",
+    "explanation": {
+      "ja": "【解答解説】\n\n細胞傷害や刺激に対する細胞の適応反応としては、萎縮・過形成・肥大・化生などが挙げられますが、これらは可逆的・生理的または病的刺激に対する応答です。\n\n- 萎縮（atrophy）：臓器や組織が縮小し、細胞が大きさや数を減らす変化。\n- 過形成（hyperplasia）：細胞数が増加し、組織量が増える変化。\n- 肥大（hypertrophy）：細胞の大きさが増大することで組織や臓器が大きくなる変化。\n- 化生（metaplasia）：ある成熟した細胞が、他の成熟した細胞に置き換わる変化。\n\n一方、新生物（neoplasia）は細胞の制御が破綻して自律的に増殖する腫瘍性変化であり、適応反応というよりも腫瘍化の病的過程です。そのため「新生物」は細胞傷害への適応には含まれません。",
+      "en": "[Answer Explanation]\n\nAdaptive responses to cellular injury or stimuli include atrophy, hyperplasia, hypertrophy, and metaplasia, all of which are generally reversible processes responding to physiological or pathological stimuli.\n\n- Atrophy: Reduction in cell size or number leading to organ shrinkage.\n- Hyperplasia: Increase in cell number, causing enlarged tissue/organ.\n- Hypertrophy: Increase in cell size, enlarging the tissue/organ.\n- Metaplasia: Replacement of one mature cell type by another mature cell type.\n\nNeoplasia, however, refers to uncontrolled, autonomous cell proliferation (tumor formation), which is a pathological process rather than an adaptive response to injury. Hence, “neoplasia” is not considered an adaptation.",
+      "zh": "【答案解析】\n\n细胞对损伤或刺激的一系列适应反应包括萎缩、增生、肥大和化生，这些通常属于细胞对生理或病理刺激的可逆性改变。\n\n- 萎缩（atrophy）：细胞体积或数量减少，使组织或器官缩小。\n- 增生（hyperplasia）：细胞数量增多，组织或器官体积增大。\n- 肥大（hypertrophy）：单个细胞体积增大，进而引起组织或器官体积增大。\n- 化生（metaplasia）：一种成熟的细胞类型被另一种成熟细胞类型所取代。\n\n而新生物（neoplasia）指的是细胞增殖失去控制、持续性生长的肿瘤过程，不属于对损伤的单纯“适应反应”，而是病理性的肿瘤变化，因此不被视为细胞伤害的适应方式。"
     }
-  ]
-  
+  },
+  {
+    "question": {
+      "ja": "壊死と疾患の組み合わせで正しいのはどれか。",
+      "en": "Which matching of necrosis type and associated disease is correct?",
+      "zh": "以下哪项关于坏死类型与相关疾病的组合是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "凝固壊死　慢性膵炎",
+        "en": "Coagulative necrosis – chronic pancreatitis",
+        "zh": "凝固坏死 - 慢性胰腺炎"
+      },
+      "b": {
+        "ja": "融解壊死　化膿性肺炎",
+        "en": "Liquefactive necrosis – suppurative pneumonia",
+        "zh": "液化坏死 - 化脓性肺炎"
+      },
+      "c": {
+        "ja": "乾酪壊死　膠原病関連血管炎",
+        "en": "Caseous necrosis – vasculitis associated with collagen disease",
+        "zh": "干酪样坏死 - 胶原病相关血管炎"
+      },
+      "d": {
+        "ja": "類線維素壊死　心筋梗塞",
+        "en": "Fibrinoid necrosis – myocardial infarction",
+        "zh": "类纤维素样坏死 - 心肌梗死"
+      },
+      "e": {
+        "ja": "脂肪壊死　肺結核",
+        "en": "Fat necrosis – pulmonary tuberculosis",
+        "zh": "脂肪坏死 - 肺结核"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\n- 融解壊死（liquefactive necrosis）：組織が液状化する壊死。脳梗塞や化膿性炎（膿）の場面で代表的にみられます。化膿性肺炎においては好中球の酵素による組織の融解壊死が起こり、膿を形成するため選択肢(b)が正解になります。\n\n【その他の代表例】\n- 凝固壊死(coagulative necrosis)：主に心筋梗塞、腎梗塞、脾梗塞など。\n- 乾酪壊死(caseous necrosis)：結核病巣が代表的。\n- 類線維素壊死(fibrinoid necrosis)：膠原病や悪性高血圧に伴う血管病変。\n- 脂肪壊死(fat necrosis)：急性膵炎や外傷による脂肪組織破壊でみられる。",
+      "en": "[Answer Explanation]\n\nLiquefactive necrosis refers to tissue necrosis that results in liquefaction. It is typically seen in brain infarcts and in purulent (suppurative) infections, where neutrophilic enzymes dissolve tissue. In suppurative pneumonia, the formation of pus caused by neutrophil activity involves liquefactive necrosis; thus, choice (b) is correct.\n\n[Other Major Examples]\n- Coagulative necrosis: Found in myocardial infarction, renal infarction, and splenic infarction.\n- Caseous necrosis: Characteristic of tuberculosis.\n- Fibrinoid necrosis: Seen in blood vessel walls in conditions like collagen vascular diseases or malignant hypertension.\n- Fat necrosis: Seen in acute pancreatitis or traumatic injury to adipose tissue.",
+      "zh": "【答案解析】\n\n液化坏死（liquefactive necrosis）指组织呈现液化的坏死过程。典型于脑梗死或化脓性炎症（脓）中出现，因中性粒细胞分泌酶而使组织溶解；在化脓性肺炎中，中性粒细胞酶导致肺组织液化坏死并形成脓，因此(b)是正确选项。\n\n【其他常见坏死类型】\n- 凝固坏死：常见于心肌梗死、肾梗死、脾梗死。\n- 干酪样坏死：典型于结核病灶。\n- 类纤维素样坏死：见于结缔组织病（胶原病）或恶性高血压的血管病变。\n- 脂肪坏死：常见于急性胰腺炎或外伤导致的脂肪组织破坏。"
+    }
+  },
+  {
+    "question": {
+      "ja": "砂粒小体がみられる腫瘍はどれか。",
+      "en": "Which tumor is characterized by the presence of psammoma bodies?",
+      "zh": "哪种肿瘤常见沙粒小体（psammoma bodies）？"
+    },
+    "choices": {
+      "a": {
+        "ja": "下垂体腺腫",
+        "en": "Pituitary adenoma",
+        "zh": "垂体腺瘤"
+      },
+      "b": {
+        "ja": "甲状腺濾胞癌",
+        "en": "Thyroid follicular carcinoma",
+        "zh": "甲状腺滤泡癌"
+      },
+      "c": {
+        "ja": "髄膜腫",
+        "en": "Meningioma",
+        "zh": "脑膜瘤"
+      },
+      "d": {
+        "ja": "類内膜癌",
+        "en": "Endometrioid carcinoma",
+        "zh": "类内膜癌"
+      },
+      "e": {
+        "ja": "リンパ管腫",
+        "en": "Lymphangioma",
+        "zh": "淋巴管瘤"
+      }
+    },
+    "answer": "c",
+    "explanation": {
+      "ja": "【解答解説】\n\n砂粒小体（psammoma body）は層状の石灰沈着物で、髄膜腫(c)、乳頭状甲状腺癌、漿液性乳頭状腺癌（卵巣）、乳頭状腎細胞癌などで認められます。髄膜腫は脳を覆う髄膜由来の良性腫瘍が多く、病理組織で砂粒小体をよく認めることが特徴的です。\n\n【誤答選択肢について】\n- a: 下垂体腺腫 → 砂粒小体とは無関係。\n- b: 甲状腺濾胞癌 → 乳頭癌では砂粒小体が高頻度にみられるが、濾胞癌は別。\n- d: 類内膜癌 → 一般に砂粒小体はみられない。\n- e: リンパ管腫 → リンパ管の腫瘍性増殖であり、砂粒小体とは無関係。\n\n【周辺知識】\n- 髄膜腫は女性に多く、硬膜に付着して脳圧迫症状を呈することがある良性腫瘍です。\n- psammoma bodyは同心円状の層状構造を示す石灰化で、一部の腫瘍に特徴的にみられます。",
+      "en": "[Answer Explanation]\n\nPsammoma bodies are concentric, laminated calcifications commonly seen in meningiomas (c), papillary thyroid carcinoma, serous papillary carcinoma of the ovary, and papillary renal cell carcinoma. Meningioma, a tumor arising from the meninges, often shows psammoma bodies in its histopathology.\n\n[Regarding the Other Choices]\n- (a) Pituitary adenoma does not typically display psammoma bodies.\n- (b) Thyroid follicular carcinoma is distinct from papillary carcinoma (the latter commonly has psammoma bodies).\n- (d) Endometrioid carcinoma generally lacks psammoma bodies.\n- (e) Lymphangioma does not produce psammoma bodies.\n\n[Additional Information]\n- Meningiomas are often benign, more common in females, and attached to the dura. Psammoma bodies are a notable microscopic feature.\n- Psammoma bodies are recognized for their laminated, concentric calcifications characteristic of specific tumors.",
+      "zh": "【答案解析】\n\n沙粒小体（psammoma body）是一种分层的钙化沉积，常见于脑膜瘤(c)、甲状腺乳头状癌、卵巢浆液性乳头状腺癌及肾脏乳头状细胞癌等。脑膜瘤是起源于脑膜的良性肿瘤，经常可在组织学上见到沙粒小体。\n\n【错误选项说明】\n- (a) 垂体腺瘤 → 与沙粒小体无关。\n- (b) 甲状腺滤泡癌 → 砂粒小体典型于甲状腺乳头状癌，而非滤泡癌。\n- (d) 类内膜癌 → 一般不出现沙粒小体。\n- (e) 淋巴管瘤 → 淋巴管的良性增生性病变，与沙粒小体无关。\n\n【补充说明】\n- 脑膜瘤多见于女性，可附着于硬脑膜，引起颅内压迫症状。沙粒小体在某些肿瘤中呈现出特有的同心层状钙化。"
+    }
+  },
+  {
+    "question": {
+      "ja": "急性心筋梗塞の発症からの時間経過と組織変化の組み合わせで正しいのはどれか。",
+      "en": "Which pairing of time after acute myocardial infarction onset and histopathological change is correct?",
+      "zh": "急性心肌梗死发病后时间进展与组织学变化的对应，下列哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "1時間：変化なし",
+        "en": "1 hour: No detectable changes",
+        "zh": "1小时：无可见变化"
+      },
+      "b": {
+        "ja": "2時間：筋細胞の凝固壊死",
+        "en": "2 hours: Coagulative necrosis of myocytes",
+        "zh": "2小时：心肌细胞凝固坏死"
+      },
+      "c": {
+        "ja": "4時間：多数の多核白血球の浸潤",
+        "en": "4 hours: Numerous multinucleated (polymorphonuclear) leukocytes infiltrate",
+        "zh": "4小时：大量多核白细胞浸润"
+      },
+      "d": {
+        "ja": "24時間：マクロファージによる壊死細胞の貪食",
+        "en": "24 hours: Macrophage phagocytosis of necrotic cells",
+        "zh": "24小时：巨噬细胞吞噬坏死细胞"
+      },
+      "e": {
+        "ja": "72時間：肉芽組織の出現",
+        "en": "72 hours: Emergence of granulation tissue",
+        "zh": "72小时：肉芽组织出现"
+      }
+    },
+    "answer": "a",
+    "explanation": {
+      "ja": "【解答解説】\n\n急性心筋梗塞で生じる病理学的変化のタイムコースは大まかに以下の通り：\n\n- 発症後 ～4時間：光学顕微鏡的にはほぼ変化が認められない\n- 4〜12時間：エオジン好性増強、波状線消失など初期変化\n- 12〜24時間：好中球が浸潤し始める\n- 1〜3日：好中球の最盛期\n- 3〜7日：マクロファージが増加し壊死組織を除去\n- 1〜2週：肉芽組織形成\n- 1ヶ月以降：瘢痕化\n\nよって、選択肢(a)「1時間：変化なし」が最も正しい組み合わせです。",
+      "en": "[Answer Explanation]\n\nA rough timeline of histopathological changes in acute myocardial infarction is as follows:\n\n- Up to ~4 hours post-onset: No significant changes detectable by light microscopy.\n- 4–12 hours: Early signs such as increased eosinophilia and loss of striations.\n- 12–24 hours: Beginning infiltration by neutrophils.\n- 1–3 days: Peak neutrophilic infiltration.\n- 3–7 days: Macrophages become prominent, removing necrotic tissue.\n- 1–2 weeks: Granulation tissue forms.\n- After 1 month: Scar formation.\n\nThus, choice (a), “1 hour: No detectable changes,” is correct.",
+      "zh": "【答案解析】\n\n急性心肌梗死后病理学变化的大致时间进程：\n\n- 发病后0～4小时：光学显微镜下无明显变化。\n- 4～12小时：出现早期变化，如胞质嗜酸性增强、横纹消失等。\n- 12～24小时：开始有中性粒细胞浸润。\n- 第1～3天：中性粒细胞浸润达高峰。\n- 第3～7天：巨噬细胞增多并清除坏死组织。\n- 第1～2周：肉芽组织形成。\n- 1个月后：瘢痕形成。\n\n因此，(a)“1小时：无可见变化”与实际变化最吻合。"
+    }
+  },
+  {
+    "question": {
+      "ja": "急性放射線障害を生じにくい臓器はどれか。",
+      "en": "Which organ is least likely to develop acute radiation injury?",
+      "zh": "哪个器官最不容易出现急性放射线损伤？"
+    },
+    "choices": {
+      "a": {
+        "ja": "脳",
+        "en": "Brain",
+        "zh": "大脑"
+      },
+      "b": {
+        "ja": "胸腺",
+        "en": "Thymus",
+        "zh": "胸腺"
+      },
+      "c": {
+        "ja": "性腺",
+        "en": "Gonads",
+        "zh": "性腺"
+      },
+      "d": {
+        "ja": "消化管",
+        "en": "Gastrointestinal tract",
+        "zh": "消化道"
+      },
+      "e": {
+        "ja": "リンパ節",
+        "en": "Lymph nodes",
+        "zh": "淋巴结"
+      }
+    },
+    "answer": "a",
+    "explanation": {
+      "ja": "【解答解説】\n\n放射線感受性は、細胞が分裂・増殖する能力が高いほど高いとされます。急性放射線障害はリンパ系、造血系、腸管上皮や性腺などで起こりやすいのに対し、脳(a)はほとんど細胞分裂を行わず、急性期の放射線障害は起こりにくい器官とされます。\n\n【その他選択肢】\n- b: 胸腺はT細胞分化の場であり、特に成長期では細胞増殖が盛んで感受性が高い。\n- c: 性腺(精巣や卵巣)も配偶子分裂が盛んで感受性高い。\n- d: 消化管は上皮細胞のターンオーバーが活発で放射線感受性が高い。\n- e: リンパ系は免疫細胞の増殖が盛んで、やはり放射線感受性が高い。",
+      "en": "[Answer Explanation]\n\nOrgans with highly proliferative cells (lymphoid tissue, hematopoietic cells, intestinal epithelium, gonads) are highly sensitive to radiation and prone to acute radiation damage. The brain (a) has very low cell turnover, making acute radiation injury less likely.\n\n[Regarding the Other Choices]\n- (b) Thymus: High T-cell proliferation, particularly in children.\n- (c) Gonads: Highly proliferative (spermatogenesis, oogenesis).\n- (d) GI tract: Rapid turnover of epithelial cells.\n- (e) Lymph nodes: High immune cell turnover.\n\nBecause the brain has minimal cell division, it is relatively resistant to acute radiation injury in comparison.",
+      "zh": "【答案解析】\n\n细胞增殖越活跃，放射线敏感性越高。淋巴系统、造血系统、肠上皮及性腺等组织细胞快速分裂，容易出现急性放射损伤；而大脑(a)细胞分裂极少，在急性期较难出现明显放射损伤。\n\n【其他选项】\n- (b) 胸腺：T细胞分化活跃，特别是儿童期对放射线敏感度高。\n- (c) 性腺：生殖细胞分裂旺盛，放射线敏感度高。\n- (d) 消化道：上皮细胞替换频率快，放射线敏感度高。\n- (e) 淋巴结：免疫细胞快速增殖，也对放射线敏感度高。\n\n由于大脑细胞分裂极低，急性放射损伤发生率相对较低。"
+    }
+  },
+  {
+    "question": {
+      "ja": "全身性アミロイドーシスの原因タンパクと背景疾患の組み合わせで正しいのはどれか。",
+      "en": "Which pairing of the amyloid protein causing systemic amyloidosis and the underlying disease is correct?",
+      "zh": "下列哪项是与全身性淀粉样变相关的成因蛋白及背景疾病的正确对应？"
+    },
+    "choices": {
+      "a": {
+        "ja": "カルシトニン - 甲状腺髄様癌",
+        "en": "Calcitonin – medullary thyroid carcinoma",
+        "zh": "降钙素 - 甲状腺髓样癌"
+      },
+      "b": {
+        "ja": "血清アミロイドA - 急性唾液腺炎",
+        "en": "Serum amyloid A – acute sialadenitis",
+        "zh": "血清淀粉样蛋白A - 急性唾液腺炎"
+      },
+      "c": {
+        "ja": "トランスサイレチン - 2型糖尿病",
+        "en": "Transthyretin – type 2 diabetes mellitus",
+        "zh": "运甲状腺素蛋白 - 2型糖尿病"
+      },
+      "d": {
+        "ja": "免疫グロブリン軽鎖 - 多発性骨髄腫",
+        "en": "Immunoglobulin light chain – multiple myeloma",
+        "zh": "免疫球蛋白轻链 - 多发性骨髓瘤"
+      },
+      "e": {
+        "ja": "β2-ミクログロブリン - ネフローゼ症候群",
+        "en": "β2-microglobulin – nephrotic syndrome",
+        "zh": "β2-微球蛋白 - 肾病综合征"
+      }
+    },
+    "answer": "d",
+    "explanation": {
+      "ja": "【解答解説】\n\n多発性骨髄腫など形質細胞由来の免疫グロブリン軽鎖が沈着するアミロイドーシス(AL型)は、全身性アミロイドーシスの代表的な一つです。選択肢(d)が正解。\n\n【他の選択肢について】\n- カルシトニン(ACal) - 甲状腺髄様癌：局所性アミロイド沈着例であり、全身性ではない。\n- 血清アミロイドA(SAA) - 慢性炎症などでAAアミロイドが蓄積する。急性唾液腺炎は急性期反応であり、アミロイド形成には至りにくい。\n- トランスサイレチン(TTR) - 家族性アミロイドポリニューロパチー(FAP)、老人性全身性アミロイドーシスなどが該当。2型糖尿病のアミロイド为IAPP(胰岛淀粉样多肽)。\n- β2-ミクログロブリン - 長期透析患者などで骨関節に沈着しやすく、ネフローゼ症候群とは直接結びつかない。",
+      "en": "[Answer Explanation]\n\nIn multiple myeloma (a plasma cell neoplasm), excessive immunoglobulin light chains form AL (amyloid light chain) amyloid deposits, causing a common type of systemic amyloidosis. Thus, (d) is correct.\n\n[Regarding the Other Choices]\n- Calcitonin (ACal) – medullary thyroid carcinoma leads to localized, not systemic, amyloid deposits.\n- Serum amyloid A (SAA) – chronic inflammatory states lead to AA amyloid (e.g., rheumatoid arthritis). Acute sialadenitis is not typically associated with amyloid.\n- Transthyretin (TTR) – associated with familial amyloid polyneuropathy or senile systemic amyloidosis. Type 2 diabetes mellitus generally exhibits islet amyloid polypeptide (IAPP) deposition.\n- β2-microglobulin – accumulates especially in dialysis-related amyloidosis, not directly linked to nephrotic syndrome.",
+      "zh": "【答案解析】\n\n在多发性骨髓瘤等浆细胞肿瘤中，产生的大量免疫球蛋白轻链可形成AL型淀粉样蛋白，在体内广泛沉积，导致全身性淀粉样变。因此(d)正确。\n\n【其他选项说明】\n- 降钙素(ACal) - 甲状腺髓样癌：一般为局部性淀粉样变，并非全身性。\n- 血清淀粉样蛋白A(SAA) - 慢性炎症（如类风湿关节炎）可导致AA型淀粉样变，急性唾液腺炎很少发展至淀粉样蛋白沉积。\n- 运甲状腺素蛋白(TTR) - 家族性淀粉样多发性神经病(FAP)或老人性全身性淀粉样变；2型糖尿病的胰岛淀粉样由IAPP形成。\n- β2-微球蛋白 - 长期透析患者常见“透析相关淀粉样变”，不与肾病综合征直接相关。"
+    }
+  },
+  {
+    "question": {
+      "ja": "急性炎症の特徴とメディエーターの組み合わせで正しいのはどれか。",
+      "en": "Which pairing of an acute inflammatory feature and its principal mediator is correct?",
+      "zh": "急性炎症某项特征与其主要介质匹配正确的选项是？"
+    },
+    "choices": {
+      "a": {
+        "ja": "疼痛 - IL-6",
+        "en": "Pain – IL-6",
+        "zh": "疼痛 - IL-6"
+      },
+      "b": {
+        "ja": "発熱 - IL-1",
+        "en": "Fever – IL-1",
+        "zh": "发热 - IL-1"
+      },
+      "c": {
+        "ja": "発赤 - トロンボキサン",
+        "en": "Redness – thromboxane",
+        "zh": "发红 - 血栓烷"
+      },
+      "d": {
+        "ja": "白血球遊走 - ブラジキニン",
+        "en": "Leukocyte chemotaxis – bradykinin",
+        "zh": "白细胞趋化 - 缓激肽"
+      },
+      "e": {
+        "ja": "血管透過性亢進 - INF-α",
+        "en": "Increased vascular permeability – interferon-α",
+        "zh": "血管通透性增加 - INF-α"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\n急性炎症の5主徴（発赤、熱感、腫脹、疼痛、機能障害）と主なメディエーターとして：\n- 発熱：IL-1(b), TNF-α, IL-6, PGE₂など\n  - 特にIL-1は代表的な内因性発熱物質\n\n【誤答選択肢について】\n- a: 疼痛はブラジキニンやPGE₂が主因。IL-6は急性期反応に関与。\n- c: 発赤は主に血管拡張（ヒスタミン、NO、PGE₂）により。トロンボキサンは血小板凝集・血管収縮に寄与。\n- d: 白血球遊走はケモカインやC5aなどが主。ブラジキニンは疼痛や血管透過性増大に関連。\n- e: 血管透過性亢進はヒスタミンやブラジキニン、PAFなどが代表。INF-αは主に抗ウイルス作用。",
+      "en": "[Answer Explanation]\n\nAcute inflammation has five cardinal signs (rubor, calor, tumor, dolor, functio laesa). Relevant mediators include:\n- Fever: IL-1 (b), TNF-α, IL-6, and PGE₂\n  - IL-1 is particularly known as an endogenous pyrogen.\n\n[Regarding the Other Choices]\n- (a) Pain is primarily mediated by bradykinin and PGE₂; IL-6 is more associated with acute-phase reactions.\n- (c) Redness largely results from vasodilation mediated by histamine, nitric oxide, PGE₂, etc. Thromboxane induces platelet aggregation and vasoconstriction.\n- (d) Leukocyte chemotaxis is strongly driven by chemokines and C5a; bradykinin mainly contributes to pain and increased vascular permeability.\n- (e) Increased vascular permeability is mediated by histamine, bradykinin, PAF, etc. Interferon-α mainly has antiviral functions.",
+      "zh": "【答案解析】\n\n急性炎症的五大典型特征（发红、发热、肿胀、疼痛、功能障碍）及其主要介质：\n- 发热：IL-1(b)、TNF-α、IL-6、前列腺素E₂(PGE₂)等\n  - 其中IL-1是典型的内源性致热原。\n\n【其他选项说明】\n- (a) 疼痛主要由缓激肽（bradykinin）和PGE₂介导；IL-6与急性期反应蛋白调控相关。\n- (c) 发红主要源于血管扩张（组胺、NO、PGE₂），而血栓烷（TXA₂）促进血小板聚集和血管收缩。\n- (d) 白细胞趋化由C5a及各种趋化因子（chemokines）主导；缓激肽主要涉及疼痛和血管通透性增加。\n- (e) 血管通透性增加通常由组胺、缓激肽、血小板活化因子(PAF)等介导。干扰素α（INF-α）主要起抗病毒作用。"
+    }
+  },
+  {
+    "question": {
+      "ja": "癌の発生・進展で、基底膜が破壊され、さらにE-cadherinの減少で細胞の結合低下が生じる段階はどれか。",
+      "en": "In the progression of cancer, at which stage do tumor cells breach the basement membrane, accompanied by reduced E-cadherin expression?",
+      "zh": "在癌变发生与进展中，基底膜遭到破坏，并且因E-cadherin表达下降导致细胞连接减弱的阶段属于下列哪一项？"
+    },
+    "choices": {
+      "a": {
+        "ja": "化生",
+        "en": "Metaplasia",
+        "zh": "化生"
+      },
+      "b": {
+        "ja": "異形成",
+        "en": "Dysplasia",
+        "zh": "异型增生"
+      },
+      "c": {
+        "ja": "癌の転移",
+        "en": "Metastasis of cancer",
+        "zh": "癌的转移"
+      },
+      "d": {
+        "ja": "上皮内癌",
+        "en": "Carcinoma in situ",
+        "zh": "上皮内癌"
+      },
+      "e": {
+        "ja": "微小浸潤癌",
+        "en": "Microinvasive (microinvasion) carcinoma",
+        "zh": "微小浸润癌"
+      }
+    },
+    "answer": "e",
+    "explanation": {
+      "ja": "【解答解説】\n\n「上皮内癌(d)」の段階では基底膜を破っていないため、浸潤・転移能を獲得していません。基底膜の破壊（浸潤の開始）は「微小浸潤癌(e)」と定義され、さらにE-cadherinの減少により細胞間接着が低下し、浸潤・転移が進行します。\n\n【他の選択肢】\n- 化生(a)、異形成(b) は前癌病変の可能性はあるが、基底膜破壊は起こらない。\n- 癌の転移(c) はさらに進行して遠隔臓器へ転移した状態。\n- 上皮内癌(d) は基底膜内にとどまり浸潤はなし。",
+      "en": "[Answer Explanation]\n\nIn carcinoma in situ (d), the tumor has not yet breached the basement membrane, so there is no invasion or metastatic capability at that point. Once the tumor cells break through the basement membrane, the lesion is termed microinvasive (microinvasion) carcinoma (e). E-cadherin downregulation further reduces cell-cell adhesion, facilitating invasion and potential metastasis.\n\n[Other Choices]\n- (a) Metaplasia and (b) Dysplasia are precancerous or reversible changes without basement membrane disruption.\n- (c) Cancer metastasis indicates spread to distant organs.\n- (d) Carcinoma in situ involves tumor cells confined within the basement membrane, no invasion yet.",
+      "zh": "【答案解析】\n\n上皮内癌（d）时，肿瘤细胞尚未突破基底膜，因此没有浸润或转移的能力。基底膜一旦被破坏，即进入浸润期，其中初始阶段称为微小浸润癌（e）。E-cadherin表达减少进一步导致细胞间黏附力降低，使得侵润和转移过程得以推进。\n\n【其他选项】\n- (a) 化生和(b) 异型增生属于癌前病变或可逆改变，不涉及基底膜破坏。\n- (c) 癌的转移是更晚期的阶段，指远处转移。\n- (d) 上皮内癌尚局限于基底膜内，没有发生浸润。"
+    }
+  },
+  {
+    "question": {
+      "ja": "高齢男性、重喫煙者の肺中枢側に発生した癌の特徴で正しいのはどれか。",
+      "en": "Which characteristic is correct for a centrally located lung cancer in an elderly heavy smoker?",
+      "zh": "对于一位高龄、长期大量吸烟男性在肺门侧发生的肺癌，下列哪项特征是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "細胞の胞体は好塩基性を示す。",
+        "en": "The cytoplasm of cells shows basophilia.",
+        "zh": "细胞胞质表现为嗜碱性。"
+      },
+      "b": {
+        "ja": "癌細胞は核偏在性を示す。",
+        "en": "The cancer cells display nuclear polarity (nuclei at the periphery).",
+        "zh": "癌细胞呈核偏移分布。"
+      },
+      "c": {
+        "ja": "癌細胞は粘液産生像を示す。",
+        "en": "The cancer cells produce mucin.",
+        "zh": "癌细胞具有黏液产生。"
+      },
+      "d": {
+        "ja": "胞巣中心に好酸性角化巣を認める。",
+        "en": "Eosinophilic keratinization is observed in the center of tumor cell nests.",
+        "zh": "在细胞巢中心可见好酸性角化灶。"
+      },
+      "e": {
+        "ja": "肺胞構造を破壊せず進展する。",
+        "en": "It progresses without disrupting the alveolar architecture.",
+        "zh": "在不破坏肺泡结构的情况下进展。"
+      }
+    },
+    "answer": "d",
+    "explanation": {
+      "ja": "【解答解説】\n\n扁平上皮癌は喫煙との関連が強く、中枢肺門部に好発し、組織学的には角化や細胞間橋が特徴。胞巣中心に好酸性角化巣を形成(d)する所見が代表的です。\n\n【誤答選択肢について】\n- a: 扁平上皮癌はしばしば細胞質が豊富で好酸性になる。好塩基性胞体は小細胞癌でみられる。\n- b: 核偏在性は腺癌などでも一般的にみられる現象だが、扁平上皮癌の典型は角化。\n- c: 粘液産生は腺癌の特徴で、扁平上皮癌ではない。\n- e: 浸潤性に増殖し、肺胞構造を破壊して進展する。",
+      "en": "[Answer Explanation]\n\nSquamous cell carcinoma of the lung is strongly associated with smoking and typically arises centrally (near the hilum). Histologically, the hallmark features include keratinization and/or intercellular bridges, often with eosinophilic keratin pearls forming in the center of tumor nests (d).\n\n[Regarding the Other Choices]\n- (a) Squamous cells often have abundant eosinophilic cytoplasm, not basophilic cytoplasm. Basophilia is more characteristic of small cell carcinoma.\n- (b) Nuclear polarity is common in adenocarcinoma. Squamous carcinoma is characterized by keratin pearls or intercellular bridges.\n- (c) Mucin production is typical of adenocarcinoma, not squamous cell carcinoma.\n- (e) This cancer invades destructively, so it does disrupt alveolar architecture.",
+      "zh": "【答案解析】\n\n肺鳞状细胞癌（扁平上皮癌）与吸烟关系密切，常发生于肺门中枢部位，病理上可见角化或细胞间桥等典型特征，常在肿瘤细胞巢中央形成好酸性“角化珠”（d）。\n\n【其他选项】\n- (a) 鳞癌细胞质多为嗜酸性，小细胞癌的胞质往往嗜碱性或少量胞质。\n- (b) 核偏移常见于腺癌等，鳞癌则以角化为主要特点。\n- (c) 黏液分泌是腺癌的典型表现，鳞癌不具此特点。\n- (e) 鳞癌呈侵袭性增长，破坏肺泡结构。"
+    }
+  },
+  {
+    "question": {
+      "ja": "転移性肝癌に最も多くみられる組織型はどれか。",
+      "en": "Which histological type is most commonly seen in metastatic liver cancer?",
+      "zh": "下列哪种组织学类型在肝脏转移性癌中最常见？"
+    },
+    "choices": {
+      "a": {
+        "ja": "印環細胞癌",
+        "en": "Signet-ring cell carcinoma",
+        "zh": "印戒细胞癌"
+      },
+      "b": {
+        "ja": "管状腺癌",
+        "en": "Tubular adenocarcinoma",
+        "zh": "管状腺癌"
+      },
+      "c": {
+        "ja": "小細胞癌",
+        "en": "Small cell carcinoma",
+        "zh": "小细胞癌"
+      },
+      "d": {
+        "ja": "尿路上皮癌",
+        "en": "Urothelial carcinoma",
+        "zh": "尿路上皮癌"
+      },
+      "e": {
+        "ja": "扁平上皮癌",
+        "en": "Squamous cell carcinoma",
+        "zh": "鳞状细胞癌"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\n大腸癌は腺癌であり、その肝転移も管状腺癌の形態を示すことが多いです。肝臓は門脈支配を受け大腸からの血流が集まるため、大腸癌転移が最も多い転移性肝腫瘍となります。結果的に、転移性肝癌の組織型として“管状腺癌”が最も頻度が高いと考えられます。\n\n【誤答選択肢について】\n- a: 印環細胞癌は胃癌の特殊型であり転移することもありますが、最も多いわけではない。\n- c: 小細胞癌は主に肺原発が多いが、頻度は大腸癌転移に比べ低い。\n- d: 尿路上皮癌（移行上皮癌）は膀胱などから肝への転移は相対的に少ない。\n- e: 扁平上皮癌も一部（食道や肺など）肝転移するが、腺癌による転移が圧倒的に多い。\n\n【周辺知識】\n- 肝転移を起こしやすい原発巣として大腸癌、胃癌、膵癌、乳癌、肺癌などが知られ、そのうち腺癌が大部分を占めます。",
+      "en": "[Answer Explanation]\n\nMost colorectal carcinomas are adenocarcinomas (particularly tubular adenocarcinoma), and given the portal venous return to the liver, metastatic deposits from colon cancer are the most frequent cause of liver metastases. Hence, “tubular adenocarcinoma” (b) is the most common histological type in metastatic liver cancer.\n\n[Regarding the Other Choices]\n- (a) Signet-ring cell carcinoma is a subtype often seen in gastric cancer, but not the most frequent.\n- (c) Small cell carcinoma usually originates in the lung; less common overall for liver metastases compared to colon adenocarcinoma.\n- (d) Urothelial carcinoma from the urinary tract is less commonly seen metastasizing to the liver.\n- (e) Squamous cell carcinoma (from esophagus, lung, etc.) can metastasize to the liver, but adenocarcinomas (particularly tubular) are much more common.\n\n[Additional Information]\n- Common primary sites that metastasize to the liver include colon, stomach, pancreas, breast, and lung. Adenocarcinomas constitute the majority.",
+      "zh": "【答案解析】\n\n结直肠癌多为腺癌（主要是管状腺癌），经门静脉易转移至肝脏，因此肝转移最常见的来源是结直肠癌，其组织学形态多表现为“管状腺癌”。因此，在转移性肝癌中，管状腺癌(b)最为常见。\n\n【其他选项】\n- (a) 印戒细胞癌常见于胃癌特有亚型，但总量相对较少。\n- (c) 小细胞癌通常来源于肺，肝转移虽可见但总体不如结直肠来源多。\n- (d) 尿路上皮癌从膀胱等处转移至肝脏的概率较低。\n- (e) 鳞状细胞癌（食管、肺等）也可转移至肝，但与腺癌相比仍较少。\n\n【补充说明】\n- 常见的肝转移原发灶包括结直肠癌、胃癌、胰腺癌、乳腺癌、肺癌等，其中以腺癌居多。"
+    }
+  }
+]

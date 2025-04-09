@@ -1,124 +1,407 @@
 [
-    {
-      "question": "グリコーゲン代謝で正しいのはどれか。",
-      "choices": {
-        "a": "アドレナリンはグリコーゲン合成を促進させる。",
-        "b": "グリコーゲンシンターゼはリン酸化で活性化する。",
-        "c": "グリコーゲン分解は細胞内cAMPの増加で促進される。",
-        "d": "グリコーゲンホスホリラーゼは加水分解酵素である。",
-        "e": "インスリンはグリコーゲンシンターゼを脱リン酸化させる。"
-      },
-      "answer": "c",
-      "explanation": "【解答解説】\n\nグリコーゲン分解はアドレナリンやグルカゴンなどが受容体に結合し、細胞内のcAMPが上昇することで促進されます。\n\ncAMPが上昇するとプロテインキナーゼA（PKA）が活性化し、これがグリコーゲンホスホリラーゼキナーゼをリン酸化してさらに活性化。最終的にはグリコーゲンホスホリラーゼもリン酸化され、グリコーゲンの分解が進むという段階を踏んでいきます。\n\nアドレナリンは基本的にグリコーゲン分解を促進（合成を抑制）する方向に働き、インスリンは逆にグリコーゲン合成を促進します。よく混同されますが、アドレナリンは合成ではなく分解を促進する点がポイントです。\n\nグリコーゲンシンターゼはリン酸化されるとむしろ不活化に傾き、脱リン酸化が行われると活性が高まります。インスリンはシグナル伝達を通じて最終的にグリコーゲンシンターゼの脱リン酸化を促すため、グリコーゲン合成を促進します。\n\nグリコーゲンホスホリラーゼはホスホリシス反応（リン酸による切断）を行うため、加水分解酵素に該当しません。\n\n【周辺知識】\nグリコーゲン貯蔵病ではホルモン作用の異常や分解酵素の欠損が原因になることが多く、肝臓や筋肉に異常な量のグリコーゲンが蓄積します。代謝経路の調節ポイントを正確に把握しておくと、これらの疾患の理解がしやすくなります。"
+  {
+    "question": {
+      "ja": "グリコーゲン代謝で正しいのはどれか。",
+      "en": "Which of the following statements about glycogen metabolism is correct?",
+      "zh": "关于糖原代谢，下列哪项是正确的？"
     },
-    {
-      "question": "親水性アミノ酸はどれか。",
-      "choices": {
-        "a": "バリン",
-        "b": "チロシン",
-        "c": "メチオニン",
-        "d": "トリプトファン",
-        "e": "フェニルアラニン",
-        "f": "アラニン"
+    "choices": {
+      "a": {
+        "ja": "アドレナリンはグリコーゲン合成を促進させる。",
+        "en": "Adrenaline promotes glycogen synthesis.",
+        "zh": "肾上腺素促进糖原合成。"
       },
-      "answer": "b",
-      "explanation": "【解答解説】\n\nチロシンは極性側鎖をもつアミノ酸で、水とある程度相互作用しやすい親水性アミノ酸に分類されます。フェニル基の一部がヒドロキシ基に置換されているため、構造上の極性が増しているのがポイントです。\n\n一方、バリン、メチオニン、トリプトファン、フェニルアラニン、アラニンはいずれも疎水性アミノ酸として扱われます。フェニルアラニンやトリプトファンは芳香族の疎水性側鎖をもち、バリンとアラニンは飽和炭化水素鎖の疎水性、メチオニンは硫黄を含むものの側鎖全体は疎水性です。\n\n【周辺知識】\nアミノ酸の性質を分類する際には側鎖の極性（親水性か疎水性か）、電荷（酸性・塩基性）、環状構造の有無などを見分けることが重要です。チロシンはフェニルアラニンがヒドロキシ化された形であり、ホルモン合成（甲状腺ホルモン、カテコールアミンなど）の材料ともなります。"
+      "b": {
+        "ja": "グリコーゲンシンターゼはリン酸化で活性化する。",
+        "en": "Glycogen synthase is activated by phosphorylation.",
+        "zh": "糖原合成酶通过磷酸化被激活。"
+      },
+      "c": {
+        "ja": "グリコーゲン分解は細胞内cAMPの増加で促進される。",
+        "en": "Glycogen breakdown is promoted by an increase in intracellular cAMP.",
+        "zh": "糖原分解在细胞内cAMP升高时得到促进。"
+      },
+      "d": {
+        "ja": "グリコーゲンホスホリラーゼは加水分解酵素である。",
+        "en": "Glycogen phosphorylase is a hydrolytic enzyme.",
+        "zh": "糖原磷酸化酶是一种水解酶。"
+      },
+      "e": {
+        "ja": "インスリンはグリコーゲンシンターゼを脱リン酸化させる。",
+        "en": "Insulin dephosphorylates glycogen synthase.",
+        "zh": "胰岛素使糖原合成酶脱磷酸化。"
+      }
     },
-    {
-      "question": "ヘムの分解と代謝で正しいのはどれか。",
-      "choices": {
-        "a": "ステルコビリンが便中に排泄される。",
-        "b": "直接ビリルビンが尿中に排泄される。",
-        "c": "間接ビリルビンがグリシン抱合を受ける。",
-        "d": "ビリルビンの血中輸送にはセルロプラスミンが関与する。",
-        "e": "ヘムオキシゲナーゼによりビリベルジンと二酸化炭素が生成する。"
-      },
-      "answer": "a",
-      "explanation": "【解答解説】\n\nヘムの分解過程では最終的に便中にステルコビリンが排泄されます。ビリルビンが腸内細菌などによって還元され、ウロビリノゲン→ステルコビリンに変換されて便に排泄されます。これが便の褐色の元です。\n\n直接ビリルビン（抱合型ビリルビン）は胆汁中に排泄され、通常は尿中にはほぼ出現しません。血中を運ぶときには間接ビリルビン（非抱合型）はアルブミンと結合し、グルクロン酸抱合によって水溶性に変換されるのが一般的です。\n\nセルロプラスミンは銅の輸送に関わるタンパク質です。ビリルビンの血中輸送には関与しません。ヘムオキシゲナーゼはビリベルジンと一酸化炭素を生成する反応がよく知られていますが、選択肢eにある二酸化炭素はやや不正確な表現です。（正確にはヘム分解時に一酸化炭素が生成されることがポイントです。）\n\n【周辺知識】\n直接ビリルビンが増加するのは肝外胆管閉塞などで胆汁排泄が障害されているとき、間接ビリルビンが増加するのは溶血や非抱合型ビリルビンの処理障害（Gilbert症候群など）を想定することが多いです。"
-    },
-    {
-      "question": "脂肪酸代謝で正しいのはどれか。",
-      "choices": {
-        "a": "脂肪酸は細胞質でβ酸化を受ける。",
-        "b": "脂肪酸の不飽和化にはFADH2が必要である。",
-        "c": "脂肪酸合成酵素はインスリンで不活性化される。",
-        "d": "マロニル-CoAはアセチル-CoAカルボキシラーゼで合成される。",
-        "e": "マロニル-CoAはカルニチンアシルトランスフェラーゼを活性化する。"
-      },
-      "answer": "d",
-      "explanation": "【解答解説】\n\nマロニル-CoAはアセチル-CoAカルボキシラーゼ（ACC）の作用によってアセチル-CoAから合成されます。これは脂肪酸合成の初発段階で、とても重要なポイントです。\n\n脂肪酸のβ酸化はミトコンドリア内で行われ、脂肪酸合成は細胞質（正確には細胞質と小胞体に関連）で進みます。よく取り違えが生じるので注意が必要です。\n\n脂肪酸合成酵素はむしろインスリンで活性化が高まり、飢餓時には抑制される方向に働きます。マロニル-CoAはカルニチンアシルトランスフェラーゼIを阻害することで脂肪酸がミトコンドリアに入るのを抑え、脂肪酸合成が行われている状況下での脂肪酸分解をブロックします。\n\n不飽和脂肪酸の生成にはいくつか酵素が関わりますが、直接FADH2が決定的に必要というわけではありません。従来の代謝経路と混同しないようにしましょう。\n\n【周辺知識】\n脂肪酸合成と脂肪酸分解は互いに制御されることでエネルギーバランスを保っています。ACCの調節機構（リン酸化や脱リン酸化、クエン酸濃度による活性化など）も試験でたびたび問われます。"
-    },
-    {
-      "question": "ケトン体で正しいのはどれか。",
-      "choices": {
-        "a": "筋肉で合成される。",
-        "b": "アセトンは呼気中に排泄される。",
-        "c": "β-ヒドロキシ酸は尿中に排泄される。",
-        "d": "HMG-CoA Lダクターゼが合成に必要である。",
-        "e": "インペンテニルピロリン酸は合成中間体である。"
-      },
-      "answer": "b",
-      "explanation": "【解答解説】\n\nケトン体の代表格はアセト酢酸、β-ヒドロキシ酪酸、アセトンで、アセトンは揮発性が高いため呼気中に排泄されます。このため、糖尿病性ケトアシドーシスなどでは特有のアセトン臭（甘酸っぱいにおい）が感じられることがあります。\n\nケトン体は主として肝臓で合成され、筋肉や脳などでエネルギー源として利用されます。筋肉で作られるわけではないので選択肢aは誤りです。\n\nβ-ヒドロキシ酪酸（β-ヒドロキシ酸）はケトン体の一種として尿中にも排泄されますが、選択肢の表現だけで見ると「ケトン体」の総称としてよりもアセトンの呼気排泄が広く知られた正解です。\n\nHMG-CoAリパーゼがケトン体合成に必要とされますが、選択肢dの「HMG-CoA Lダクターゼ」という表現は誤り。さらにインペンテニルピロリン酸は一般的でない用語です。\n\n【周辺知識】\n長期間の飢餓や糖尿病性ケトアシドーシスでは肝臓が大量のケトン体を合成し、血中濃度が上昇します。これにより血液が酸性に傾く場合があり、呼気中にアセトン臭が確認されやすくなります。"
-    },
-    {
-      "question": "エイコサノイド代謝で正しいのはどれか。",
-      "choices": {
-        "a": "アラキドン酸は5つの二重結合をもつ。",
-        "b": "コルチゾールはシクロオキシゲナーゼを不活性化する。",
-        "c": "アセチルサリチル酸はトロンボキサンの生成を抑制する。",
-        "d": "プロスタグランジンはリポキシゲナーゼ活性により生成する。",
-        "e": "ロイコトリエンはシクロオキシゲナーゼ活性により生成する。"
-      },
-      "answer": "c",
-      "explanation": "【解答解説】\n\nアセチルサリチル酸（アスピリン）はシクロオキシゲナーゼ（COX）をアセチル化し、酵素活性を阻害することでトロンボキサンA2の生成を抑制します。この作用により血小板凝集が阻害され、抗血栓薬として使われています。\n\nアラキドン酸は4つの二重結合をもつ多価不飽和脂肪酸です。コルチゾールはホスホリパーゼA2を抑制してアラキドン酸の遊離を抑えるのが主な作用で、COXを直接不活性化するわけではありません。\n\nプロスタグランジンはCOX経路（シクロオキシゲナーゼ経路）、ロイコトリエンはリポキシゲナーゼ経路で合成されます。このあたりは混同が多いので注意しましょう。\n\n【周辺知識】\nエイコサノイドはアラキドン酸を原料とし、炎症・発熱・血管拡張・血小板凝集などに関わる生理活性物質の総称です。各経路の酵素と最終生成物の対応をセットで覚えることが大切です。"
-    },
-    {
-      "question": "DNAで正しいのはどれか。",
-      "choices": {
-        "a": "ミトコンドリアDNAは父親由来である。",
-        "b": "DNAの二本鎖切断は相同組換えで修復される。",
-        "c": "ゲノムインプリンティングでは遺伝子配列が変化する。",
-        "d": "テロメアの伸長には親DNA鎖が鋳型として必要である。",
-        "e": "親DNAラギン鎖に対して娘DNA鎖は連続して合成される。"
-      },
-      "answer": "b",
-      "explanation": "【解答解説】\n\nDNAの二本鎖切断には相同組換え修復や非相同末端結合があり、相同組換え修復は同源な配列を鋳型として使い、正確な修復を行う重要な仕組みです。\n\nミトコンドリアDNAは母系遺伝（母親由来）なので、aは誤りです。ゲノムインプリンティングはDNA配列そのものが変化するわけではなく、メチル化などのエピジェネティック修飾によって発現制御が変わります。テロメア伸長にはテロメラーゼが関わり、その酵素に含まれるRNAを鋳型にして伸長が行われます。親DNA鎖をそのまま鋳型にはしません。\n\nラギング鎖側の娘DNA鎖は岡崎フラグメントを形成しながら不連続に合成されます。リーディング鎖は連続合成です。\n\n【周辺知識】\nDNA修復機構はがん抑制や遺伝子安定性の維持に非常に重要です。BRCA1/BRCA2などは相同組換え修復に関わる遺伝子で、変異があると乳がんや卵巣がんのリスクが上昇します。"
-    },
-    {
-      "question": "転写で正しいのはどれか。",
-      "choices": {
-        "a": "グルカゴン受容体は転写因子である。",
-        "b": "ヒストンのアセチル化で転写が抑制される。",
-        "c": "mRNAはRNAポリメラーゼIによって転写される。",
-        "d": "mRNAのキャップ構造は7-メチルアデノシンを含む。",
-        "e": "TATAボックスは真核生物のコアプロモーターを構成する。"
-      },
-      "answer": "e",
-      "explanation": "【解答解説】\n\nTATAボックスは真核生物の転写開始に関わるコアプロモーター領域の一部であり、RNAポリメラーゼIIが働く際の認識部位となります。\n\nグルカゴン受容体は細胞膜に存在するGタンパク質共役受容体で、転写因子とは大きく機能が異なります。ヒストンのアセチル化は一般にヌクレオソーム構造を開放して転写を促進する方向に働きます。mRNAはRNAポリメラーゼIIが合成し、ポリメラーゼIは主にrRNA合成に、IIIはtRNA合成などを担当します。\n\nmRNAのキャップ構造は7-メチルグアノシンを含みます（7-メチルアデノシンではなく7-メチルグアノシン）。\n\n【周辺知識】\n遺伝子発現の制御はアセチル化、メチル化、リン酸化など様々なエピジェネティック修飾が複合的に関与しています。転写因子やリプレッサー、エンハンサー領域などの用語も頻出です。"
-    },
-    {
-      "question": "代謝異常疾患と関連するものとの組合せで正しいのはどれか。",
-      "choices": {
-        "a": "アルカプトン尿症 - ロイシン",
-        "b": "眼皮膚白皮症 - セロトニン",
-        "c": "フェニルケトン尿症 - シスステイン",
-        "d": "ホモシスチン尿症 - メチオニン",
-        "e": "メープルシロップ尿症 - ビタミンと酵素の組合せ"
-      },
-      "answer": "d",
-      "explanation": "【解答解説】\n\nホモシスチン尿症はメチオニン代謝に関わる酵素（シスタチオニンβ-シンターゼなど）の異常が主な原因です。血中や尿中にホモシステインが蓄積し、血管障害や骨・結合組織異常など多彩な症状を呈します。\n\nアルカプトン尿症はフェニルアラニン・チロシン経路の中間産物を分解するホモゲンチジン酸オキシダーゼの欠損です。眼皮膚白皮症（オキュロカニュラルアルビニズム）はメラニン合成障害で、チロシナーゼの欠損などが主であって、セロトニンとは直接関連しません。フェニルケトン尿症はフェニルアラニンとチロシンの代謝異常であり、シスステインは絡みません。メープルシロップ尿症は分岐鎖アミノ酸（バリン、イソロイシン、ロイシン）の代謝異常です。\n\n【周辺知識】\nホモシスチン尿症ではレンズの亜脱臼、長い四肢（マルファン症候群との鑑別点）や血栓傾向が特徴的です。メチオニン経路の再確認をするとき、シスタチオニンβ-シンターゼやメチルテトラヒドロ葉酸、ビタミンB12などの関わりを整理しておくと理解が深まります。"
-    },
-    {
-      "question": "ビタミンと酵素の組合せで正しいのはどれか。",
-      "choices": {
-        "a": "ビタミンA - メチオニン合成酵素",
-        "b": "ビタミンB1 - α-ケト酸デヒドロゲナーゼ",
-        "c": "ビタミンB12 - アミノ基転移酵素",
-        "d": "ビタミンC - ソーカルボキシラーゼ",
-        "e": "ビタミンK - コハク酸デヒドロゲナーゼ"
-      },
-      "answer": "b",
-      "explanation": "【解答解説】\n\nビタミンB1（チアミン）はピルビン酸デヒドロゲナーゼやα-ケト酸デヒドロゲナーゼなどで補酵素として働きます。これらの酵素は糖代謝やエネルギー産生に不可欠です。\n\nビタミンAは視覚や上皮細胞の分化、免疫機能などに関係し、メチオニン合成酵素との直接的関連はありません。メチオニン合成酵素の補酵素としてはビタミンB12が関与します。ビタミンB12は主にメチル基転移や一炭素代謝に関わり、アミノ基転移酵素とは異なります。ビタミンCはコラーゲン合成のヒドロキシ化反応や抗酸化作用がメインで、ソーカルボキシラーゼ（誤表記）とは関係しません。ビタミンKは血液凝固因子のγ-カルボキシ化に必要です。コハク酸デヒドロゲナーゼとは無関係です。\n\n【周辺知識】\nビタミンB1欠乏症としては脚気やウェルニッケ脳症、コルサコフ症候群が有名です。糖代謝酵素の活性低下が原因で中枢神経系や末梢神経にダメージが出るというメカニズムがよく問われます。"
+    "answer": "c",
+    "explanation": {
+      "ja": "【解答解説】\n\nグリコーゲン分解はアドレナリンやグルカゴンなどが受容体に結合し、細胞内のcAMPが上昇することで促進されます。\n\ncAMPが上昇するとプロテインキナーゼA（PKA）が活性化し、これがグリコーゲンホスホリラーゼキナーゼをリン酸化してさらに活性化。最終的にはグリコーゲンホスホリラーゼもリン酸化され、グリコーゲンの分解が進むという段階を踏んでいきます。\n\nアドレナリンは基本的にグリコーゲン分解を促進（合成を抑制）する方向に働き、インスリンは逆にグリコーゲン合成を促進します。よく混同されますが、アドレナリンは合成ではなく分解を促進する点がポイントです。\n\nグリコーゲンシンターゼはリン酸化されるとむしろ不活化に傾き、脱リン酸化が行われると活性が高まります。インスリンはシグナル伝達を通じて最終的にグリコーゲンシンターゼの脱リン酸化を促すため、グリコーゲン合成を促進します。\n\nグリコーゲンホスホリラーゼはホスホリシス反応（リン酸による切断）を行うため、加水分解酵素に該当しません。\n\n【周辺知識】\nグリコーゲン貯蔵病ではホルモン作用の異常や分解酵素の欠損が原因になることが多く、肝臓や筋肉に異常な量のグリコーゲンが蓄積します。代謝経路の調節ポイントを正確に把握しておくと、これらの疾患の理解がしやすくなります。",
+      "en": "[Answer Explanation]\n\nGlycogen breakdown is promoted when hormones such as adrenaline or glucagon bind to their receptors, increasing intracellular cAMP levels.\n\nThe rise in cAMP activates protein kinase A (PKA), which phosphorylates and activates glycogen phosphorylase kinase, and in turn phosphorylates glycogen phosphorylase, facilitating glycogen degradation.\n\nAdrenaline generally promotes glycogen breakdown (and inhibits synthesis), whereas insulin promotes glycogen synthesis. It is important to note that adrenaline does not promote glycogen synthesis, but rather its breakdown.\n\nWhen glycogen synthase is phosphorylated, it becomes less active; it is dephosphorylation that increases its activity. Through its signaling pathways, insulin ultimately promotes the dephosphorylation of glycogen synthase, thereby enhancing glycogen synthesis.\n\nGlycogen phosphorylase performs phosphorolysis (cleavage by inorganic phosphate) rather than hydrolysis, so it is not a hydrolytic enzyme.\n\n[Additional Information]\nIn glycogen storage diseases, abnormalities in hormone action or deficiencies in enzymes involved in glycogen breakdown often lead to abnormal glycogen accumulation in the liver or muscle. Knowing the regulatory points in the pathway is key to understanding these diseases.",
+      "zh": "【答案解析】\n\n当肾上腺素或胰高血糖素等激素与其受体结合后，会引起细胞内cAMP水平升高，从而促进糖原分解。\n\ncAMP升高后会激活蛋白激酶A（PKA），它再去磷酸化并激活糖原磷酸化酶激酶，最终导致糖原磷酸化酶被磷酸化，从而加速糖原分解。\n\n肾上腺素一般促进糖原分解（并抑制合成），而胰岛素则促进糖原合成。需注意，肾上腺素的作用重点是加速糖原分解而非合成。\n\n糖原合成酶在被磷酸化后活性会降低，脱磷酸化则使其活性增强。胰岛素通过信号传导途径促进糖原合成酶的脱磷酸化，从而增强糖原合成。\n\n糖原磷酸化酶是通过磷酸进行切割的磷解作用，而非水解作用，因此并不属于水解酶。\n\n【相关知识】\n在糖原贮积病中，常因激素作用异常或糖原分解酶缺陷导致肝脏或肌肉中糖原异常积累。准确掌握代谢途径的调控要点有助于理解这些疾病。"
     }
-  ]
-  
+  },
+  {
+    "question": {
+      "ja": "親水性アミノ酸はどれか。",
+      "en": "Which of the following is a hydrophilic amino acid?",
+      "zh": "以下哪种是亲水性氨基酸？"
+    },
+    "choices": {
+      "a": {
+        "ja": "バリン",
+        "en": "Valine",
+        "zh": "缬氨酸"
+      },
+      "b": {
+        "ja": "チロシン",
+        "en": "Tyrosine",
+        "zh": "酪氨酸"
+      },
+      "c": {
+        "ja": "メチオニン",
+        "en": "Methionine",
+        "zh": "蛋氨酸"
+      },
+      "d": {
+        "ja": "トリプトファン",
+        "en": "Tryptophan",
+        "zh": "色氨酸"
+      },
+      "e": {
+        "ja": "フェニルアラニン",
+        "en": "Phenylalanine",
+        "zh": "苯丙氨酸"
+      },
+      "f": {
+        "ja": "アラニン",
+        "en": "Alanine",
+        "zh": "丙氨酸"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\nチロシンは極性側鎖をもつアミノ酸で、水とある程度相互作用しやすい親水性アミノ酸に分類されます。フェニル基の一部がヒドロキシ基に置換されているため、構造上の極性が増しているのがポイントです。\n\n一方、バリン、メチオニン、トリプトファン、フェニルアラニン、アラニンはいずれも疎水性アミノ酸として扱われます。フェニルアラニンやトリプトファンは芳香族の疎水性側鎖をもち、バリンとアラニンは飽和炭化水素鎖の疎水性、メチオニンは硫黄を含むものの側鎖全体は疎水性です。\n\n【周辺知識】\nアミノ酸の性質を分類する際には側鎖の極性（親水性か疎水性か）、電荷（酸性・塩基性）、環状構造の有無などを見分けることが重要です。チロシンはフェニルアラニンがヒドロキシ化された形であり、ホルモン合成（甲状腺ホルモン、カテコールアミンなど）の材料ともなります。",
+      "en": "[Answer Explanation]\n\nTyrosine has a polar side chain and is thus classified as a hydrophilic amino acid. Its phenyl group is partially substituted by a hydroxyl group, which increases its polarity.\n\nIn contrast, valine, methionine, tryptophan, phenylalanine, and alanine are typically considered hydrophobic amino acids. Phenylalanine and tryptophan contain aromatic, hydrophobic side chains; valine and alanine have saturated hydrocarbon side chains; and although methionine contains sulfur, its overall side chain is hydrophobic.\n\n[Additional Information]\nWhen classifying amino acids, it is important to consider the polarity of the side chain (whether hydrophilic or hydrophobic), the charge (acidic or basic), and whether the side chain is cyclic. Tyrosine is formed by the hydroxylation of phenylalanine and is also a precursor for various hormones (e.g., thyroid hormones, catecholamines).",
+      "zh": "【答案解析】\n\n酪氨酸具有极性侧链，因而被归类为亲水性氨基酸。其苯环部分被羟基取代，增加了整体结构的极性。\n\n相比之下，缬氨酸、蛋氨酸、色氨酸、苯丙氨酸和丙氨酸都被视为疏水性氨基酸。苯丙氨酸和色氨酸具有芳香族疏水侧链；缬氨酸和丙氨酸则是饱和烃链；蛋氨酸尽管含硫，但其侧链整体仍然偏疏水。\n\n【相关知识】\n在区分氨基酸性质时，应注意侧链的极性（亲水或疏水）、电荷（酸性或碱性）、是否具有环状结构等。酪氨酸由苯丙氨酸羟基化而来，亦是多种激素（如甲状腺激素、儿茶酚胺）的合成前体。"
+    }
+  },
+  {
+    "question": {
+      "ja": "ヘムの分解と代謝で正しいのはどれか。",
+      "en": "Which statement about heme degradation and metabolism is correct?",
+      "zh": "以下关于血红素（heme）的分解和代谢哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "ステルコビリンが便中に排泄される。",
+        "en": "Stercobilin is excreted in the feces.",
+        "zh": "粪胆素（stercobilin）随粪便排出。"
+      },
+      "b": {
+        "ja": "直接ビリルビンが尿中に排泄される。",
+        "en": "Conjugated bilirubin (direct bilirubin) is excreted in the urine.",
+        "zh": "结合胆红素（直接胆红素）在尿中排泄。"
+      },
+      "c": {
+        "ja": "間接ビリルビンがグリシン抱合を受ける。",
+        "en": "Unconjugated bilirubin (indirect bilirubin) undergoes glycine conjugation.",
+        "zh": "非结合胆红素（间接胆红素）与甘氨酸结合。"
+      },
+      "d": {
+        "ja": "ビリルビンの血中輸送にはセルロプラスミンが関与する。",
+        "en": "Ceruloplasmin is involved in the transport of bilirubin in the bloodstream.",
+        "zh": "铜蓝蛋白（ceruloplasmin）参与胆红素在血液中的运输。"
+      },
+      "e": {
+        "ja": "ヘムオキシゲナーゼによりビリベルジンと二酸化炭素が生成する。",
+        "en": "Heme oxygenase produces biliverdin and carbon dioxide.",
+        "zh": "血红素加氧酶产生胆绿素和二氧化碳。"
+      }
+    },
+    "answer": "a",
+    "explanation": {
+      "ja": "【解答解説】\n\nヘムの分解過程では最終的に便中にステルコビリンが排泄されます。ビリルビンが腸内細菌などによって還元され、ウロビリノゲン→ステルコビリンに変換されて便に排泄されます。これが便の褐色の元です。\n\n直接ビリルビン（抱合型ビリルビン）は胆汁中に排泄され、通常は尿中にはほぼ出現しません。血中を運ぶときには間接ビリルビン（非抱合型）はアルブミンと結合し、グルクロン酸抱合によって水溶性に変換されるのが一般的です。\n\nセルロプラスミンは銅の輸送に関わるタンパク質です。ビリルビンの血中輸送には関与しません。ヘムオキシゲナーゼはビリベルジンと一酸化炭素を生成する反応がよく知られていますが、選択肢eにある二酸化炭素はやや不正確な表現です。（正確にはヘム分解時に一酸化炭素が生成されることがポイントです。）\n\n【周辺知識】\n直接ビリルビンが増加するのは肝外胆管閉塞などで胆汁排泄が障害されているとき、間接ビリルビンが増加するのは溶血や非抱合型ビリルビンの処理障害（Gilbert症候群など）を想定することが多いです。",
+      "en": "[Answer Explanation]\n\nIn the final stage of heme degradation, stercobilin is excreted in the feces. Bilirubin is reduced by intestinal bacteria, forming urobilinogen, which is then converted to stercobilin and excreted. This gives stool its characteristic brown color.\n\nConjugated (direct) bilirubin is usually excreted into bile and typically does not appear in the urine under normal conditions. In the bloodstream, unconjugated (indirect) bilirubin is bound to albumin, and it is conjugated with glucuronic acid in the liver to become water-soluble.\n\nCeruloplasmin is a protein that transports copper, not bilirubin. Heme oxygenase is well-known to produce biliverdin and carbon monoxide (CO), not carbon dioxide, when it breaks down heme.\n\n[Additional Information]\nElevated direct bilirubin often indicates an obstruction in bile excretion (e.g., extrahepatic cholestasis), whereas elevated indirect bilirubin suggests hemolysis or a defect in the processing of unconjugated bilirubin (e.g., Gilbert’s syndrome).",
+      "zh": "【答案解析】\n\n在血红素分解的最后阶段，粪胆素（stercobilin）随粪便排出。胆红素在肠道细菌的作用下被还原，生成尿胆原（urobilinogen），随后转化为粪胆素并通过大便排出，这也是粪便呈棕色的原因。\n\n结合（直接）胆红素通常经胆汁排泄，正常情况下几乎不会随尿液排出。血液中，非结合（间接）胆红素通常与白蛋白结合，并在肝脏中与葡萄糖醛酸结合后转变为水溶性。\n\n铜蓝蛋白（ceruloplasmin）主要参与铜离子的运输，与胆红素的血液运输无关。血红素加氧酶（heme oxygenase）在分解血红素时主要产生胆绿素（biliverdin）和一氧化碳（CO），而并非二氧化碳。\n\n【相关知识】\n直接胆红素升高常提示胆道阻塞（如肝外胆管梗阻）导致的胆汁排泄障碍；间接胆红素升高则常见于溶血或非结合胆红素处理障碍（如Gilbert综合征）。"
+    }
+  },
+  {
+    "question": {
+      "ja": "脂肪酸代謝で正しいのはどれか。",
+      "en": "Which statement about fatty acid metabolism is correct?",
+      "zh": "关于脂肪酸代谢，下列哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "脂肪酸は細胞質でβ酸化を受ける。",
+        "en": "Fatty acids undergo β-oxidation in the cytoplasm.",
+        "zh": "脂肪酸在细胞质内进行β氧化。"
+      },
+      "b": {
+        "ja": "脂肪酸の不飽和化にはFADH2が必要である。",
+        "en": "The desaturation of fatty acids requires FADH2.",
+        "zh": "脂肪酸的不饱和化需要FADH2。"
+      },
+      "c": {
+        "ja": "脂肪酸合成酵素はインスリンで不活性化される。",
+        "en": "Fatty acid synthase is inactivated by insulin.",
+        "zh": "脂肪酸合成酶受到胰岛素的抑制而失活。"
+      },
+      "d": {
+        "ja": "マロニル-CoAはアセチル-CoAカルボキシラーゼで合成される。",
+        "en": "Malonyl-CoA is synthesized by acetyl-CoA carboxylase.",
+        "zh": "丙二酰辅酶A（Malonyl-CoA）由乙酰辅酶A羧化酶合成。"
+      },
+      "e": {
+        "ja": "マロニル-CoAはカルニチンアシルトランスフェラーゼを活性化する。",
+        "en": "Malonyl-CoA activates carnitine acyltransferase.",
+        "zh": "丙二酰辅酶A能激活肉碱酰基转移酶。"
+      }
+    },
+    "answer": "d",
+    "explanation": {
+      "ja": "【解答解説】\n\nマロニル-CoAはアセチル-CoAカルボキシラーゼ（ACC）の作用によってアセチル-CoAから合成されます。これは脂肪酸合成の初発段階で、とても重要なポイントです。\n\n脂肪酸のβ酸化はミトコンドリア内で行われ、脂肪酸合成は細胞質（正確には細胞質と小胞体に関連）で進みます。よく取り違えが生じるので注意が必要です。\n\n脂肪酸合成酵素はむしろインスリンで活性化が高まり、飢餓時には抑制される方向に働きます。マロニル-CoAはカルニチンアシルトランスフェラーゼIを阻害することで脂肪酸がミトコンドリアに入るのを抑え、脂肪酸合成が行われている状況下での脂肪酸分解をブロックします。\n\n不飽和脂肪酸の生成にはいくつか酵素が関わりますが、直接FADH2が決定的に必要というわけではありません。従来の代謝経路と混同しないようにしましょう。\n\n【周辺知識】\n脂肪酸合成と脂肪酸分解は互いに制御されることでエネルギーバランスを保っています。ACCの調節機構（リン酸化や脱リン酸化、クエン酸濃度による活性化など）も試験でたびたび問われます。",
+      "en": "[Answer Explanation]\n\nMalonyl-CoA is synthesized from acetyl-CoA by the enzyme acetyl-CoA carboxylase (ACC). This is a crucial initial step in fatty acid synthesis.\n\nFatty acid β-oxidation occurs in the mitochondria, whereas fatty acid synthesis primarily takes place in the cytosol (with some involvement of the endoplasmic reticulum). These locations are often confused, so one must be careful.\n\nFatty acid synthase is actually activated by insulin, and is inhibited when one is fasting. Malonyl-CoA inhibits carnitine acyltransferase I, preventing fatty acids from entering the mitochondria for β-oxidation, thus blocking fatty acid breakdown when synthesis is ongoing.\n\nSeveral enzymes are involved in the formation of unsaturated fatty acids, but the direct requirement for FADH2 is not critical in that context. Be sure not to mix it up with other metabolic pathways.\n\n[Additional Information]\nFatty acid synthesis and fatty acid breakdown are reciprocally regulated to maintain energy balance. The regulatory mechanisms of ACC (such as phosphorylation, dephosphorylation, and activation by citrate) frequently appear in examinations.",
+      "zh": "【答案解析】\n\n丙二酰辅酶A（Malonyl-CoA）由乙酰辅酶A羧化酶（ACC）催化，将乙酰辅酶A转化而来。这是脂肪酸合成过程中的关键第一步。\n\n脂肪酸的β氧化在线粒体内进行，而脂肪酸合成主要在细胞质（并部分与内质网相关）中进行。两者发生场所不同，需注意区分。\n\n脂肪酸合成酶在胰岛素作用下反而被激活，在饥饿时受到抑制。丙二酰辅酶A能抑制肉碱酰基转移酶I，阻止脂肪酸进入线粒体进行β氧化，从而在合成进行时阻止脂肪酸的分解。\n\n不饱和脂肪酸的生成涉及多种酶，但并非一定需要FADH2作为关键要素。不要与其他代谢途径混淆。\n\n【相关知识】\n脂肪酸合成与分解在体内相互调控，从而维持能量平衡。关于ACC的调控机制（如磷酸化、去磷酸化以及柠檬酸浓度的影响）也常出现在考试中。"
+    }
+  },
+  {
+    "question": {
+      "ja": "ケトン体で正しいのはどれか。",
+      "en": "Which statement about ketone bodies is correct?",
+      "zh": "以下关于酮体的描述哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "筋肉で合成される。",
+        "en": "They are synthesized in muscle.",
+        "zh": "在肌肉中合成。"
+      },
+      "b": {
+        "ja": "アセトンは呼気中に排泄される。",
+        "en": "Acetone is excreted in the breath.",
+        "zh": "丙酮（acetone）随呼气排出。"
+      },
+      "c": {
+        "ja": "β-ヒドロキシ酸は尿中に排泄される。",
+        "en": "β-hydroxybutyric acid (β-hydroxy acid) is excreted in the urine.",
+        "zh": "β-羟基丁酸（β-羟基酸）随尿排出。"
+      },
+      "d": {
+        "ja": "HMG-CoA Lダクターゼが合成に必要である。",
+        "en": "HMG-CoA L-ductase is required for ketone body synthesis.",
+        "zh": "酮体合成需要HMG-CoA L-ductase。"
+      },
+      "e": {
+        "ja": "インペンテニルピロリン酸は合成中間体である。",
+        "en": "Impentenyl pyrolinic acid is an intermediate in ketone body synthesis.",
+        "zh": "Impentenyl pyrolinic acid是酮体合成的中间产物。"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\nケトン体の代表格はアセト酢酸、β-ヒドロキシ酪酸、アセトンで、アセトンは揮発性が高いため呼気中に排泄されます。このため、糖尿病性ケトアシドーシスなどでは特有のアセトン臭（甘酸っぱいにおい）が感じられることがあります。\n\nケトン体は主として肝臓で合成され、筋肉や脳などでエネルギー源として利用されます。筋肉で作られるわけではないので選択肢aは誤りです。\n\nβ-ヒドロキシ酪酸（β-ヒドロキシ酸）はケトン体の一種として尿中にも排泄されますが、選択肢の表現だけで見ると「ケトン体」の総称としてよりもアセトンの呼気排泄が広く知られた正解です。\n\nHMG-CoAリパーゼがケトン体合成に必要とされますが、選択肢dの「HMG-CoA Lダクターゼ」という表現は誤り。さらにインペンテニルピロリン酸は一般的でない用語です。\n\n【周辺知識】\n長期間の飢餓や糖尿病性ケトアシドーシスでは肝臓が大量のケトン体を合成し、血中濃度が上昇します。これにより血液が酸性に傾く場合があり、呼気中にアセトン臭が確認されやすくなります。",
+      "en": "[Answer Explanation]\n\nThe main ketone bodies are acetoacetate, β-hydroxybutyrate, and acetone. Acetone is volatile, so it is excreted in the breath. As a result, in diabetic ketoacidosis, a characteristic acetone (fruity) odor can often be detected.\n\nKetone bodies are synthesized primarily in the liver and utilized by muscles and the brain as an energy source, so they are not produced in muscle itself (eliminating choice a).\n\nAlthough β-hydroxybutyrate is also excreted in the urine, acetone exhalation is the more prominent and well-known phenomenon among the ketone bodies, making (b) the best correct answer.\n\nHMG-CoA lyase is needed for ketone body synthesis, but the “HMG-CoA L-ductase” in choice (d) is not the correct enzyme name. “Impentenyl pyrolinic acid” in (e) is not a recognized intermediate.\n\n[Additional Information]\nDuring prolonged fasting or in diabetic ketoacidosis, the liver produces large amounts of ketone bodies, leading to elevated blood levels and possible acidosis. Acetone in the breath causes the typical fruity odor often associated with this condition.",
+      "zh": "【答案解析】\n\n主要的酮体包括乙酰乙酸、β-羟基丁酸和丙酮（acetone），其中丙酮具有挥发性，可随呼气排出。因此在糖尿病酮症酸中毒等情况下，往往能闻到带有果香或指甲油样气味的丙酮味。\n\n酮体主要在肝脏中合成，但在肌肉和大脑等组织中用作能量来源，因此a选项“在肌肉合成”不正确。\n\n尽管β-羟基丁酸也能随尿液排出，但就酮体而言，更广为人知的是丙酮随呼气排出，因此b选项更具代表性。\n\n酮体合成实际需要HMG-CoA裂解酶（HMG-CoA lyase），而选项d中的“HMG-CoA L-dactase”不是正确的酶名称。选项e“Impentenyl pyrolinic acid”并非公认的中间产物。\n\n【相关知识】\n在长期饥饿或糖尿病酮症酸中毒时，肝脏会大量合成酮体，导致血中浓度上升并可能出现酸中毒。由于丙酮会通过呼气排出，患者的呼吸会带有明显的果香或丙酮味。"
+    }
+  },
+  {
+    "question": {
+      "ja": "エイコサノイド代謝で正しいのはどれか。",
+      "en": "Which statement about eicosanoid metabolism is correct?",
+      "zh": "以下关于花生四烯酸代谢产物（eicosanoids）哪项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "アラキドン酸は5つの二重結合をもつ。",
+        "en": "Arachidonic acid has five double bonds.",
+        "zh": "花生四烯酸含有5个双键。"
+      },
+      "b": {
+        "ja": "コルチゾールはシクロオキシゲナーゼを不活性化する。",
+        "en": "Cortisol inactivates cyclooxygenase (COX).",
+        "zh": "皮质醇（cortisol）会使环氧合酶（COX）失活。"
+      },
+      "c": {
+        "ja": "アセチルサリチル酸はトロンボキサンの生成を抑制する。",
+        "en": "Acetylsalicylic acid (aspirin) suppresses the production of thromboxane.",
+        "zh": "乙酰水杨酸（阿司匹林）抑制血栓烷（TX）的生成。"
+      },
+      "d": {
+        "ja": "プロスタグランジンはリポキシゲナーゼ活性により生成する。",
+        "en": "Prostaglandins are produced via lipoxygenase activity.",
+        "zh": "前列腺素通过脂氧合酶（LOX）途径生成。"
+      },
+      "e": {
+        "ja": "ロイコトリエンはシクロオキシゲナーゼ活性により生成する。",
+        "en": "Leukotrienes are produced via cyclooxygenase (COX) activity.",
+        "zh": "白三烯由环氧合酶（COX）催化生成。"
+      }
+    },
+    "answer": "c",
+    "explanation": {
+      "ja": "【解答解説】\n\nアセチルサリチル酸（アスピリン）はシクロオキシゲナーゼ（COX）をアセチル化し、酵素活性を阻害することでトロンボキサンA2の生成を抑制します。この作用により血小板凝集が阻害され、抗血栓薬として使われています。\n\nアラキドン酸は4つの二重結合をもつ多価不飽和脂肪酸です。コルチゾールはホスホリパーゼA2を抑制してアラキドン酸の遊離を抑えるのが主な作用で、COXを直接不活性化するわけではありません。\n\nプロスタグランジンはCOX経路（シクロオキシゲナーゼ経路）、ロイコトリエンはリポキシゲナーゼ経路で合成されます。このあたりは混同が多いので注意しましょう。\n\n【周辺知識】\nエイコサノイドはアラキドン酸を原料とし、炎症・発熱・血管拡張・血小板凝集などに関わる生理活性物質の総称です。各経路の酵素と最終生成物の対応をセットで覚えることが大切です。",
+      "en": "[Answer Explanation]\n\nAcetylsalicylic acid (aspirin) acetylates and inhibits cyclooxygenase (COX), thereby reducing thromboxane A2 production. This action inhibits platelet aggregation and is used therapeutically as an antithrombotic agent.\n\nArachidonic acid is a polyunsaturated fatty acid with four double bonds. Cortisol primarily inhibits phospholipase A2, thus reducing the release of arachidonic acid. It does not directly inactivate COX.\n\nProstaglandins are synthesized via the cyclooxygenase (COX) pathway, whereas leukotrienes are produced via the lipoxygenase pathway. These two pathways can be confused, so care should be taken.\n\n[Additional Information]\nEicosanoids are a group of bioactive compounds derived from arachidonic acid, involved in inflammation, fever, vasodilation, and platelet aggregation, among other processes. It is vital to remember which enzyme pathway leads to which final products.",
+      "zh": "【答案解析】\n\n乙酰水杨酸（阿司匹林）通过乙酰化环氧合酶（COX）抑制其活性，从而降低血栓烷A2（TXA2）的生成，进而抑制血小板聚集，在临床上作为抗血栓药使用。\n\n花生四烯酸是一种含有四个双键的多不饱和脂肪酸。皮质醇主要通过抑制磷脂酶A2而减少花生四烯酸的释放，并非直接失活COX。\n\n前列腺素通过环氧合酶（COX）途径合成，白三烯则通过脂氧合酶（LOX）途径生成。这两个合成途径常被混淆，需特别注意。\n\n【相关知识】\n花生四烯酸衍生的各种类花生酸（eicosanoids）在炎症、发热、血管舒张、血小板聚集等生理活动中起重要作用。记住每条合成途径与对应产物的关系对于理解它们的功能至关重要。"
+    }
+  },
+  {
+    "question": {
+      "ja": "DNAで正しいのはどれか。",
+      "en": "Which statement about DNA is correct?",
+      "zh": "以下关于DNA的描述哪项正确？"
+    },
+    "choices": {
+      "a": {
+        "ja": "ミトコンドリアDNAは父親由来である。",
+        "en": "Mitochondrial DNA is inherited from the father.",
+        "zh": "线粒体DNA源自父系遗传。"
+      },
+      "b": {
+        "ja": "DNAの二本鎖切断は相同組換えで修復される。",
+        "en": "Double-strand breaks in DNA are repaired by homologous recombination.",
+        "zh": "DNA双链断裂可通过同源重组修复。"
+      },
+      "c": {
+        "ja": "ゲノムインプリンティングでは遺伝子配列が変化する。",
+        "en": "Genomic imprinting changes the DNA sequence itself.",
+        "zh": "基因组印记（genomic imprinting）会改变DNA的核苷酸序列。"
+      },
+      "d": {
+        "ja": "テロメアの伸長には親DNA鎖が鋳型として必要である。",
+        "en": "Telomere elongation requires the parental DNA strand as a template.",
+        "zh": "端粒的延长需要母链DNA作为模板。"
+      },
+      "e": {
+        "ja": "親DNAラギン鎖に対して娘DNA鎖は連続して合成される。",
+        "en": "The daughter DNA strand is synthesized continuously on the parental lagging strand.",
+        "zh": "在母链的后随链上，子链DNA是连续合成的。"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\nDNAの二本鎖切断には相同組換え修復や非相同末端結合があり、相同組換え修復は同源な配列を鋳型として使い、正確な修復を行う重要な仕組みです。\n\nミトコンドリアDNAは母系遺伝（母親由来）なので、aは誤りです。ゲノムインプリンティングはDNA配列そのものが変化するわけではなく、メチル化などのエピジェネティック修飾によって発現制御が変わります。テロメア伸長にはテロメラーゼが関わり、その酵素に含まれるRNAを鋳型にして伸長が行われます。親DNA鎖をそのまま鋳型にはしません。\n\nラギング鎖側の娘DNA鎖は岡崎フラグメントを形成しながら不連続に合成されます。リーディング鎖は連続合成です。\n\n【周辺知識】\nDNA修復機構はがん抑制や遺伝子安定性の維持に非常に重要です。BRCA1/BRCA2などは相同組換え修復に関わる遺伝子で、変異があると乳がんや卵巣がんのリスクが上昇します。",
+      "en": "[Answer Explanation]\n\nDouble-strand breaks in DNA can be repaired by homologous recombination or non-homologous end joining (NHEJ). Homologous recombination uses a homologous sequence as a template and is a crucial mechanism for accurate repair.\n\nMitochondrial DNA is inherited maternally, so (a) is incorrect. Genomic imprinting does not change the DNA sequence itself but rather modifies gene expression through epigenetic mechanisms (e.g., DNA methylation). Telomere elongation involves telomerase, which has an RNA component that serves as the template, not the parental DNA strand.\n\nDaughter DNA on the lagging strand is synthesized discontinuously in short Okazaki fragments; the leading strand is synthesized continuously.\n\n[Additional Information]\nDNA repair is critical for tumor suppression and the maintenance of genomic stability. Genes such as BRCA1 and BRCA2 are involved in homologous recombination repair, and mutations in these genes increase the risk of breast and ovarian cancers.",
+      "zh": "【答案解析】\n\nDNA双链断裂既可通过同源重组修复（HR）也可通过非同源末端连接（NHEJ）来修复。其中，同源重组修复以同源序列为模板，可精确修复断裂。\n\n线粒体DNA是母系遗传（来自母亲），因此a是错误的。基因组印记并不改变DNA本身的碱基序列，而是通过DNA甲基化等表观遗传修饰影响基因表达。端粒延长依赖端粒酶（telomerase），该酶自带RNA模板，并非利用母链DNA作为模板。\n\n后随链合成子链是通过形成冈崎片段（Okazaki fragments）实现的，属于不连续合成；而前导链则是连续合成。\n\n【相关知识】\nDNA修复对抑制肿瘤及维持基因组稳定性至关重要。BRCA1/BRCA2等基因参与同源重组修复，其突变会显著增加乳腺癌和卵巢癌的风险。"
+    }
+  },
+  {
+    "question": {
+      "ja": "転写で正しいのはどれか。",
+      "en": "Which statement about transcription is correct?",
+      "zh": "以下关于转录过程哪项正确？"
+    },
+    "choices": {
+      "a": {
+        "ja": "グルカゴン受容体は転写因子である。",
+        "en": "The glucagon receptor is a transcription factor.",
+        "zh": "胰高血糖素受体是转录因子。"
+      },
+      "b": {
+        "ja": "ヒストンのアセチル化で転写が抑制される。",
+        "en": "Histone acetylation represses transcription.",
+        "zh": "组蛋白的乙酰化会抑制转录。"
+      },
+      "c": {
+        "ja": "mRNAはRNAポリメラーゼIによって転写される。",
+        "en": "mRNA is transcribed by RNA polymerase I.",
+        "zh": "mRNA由RNA聚合酶I转录。"
+      },
+      "d": {
+        "ja": "mRNAのキャップ構造は7-メチルアデノシンを含む。",
+        "en": "The cap structure of mRNA contains 7-methyladenosine.",
+        "zh": "mRNA的帽子结构含有7-甲基腺苷。"
+      },
+      "e": {
+        "ja": "TATAボックスは真核生物のコアプロモーターを構成する。",
+        "en": "The TATA box is part of the core promoter in eukaryotes.",
+        "zh": "TATA盒是真核生物核心启动子的一部分。"
+      }
+    },
+    "answer": "e",
+    "explanation": {
+      "ja": "【解答解説】\n\nTATAボックスは真核生物の転写開始に関わるコアプロモーター領域の一部であり、RNAポリメラーゼIIが働く際の認識部位となります。\n\nグルカゴン受容体は細胞膜に存在するGタンパク質共役受容体で、転写因子とは大きく機能が異なります。ヒストンのアセチル化は一般にヌクレオソーム構造を開放して転写を促進する方向に働きます。mRNAはRNAポリメラーゼIIが合成し、ポリメラーゼIは主にrRNA合成に、IIIはtRNA合成などを担当します。\n\nmRNAのキャップ構造は7-メチルグアノシンを含みます（7-メチルアデノシンではなく7-メチルグアノシン）。\n\n【周辺知識】\n遺伝子発現の制御はアセチル化、メチル化、リン酸化など様々なエピジェネティック修飾が複合的に関与しています。転写因子やリプレッサー、エンハンサー領域などの用語も頻出です。",
+      "en": "[Answer Explanation]\n\nThe TATA box is part of the core promoter region involved in the initiation of transcription in eukaryotes. It is where RNA polymerase II and associated factors recognize and bind.\n\nThe glucagon receptor is a G protein–coupled receptor located on the cell membrane, not a transcription factor. Histone acetylation generally relaxes the nucleosome structure and promotes transcription, rather than repressing it. mRNA is synthesized by RNA polymerase II, whereas polymerase I mainly transcribes rRNA and polymerase III mainly transcribes tRNA and some other small RNAs.\n\nThe cap structure of eukaryotic mRNA contains 7-methylguanosine (not 7-methyladenosine).\n\n[Additional Information]\nGene expression is regulated by a variety of epigenetic modifications, such as acetylation, methylation, and phosphorylation of histones. Terms like transcription factors, repressors, and enhancers often appear in this context.",
+      "zh": "【答案解析】\n\nTATA盒是真核生物转录起始时核心启动子区域的一部分，RNA聚合酶II及其辅助因子会在此处识别并结合。\n\n胰高血糖素受体是一种位于细胞膜上的G蛋白偶联受体，并非转录因子。组蛋白的乙酰化通常会使染色质结构变得疏松，从而促进转录，而非抑制。mRNA由RNA聚合酶II合成，聚合酶I主要合成rRNA，聚合酶III则主要合成tRNA等小分子RNA。\n\n真核生物mRNA的帽结构包含7-甲基鸟苷（7-methylguanosine），而非7-甲基腺苷。\n\n【相关知识】\n基因表达的调控涉及多种表观遗传修饰，如组蛋白的乙酰化、甲基化、磷酸化等。转录因子、抑制蛋白（repressor）、增强子（enhancer）等术语在此过程中也十分常见。"
+    }
+  },
+  {
+    "question": {
+      "ja": "代謝異常疾患と関連するものとの組合せで正しいのはどれか。",
+      "en": "Which pairing of metabolic disorder and associated factor is correct?",
+      "zh": "下列代谢异常疾病与其相关因素的组合中，哪一项是正确的？"
+    },
+    "choices": {
+      "a": {
+        "ja": "アルカプトン尿症 - ロイシン",
+        "en": "Alkaptonuria - Leucine",
+        "zh": "尿黑酸症（Alkaptonuria）- 亮氨酸"
+      },
+      "b": {
+        "ja": "眼皮膚白皮症 - セロトニン",
+        "en": "Oculocutaneous albinism - Serotonin",
+        "zh": "眼皮肤白化病 - 血清素"
+      },
+      "c": {
+        "ja": "フェニルケトン尿症 - シスステイン",
+        "en": "Phenylketonuria (PKU) - Cysteine",
+        "zh": "苯丙酮尿症 - 半胱氨酸"
+      },
+      "d": {
+        "ja": "ホモシスチン尿症 - メチオニン",
+        "en": "Homocystinuria - Methionine",
+        "zh": "高半胱氨酸尿症 - 甲硫氨酸"
+      },
+      "e": {
+        "ja": "メープルシロップ尿症 - ビタミンと酵素の組合せ",
+        "en": "Maple syrup urine disease - A particular vitamin-enzyme combination",
+        "zh": "枫糖尿症 - 维生素和酶的组合"
+      }
+    },
+    "answer": "d",
+    "explanation": {
+      "ja": "【解答解説】\n\nホモシスチン尿症はメチオニン代謝に関わる酵素（シスタチオニンβ-シンターゼなど）の異常が主な原因です。血中や尿中にホモシステインが蓄積し、血管障害や骨・結合組織異常など多彩な症状を呈します。\n\nアルカプトン尿症はフェニルアラニン・チロシン経路の中間産物を分解するホモゲンチジン酸オキシダーゼの欠損です。眼皮膚白皮症（オキュロカニュラルアルビニズム）はメラニン合成障害で、チロシナーゼの欠損などが主であって、セロトニンとは直接関連しません。フェニルケトン尿症はフェニルアラニンとチロシンの代謝異常であり、シスステインは絡みません。メープルシロップ尿症は分岐鎖アミノ酸（バリン、イソロイシン、ロイシン）の代謝異常です。\n\n【周辺知識】\nホモシスチン尿症ではレンズの亜脱臼、長い四肢（マルファン症候群との鑑別点）や血栓傾向が特徴的です。メチオニン経路の再確認をするとき、シスタチオニンβ-シンターゼやメチルテトラヒドロ葉酸、ビタミンB12などの関わりを整理しておくと理解が深まります。",
+      "en": "[Answer Explanation]\n\nHomocystinuria is primarily caused by abnormalities in enzymes involved in methionine metabolism (such as cystathionine β-synthase). This leads to the accumulation of homocysteine in the blood and urine, causing vascular problems, skeletal abnormalities, and other symptoms.\n\nAlkaptonuria is due to a deficiency in homogentisic acid oxidase in the phenylalanine/tyrosine degradation pathway. Oculocutaneous albinism involves a defect in melanin synthesis (e.g., tyrosinase deficiency), which is not directly related to serotonin. Phenylketonuria (PKU) is a defect in phenylalanine and tyrosine metabolism, not cysteine. Maple syrup urine disease involves branched-chain amino acids (valine, isoleucine, leucine) rather than a specific vitamin-enzyme pair in this context.\n\n[Additional Information]\nHomocystinuria can present with ectopia lentis (lens dislocation), unusually long limbs (which can resemble Marfan syndrome), and a tendency toward thrombosis. Reviewing the methionine metabolic pathway, including cystathionine β-synthase, methyl tetrahydrofolate, and vitamin B12, is helpful for understanding this condition.",
+      "zh": "【答案解析】\n\n高半胱氨酸尿症主要由与甲硫氨酸代谢相关的酶（如胱硫醚β-合成酶）缺陷所致，导致血液和尿液中高半胱氨酸水平升高，表现为血管损伤、骨骼和结缔组织异常等多种症状。\n\n尿黑酸症（Alkaptonuria）则是苯丙氨酸/酪氨酸代谢通路中的臭梭酸氧化酶（homogentisic acid oxidase）缺陷；眼皮肤白化病（oculocutaneous albinism）涉及黑色素合成障碍（如酪氨酸酶缺陷），与血清素无直接关系；苯丙酮尿症（PKU）是苯丙氨酸与酪氨酸代谢异常，并不涉及半胱氨酸；枫糖尿症（Maple syrup urine disease）是支链氨基酸（缬氨酸、异亮氨酸、亮氨酸）代谢异常。\n\n【相关知识】\n高半胱氨酸尿症的临床特点包括晶状体半脱位、四肢细长（易与马凡综合征混淆）以及血栓倾向。复习甲硫氨酸代谢通路时，可把胱硫醚β-合成酶、甲基四氢叶酸、维生素B12等因素一起理解，有助于掌握该疾病机理。"
+    }
+  },
+  {
+    "question": {
+      "ja": "ビタミンと酵素の組合せで正しいのはどれか。",
+      "en": "Which pairing of vitamin and enzyme is correct?",
+      "zh": "以下维生素与酶的配对哪项正确？"
+    },
+    "choices": {
+      "a": {
+        "ja": "ビタミンA - メチオニン合成酵素",
+        "en": "Vitamin A - Methionine synthase",
+        "zh": "维生素A - 甲硫氨酸合成酶"
+      },
+      "b": {
+        "ja": "ビタミンB1 - α-ケト酸デヒドロゲナーゼ",
+        "en": "Vitamin B1 (thiamine) - α-keto acid dehydrogenase",
+        "zh": "维生素B1（硫胺素） - α-酮酸脱氢酶"
+      },
+      "c": {
+        "ja": "ビタミンB12 - アミノ基転移酵素",
+        "en": "Vitamin B12 - Aminotransferase",
+        "zh": "维生素B12 - 转氨酶"
+      },
+      "d": {
+        "ja": "ビタミンC - ソーカルボキシラーゼ",
+        "en": "Vitamin C - 'Socarboxylase'",
+        "zh": "维生素C - 'Socarboxylase'酶"
+      },
+      "e": {
+        "ja": "ビタミンK - コハク酸デヒドロゲナーゼ",
+        "en": "Vitamin K - Succinate dehydrogenase",
+        "zh": "维生素K - 琥珀酸脱氢酶"
+      }
+    },
+    "answer": "b",
+    "explanation": {
+      "ja": "【解答解説】\n\nビタミンB1（チアミン）はピルビン酸デヒドロゲナーゼやα-ケト酸デヒドロゲナーゼなどで補酵素として働きます。これらの酵素は糖代謝やエネルギー産生に不可欠です。\n\nビタミンAは視覚や上皮細胞の分化、免疫機能などに関係し、メチオニン合成酵素との直接的関連はありません。メチオニン合成酵素の補酵素としてはビタミンB12が関与します。ビタミンB12は主にメチル基転移や一炭素代謝に関わり、アミノ基転移酵素とは異なります。ビタミンCはコラーゲン合成のヒドロキシ化反応や抗酸化作用がメインで、ソーカルボキシラーゼ（誤表記）とは関係しません。ビタミンKは血液凝固因子のγ-カルボキシ化に必要です。コハク酸デヒドロゲナーゼとは無関係です。\n\n【周辺知識】\nビタミンB1欠乏症としては脚気やウェルニッケ脳症、コルサコフ症候群が有名です。糖代謝酵素の活性低下が原因で中枢神経系や末梢神経にダメージが出るというメカニズムがよく問われます。",
+      "en": "[Answer Explanation]\n\nVitamin B1 (thiamine) serves as a coenzyme for pyruvate dehydrogenase and α-keto acid dehydrogenase complexes, both of which are crucial for carbohydrate metabolism and energy production.\n\nVitamin A is associated with vision, epithelial cell differentiation, and immune function, and does not have a direct role with methionine synthase. Vitamin B12 is a cofactor for methionine synthase and is mainly involved in methyl group transfers and one-carbon metabolism, not aminotransferases. Vitamin C is essential for the hydroxylation reactions in collagen synthesis and has antioxidant properties, not related to any “socarboxylase.” Vitamin K is necessary for the γ-carboxylation of certain clotting factors and is not related to succinate dehydrogenase.\n\n[Additional Information]\nA deficiency of vitamin B1 can lead to beriberi, Wernicke’s encephalopathy, and Korsakoff syndrome. The underlying mechanism often involves reduced activity of carbohydrate metabolism enzymes, causing neurological and peripheral nerve damage.",
+      "zh": "【答案解析】\n\n维生素B1（硫胺素）作为焦磷酸硫胺素的形式参与丙酮酸脱氢酶和α-酮酸脱氢酶复合体，是碳水化合物代谢和能量产生的重要辅酶。\n\n维生素A主要与视力、上皮细胞分化及免疫功能相关，与甲硫氨酸合成酶无直接联系。甲硫氨酸合成酶的辅酶实际上是维生素B12，它与甲基转移和一碳代谢相关，而非转氨酶。维生素C主要参与胶原蛋白合成中的羟基化反应并具有抗氧化作用，与所谓的“Socarboxylase”无关。维生素K用于某些凝血因子的γ-羧基化，与琥珀酸脱氢酶也无关。\n\n【相关知识】\n维生素B1缺乏时，可导致脚气病、韦尼克脑病和柯萨科夫综合征。其病理机制常与糖代谢酶活性下降有关，从而对中枢神经系统和外周神经造成损害。"
+    }
+  }
+]
